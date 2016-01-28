@@ -6,16 +6,22 @@
 using namespace std;
 
 int main() {
-	unsigned char data[16384];
-//	DsbLcModulator mod(data, 16384);
-//	unsigned char* loc;
-//	unsigned char temp;
+	const uint32 len = 8;
+	float data[len];
+//	DsbLcModulator mod(data, len*4);
+	float temp;
 
 	while(true) {
-		char* pt1 = (char*) &data;
-		const char * pt2 = (const char*) &data;
-		cin.get(pt1, 16384);
-		cout.write(pt2, 16384);
+		for(int i = 0; i < len; i++) {
+			scanf("%f", &data[i]);
+		}
+
+//		mod.Mod();
+
+		for(int i = 0; i < len; i++) {
+			printf("%f", data[i]);
+		}
+
 	}
 
 }
