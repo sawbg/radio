@@ -6,20 +6,19 @@
 using namespace std;
 
 int main() {
-	const uint32 len = 8;
-	float data[len];
-//	DsbLcModulator mod(data, len*4);
-	float temp;
+	const uint16 len = 256;
+	uint8 data[len];
+	DsbLcModulator mod(data, len);
 
 	while(true) {
 		for(int i = 0; i < len; i++) {
-			scanf("%f", &data[i]);
+			data[i] = (uint8)getchar();
 		}
 
-//		mod.Mod();
+		mod.Mod();
 
 		for(int i = 0; i < len; i++) {
-			printf("%f", data[i]);
+			putchar((int)data[i]);
 		}
 
 	}

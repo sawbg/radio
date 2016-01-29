@@ -2,111 +2,152 @@
 #define modulation_H
 
 #include <cmath>
+#include <cstdlib>
+#include <vector>
 
 #include "definitions.hpp"
 
-/**
- *
- */
-class Modulator {
-	public:
-		/**
-		 *
-		 */
-		virtual void Mod() = 0;
+namespace lolz {
 
-	protected:
-		/**
-		 *
-		 */
-		float32* carrier;
-		
-		/**
-		 *
-		 */
-		uint32 carrInd = 0;
+	/**
+	 *
+	 */
+	class Modulator {
+		public:
+			/**
+			 *
+			 */
+			virtual void Mod() = 0;
 
-		/**
-		 *
-		 */
-		float* data;
+		protected:
+			/**
+			 *
+			 */
+			std::vector<float> carrier;
 
-		/**
-		 *
-		 */
-		float32 rate;
+			/**
+			 *
+			 */
+			uint32 carrInd = 0;
 
-		/**
-		 *
-		 */
-		uint16 size;
+			/**
+			 *
+			 */
+			uint8* data;
 
-		/**
-		 *
-		 */
-		Modulator(float* data, uint16 size)
-			: Modulator(2000, 48000, data, size) {};
+			/**
+			 *
+			 */
+			float32 rate;
 
-		/**
-		 *
-		 */
-		Modulator(float32 freqInter, uint32 rate,
-				float* data,  uint16 size);
+			/**
+			 *
+			 */
+			uint16 size;
 
-	private:
-		/**
-		 *
-		 */
-		float32 freqCarrier;
+			/**
+			 *
+			 */
+			Modulator(uint8 data[], uint16 size)
+				: Modulator(2000, 48000, data, size) {};
 
-		/**
-		 *
-		 */
-		void makeCarrier();
-};
+			/**
+			 *
+			 */
+			Modulator(float32 freqInter, uint32 rate,
+					uint8 data[], uint16 size);
 
-class DsbLcModulator : Modulator {
-	public:
-		/**
-		 *
-		 */
-		DsbLcModulator(float* data, uint16 size)
-			: Modulator(data,size) {};
+		private:
+			/**
+			 *
+			 */
+			float32 freqCarrier;
 
-		/**
-		 *
-		 */
-		DsbLcModulator(float32 freqInter, uint32 rate,
-				float* data, uint16 size)
-			: Modulator(freqInter, rate, data, size) {};
+			/**
+			 *
+			 */
+			void makeCarrier();
+	};
 
-		/**
-		 *
-		 */
-		void Mod();
-};
+	class DsbLcModulator : Modulator {
+		public:
+			/**
+			 *
+			 */
+			DsbLcModulator(uint8 data[], uint16 size)
+				: Modulator(data,size) {};
 
-Modulator::Modulator(float32 carrier, uint32 rate, float* data, uint16 size) {
-	freqCarrier = carrier;
-	this->rate = rate;
-	this->data = data;
-	this->size = size;
-	makeCarrier();
-}
+			/**
+			 *
+			 */
+			DsbLcModulator(uint8 freqInter, uint32 rate,
+					uint8 data[], uint16 size)
+				: Modulator(freqInter, rate, data, size) {};
 
-void Modulator::makeCarrier() {
-	for(int i = 0; i < rate; i++) {
-		carrier[i] = sin(2 * M_PI * freqCarrier * (float)i / rate);
+			/**
+			 *
+			 */
+			//	void Mod();
+	};
+
+	class DsbScModulator : Modulator {
+		public:
+			/*
+			 *
+			 */
+			DsbScModulator(uint8 data[], uint16 size)
+				: Modulator(data,size) {};
+
+			/**
+			 *
+			 */
+			DsbScModulator(uint8 freqInter, uint32 rate,
+					uint8 data[], uint16 size)
+				: Modulator(freqInter, rate, data, size) {};
+	};
+
+	Modulator::Modulator(float32 carrier,
+			uint32 rate, uint8 data[],
+			uint16 size) {
+		freqCarrier = carrier;
+		this->rate = rate;
+		this->data = data;
+		this->size = size;
+		makeCarrier();
+	}
+
+	void Modulator::makeCarrier() {
+		for(int i = 0; i < rate; i++) {
+			carrier.push_back(sin(2 * M_PI * freqCarrier
+						* (float)i / rate));
+		}
+	}
+
+	void DsbLcModulator::Mod() {
+		float temp;
+
+		for(int i = 0; i < size; i++,
+				carrInd = (carrInd < rate ? carrInd + 1 : 0)) {
+
+			/*
+			 * Normally, 1 would be subtracted from temp in the
+			 * uint8 to float conversion, but we'd also add one for
+			 * DSB-LC modulation, so it cancels out.
+			 */
+			temp = ((float)data[i]/128);
+			data[i] = (temp * carrier[carrInd] + 1) * 128;
+		}
+	}
+
+	void DsbScModulator::Mod() {
+		float temp;
+
+		for(int i = 0; i < size; i++,
+				carrInd = (carrInd < rate ? carrInd + 1 : 0)) {
+			temp = ((float)data[i]/128) - 1;
+			data[i] = (temp * carrier[carrInd] + 1) * 128;
+		}
 	}
 }
-
-void DsbLcModulator::Mod() {
-	for(int i = 0; i < size;
-			i++, carrInd = (carrInd < rate ? carrInd + 1 : 0)) {
-		char hey = *((char*)&data[i]);
-		data[i] = (data[i] + 1) * carrier[carrInd];
-	}
-}
-
 
 #endif

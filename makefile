@@ -1,8 +1,8 @@
-GCC = g++-4.9
-CPPFLAGS = -g -std=gnu++14
+GCC = g++
+CPPFLAGS = -g -std=gnu++14 
 
-fft-test.cpp
-	$(GCC) src/fft_test.cpp -o bin/fft-test $(CPPFLAGS)
+alsa-test:
+	$(GCC) $(CPPFLAGS) src/alsa_test.cpp -o bin/alsatest -O0 -lasound
 
 docs:
 	rm -r doc/
@@ -14,3 +14,6 @@ docs:
 
 count:
 	find src/ -name '*' | xargs wc -l  # works assuming there's no subdirectories
+
+piped-test:
+	$(GCC) $(CPPFLAGS) src/piped_test.cpp -o bin/pipedtest
