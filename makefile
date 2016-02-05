@@ -15,5 +15,12 @@ docs:
 count:
 	find src/ -name '*' | xargs wc -l  # works assuming there's no subdirectories
 
+fft-test:
+	$(GCC) $(CPPFLAGS) src/fft_test.cpp -o bin/fft-test
+
+fft-test2:
+	$(GCC) $(CPPFLAGS) src/fft_test2.cpp -o bin/fft-test2
+
+
 piped-test:
 	$(GCC) $(CPPFLAGS) src/piped_test.cpp -o bin/pipedtest
