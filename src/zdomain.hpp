@@ -1,3 +1,6 @@
+#ifndef zdomain_H
+#define zdomain_H
+
 #include <complex>
 
 #include "definitions.hpp"
@@ -5,7 +8,7 @@
 namespace lolz {
 
 	/**
-	 *
+	 * 
 	 */
 	void aconj(std::complex<float32>* data, uint32 size);
 
@@ -23,6 +26,11 @@ namespace lolz {
 	 *
 	 */
 	void ifft(std::complex<float32>* data, uint32 size);
+
+	/**
+	 *
+	 */
+	void makeIQ(float32* data, float32* dest, uint32 size);
 
 	void aconj(std::complex<float32>* data, uint32 size) {
 		for(int i = 0; i < size; i++) {
@@ -107,4 +115,16 @@ namespace lolz {
 			data[i] /= size;
 		}
 	}
+
+	void makeIQ(float32* data, float32* dest, uint32 size) {
+		float32 quadData[size];
+		hilbert(data, quadData, size);
+
+		for(int i = 0; i < 2 * size; i += 2) {
+			dest[i] = quadData[i/2];
+			dest[i+1] = data[i/2];
+		}
+	}
 }
+
+#endif
