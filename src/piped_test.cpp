@@ -2,41 +2,36 @@
 #include <cstdio>
 #include <unistd.h>
 
+#include "Filter.hpp"
 #include "modulation.hpp"
+#include "zdomain.hpp"
 
 using namespace std;
 using namespace lolz;
 
 int main() {
-	const uint16 len = 48000;
+	const uint16 len = 16384;
 	float32 data[len];
-	uint16 index = 0;
-	float32 vals[48000];
+	float32 iqData[2*len];
+	DsbScModulator mod(data, len);
 
-	for(int i = 0; i < 48000; i++) {
-		vals[i] = cos(2*M_PI*20000*(float)i/48000);
+	vector<vector<float32>> baseFilterVector = { vector<float32> {
+
+
+	Filter baseFilter;
+
+
+	for(int i = 0; i < len; i++) {
+		//data[i] = sin(2*3.141592*440*i/len);
 	}
 
-	for(int i = 0; i <= 3; i++) {
-		cerr << "header" << endl;
-		putchar((int)255);
-	}
+
 
 	while(true) {
-		cerr << "loop" << endl;
-	
-		for(int i = 0; i < len; i++) {
-			//data[i] = (uint8)getchar();
-			if(index >= 48000) index = 0;
-//			read(STDIN_FILENO, &data, len);
-		}
-
-//		mod.Mod();
-
-		for(int i = 0; i < len; i++) {
-			write(STDOUT_FILENO, &vals, len);
-		}
-
+		read(STDIN_FILENO, &data, len * sizeof(float32));
+		//mod.Mod();
+		makeIQ(data, iqData, len);
+		write(STDOUT_FILENO, &iqData,  2 * len * sizeof(float32));
 	}
 
 }
