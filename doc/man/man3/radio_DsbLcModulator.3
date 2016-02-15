@@ -1,0 +1,72 @@
+.TH "radio::DsbLcModulator" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio::DsbLcModulator \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <modulation\&.hpp>\fP
+.PP
+Inherits \fBradio::Modulator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDsbLcModulator\fP (\fBfloat32\fP \fBdata\fP[], \fBuint32\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "\fBDsbLcModulator\fP (\fBuint8\fP freqInter, \fBuint32\fP \fBrate\fP, \fBfloat32\fP \fBdata\fP[], \fBuint32\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "void \fBMod\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 100 of file modulation\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::DsbLcModulator::DsbLcModulator (\fBfloat32\fPdata[], \fBuint32\fPsize)\fC [inline]\fP"
+Creates a double-sideband, large-carrier (i\&.e\&., broadcast AM modulation) \fBModulator\fP with the default intermediate frequency and sampling rate\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the data array initially containing the baseband signal
+.br
+\fIsize\fP the number of elements in the data array 
+.RE
+.PP
+
+.PP
+Definition at line 112 of file modulation\&.hpp\&.
+.SS "radio::DsbLcModulator::DsbLcModulator (\fBuint8\fPfreqInter, \fBuint32\fPrate, \fBfloat32\fPdata[], \fBuint32\fPsize)\fC [inline]\fP"
+Creates a double-sideband, large-carrier (i\&.e\&., broadcast AM modulation) \fBModulator\fP with the given parameters\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfreqInter\fP the frequency of the IF carrier sinusoid
+.br
+\fIrate\fP the sampling rate of the baseband and IF signals
+.br
+\fIdata\fP the array holding initially the baseband signal
+.br
+\fIsize\fP the number of elements in data 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file modulation\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void radio::DsbLcModulator::Mod ()\fC [virtual]\fP"
+Modulates the data using double-sideband, large-carrier modulation\&. 
+.PP
+Implements \fBradio::Modulator\fP\&.
+.PP
+Definition at line 194 of file modulation\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classradio_1_1Filter" kind="class" prot="public">
+    <compoundname>radio::Filter</compoundname>
+    <includes refid="Filter_8hpp" local="no">Filter.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" prot="protected" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>uint8 radio::Filter::eqLength</definition>
+        <argsstring></argsstring>
+        <name>eqLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The order of the filter transfer function (i.e., the maximum of the orders of the numerator and denominator). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="60" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" compoundref="Filter_8hpp" startline="91" endline="109">Filter</referencedby>
+        <referencedby refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" compoundref="Filter_8hpp" startline="111" endline="155">Pass</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" prot="protected" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+        <definition>uint32 radio::Filter::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of elements in the data array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="65" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" compoundref="Filter_8hpp" startline="91" endline="109">Filter</referencedby>
+        <referencedby refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" compoundref="Filter_8hpp" startline="111" endline="155">Pass</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" prot="protected" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref> *</type>
+        <definition>float32* radio::Filter::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A pointer to the data array that should be filtered when <ref refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" kindref="member">Pass()</ref> is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="71" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" compoundref="Filter_8hpp" startline="91" endline="109">Filter</referencedby>
+        <referencedby refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" compoundref="Filter_8hpp" startline="111" endline="155">Pass</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" prot="protected" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref></type>
+        <definition>fparams radio::Filter::diffEq</definition>
+        <argsstring></argsstring>
+        <name>diffEq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A vector containing two vectors of float32&apos;&apos;&apos;s (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="79" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" compoundref="Filter_8hpp" startline="91" endline="109">Filter</referencedby>
+        <referencedby refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" compoundref="Filter_8hpp" startline="111" endline="155">Pass</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" prot="protected" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref></type>
+        <definition>fparams radio::Filter::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vectors of the original (x[n]) and filtered (y[n]) values of the data array used to calculate the first filtered values of the data array. In spite of the type name, this variable does NOT contains filter parameters but rather the same data type that fparams represents. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="88" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" compoundref="Filter_8hpp" startline="91" endline="109">Filter</referencedby>
+        <referencedby refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" compoundref="Filter_8hpp" startline="111" endline="155">Pass</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>radio::Filter::Filter</definition>
+        <argsstring>(float32 *data, uint32 size, fparams &amp;diffEq)</argsstring>
+        <name>Filter</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref> &amp;</type>
+          <declname>diffEq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes <ref refid="classradio_1_1Filter" kindref="compound">Filter</ref> based on a difference equation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array to be filtered. The filtered data will be placed here.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in the data array</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diffEq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector containing two vectors of float32&apos;&apos;&apos;s (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="47" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="91" bodyend="109"/>
+        <references refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" compoundref="Filter_8hpp" startline="71">data</references>
+        <references refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" compoundref="Filter_8hpp" startline="65">size</references>
+        <references refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" compoundref="Filter_8hpp" startline="79">diffEq</references>
+        <references refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" compoundref="Filter_8hpp" startline="60">eqLength</references>
+        <references refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" compoundref="definitions_8hpp" startline="55">radio::NUM</references>
+        <references refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" compoundref="definitions_8hpp" startline="55">radio::DEN</references>
+        <references refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" compoundref="Filter_8hpp" startline="88">prev</references>
+        <references refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" compoundref="definitions_8hpp" startline="50">radio::OLD</references>
+        <references refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" compoundref="definitions_8hpp" startline="50">radio::NEW</references>
+      </memberdef>
+      <memberdef kind="function" id="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void radio::Filter::Pass</definition>
+        <argsstring>()</argsstring>
+        <name>Pass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Passes the data array through the digital filter and accounts for x[n] and y[n] values from the previous call to <ref refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" kindref="member">Pass()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/Filter.hpp" line="53" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="111" bodyend="155"/>
+        <references refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" compoundref="Filter_8hpp" startline="65">size</references>
+        <references refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" compoundref="Filter_8hpp" startline="79">diffEq</references>
+        <references refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" compoundref="definitions_8hpp" startline="55">radio::NUM</references>
+        <references refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" compoundref="Filter_8hpp" startline="88">prev</references>
+        <references refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" compoundref="definitions_8hpp" startline="50">radio::OLD</references>
+        <references refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" compoundref="Filter_8hpp" startline="71">data</references>
+        <references refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" compoundref="definitions_8hpp" startline="50">radio::NEW</references>
+        <references refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" compoundref="definitions_8hpp" startline="55">radio::DEN</references>
+        <references refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" compoundref="Filter_8hpp" startline="60">eqLength</references>
+        <referencedby refid="baseband__filter__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="baseband__filter__test_8cpp" startline="24" endline="45">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements a z-domain filter on a specified array of float32&apos;&apos;&apos;s (a.k.a. singles, floats). It requires the transfer function coefficients already be calculated (i.e., it does not generate the coefficients based on desired filter characteristics). MATLAB and its Signal Processing Toolbox can be used to generate the coefficients.</para><para>While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array sequentially to effectively implement a multi-section filter.</para><para>The class is designed (but not tested!) to allow for a z-domain transfer function with different orders of the zeros (numerator) and poles (denominator). </para>    </detaileddescription>
+    <location file="/home/pi/radio/src/Filter.hpp" line="31" column="1" bodyfile="/home/pi/radio/src/Filter.hpp" bodystart="31" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" prot="protected" virt="non-virtual"><scope>radio::Filter</scope><name>data</name></member>
+      <member refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" prot="protected" virt="non-virtual"><scope>radio::Filter</scope><name>diffEq</name></member>
+      <member refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" prot="protected" virt="non-virtual"><scope>radio::Filter</scope><name>eqLength</name></member>
+      <member refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" prot="public" virt="non-virtual"><scope>radio::Filter</scope><name>Filter</name></member>
+      <member refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" prot="public" virt="non-virtual"><scope>radio::Filter</scope><name>Pass</name></member>
+      <member refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" prot="protected" virt="non-virtual"><scope>radio::Filter</scope><name>prev</name></member>
+      <member refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" prot="protected" virt="non-virtual"><scope>radio::Filter</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

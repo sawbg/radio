@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classradio_1_1DsbScModulator">
+<title>radio::DsbScModulator class Reference</title>
+<para>
+    <programlisting>#include <link linkend="modulation_8hpp">&lt;modulation.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for radio::DsbScModulator</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1DsbScModulator__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for radio::DsbScModulator</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1DsbScModulator__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1DsbScModulator_1a42c1c1334d51a32a36dce54cd8cf1201">DsbScModulator</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1DsbScModulator_1a14281797132e055bc2e2a726ca5932a0">DsbScModulator</link> (
+<link linkend="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79">uint8</link> freqInter, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> rate, <link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1DsbScModulator_1a0925dbd82745c282a488a45b0ee1410b">Mod</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classradio_1_1DsbScModulator_1a42c1c1334d51a32a36dce54cd8cf1201">
+                <title>radio::DsbScModulator::DsbScModulator (float32 data[], uint32 size)</title> <emphasis></emphasis>
+                
+<para>Creates a double-sideband, large-carrier (i.e., broadcast AM modulation) <link linkend="classradio_1_1Modulator">Modulator</link> with the default intermediate frequency and sampling rate.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>data</entry>
+                                <entry>
+<para>the data array initially containing the baseband signal</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>size</entry>
+                                <entry>
+<para>the number of elements in the data array </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classradio_1_1DsbScModulator_1a14281797132e055bc2e2a726ca5932a0">
+                <title>radio::DsbScModulator::DsbScModulator (uint8 freqInter, uint32 rate, float32 data[], uint32 size)</title> <emphasis></emphasis>
+                
+<para>Creates a double-sideband, supressed-carrier <link linkend="classradio_1_1Modulator">Modulator</link> with the given parameters.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>freqInter</entry>
+                                <entry>
+<para>the frequency of the IF carrier sinusoid</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>rate</entry>
+                                <entry>
+<para>the sampling rate of the baseband and IF signals</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>data</entry>
+                                <entry>
+<para>the array holding initially the baseband signal</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>size</entry>
+                                <entry>
+<para>the number of elements in data </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classradio_1_1DsbScModulator_1a0925dbd82745c282a488a45b0ee1410b">
+                <title>void radio::DsbScModulator::Mod ()</title> <emphasis></emphasis>
+                
+<para>Modulates the data using double-sideband, supressed-carrier modulation. </para>
+
+            </section>
+</section>

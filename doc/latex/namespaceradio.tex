@@ -1,0 +1,325 @@
+\hypertarget{namespaceradio}{\section{radio Namespace Reference}
+\label{namespaceradio}\index{radio@{radio}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classradio_1_1DsbLcModulator}{Dsb\+Lc\+Modulator}
+\item 
+class \hyperlink{classradio_1_1DsbScModulator}{Dsb\+Sc\+Modulator}
+\item 
+class \hyperlink{classradio_1_1Filter}{Filter}
+\item 
+class \hyperlink{classradio_1_1Modulator}{Modulator}
+\item 
+class \hyperlink{classradio_1_1ZDomain}{Z\+Domain}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{Age} \{ \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{O\+L\+D}, 
+\hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}{N\+E\+W}
+ \}
+\item 
+enum \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{Fractional} \{ \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{N\+U\+M}, 
+\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{D\+E\+N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26}{aconj} (\hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} $\ast$data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\item 
+void \hyperlink{namespaceradio_ab146b5bf7f1c005939b024c9c4910a77}{fft} (\hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} $\ast$data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\item 
+void \hyperlink{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0}{hilbert} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$data, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$dest, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\item 
+void \hyperlink{namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb}{ifft} (\hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} $\ast$data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\item 
+void \hyperlink{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}{make\+I\+Q} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$data, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$dest, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{definitions_8hpp_af19387f95516e2132a08cf60503f22a5}{fparams} \hyperlink{namespaceradio_a9bd902e9216499953a5906de73dc1796}{F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This namespace contains all the classes, functions, and enumerations used in the application. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{\index{radio@{radio}!Age@{Age}}
+\index{Age@{Age}!radio@{radio}}
+\subsubsection[{Age}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf radio\+::\+Age}}}\label{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}
+Describes the age of a filter (from last Pass() or in this Pass()) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\+L\+D@{O\+L\+D}!radio@{radio}}\index{radio@{radio}!O\+L\+D@{O\+L\+D}}\item[{\em 
+\hypertarget{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{O\+L\+D}\label{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}
+}]\index{N\+E\+W@{N\+E\+W}!radio@{radio}}\index{radio@{radio}!N\+E\+W@{N\+E\+W}}\item[{\em 
+\hypertarget{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}{N\+E\+W}\label{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 50 of file definitions.\+hpp.
+
+\hypertarget{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{\index{radio@{radio}!Fractional@{Fractional}}
+\index{Fractional@{Fractional}!radio@{radio}}
+\subsubsection[{Fractional}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf radio\+::\+Fractional}}}\label{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}
+Describes the numerator and denominator of a z-\/domain transfer function \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+U\+M@{N\+U\+M}!radio@{radio}}\index{radio@{radio}!N\+U\+M@{N\+U\+M}}\item[{\em 
+\hypertarget{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{N\+U\+M}\label{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}
+}]\index{D\+E\+N@{D\+E\+N}!radio@{radio}}\index{radio@{radio}!D\+E\+N@{D\+E\+N}}\item[{\em 
+\hypertarget{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{D\+E\+N}\label{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 55 of file definitions.\+hpp.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26}{\index{radio@{radio}!aconj@{aconj}}
+\index{aconj@{aconj}!radio@{radio}}
+\subsubsection[{aconj}]{\setlength{\rightskip}{0pt plus 5cm}void radio\+::aconj (
+\begin{DoxyParamCaption}
+\item[{{\bf cfloat32} $\ast$}]{data, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26}
+Replaces the values in an array of complex float32's with their respective conjugates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the array whose values should be replaced with their respective conjugates\\
+\hline
+{\em size} & the number of elements in the data array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file zdomain.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespaceradio_ab146b5bf7f1c005939b024c9c4910a77}{\index{radio@{radio}!fft@{fft}}
+\index{fft@{fft}!radio@{radio}}
+\subsubsection[{fft}]{\setlength{\rightskip}{0pt plus 5cm}void radio\+::fft (
+\begin{DoxyParamCaption}
+\item[{{\bf cfloat32} $\ast$}]{data, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceradio_ab146b5bf7f1c005939b024c9c4910a77}
+Replaces the values of an array of cfloat32's with the array's D\+F\+T using a decimation-\/in-\/frequency algorithm.
+
+This code is based on code from \href{http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B}{\tt http\+://rosettacode.\+org/wiki/\+Fast\+\_\+\+Fourier\+\_\+transform\#\+C.\+2\+B.\+2\+B}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the array whose values should be replaced with its D\+F\+T\\
+\hline
+{\em size} & the number of elements in the data array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file zdomain.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0}{\index{radio@{radio}!hilbert@{hilbert}}
+\index{hilbert@{hilbert}!radio@{radio}}
+\subsubsection[{hilbert}]{\setlength{\rightskip}{0pt plus 5cm}void radio\+::hilbert (
+\begin{DoxyParamCaption}
+\item[{{\bf float32} $\ast$}]{data, }
+\item[{{\bf float32} $\ast$}]{dest, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0}
+Performs the hilbert transfor of an array of float32's.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the source array of the R\+E\+A\+L numbers of which to take the Hilbert transform\\
+\hline
+{\em dest} & the destination array of R\+E\+A\+L numbers for the results of the Hilbert transform\\
+\hline
+{\em size} & the number of elements in the data and dest arrays \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 138 of file zdomain.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb}{\index{radio@{radio}!ifft@{ifft}}
+\index{ifft@{ifft}!radio@{radio}}
+\subsubsection[{ifft}]{\setlength{\rightskip}{0pt plus 5cm}void radio\+::ifft (
+\begin{DoxyParamCaption}
+\item[{{\bf cfloat32} $\ast$}]{data, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb}
+Replaces the values of an array of cfloat32's with the array's inverse D\+F\+T.
+
+This code is based on code from \href{http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B}{\tt http\+://rosettacode.\+org/wiki/\+Fast\+\_\+\+Fourier\+\_\+transform\#\+C.\+2\+B.\+2\+B}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the array whose values should be replaced with its inverse D\+F\+T\\
+\hline
+{\em size} & the number of elements in the data array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file zdomain.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}{\index{radio@{radio}!make\+I\+Q@{make\+I\+Q}}
+\index{make\+I\+Q@{make\+I\+Q}!radio@{radio}}
+\subsubsection[{make\+I\+Q}]{\setlength{\rightskip}{0pt plus 5cm}void radio\+::make\+I\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf float32} $\ast$}]{data, }
+\item[{{\bf float32} $\ast$}]{dest, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}
+Produces an interleaved array of first an element from an original array of data and then an element from the original data's Hilbert transform. This function is intended to generate a two-\/channel output (I/\+Q output) for mixing applications.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the original data (left channel)\\
+\hline
+{\em dest} & the interleaved data (left channel original data, right channel transformed data) twice the size of the original data array\\
+\hline
+{\em size} & the number of elements in the data array (N\+O\+T in the destination array) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file zdomain.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceradio_a7166522e76ff88e8d482491b1b6e2275_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceradio_a9bd902e9216499953a5906de73dc1796}{\index{radio@{radio}!F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D@{F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D}}
+\index{F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D@{F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D}!radio@{radio}}
+\subsubsection[{F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fparams} radio\+::\+F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D}}\label{namespaceradio_a9bd902e9216499953a5906de73dc1796}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ std::vector<float32> \{
+        0.0008977019461,
+            -0.002215694636,
+            0.001372192986,
+            0.001372192986,
+            -0.002215694636,
+            0.0008977019461
+    \}, std::vector<float32> \{
+        1,
+            -4.678616047,
+            8.822912216,
+            -8.379911423,
+            4.007629871,
+            -0.7719064355
+    \} \}
+\end{DoxyCode}
+Baseband filter coefficients. 
+
+Definition at line 19 of file fvectors.\+hpp.
+

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>My Project</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespaceradio.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestd.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+        <xi:include href="bug.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="classradio_1_1DsbLcModulator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classradio_1_1DsbScModulator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classradio_1_1Filter.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classradio_1_1Modulator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classradio_1_1ZDomain.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="sradio.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="doxygen_8config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="makefile.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="alsa__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="baseband__filter__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="definitions_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="fft__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="fft__test2_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Filter_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="fvectors_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="iq__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="mic__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="modulation_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="zdomain_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ZDomain_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Directory Documentation</title>
+        <xi:include href="dir_2ea30aa2956a8db99dd22aa5e597f384.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_34c6163d67acbbcfc56107279c411fb1.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

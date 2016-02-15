@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="ZDomain_8hpp" kind="file">
+    <compoundname>ZDomain.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">complex</includes>
+    <includes local="no">functional</includes>
+    <includes refid="definitions_8hpp" local="yes">definitions.hpp</includes>
+    <incdepgraph>
+      <node id="201">
+        <label>functional</label>
+      </node>
+      <node id="198">
+        <label>cmath</label>
+      </node>
+      <node id="202">
+        <label>definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>complex</label>
+      </node>
+      <node id="197">
+        <label>src/ZDomain.hpp</label>
+        <link refid="ZDomain.hpp"/>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classradio_1_1ZDomain" prot="public">radio::ZDomain</innerclass>
+    <innernamespace refid="namespaceradio">radio</innernamespace>
+    <briefdescription>
+<para>This is an abandoned, overly complicated attempt to have a class housing z-domain functions. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Samuel Andrew Wisner, <ulink url="mailto:awisner94@gmail.com">awisner94@gmail.com</ulink> </para></simplesect>
+<xrefsect id="bug_1_bug000002"><xreftitle>Bug</xreftitle><xrefdescription><para>Everything. Just everything. </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>ZDomain_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ZDomain_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8hpp" kindref="compound">definitions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceradio" kindref="compound">radio</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="classradio_1_1ZDomain" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classradio_1_1ZDomain" kindref="compound">ZDomain</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref><sp/><ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classradio_1_1ZDomain_1afd6f4cc19657c9074d1afb9b89a5fbc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/><ref refid="classradio_1_1ZDomain_1afd6f4cc19657c9074d1afb9b89a5fbc2" kindref="member">orig</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;float32&gt;*<sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1a4eec389cfb236f28cda5e66a65d86558" kindref="member">ZDomain</ref>(<ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/>orig,<sp/><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/>dest,<sp/><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref><sp/>size);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1ae9e0bc3e12b7ac15099d54fe13b00a86" kindref="member">~ZDomain</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1a8ce67c0185428f8bf8de998481798593" kindref="member">fft</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1ac6de3f5864558c598c4043a551aa073a" kindref="member">hilbert</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1a7f9c3519330e336c5382abe884a83b7a" kindref="member">ifft</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1a59e1af33c1607f813e5c4885036ee30d" kindref="member">_fft</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1ad9e508b8c400e5b3eae99ed411d66441" kindref="member">_ifft</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classradio_1_1ZDomain_1a4eec389cfb236f28cda5e66a65d86558" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1a4eec389cfb236f28cda5e66a65d86558" kindref="member">ZDomain::ZDomain</ref>(<ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/>orig,<sp/><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;orig<sp/>=<sp/><ref refid="classradio_1_1ZDomain_1afd6f4cc19657c9074d1afb9b89a5fbc2" kindref="member">orig</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;size<sp/>=<sp/><ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref><sp/>=<sp/>(std::complex&lt;float32&gt;*)malloc(size</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(std::complex&lt;float32&gt;*));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[i]<sp/>=<sp/>std::complex&lt;float32&gt;(orig[i],<sp/>0);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classradio_1_1ZDomain_1ae9e0bc3e12b7ac15099d54fe13b00a86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1ae9e0bc3e12b7ac15099d54fe13b00a86" kindref="member">ZDomain::~ZDomain</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classradio_1_1ZDomain_1a59e1af33c1607f813e5c4885036ee30d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1a59e1af33c1607f813e5c4885036ee30d" kindref="member">ZDomain::_fft</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>k<sp/>=<sp/><ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>n;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref><sp/>thetaT<sp/>=<sp/>M_PI<sp/>/<sp/>N;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;float32&gt;<sp/>phiT(cos(thetaT),<sp/>sin(thetaT));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;float32&gt;<sp/>T;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(k<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>k;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phiT<sp/>=<sp/>phiT<sp/>*<sp/>phiT;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>=<sp/>1.0L;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/>k;<sp/>l++)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>a<sp/>=<sp/>l;<sp/>a<sp/>&lt;<sp/><ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>;<sp/>a<sp/>+=<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>b<sp/>=<sp/>a<sp/>+<sp/>k;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;float32&gt;<sp/>t<sp/>=<sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[a]<sp/>-<sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[b];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[a]<sp/>+=<sp/>temp[b];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[b]<sp/>=<sp/>t<sp/>*<sp/>T;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>*=<sp/>phiT;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decimate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>m<sp/>=<sp/>(<ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref>)log2(<ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref><sp/>a<sp/>=<sp/>0;<sp/>a<sp/>&lt;<sp/><ref refid="classradio_1_1ZDomain_1a4cd757a40cbd98b29a64557fab4b23f5" kindref="member">size</ref>;<sp/>a++)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reverse<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xaaaa)<sp/>&gt;&gt;<sp/>1)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x5555)<sp/>&lt;&lt;<sp/>1));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xcccc)<sp/>&gt;&gt;<sp/>2)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x3333)<sp/>&lt;&lt;<sp/>2));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xf0f0)<sp/>&gt;&gt;<sp/>4)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x0f0f)<sp/>&lt;&lt;<sp/>4));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xff00)<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x00ff)<sp/>&lt;&lt;<sp/>8));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>((b<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>(b<sp/>&lt;&lt;<sp/>8))<sp/>&gt;&gt;<sp/>(16<sp/>-<sp/>m);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b<sp/>&gt;<sp/>a)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;float32&gt;<sp/>t<sp/>=<sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[a];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[a]<sp/>=<sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[b];</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1ZDomain_1aac575115f72d07c8e15178e9707592ce" kindref="member">temp</ref>[b]<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classradio_1_1ZDomain_1ad9e508b8c400e5b3eae99ed411d66441" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1ad9e508b8c400e5b3eae99ed411d66441" kindref="member">ZDomain::_ifft</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*void<sp/>ZDomain::fft(std::complex&lt;float32&gt;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classradio_1_1ZDomain_1ac6de3f5864558c598c4043a551aa073a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1ZDomain_1ac6de3f5864558c598c4043a551aa073a" kindref="member">ZDomain::hilbert</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*void<sp/>ZDomain::ifft<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"></highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/pi/radio/src/ZDomain.hpp"/>
+  </compounddef>
+</doxygen>

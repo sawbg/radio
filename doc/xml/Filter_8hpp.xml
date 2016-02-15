@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Filter_8hpp" kind="file">
+    <compoundname>Filter.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">vector</includes>
+    <includes refid="definitions_8hpp" local="yes">definitions.hpp</includes>
+    <includedby refid="baseband__filter__test_8cpp" local="yes">src/baseband_filter_test.cpp</includedby>
+    <incdepgraph>
+      <node id="154">
+        <label>cmath</label>
+      </node>
+      <node id="156">
+        <label>definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>src/Filter.hpp</label>
+        <link refid="Filter.hpp"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>vector</label>
+      </node>
+      <node id="157">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="159">
+        <label>src/baseband_filter_test.cpp</label>
+        <link refid="baseband__filter__test_8cpp"/>
+      </node>
+      <node id="158">
+        <label>src/Filter.hpp</label>
+        <link refid="Filter.hpp"/>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classradio_1_1Filter" prot="public">radio::Filter</innerclass>
+    <innernamespace refid="namespaceradio">radio</innernamespace>
+    <briefdescription>
+<para>Defines the Filter class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Samuel Andrew Wisner, <ulink url="mailto:awisner94@gmail.com">awisner94@gmail.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>Filter_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Filter_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8hpp" kindref="compound">definitions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceradio" kindref="compound">radio</ref><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="classradio_1_1Filter" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classradio_1_1Filter" kindref="compound">Filter</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" kindref="member">Filter</ref>(<ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>,<sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>,<ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref>&amp;<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" kindref="member">Pass</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60" refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><ref refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" kindref="member">eqLength</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref><sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref><sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1" kindref="member">Filter::Filter</ref>(<ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>*<sp/>data,<sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>size,<sp/><ref refid="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5" kindref="member">fparams</ref>&amp;<sp/>diffEq)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data<sp/>=<sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;size<sp/>=<sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;diffEq<sp/>=<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" kindref="member">eqLength</ref><sp/>=<sp/>std::max(this-&gt;diffEq[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>].<ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>(),</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;diffEq[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" kindref="member">DEN</ref>].<ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>.push_back(std::vector&lt;float32&gt;());</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;diffEq[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>].size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" kindref="member">OLD</ref>].push_back(0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;diffEq[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" kindref="member">DEN</ref>].size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" kindref="member">NEW</ref>].push_back(0);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classradio_1_1Filter_1ad2793821801780809af385463bf8f197" kindref="member">Filter::Pass</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref><sp/>temp[<ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>first<sp/>values<sp/>in<sp/>filtered<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i&lt;<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>].size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" kindref="member">OLD</ref>].size();<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>+=<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>][j]<sp/>*<sp/>(j<sp/>&gt;<sp/>i<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" kindref="member">OLD</ref>][<ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" kindref="member">OLD</ref>].size()<sp/>-<sp/>(j<sp/>-<sp/>i)]<sp/>:<sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>[i<sp/>-<sp/>j]);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" kindref="member">NEW</ref>].size();<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>-=<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" kindref="member">DEN</ref>][j]<sp/>*<sp/>(j<sp/>&gt;<sp/>i</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" kindref="member">NEW</ref>][<ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" kindref="member">NEW</ref>].size()<sp/>-<sp/>(j<sp/>-<sp/>i)]<sp/>:<sp/>temp[i<sp/>-<sp/>j]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>the<sp/>REST<sp/>of<sp/>the<sp/>values<sp/>in<sp/>filtered<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classradio_1_1Filter_1a26a32320c4dffa8925ab5f0f06689e8d" kindref="member">eqLength</ref>;<sp/>i<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>].size();<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>+=<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>][j]<sp/>*<sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>[i<sp/>-<sp/>j];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>].size();<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>-=<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" kindref="member">DEN</ref>][j]<sp/>*<sp/>temp[i<sp/>-<sp/>j];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>final<sp/>values<sp/>of<sp/>data<sp/>and<sp/>filtered<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>size<sp/>-<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48" kindref="member">NUM</ref>].<ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>(),<sp/>j<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>;<sp/>i++,<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82" kindref="member">OLD</ref>][j]<sp/>=<sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>[i];</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>size<sp/>-<sp/><ref refid="classradio_1_1Filter_1abe705768a267844edfa2aaabfdac9f56" kindref="member">diffEq</ref>[<ref refid="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe" kindref="member">DEN</ref>].<ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>(),<sp/>j<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>;<sp/>i++,<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1ae7e324e76354063772bcb5f241a2eae9" kindref="member">prev</ref>[<ref refid="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686" kindref="member">NEW</ref>][j]<sp/>=<sp/>temp[i];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transfer<sp/>filtered<sp/>data<sp/>to<sp/>original<sp/>data&apos;s<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classradio_1_1Filter_1a7285b4c7263d8278e38abb14b5dca5d9" kindref="member">size</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classradio_1_1Filter_1a25459a2b762120df0102f00553344be2" kindref="member">data</ref>[i]<sp/>=<sp/>temp[i];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/pi/radio/src/Filter.hpp"/>
+  </compounddef>
+</doxygen>

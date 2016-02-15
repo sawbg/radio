@@ -1,0 +1,193 @@
+.TH "radio" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDsbLcModulator\fP"
+.br
+.ti -1c
+.RI "class \fBDsbScModulator\fP"
+.br
+.ti -1c
+.RI "class \fBFilter\fP"
+.br
+.ti -1c
+.RI "class \fBModulator\fP"
+.br
+.ti -1c
+.RI "class \fBZDomain\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBAge\fP { \fBOLD\fP, \fBNEW\fP }"
+.br
+.ti -1c
+.RI "enum \fBFractional\fP { \fBNUM\fP, \fBDEN\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaconj\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
+.br
+.ti -1c
+.RI "void \fBfft\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
+.br
+.ti -1c
+.RI "void \fBhilbert\fP (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fP size)"
+.br
+.ti -1c
+.RI "void \fBifft\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
+.br
+.ti -1c
+.RI "void \fBmakeIQ\fP (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fP size)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBfparams\fP \fBF_BASEBAND\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This namespace contains all the classes, functions, and enumerations used in the application\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBradio::Age\fP"
+Describes the age of a filter (from last Pass() or in this Pass()) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOLD \fP\fP
+.TP
+\fB\fINEW \fP\fP
+.PP
+Definition at line 50 of file definitions\&.hpp\&.
+.SS "enum \fBradio::Fractional\fP"
+Describes the numerator and denominator of a z-domain transfer function 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINUM \fP\fP
+.TP
+\fB\fIDEN \fP\fP
+.PP
+Definition at line 55 of file definitions\&.hpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "void radio::aconj (\fBcfloat32\fP *data, \fBuint32\fPsize)"
+Replaces the values in an array of complex float32's with their respective conjugates\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the array whose values should be replaced with their respective conjugates
+.br
+\fIsize\fP the number of elements in the data array 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file zdomain\&.hpp\&.
+.SS "void radio::fft (\fBcfloat32\fP *data, \fBuint32\fPsize)"
+Replaces the values of an array of cfloat32's with the array's DFT using a decimation-in-frequency algorithm\&.
+.PP
+This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the array whose values should be replaced with its DFT
+.br
+\fIsize\fP the number of elements in the data array 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file zdomain\&.hpp\&.
+.SS "void radio::hilbert (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fPsize)"
+Performs the hilbert transfor of an array of float32's\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the source array of the REAL numbers of which to take the Hilbert transform
+.br
+\fIdest\fP the destination array of REAL numbers for the results of the Hilbert transform
+.br
+\fIsize\fP the number of elements in the data and dest arrays 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file zdomain\&.hpp\&.
+.SS "void radio::ifft (\fBcfloat32\fP *data, \fBuint32\fPsize)"
+Replaces the values of an array of cfloat32's with the array's inverse DFT\&.
+.PP
+This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the array whose values should be replaced with its inverse DFT
+.br
+\fIsize\fP the number of elements in the data array 
+.RE
+.PP
+
+.PP
+Definition at line 158 of file zdomain\&.hpp\&.
+.SS "void radio::makeIQ (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fPsize)"
+Produces an interleaved array of first an element from an original array of data and then an element from the original data's Hilbert transform\&. This function is intended to generate a two-channel output (I/Q output) for mixing applications\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the original data (left channel)
+.br
+\fIdest\fP the interleaved data (left channel original data, right channel transformed data) twice the size of the original data array
+.br
+\fIsize\fP the number of elements in the data array (NOT in the destination array) 
+.RE
+.PP
+
+.PP
+Definition at line 168 of file zdomain\&.hpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBfparams\fP radio::F_BASEBAND"
+\fBInitial value:\fP
+.PP
+.nf
+= { std::vector<float32> {
+        0\&.0008977019461,
+            -0\&.002215694636,
+            0\&.001372192986,
+            0\&.001372192986,
+            -0\&.002215694636,
+            0\&.0008977019461
+    }, std::vector<float32> {
+        1,
+            -4\&.678616047,
+            8\&.822912216,
+            -8\&.379911423,
+            4\&.007629871,
+            -0\&.7719064355
+    } }
+.fi
+Baseband filter coefficients\&. 
+.PP
+Definition at line 19 of file fvectors\&.hpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespaceradio">
+<title>radio</title>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classradio_1_1DsbLcModulator">radio::DsbLcModulator</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classradio_1_1DsbScModulator">radio::DsbScModulator</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classradio_1_1Filter">radio::Filter</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classradio_1_1Modulator">radio::Modulator</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classradio_1_1ZDomain">radio::ZDomain</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3">Age</link> {
+<link linkend="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82">OLD</link>,
+<link linkend="namespaceradio_1a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686">NEW</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0dac">Fractional</link> {
+<link linkend="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48">NUM</link>,
+<link linkend="namespaceradio_1aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">DEN</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5">fparams</link> <link linkend="namespaceradio_1a9bd902e9216499953a5906de73dc1796">F_BASEBAND</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="namespaceradio_1aa04bb922c40cafb00a5603f1fc6d9c26">aconj</link> (
+<link linkend="definitions_8hpp_1a960be6b6614c08090c16574dba10a421">cfloat32</link> * data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="namespaceradio_1ab146b5bf7f1c005939b024c9c4910a77">fft</link> (
+<link linkend="definitions_8hpp_1a960be6b6614c08090c16574dba10a421">cfloat32</link> * data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="namespaceradio_1a285a47b4ed81e5662d2b6b4bae0188d0">hilbert</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * data, <link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * dest, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="namespaceradio_1a51add4e2faf6d58cabc3b4a3892420eb">ifft</link> (
+<link linkend="definitions_8hpp_1a960be6b6614c08090c16574dba10a421">cfloat32</link> * data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="namespaceradio_1a7166522e76ff88e8d482491b1b6e2275">makeIQ</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * data, <link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * dest, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This namespace contains all the classes, functions, and enumerations used in the application. </para>
+                <para>Definition at line 46 of file definitions.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>definitions.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+</section>

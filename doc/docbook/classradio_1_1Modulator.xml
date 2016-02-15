@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classradio_1_1Modulator">
+<title>radio::Modulator class Reference</title>
+<para>
+    <programlisting>#include <link linkend="modulation_8hpp">&lt;modulation.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for radio::Modulator</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1Modulator__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for radio::Modulator</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1Modulator__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float32 * carrier</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32 carrInd</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float32 * data</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float32 rate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32 size</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float32 freqCarrier</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="classradio_1_1Modulator_1a44e9de3acd9499b31da5064b039e7a15">Mod</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1Modulator_1a4ce73238d07f8703b7b905c9c6dba28e">Modulator</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1Modulator_1a07ffbd7e75e18027c60e77d4fc5b5e37">Modulator</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> freqInter, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> rate, <link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1Modulator_1a19cf1b3b60f9d45f200be2365be42f7c">makeCarrier</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This class, while not intended to be called directly, is a superclass for the classes of the modulation forms used in this project. </para>
+                <para>Definition at line 24 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+        <simplesect>
+            <title>Member Documentation</title>
+            <simplesect>
+                <title>float32* radio::Modulator::carrier</title>                
+<para>An array of sinusoid values of the carrier wave </para>
+
+                <para>Definition at line 35 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>uint32 radio::Modulator::carrInd</title>                
+<para>The index tracking the value of the carrier sinusoid (held in carrier) to be used in the next calculation </para>
+
+                <para>Definition at line 41 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float32* radio::Modulator::data</title>                
+<para>The data to modulate (i.e., baseband signal), which is then replaced by its modulated signal of the same sampling rate </para>
+
+                <para>Definition at line 47 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float32 radio::Modulator::rate</title>                
+<para>The sampling rate of the baseband and generated IF signals </para>
+
+                <para>Definition at line 52 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>uint32 radio::Modulator::size</title>                
+<para>The number of elements in the data array </para>
+
+                <para>Definition at line 57 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+        </simplesect>
+        <simplesect>
+            <title>Member Documentation</title>
+            <simplesect>
+                <title>float32 radio::Modulator::freqCarrier</title>                
+<para>The frequency of the IF carrier sinusoid </para>
+
+                <para>Definition at line 91 of file modulation.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>modulation.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+        </simplesect>
+            <section xml:id="classradio_1_1Modulator_1a44e9de3acd9499b31da5064b039e7a15">
+                <title>virtual void radio::Modulator::Mod ()=0</title> <emphasis></emphasis>
+                
+<para>Requires subclasses to implement a <link linkend="classradio_1_1Modulator_1a44e9de3acd9499b31da5064b039e7a15">Mod()</link> function. </para>
+
+            </section>
+            <section xml:id="classradio_1_1Modulator_1a4ce73238d07f8703b7b905c9c6dba28e">
+                <title>radio::Modulator::Modulator (float32 data[], uint32 size)</title> <emphasis></emphasis>
+                
+<para>Creates a <link linkend="classradio_1_1Modulator">Modulator</link> with a default carrier intermediate frequency and default sampling rate. Intended to be called only by subclasses.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>data</entry>
+                                <entry>
+<para>the data array initially containing the baseband signal</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>size</entry>
+                                <entry>
+<para>the number of elements in the data array </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classradio_1_1Modulator_1a07ffbd7e75e18027c60e77d4fc5b5e37">
+                <title>radio::Modulator::Modulator (float32 freqInter, uint32 rate, float32 data[], uint32 size)</title> <emphasis></emphasis>
+                
+<para>Creates a <link linkend="classradio_1_1Modulator">Modulator</link> with the specified parameters. Intended to be called only by subclasses.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>freqInter</entry>
+                                <entry>
+<para>the frequency of the IF carrier sinusoid</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>rate</entry>
+                                <entry>
+<para>the sampling rate of the baseband and IF signals</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>data</entry>
+                                <entry>
+<para>the array holding initially the baseband signal</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>size</entry>
+                                <entry>
+<para>the number of elements in data </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classradio_1_1Modulator_1a19cf1b3b60f9d45f200be2365be42f7c">
+                <title>void radio::Modulator::makeCarrier ()</title> <emphasis></emphasis>
+                
+<para>Generates the IF carrier sinusoid based on the frequency specified by freqCarrier. </para>
+
+            </section>
+</section>

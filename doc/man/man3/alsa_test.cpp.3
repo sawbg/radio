@@ -1,0 +1,57 @@
+.TH "src/alsa_test.cpp" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/alsa_test.cpp \- 
+.PP
+Tests sinusoidal tone generation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cmath>\fP
+.br
+\fC#include <climits>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <alsa/asoundlib\&.h>\fP
+.br
+\fC#include 'definitions\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Tests sinusoidal tone generation\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+\fBBug\fP
+.RS 4
+clicking noise from sinusoidal discontinuity 
+.RE
+.PP
+
+.PP
+Definition in file \fBalsa_test\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program tests sinusoidal speaker output through the ALSA API\&. Not sure if it works\&. When it did at least compile and run, it produced a sinusoid with an approximately twice-per-second clicking noise\&. 
+.PP
+Definition at line 22 of file alsa_test\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

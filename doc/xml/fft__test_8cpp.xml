@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="fft__test_8cpp" kind="file">
+    <compoundname>fft_test.cpp</compoundname>
+    <includes local="no">complex</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">valarray</includes>
+    <incdepgraph>
+      <node id="145">
+        <label>valarray</label>
+      </node>
+      <node id="143">
+        <label>functional</label>
+      </node>
+      <node id="144">
+        <label>iostream</label>
+      </node>
+      <node id="142">
+        <label>complex</label>
+      </node>
+      <node id="141">
+        <label>src/fft_test.cpp</label>
+        <link refid="fft_test.cpp"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" prot="public" static="no">
+        <type>std::valarray&lt; std::complex&lt; double &gt; &gt;</type>
+        <definition>typedef std::valarray&lt;std::complex&lt;double&gt; &gt; CArray</definition>
+        <argsstring></argsstring>
+        <name>CArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/fft_test.cpp" line="14" column="1" bodyfile="/home/pi/radio/src/fft_test.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="fft__test_8cpp_1a952eac791b596a61bba0a133a3bb439f" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <initializer>= 3.141592653589793238460</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/fft_test.cpp" line="12" column="1" bodyfile="/home/pi/radio/src/fft_test.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fft</definition>
+        <argsstring>(CArray &amp;x)</argsstring>
+        <name>fft</name>
+        <param>
+          <type><ref refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" kindref="member">CArray</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This code was taken from <ulink url="http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B">http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B</ulink>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/fft_test.cpp" line="23" column="1" bodyfile="/home/pi/radio/src/fft_test.cpp" bodystart="23" bodyend="69"/>
+        <referencedby refid="fft__test_8cpp_1a6234aee8acb83780e803805365617f36" compoundref="fft__test_8cpp" startline="72" endline="85">ifft</referencedby>
+        <referencedby refid="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="fft__test_8cpp" startline="91" endline="127">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="fft__test_8cpp_1a6234aee8acb83780e803805365617f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ifft</definition>
+        <argsstring>(CArray &amp;x)</argsstring>
+        <name>ifft</name>
+        <param>
+          <type><ref refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" kindref="member">CArray</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/fft_test.cpp" line="72" column="1" bodyfile="/home/pi/radio/src/fft_test.cpp" bodystart="72" bodyend="85"/>
+        <references refid="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" compoundref="fft__test_8cpp" startline="23" endline="69">fft</references>
+        <referencedby refid="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="fft__test_8cpp" startline="91" endline="127">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="fft__test_8cpp_1adc49b5a69e64611f421bbefee39a4d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::complex&lt; double &gt;</type>
+        <definition>std::complex&lt;double&gt; hilbert</definition>
+        <argsstring>(std::complex&lt; double &gt; n)</argsstring>
+        <name>hilbert</name>
+        <param>
+          <type>std::complex&lt; double &gt;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/fft_test.cpp" line="87" column="1" bodyfile="/home/pi/radio/src/fft_test.cpp" bodystart="87" bodyend="89"/>
+        <referencedby refid="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="fft__test_8cpp" startline="91" endline="127">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/fft_test.cpp" line="91" column="1" bodyfile="/home/pi/radio/src/fft_test.cpp" bodystart="91" bodyend="127"/>
+        <references refid="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" compoundref="fft__test_8cpp" startline="23" endline="69">fft</references>
+        <references refid="fft__test_8cpp_1a6234aee8acb83780e803805365617f36" compoundref="fft__test_8cpp" startline="72" endline="85">ifft</references>
+        <references refid="fft__test_8cpp_1adc49b5a69e64611f421bbefee39a4d15" compoundref="fft__test_8cpp" startline="87" endline="89">hilbert</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tests FFT, IFFT, and Hilbert implementations. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Samuel Andrew Wisner, <ulink url="mailto:awisner94@gmail.com">awisner94@gmail.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;valarray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="fft__test_8cpp_1a952eac791b596a61bba0a133a3bb439f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="fft__test_8cpp_1a952eac791b596a61bba0a133a3bb439f" kindref="member">PI</ref><sp/>=<sp/>3.141592653589793238460;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::valarray&lt;std::complex&lt;double&gt;&gt;<sp/><ref refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" kindref="member">CArray</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">//<sp/>Cooley-Tukey<sp/>FFT<sp/>(in-place,<sp/>breadth-first,<sp/>decimation-in-frequency)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Better<sp/>optimized<sp/>but<sp/>less<sp/>intuitive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" kindref="member">fft</ref>(<ref refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" kindref="member">CArray</ref><sp/>&amp;x)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N<sp/>=<sp/>x.size(),<sp/>k<sp/>=<sp/>N,<sp/>n;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thetaT<sp/>=<sp/>3.14159265358979323846264338328L<sp/>/<sp/>N;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::complex&lt;double&gt;<sp/>phiT(cos(thetaT),<sp/>sin(thetaT)),<sp/>T;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(k<sp/>&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>k;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phiT<sp/>=<sp/>phiT<sp/>*<sp/>phiT;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>=<sp/>1.0L;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/>k;<sp/>l++)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>l;<sp/>a<sp/>&lt;<sp/>N;<sp/>a<sp/>+=<sp/>n)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>a<sp/>+<sp/>k;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;double&gt;<sp/>t<sp/>=<sp/>x[a]<sp/>-<sp/>x[b];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x[a]<sp/>+=<sp/>x[b];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x[b]<sp/>=<sp/>t<sp/>*<sp/>T;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>*=<sp/>phiT;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decimate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)log2(N);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>0;<sp/>a<sp/>&lt;<sp/>N;<sp/>a++)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reverse<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xaaaaaaaa)<sp/>&gt;&gt;<sp/>1)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x55555555)<sp/>&lt;&lt;<sp/>1));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xcccccccc)<sp/>&gt;&gt;<sp/>2)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x33333333)<sp/>&lt;&lt;<sp/>2));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xf0f0f0f0)<sp/>&gt;&gt;<sp/>4)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x0f0f0f0f)<sp/>&lt;&lt;<sp/>4));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(((b<sp/>&amp;<sp/>0xff00ff00)<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>((b<sp/>&amp;<sp/>0x00ff00ff)<sp/>&lt;&lt;<sp/>8));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>((b<sp/>&gt;&gt;<sp/>16)<sp/>|<sp/>(b<sp/>&lt;&lt;<sp/>16))<sp/>&gt;&gt;<sp/>(32<sp/>-<sp/>m);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b<sp/>&gt;<sp/>a)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::complex&lt;double&gt;<sp/>t<sp/>=<sp/>x[a];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x[a]<sp/>=<sp/>x[b];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x[b]<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::complex&lt;double&gt;<sp/>f<sp/>=<sp/>1.0<sp/>/<sp/>sqrt(N);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>(unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>N;<sp/>i++)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>x[i]<sp/>*=<sp/>f;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>inverse<sp/>fft<sp/>(in-place)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="fft__test_8cpp_1a6234aee8acb83780e803805365617f36" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="fft__test_8cpp_1a6234aee8acb83780e803805365617f36" kindref="member">ifft</ref>(<ref refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" kindref="member">CArray</ref>&amp;<sp/>x)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>conjugate<sp/>the<sp/>complex<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x.apply(std::conj);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>fft</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" kindref="member">fft</ref>(<sp/>x<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>conjugate<sp/>the<sp/>complex<sp/>numbers<sp/>again</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x.apply(std::conj);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>the<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>/=<sp/>x.size();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="fft__test_8cpp_1adc49b5a69e64611f421bbefee39a4d15" refkind="member"><highlight class="normal">std::complex&lt;double&gt;<sp/><ref refid="fft__test_8cpp_1adc49b5a69e64611f421bbefee39a4d15" kindref="member">hilbert</ref>(std::complex&lt;double&gt;<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;(-2<sp/>*<sp/>n.imag(),<sp/>0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::complex&lt;double&gt;<sp/>test[]<sp/>=<sp/>{<sp/>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16<sp/>};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c" kindref="member">CArray</ref><sp/>data(test,<sp/>16);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>fft</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd" kindref="member">fft</ref>(data);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;fft&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>++i)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>data[i]<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>8;<sp/>i<sp/>&lt;<sp/>16;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inverse<sp/>fft</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft__test_8cpp_1a6234aee8acb83780e803805365617f36" kindref="member">ifft</ref>(data);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ifft&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>++i)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>data[i]<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>data<sp/>=<sp/>data.apply(<ref refid="fft__test_8cpp_1adc49b5a69e64611f421bbefee39a4d15" kindref="member">hilbert</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>16;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>data[i].real()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/pi/radio/src/fft_test.cpp"/>
+  </compounddef>
+</doxygen>

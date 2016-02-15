@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classradio_1_1ZDomain">
+<title>radio::ZDomain class Reference</title>
+<para>
+    <programlisting>#include <link linkend="ZDomain_8hpp">&lt;ZDomain.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for radio::ZDomain</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1ZDomain__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for radio::ZDomain</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1ZDomain__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint16 size</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float32 * orig</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::complex&lt; float32 &gt; * temp</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1ZDomain_1a4eec389cfb236f28cda5e66a65d86558">ZDomain</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * orig, <link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * dest, <link linkend="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1ZDomain_1ae9e0bc3e12b7ac15099d54fe13b00a86">~ZDomain</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1ZDomain_1a8ce67c0185428f8bf8de998481798593">fft</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1ZDomain_1ac6de3f5864558c598c4043a551aa073a">hilbert</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1ZDomain_1a7f9c3519330e336c5382abe884a83b7a">ifft</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1ZDomain_1a59e1af33c1607f813e5c4885036ee30d">_fft</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1ZDomain_1ad9e508b8c400e5b3eae99ed411d66441">_ifft</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+            <section xml:id="classradio_1_1ZDomain_1a4eec389cfb236f28cda5e66a65d86558">
+                <title>radio::ZDomain::ZDomain (float32 *orig, float32 *dest, uint16 size)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classradio_1_1ZDomain_1ae9e0bc3e12b7ac15099d54fe13b00a86">
+                <title>radio::ZDomain::~ZDomain ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classradio_1_1ZDomain_1a8ce67c0185428f8bf8de998481798593">
+                <title>void radio::ZDomain::fft ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classradio_1_1ZDomain_1ac6de3f5864558c598c4043a551aa073a">
+                <title>void radio::ZDomain::hilbert ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classradio_1_1ZDomain_1a7f9c3519330e336c5382abe884a83b7a">
+                <title>void radio::ZDomain::ifft ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classradio_1_1ZDomain_1a59e1af33c1607f813e5c4885036ee30d">
+                <title>void radio::ZDomain::_fft ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classradio_1_1ZDomain_1ad9e508b8c400e5b3eae99ed411d66441">
+                <title>void radio::ZDomain::_ifft ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

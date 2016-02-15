@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classradio_1_1Filter">
+<title>radio::Filter class Reference</title>
+<para>
+    <programlisting>#include <link linkend="Filter_8hpp">&lt;Filter.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for radio::Filter</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1Filter__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for radio::Filter</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classradio_1_1Filter__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 eqLength</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint32 size</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float32 * data</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fparams diffEq</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>fparams prev</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1">Filter</link> (
+<link linkend="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1">float32</link> * data, <link linkend="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e">uint32</link> size, <link linkend="definitions_8hpp_1af19387f95516e2132a08cf60503f22a5">fparams</link> &amp; diffEq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classradio_1_1Filter_1ad2793821801780809af385463bf8f197">Pass</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This class implements a z-domain filter on a specified array of float32&apos;&apos;&apos;s (a.k.a. singles, floats). It requires the transfer function coefficients already be calculated (i.e., it does not generate the coefficients based on desired filter characteristics). MATLAB and its Signal Processing Toolbox can be used to generate the coefficients.</para>
+
+<para>While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array sequentially to effectively implement a multi-section filter.</para>
+
+<para>The class is designed (but not tested!) to allow for a z-domain transfer function with different orders of the zeros (numerator) and poles (denominator). </para>
+                <para>Definition at line 31 of file Filter.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Filter.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+        <simplesect>
+            <title>Member Documentation</title>
+            <simplesect>
+                <title>uint8 radio::Filter::eqLength</title>                
+<para>The order of the filter transfer function (i.e., the maximum of the orders of the numerator and denominator). </para>
+
+                <para>Definition at line 60 of file Filter.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Filter.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>uint32 radio::Filter::size</title>                
+<para>The number of elements in the data array. </para>
+
+                <para>Definition at line 65 of file Filter.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Filter.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>float32* radio::Filter::data</title>                
+<para>A pointer to the data array that should be filtered when <link linkend="classradio_1_1Filter_1ad2793821801780809af385463bf8f197">Pass()</link> is called. </para>
+
+                <para>Definition at line 71 of file Filter.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Filter.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>fparams radio::Filter::diffEq</title>                
+<para>A vector containing two vectors of float32&apos;&apos;&apos;s (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </para>
+
+                <para>Definition at line 79 of file Filter.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Filter.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>fparams radio::Filter::prev</title>                
+<para>Vectors of the original (x[n]) and filtered (y[n]) values of the data array used to calculate the first filtered values of the data array. In spite of the type name, this variable does NOT contains filter parameters but rather the same data type that fparams represents. </para>
+
+                <para>Definition at line 88 of file Filter.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Filter.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+        </simplesect>
+            <section xml:id="classradio_1_1Filter_1a48ab268192e0135e5c9f74ad35a90fa1">
+                <title>radio::Filter::Filter (float32 *data, uint32 size, fparams &amp;diffEq)</title> <emphasis></emphasis>
+                
+<para>Initializes <link linkend="classradio_1_1Filter">Filter</link> based on a difference equation.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>data</entry>
+                                <entry>
+<para>array to be filtered. The filtered data will be placed here.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>size</entry>
+                                <entry>
+<para>number of elements in the data array</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>diffEq</entry>
+                                <entry>
+<para>a vector containing two vectors of float32&apos;&apos;&apos;s (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classradio_1_1Filter_1ad2793821801780809af385463bf8f197">
+                <title>void radio::Filter::Pass ()</title> <emphasis></emphasis>
+                
+<para>Passes the data array through the digital filter and accounts for x[n] and y[n] values from the previous call to <link linkend="classradio_1_1Filter_1ad2793821801780809af385463bf8f197">Pass()</link>. </para>
+
+            </section>
+</section>

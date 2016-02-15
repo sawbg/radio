@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="makefile" kind="file">
+    <compoundname>makefile</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">GCC<sp/>=<sp/>g++</highlight></codeline>
+<codeline><highlight class="normal">CPPFLAGS<sp/>=<sp/>-g<sp/>-std=gnu++14<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">alsa-test:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$(GCC)<sp/>$(CPPFLAGS)<sp/>src/alsa_test.cpp<sp/>-o<sp/>bin/alsatest<sp/>-O0<sp/>-lasound</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">baseband-filter-test:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$(GCC)<sp/>$(CPPFLAGS)<sp/>src/baseband_filter_test.cpp<sp/>-o<sp/>bin/bbftest</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">count:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>find<sp/>src/<sp/>-name<sp/>&apos;*&apos;<sp/>|<sp/>xargs<sp/>wc<sp/>-l<sp/><sp/>#<sp/>works<sp/>assuming<sp/>there&apos;s<sp/>no<sp/>subdirectories</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">docs:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>rm<sp/>-r<sp/>doc/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>doxygen<sp/>etc/doxygen.config</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>git<sp/>reset</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>git<sp/>add<sp/>doc/.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>git<sp/>commit<sp/>-m<sp/>&quot;Updated<sp/>documentation.&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>git<sp/>push</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">fft-test:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$(GCC)<sp/>$(CPPFLAGS)<sp/>src/fft_test.cpp<sp/>-o<sp/>bin/fft-test</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">fft-test2:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$(GCC)<sp/>$(CPPFLAGS)<sp/>src/fft_test2.cpp<sp/>-o<sp/>bin/fft-test2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">iq-test:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$(GCC)<sp/>$(CPPFLAGS)<sp/>src/iq_test.cpp<sp/>-o<sp/>bin/iqtest</highlight></codeline>
+    </programlisting>
+    <location file="/home/pi/radio/makefile"/>
+  </compounddef>
+</doxygen>

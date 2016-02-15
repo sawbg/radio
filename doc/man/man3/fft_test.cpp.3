@@ -1,0 +1,99 @@
+.TH "src/fft_test.cpp" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/fft_test.cpp \- 
+.PP
+Tests FFT, IFFT, and Hilbert implementations\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <complex>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <valarray>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::valarray
+.br
+< std::complex< double > > \fBCArray\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfft\fP (\fBCArray\fP &x)"
+.br
+.ti -1c
+.RI "void \fBifft\fP (\fBCArray\fP &x)"
+.br
+.ti -1c
+.RI "std::complex< double > \fBhilbert\fP (std::complex< double > n)"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const double \fBPI\fP = 3\&.141592653589793238460"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Tests FFT, IFFT, and Hilbert implementations\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBfft_test\&.cpp\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::valarray<std::complex<double> > \fBCArray\fP"
+
+.PP
+Definition at line 14 of file fft_test\&.cpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "void fft (\fBCArray\fP &x)"
+This code was taken from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&. 
+.PP
+Definition at line 23 of file fft_test\&.cpp\&.
+.SS "std::complex<double> hilbert (std::complex< double >n)"
+
+.PP
+Definition at line 87 of file fft_test\&.cpp\&.
+.SS "void ifft (\fBCArray\fP &x)"
+
+.PP
+Definition at line 72 of file fft_test\&.cpp\&.
+.SS "int main ()"
+
+.PP
+Definition at line 91 of file fft_test\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const double PI = 3\&.141592653589793238460"
+
+.PP
+Definition at line 12 of file fft_test\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

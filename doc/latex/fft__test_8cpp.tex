@@ -1,0 +1,181 @@
+\hypertarget{fft__test_8cpp}{\section{src/fft\+\_\+test.cpp File Reference}
+\label{fft__test_8cpp}\index{src/fft\+\_\+test.\+cpp@{src/fft\+\_\+test.\+cpp}}
+}
+
+
+Tests F\+F\+T, I\+F\+F\+T, and Hilbert implementations.  
+
+
+{\ttfamily \#include $<$complex$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$valarray$>$}\\*
+Include dependency graph for fft\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fft__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::valarray\\*
+$<$ std\+::complex$<$ double $>$ $>$ \hyperlink{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}{C\+Array}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{fft} (\hyperlink{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}{C\+Array} \&x)
+\item 
+void \hyperlink{fft__test_8cpp_a6234aee8acb83780e803805365617f36}{ifft} (\hyperlink{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}{C\+Array} \&x)
+\item 
+std\+::complex$<$ double $>$ \hyperlink{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}{hilbert} (std\+::complex$<$ double $>$ n)
+\item 
+int \hyperlink{fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{fft__test_8cpp_a952eac791b596a61bba0a133a3bb439f}{P\+I} = 3.\+141592653589793238460
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tests F\+F\+T, I\+F\+F\+T, and Hilbert implementations. 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}{\index{fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}!C\+Array@{C\+Array}}
+\index{C\+Array@{C\+Array}!fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}}
+\subsubsection[{C\+Array}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::valarray$<$std\+::complex$<$double$>$ $>$ {\bf C\+Array}}}\label{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}
+
+
+Definition at line 14 of file fft\+\_\+test.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{\index{fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}!fft@{fft}}
+\index{fft@{fft}!fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}}
+\subsubsection[{fft}]{\setlength{\rightskip}{0pt plus 5cm}void fft (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Array} \&}]{x}
+\end{DoxyParamCaption}
+)}}\label{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}
+This code was taken from \href{http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B}{\tt http\+://rosettacode.\+org/wiki/\+Fast\+\_\+\+Fourier\+\_\+transform\#\+C.\+2\+B.\+2\+B}. 
+
+Definition at line 23 of file fft\+\_\+test.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}{\index{fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}!hilbert@{hilbert}}
+\index{hilbert@{hilbert}!fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}}
+\subsubsection[{hilbert}]{\setlength{\rightskip}{0pt plus 5cm}std\+::complex$<$double$>$ hilbert (
+\begin{DoxyParamCaption}
+\item[{std\+::complex$<$ double $>$}]{n}
+\end{DoxyParamCaption}
+)}}\label{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}
+
+
+Definition at line 87 of file fft\+\_\+test.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fft__test_8cpp_a6234aee8acb83780e803805365617f36}{\index{fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}!ifft@{ifft}}
+\index{ifft@{ifft}!fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}}
+\subsubsection[{ifft}]{\setlength{\rightskip}{0pt plus 5cm}void ifft (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+Array} \&}]{x}
+\end{DoxyParamCaption}
+)}}\label{fft__test_8cpp_a6234aee8acb83780e803805365617f36}
+
+
+Definition at line 72 of file fft\+\_\+test.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Definition at line 91 of file fft\+\_\+test.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{fft__test_8cpp_a952eac791b596a61bba0a133a3bb439f}{\index{fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}!P\+I@{P\+I}}
+\index{P\+I@{P\+I}!fft\+\_\+test.\+cpp@{fft\+\_\+test.\+cpp}}
+\subsubsection[{P\+I}]{\setlength{\rightskip}{0pt plus 5cm}const double P\+I = 3.\+141592653589793238460}}\label{fft__test_8cpp_a952eac791b596a61bba0a133a3bb439f}
+
+
+Definition at line 12 of file fft\+\_\+test.\+cpp.
+

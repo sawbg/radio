@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="fft__test_8cpp">
+    <title>fft_test.cpp File Reference</title>
+    <programlisting>#include &lt;complex&gt;</programlisting>
+    <programlisting>#include &lt;functional&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;valarray&gt;</programlisting>
+<para>Include dependency diagram for fft_test.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="fft__test_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for fft_test.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="fft__test_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Typedefs</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::valarray&lt; std::complex&lt; double &gt; &gt;  <link linkend="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c">CArray</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const double <link linkend="fft__test_8cpp_1a952eac791b596a61bba0a133a3bb439f">PI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="fft__test_8cpp_1a22051cd252d576aec530227d32d95bdd">fft</link> (
+<link linkend="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c">CArray</link> &amp; x)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="fft__test_8cpp_1a6234aee8acb83780e803805365617f36">ifft</link> (
+<link linkend="fft__test_8cpp_1ac43c8a7b2d97f3ccbd6f7a48beaa472c">CArray</link> &amp; x)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::complex&lt; double &gt; <link linkend="fft__test_8cpp_1adc49b5a69e64611f421bbefee39a4d15">hilbert</link> (
+std::complex&lt; double &gt; n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="fft__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+
+<para>Tests FFT, IFFT, and Hilbert implementations. </para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Samuel Andrew Wisner, <link xlink:href="mailto:awisner94@gmail.com">awisner94@gmail.com</link> </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/pi/radio/src/fft_test.cpp</para>
+    </simplesect>
+</section>

@@ -1,0 +1,97 @@
+.TH "radio::Filter" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio::Filter \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Filter\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFilter\fP (\fBfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP, \fBfparams\fP &\fBdiffEq\fP)"
+.br
+.ti -1c
+.RI "void \fBPass\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBuint8\fP \fBeqLength\fP"
+.br
+.ti -1c
+.RI "\fBuint32\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "\fBfloat32\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "\fBfparams\fP \fBdiffEq\fP"
+.br
+.ti -1c
+.RI "\fBfparams\fP \fBprev\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements a z-domain filter on a specified array of float32'''s (a\&.k\&.a\&. singles, floats)\&. It requires the transfer function coefficients already be calculated (i\&.e\&., it does not generate the coefficients based on desired filter characteristics)\&. MATLAB and its Signal Processing Toolbox can be used to generate the coefficients\&.
+.PP
+While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array sequentially to effectively implement a multi-section filter\&.
+.PP
+The class is designed (but not tested!) to allow for a z-domain transfer function with different orders of the zeros (numerator) and poles (denominator)\&. 
+.PP
+Definition at line 31 of file Filter\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::Filter::Filter (\fBfloat32\fP *data, \fBuint32\fPsize, \fBfparams\fP &diffEq)"
+Initializes \fBFilter\fP based on a difference equation\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP array to be filtered\&. The filtered data will be placed here\&.
+.br
+\fIsize\fP number of elements in the data array
+.br
+\fIdiffEq\fP a vector containing two vectors of float32'''s (a\&.k\&.a\&. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc\&.)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file Filter\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void radio::Filter::Pass ()"
+Passes the data array through the digital filter and accounts for x[n] and y[n] values from the previous call to \fBPass()\fP\&. 
+.PP
+Definition at line 111 of file Filter\&.hpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBfloat32\fP* radio::Filter::data\fC [protected]\fP"
+A pointer to the data array that should be filtered when \fBPass()\fP is called\&. 
+.PP
+Definition at line 71 of file Filter\&.hpp\&.
+.SS "\fBfparams\fP radio::Filter::diffEq\fC [protected]\fP"
+A vector containing two vectors of float32'''s (a\&.k\&.a\&. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc\&.)\&. 
+.PP
+Definition at line 79 of file Filter\&.hpp\&.
+.SS "\fBuint8\fP radio::Filter::eqLength\fC [protected]\fP"
+The order of the filter transfer function (i\&.e\&., the maximum of the orders of the numerator and denominator)\&. 
+.PP
+Definition at line 60 of file Filter\&.hpp\&.
+.SS "\fBfparams\fP radio::Filter::prev\fC [protected]\fP"
+Vectors of the original (x[n]) and filtered (y[n]) values of the data array used to calculate the first filtered values of the data array\&. In spite of the type name, this variable does NOT contains filter parameters but rather the same data type that fparams represents\&. 
+.PP
+Definition at line 88 of file Filter\&.hpp\&.
+.SS "\fBuint32\fP radio::Filter::size\fC [protected]\fP"
+The number of elements in the data array\&. 
+.PP
+Definition at line 65 of file Filter\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

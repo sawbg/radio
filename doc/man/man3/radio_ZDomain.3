@@ -1,0 +1,101 @@
+.TH "radio::ZDomain" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio::ZDomain \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ZDomain\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBZDomain\fP (\fBfloat32\fP *\fBorig\fP, \fBfloat32\fP *dest, \fBuint16\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "\fB~ZDomain\fP ()"
+.br
+.ti -1c
+.RI "void \fBfft\fP ()"
+.br
+.ti -1c
+.RI "void \fBhilbert\fP ()"
+.br
+.ti -1c
+.RI "void \fBifft\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBuint16\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "\fBfloat32\fP * \fBorig\fP"
+.br
+.ti -1c
+.RI "std::complex< \fBfloat32\fP > * \fBtemp\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_fft\fP ()"
+.br
+.ti -1c
+.RI "void \fB_ifft\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 23 of file ZDomain\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::ZDomain::ZDomain (\fBfloat32\fP *orig, \fBfloat32\fP *dest, \fBuint16\fPsize)"
+
+.PP
+Definition at line 78 of file ZDomain\&.hpp\&.
+.SS "radio::ZDomain::~ZDomain ()"
+
+.PP
+Definition at line 89 of file ZDomain\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void radio::ZDomain::_fft ()\fC [protected]\fP"
+
+.PP
+Definition at line 93 of file ZDomain\&.hpp\&.
+.SS "void radio::ZDomain::_ifft ()\fC [protected]\fP"
+
+.PP
+Definition at line 141 of file ZDomain\&.hpp\&.
+.SS "void radio::ZDomain::fft ()"
+
+.SS "void radio::ZDomain::hilbert ()"
+
+.PP
+Definition at line 149 of file ZDomain\&.hpp\&.
+.SS "void radio::ZDomain::ifft ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBfloat32\fP* radio::ZDomain::orig"
+
+.PP
+Definition at line 34 of file ZDomain\&.hpp\&.
+.SS "\fBuint16\fP radio::ZDomain::size"
+
+.PP
+Definition at line 29 of file ZDomain\&.hpp\&.
+.SS "std::complex<\fBfloat32\fP>* radio::ZDomain::temp"
+
+.PP
+Definition at line 39 of file ZDomain\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

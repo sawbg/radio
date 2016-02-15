@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classradio_1_1DsbLcModulator" kind="class" prot="public">
+    <compoundname>radio::DsbLcModulator</compoundname>
+    <basecompoundref refid="classradio_1_1Modulator" prot="private" virt="non-virtual">radio::Modulator</basecompoundref>
+    <includes refid="modulation_8hpp" local="no">modulation.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classradio_1_1DsbLcModulator_1a26c13b2fa95c6ff4cd769abaa4749f4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>radio::DsbLcModulator::DsbLcModulator</definition>
+        <argsstring>(float32 data[], uint32 size)</argsstring>
+        <name>DsbLcModulator</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref></type>
+          <declname>data</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a double-sideband, large-carrier (i.e., broadcast AM modulation) <ref refid="classradio_1_1Modulator" kindref="compound">Modulator</ref> with the default intermediate frequency and sampling rate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data array initially containing the baseband signal</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of elements in the data array </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/modulation.hpp" line="112" column="1" bodyfile="/home/pi/radio/src/modulation.hpp" bodystart="112" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classradio_1_1DsbLcModulator_1a2ffec261c4988ab9405004320781d668" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>radio::DsbLcModulator::DsbLcModulator</definition>
+        <argsstring>(uint8 freqInter, uint32 rate, float32 data[], uint32 size)</argsstring>
+        <name>DsbLcModulator</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+          <declname>freqInter</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref></type>
+          <declname>data</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a double-sideband, large-carrier (i.e., broadcast AM modulation) <ref refid="classradio_1_1Modulator" kindref="compound">Modulator</ref> with the given parameters.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freqInter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the frequency of the IF carrier sinusoid</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sampling rate of the baseband and IF signals</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the array holding initially the baseband signal</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of elements in data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/modulation.hpp" line="127" column="1" bodyfile="/home/pi/radio/src/modulation.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classradio_1_1DsbLcModulator_1ad6b7f8af29cadd93ffa104e598485c25" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void radio::DsbLcModulator::Mod</definition>
+        <argsstring>()</argsstring>
+        <name>Mod</name>
+        <reimplements refid="classradio_1_1Modulator_1a44e9de3acd9499b31da5064b039e7a15">Mod</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modulates the data using double-sideband, large-carrier modulation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/radio/src/modulation.hpp" line="135" column="1" bodyfile="/home/pi/radio/src/modulation.hpp" bodystart="194" bodyend="199"/>
+        <references refid="classradio_1_1Modulator_1ad1fbba4bdd6a8c8d2ff05cb7be60fc5c" compoundref="modulation_8hpp" startline="57">radio::Modulator::size</references>
+        <references refid="classradio_1_1Modulator_1a9a4b25f4589e30915ef4836c8b01cd93" compoundref="modulation_8hpp" startline="41">radio::Modulator::carrInd</references>
+        <references refid="classradio_1_1Modulator_1a8901a2170e850a767dd40f9494dd7536" compoundref="modulation_8hpp" startline="52">radio::Modulator::rate</references>
+        <references refid="classradio_1_1Modulator_1a39d698f7720aa3677ecaf1baf83c8fa0" compoundref="modulation_8hpp" startline="47">radio::Modulator::data</references>
+        <references refid="classradio_1_1Modulator_1a42d68c4f2d9819ede178b9dea23fecee" compoundref="modulation_8hpp" startline="35">radio::Modulator::carrier</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>radio::Modulator</label>
+        <link refid="classradio_1_1Modulator"/>
+      </node>
+      <node id="16">
+        <label>radio::DsbLcModulator</label>
+        <link refid="classradio_1_1DsbLcModulator"/>
+        <childnode refid="17" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>radio::Modulator</label>
+        <link refid="classradio_1_1Modulator"/>
+      </node>
+      <node id="18">
+        <label>radio::DsbLcModulator</label>
+        <link refid="classradio_1_1DsbLcModulator"/>
+        <childnode refid="19" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/pi/radio/src/modulation.hpp" line="100" column="1" bodyfile="/home/pi/radio/src/modulation.hpp" bodystart="100" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classradio_1_1Modulator_1a42d68c4f2d9819ede178b9dea23fecee" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>carrier</name></member>
+      <member refid="classradio_1_1Modulator_1a9a4b25f4589e30915ef4836c8b01cd93" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>carrInd</name></member>
+      <member refid="classradio_1_1Modulator_1a39d698f7720aa3677ecaf1baf83c8fa0" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>data</name></member>
+      <member refid="classradio_1_1DsbLcModulator_1a26c13b2fa95c6ff4cd769abaa4749f4b" prot="public" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>DsbLcModulator</name></member>
+      <member refid="classradio_1_1DsbLcModulator_1a2ffec261c4988ab9405004320781d668" prot="public" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>DsbLcModulator</name></member>
+      <member refid="classradio_1_1DsbLcModulator_1ad6b7f8af29cadd93ffa104e598485c25" prot="public" virt="virtual"><scope>radio::DsbLcModulator</scope><name>Mod</name></member>
+      <member refid="classradio_1_1Modulator_1a4ce73238d07f8703b7b905c9c6dba28e" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>Modulator</name></member>
+      <member refid="classradio_1_1Modulator_1a07ffbd7e75e18027c60e77d4fc5b5e37" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>Modulator</name></member>
+      <member refid="classradio_1_1Modulator_1a8901a2170e850a767dd40f9494dd7536" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>rate</name></member>
+      <member refid="classradio_1_1Modulator_1ad1fbba4bdd6a8c8d2ff05cb7be60fc5c" prot="private" virt="non-virtual"><scope>radio::DsbLcModulator</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
