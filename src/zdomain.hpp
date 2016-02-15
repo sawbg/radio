@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Contains the functions to manipulate sequential data in the frequency
+ * (z) domain.
+ */
+
 #ifndef zdomain_H
 #define zdomain_H
 
@@ -5,46 +12,88 @@
 
 #include "definitions.hpp"
 
-namespace lolz {
+namespace radio {
 
 	/**
-	 * 
-	 */
-	void aconj(std::complex<float32>* data, uint32 size);
-
-	/**
+	 * Replaces the values in an array of complex float32's with their respective
+	 * conjugates.
 	 *
+	 * @param data the array whose values should be replaced with their
+	 * respective conjugates
+	 *
+	 * @param size the number of elements in the data array 
 	 */
-	void fft(std::complex<float32>* data, uint32 size);
+	void aconj(cfloat32* data, uint32 size);
 
 	/**
+	 * Replaces the values of an array of cfloat32's with the array's DFT using
+	 * a decimation-in-frequency algorithm.
 	 *
+	 * This code is based on code from
+	 * http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B.
+	 *
+	 * @param data the array whose values should be replaced with its DFT
+	 *
+	 * @param size the number of elements in the data array
+	 */
+	void fft(cfloat32* data, uint32 size);
+
+	/**
+	 * Performs the hilbert transfor of an array of float32's.
+	 *
+	 * @param data the source array of the REAL numbers of which to take the
+	 * Hilbert transform
+	 *
+	 * @param dest the destination array of REAL numbers for the results of the
+	 * Hilbert transform
+	 *
+	 * @param size the number of elements in the data and dest arrays
 	 */
 	void hilbert(float32* data, float32* dest, uint32 size);
 
 	/**
+	 * Replaces the values of an array of cfloat32's with the array's inverse
+	 * DFT. 
+	 * 
+	 * This code is based on code from
+	 * http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B.
 	 *
+	 * @param data the array whose values should be replaced with its inverse
+	 * DFT
+	 *
+	 * @param size the number of elements in the data array
 	 */
-	void ifft(std::complex<float32>* data, uint32 size);
+	void ifft(cfloat32* data, uint32 size);
 
 	/**
+	 * Produces an interleaved array of first an element from an original array
+	 * of data and then an element from the original data's Hilbert transform.
+	 * This function is intended to generate a two-channel output (I/Q output)
+	 * for mixing applications.
 	 *
+	 * @param data the original data (left channel)
+	 *
+	 * @param dest the interleaved data (left channel original data, right
+	 * channel transformed data) twice the size of the original data array
+	 *
+	 * @param size the number of elements in the data array (NOT in the
+	 * destination array)
 	 */
 	void makeIQ(float32* data, float32* dest, uint32 size);
 
-	void aconj(std::complex<float32>* data, uint32 size) {
+	void aconj(cfloat32* data, uint32 size) {
 		for(int i = 0; i < size; i++) {
 			data[i] = std::conj(data[i]);
 		}
 	}
 
-	void fft(std::complex<float32>* data, uint32 size) {
+	void fft(cfloat32* data, uint32 size) {
 		// DFT
 		uint32 k = size;
 		uint32 n;
 		float32 thetaT = M_PI / size;
-		std::complex<float32> phiT(cos(thetaT), sin(thetaT));
-		std::complex<float32> T;
+		cfloat32 phiT(cos(thetaT), sin(thetaT));
+		cfloat32 T;
 
 		while(k > 1) {
 			n = k;
@@ -55,7 +104,7 @@ namespace lolz {
 			for(uint32 l = 0; l < k; l++) {
 				for(uint32 a = l; a < size; a += n) {
 					uint32 b = a + k;
-					std::complex<float32> t = data[a] -data[b];
+					cfloat32 t = data[a] -data[b];
 					data[a] +=data[b];
 					data[b] = t * T;
 				}
@@ -79,7 +128,7 @@ namespace lolz {
 
 			if (b > a)
 			{
-				std::complex<float32> t = data[a];
+				cfloat32 t = data[a];
 				data[a] =data[b];
 				data[b] = t;
 			}
@@ -87,7 +136,7 @@ namespace lolz {
 	}
 
 	void hilbert(float32* data, float32* dest, uint32 size) {
-		std::complex<float32> temp[size];
+		cfloat32 temp[size];
 
 		for(int i = 0; i < size; i++) {
 			temp[i] = data[i];
@@ -106,7 +155,7 @@ namespace lolz {
 		}
 	}
 
-	void ifft(std::complex<float32>* data, uint32 size) {
+	void ifft(cfloat32* data, uint32 size) {
 		aconj(data, size);
 		fft(data, size);
 		aconj(data, size);

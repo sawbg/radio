@@ -1,5 +1,15 @@
+/**
+ * @file
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Contains declarations of system-independant (universal size) integers
+ * and float types, shortened type names for some commonly used types, and
+ * enumerations.
+ */
+
 #ifndef definitions_H
 #define definitions_H
+
+#include <complex>
 
 #define ENUM signed char
 
@@ -20,13 +30,29 @@ typedef float float32;
 typedef double float64;
 
 /**
- *
+ * Defines a type for complex float32's.
  */
-typedef enum Age { OLD, NEW };
+typedef std::complex<float32> cfloat32;
 
 /**
- *
+ * Defines a type for the filter coefficients.
  */
-typedef enum Fractional { NUM, DEN };
+typedef std::vector<std::vector<float32>> fparams;
+
+/**
+ * This namespace contains all the classes, functions, and enumerations used in
+ * the application.
+ */
+namespace radio {
+	/**
+	 * Describes the age of a filter (from last Pass() or in this Pass())
+	 */
+	enum Age { OLD, NEW };
+
+	/**
+	 * Describes the numerator and denominator of a z-domain transfer function
+	 */
+	enum Fractional { NUM, DEN };
+}
 
 #endif

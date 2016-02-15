@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Tests FFT, IFFT, and Hilbert implementations.
+ */
+
 #include <complex>
 #include <functional>
 #include <iostream>

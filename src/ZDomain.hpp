@@ -1,3 +1,11 @@
+/**
+ * @file
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief This is an abandoned, overly complicated attempt to have a class
+ * housing z-domain functions.
+ * @bug Everything. Just everything.
+ */
+
 #ifndef ZDomain_H
 #define ZDomain_H
 
@@ -8,7 +16,7 @@
 
 #include "definitions.hpp"
 
-namespace lolz {
+namespace radio {
 	/**
 	 *
 	 */

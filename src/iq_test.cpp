@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Generates test IQ signal
+ */
+
 #include <iostream>
 #include <cstdio>
 #include <unistd.h>
@@ -5,7 +11,7 @@
 #include "zdomain.hpp"
 
 using namespace std;
-using namespace lolz;
+using namespace radio;
 
 /**
  * This small program demonstrates the IQ generation abilities of the makeIQ()
