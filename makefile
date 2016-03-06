@@ -8,11 +8,12 @@ baseband-filter-test:
 	$(GCC) $(CPPFLAGS) src/baseband_filter_test.cpp -o bin/bbftest
 
 count:
-	find src/ -name '*' | xargs wc -l  # works assuming there's no subdirectories
+	grep -r "src/" -e "Samuel Andrew Wisner" -l | xargs wc -l
 
 docs:
 	rm -r doc/
 	doxygen etc/doxygen.config
+	cd doc/latex; make pdf;
 	git reset
 	git add doc/.
 	git commit -m "Updated documentation."
