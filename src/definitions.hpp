@@ -53,6 +53,11 @@ namespace radio {
 	 * Describes the numerator and denominator of a z-domain transfer function
 	 */
 	enum Fractional { NUM, DEN };
+
+	/**
+	 * Describes a sideband
+	 */
+	enum class Sideband { Lower, Upper };
 }
 
 #endif

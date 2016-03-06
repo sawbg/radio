@@ -1,5 +1,4 @@
 /**
- * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief Contains the classes for the various types of modulation supported by
  * the program.
@@ -14,8 +13,20 @@
 #include <vector>
 
 #include "definitions.hpp"
+#include "Filter.hpp"
+#include "fvectors.hpp"
 
 namespace radio {
+
+	/**
+	 *
+	 */
+	const uint32 FREQ_IF = 20000;
+
+	/**
+	 *
+	 */
+	const uint32 SAMPLING_RATE = 48000;
 
 	/**
 	 * This class, while not intended to be called directly, is a superclass for
@@ -29,17 +40,6 @@ namespace radio {
 			virtual void Mod() = 0;
 
 		protected:
-			/**
-			 * An array of sinusoid values of the carrier wave
-			 */
-			float32* carrier;
-
-			/**
-			 * The index tracking the value of the carrier sinusoid (held in
-			 * carrier) to be used in the next calculation
-			 */
-			uint32 carrInd = 0;
-
 			/**
 			 * The data to modulate (i.e., baseband signal), which is then
 			 * replaced by its modulated signal of the same sampling rate
@@ -57,17 +57,9 @@ namespace radio {
 			uint32 size;
 
 			/**
-			 * Creates a Modulator with a default carrier intermediate frequency
-			 * and default sampling rate. Intended to be called only by
-			 * subclasses.
 			 *
-			 * @param data the data array initially containing the baseband
-			 * signal
-			 *
-			 * @param size the number of elements in the data array
 			 */
-			Modulator(float32 data[], uint32 size)
-				: Modulator(20000, 48000, data, size) {};
+			Sinusoid sinusoid;
 
 			/**
 			 * Creates a Modulator with the specified parameters. Intended to be
@@ -81,78 +73,38 @@ namespace radio {
 			 *
 			 * @param size the number of elements in data
 			 */
-			Modulator(float32 freqInter, uint32 rate,
-					float32 data[], uint32 size);
+			Modulator(float32 data[], uint32 size, float32 freqInteri = FREQ_IF,
+					uint32 rate = SAMPLING_RATE);
 
 		private:
 			/**
 			 * The frequency of the IF carrier sinusoid
 			 */
 			float32 freqCarrier;
-
-			/**
-			 * Generates the IF carrier sinusoid based on the frequency
-			 * specified by freqCarrier.
-			 */
-			void makeCarrier();
 	};
 
 	class DsbLcModulator : Modulator {
 		public:
-			/**
-			 * Creates a double-sideband, large-carrier (i.e., broadcast AM
-			 * modulation) Modulator with the default intermediate frequency and
-			 * sampling rate.
-			 *
-			 * @param data the data array initially containing the baseband
-			 * signal
-			 *
-			 * @param size the number of elements in the data array
-			 */
-			DsbLcModulator(float32 data[], uint32 size)
-				: Modulator(data,size) {};
-
-			/**
-			 * Creates a double-sideband, large-carrier (i.e., broadcast AM
-			 * modulation) Modulator with the given parameters.
-			 *
-			 * @param freqInter the frequency of the IF carrier sinusoid
-			 *
-			 * @param rate the sampling rate of the baseband and IF signals
-			 *
-			 * @param data the array holding initially the baseband signal
-			 *
-			 * @param size the number of elements in data
-			 */
-			DsbLcModulator(uint8 freqInter, uint32 rate,
-					float32 data[], uint32 size)
-				: Modulator(freqInter, rate, data, size) {};
-
-			/**
-			 * Modulates the data using double-sideband, large-carrier
-			 * modulation.
-			 */
+			using Modulator::Modulator;
 			void Mod();
 	};
 
 	class DsbScModulator : Modulator {
 		public:
-			/**
-			 * Creates a double-sideband, large-carrier (i.e., broadcast AM
-			 * modulation) Modulator with the default intermediate frequency and
-			 * sampling rate.
-			 *
-			 * @param data the data array initially containing the baseband
-			 * signal
-			 *
-			 * @param size the number of elements in the data array
-			 */
-			DsbScModulator(float32 data[], uint32 size)
-				: Modulator(data,size) {};
+			using Modulator::Modulator; 
+			void Mod();
+	};
 
+/**
+ *
+ */
+	class SsbModulator : Modulator {
+		protected:
 			/**
-			 * Creates a double-sideband, supressed-carrier Modulator with the
-			 * given parameters.
+			 * Creates a single-sideband, supressed-carrier Modulator with the
+			 * default intermediate frequency and sampling rate. This form of
+			 * single-sideband modulation generates a DSB-SC signal and
+			 * filtering out the unwanted sideband.
 			 *
 			 * @param freqInter the frequency of the IF carrier sinusoid
 			 *
@@ -161,17 +113,34 @@ namespace radio {
 			 * @param data the array holding initially the baseband signal
 			 *
 			 * @param size the number of elements in data
+			 *
+			 * @param sideband to allow in signal
 			 */
-			DsbScModulator(uint8 freqInter, uint32 rate,
-					float32 data[], uint32 size)
-				: Modulator(freqInter, rate, data, size) {};
+			SsbModulator(float32 data[], uint32 size, Sideband sideband,
+					uint32 freqInter = FREQ_IF, uint32 rate = SAMPLING_RATE)
+				: Modulator(freqInter, rate, data, size);
 
-			/**
-			 * Modulates the data using double-sideband, supressed-carrier
-			 * modulation.
-			 */
-			void Mod();
+		private:
+			Sideband sideband;
 	};
+
+	/**
+	 * 
+	 */
+	class FilteredSsbModulator : SsbModulator {
+		public:
+			using SsbModulator::SsbModulator;
+			void Mod();
+	}
+
+	/**
+	 *
+	 */
+	class HilbertSsbModulator : SsbModulator {
+		public:
+			using SsbModulator::SsbModulator;
+			void Mod();
+	}
 
 	Modulator::Modulator(float32 carrier,
 			uint32 rate, float32 data[],
@@ -180,16 +149,15 @@ namespace radio {
 		this->rate = rate;
 		this->data = data;
 		this->size = size;
-		this->carrier = (float32*)malloc(rate*sizeof(float32));
-		makeCarrier();
+		sinusoid = Sinusoid(carrier, rate);
 	}
 
-	void Modulator::makeCarrier() {
-		for(int i = 0; i < rate; i++) {
-			carrier[i] = cos(2 * M_PI * freqCarrier
-					* i / rate);
-		}
+	SsbModulator::SsbModulator(float32 data[], uint32 size, Sideband sideband,
+			uint32 freqInter, uint32 rate) {
+		this->sideband = sideband;
 	}
+
+	FilteredSsbModulator(
 
 	void DsbLcModulator::Mod() {
 		for(int i = 0; i < size; i++, carrInd++) {
@@ -206,6 +174,14 @@ namespace radio {
 			temp = ((float)data[i]/128) - 1;
 			data[i] = temp * carrier[carrInd];
 		}
+	}
+	
+	FilteredSsbModulator::Mod() {	
+		
+	}
+
+	HilbertSsbModulator() {
+		
 	}
 }
 

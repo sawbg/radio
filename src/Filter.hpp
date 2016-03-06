@@ -44,7 +44,7 @@ namespace radio {
 			 * function of the filter in decending order (z^0, z^-1, z^-2,
 			 * etc.).
 			 */
-			Filter(float32* data, uint32 size,fparams& diffEq);
+			Filter(float32* data, uint32 size, fparams& diffEq);
 
 			/**
 			 * Passes the data array through the digital filter and accounts for
