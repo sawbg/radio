@@ -55,9 +55,10 @@ namespace radio {
 	enum Fractional { NUM, DEN };
 
 	/**
-	 * Describes a sideband
+	 * Describes a form of modulation.
 	 */
-	enum class Sideband { Lower, Upper };
+	enum class ModulationType { DSB_LC, DSB_SC, USB_FILTERED, USB_HILBERT,
+		LSB_FILTERED, LSB_HILBERT, FM_NARROW, FM_WIDE };
 }
 
 #endif
