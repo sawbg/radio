@@ -19,12 +19,12 @@
 namespace radio {
 
 	/**
-	 *
+	 * The default intermediate carrier frequency
 	 */
-	const uint32 FREQ_IF = 20000;
+	const uint32 FREQ_INTERMEDIATE = 20000;
 
 	/**
-	 *
+	 * The default sampling rate (frequency)
 	 */
 	const uint32 SAMPLING_RATE = 48000;
 
@@ -35,16 +35,21 @@ namespace radio {
 	class Modulator {
 		public:
 			/**
-			 * Requires subclasses to implement a Mod() function.
+			 * Modulates the audio currently in the data array.
 			 */
-			virtual void Mod() = 0;
+			void Mod();
 
-		protected:
+		private:
 			/**
 			 * The data to modulate (i.e., baseband signal), which is then
 			 * replaced by its modulated signal of the same sampling rate
 			 */
 			float32* data;
+
+			/**
+			 * The frequency of the IF carrier sinusoid
+			 */
+			float32 freqCarrier;
 
 			/**
 			 * The sampling rate of the baseband and generated IF signals
@@ -59,7 +64,7 @@ namespace radio {
 			/**
 			 *
 			 */
-			Sinusoid sinusoid;
+			ModulationType type;
 
 			/**
 			 * Creates a Modulator with the specified parameters. Intended to be
@@ -72,116 +77,76 @@ namespace radio {
 			 * @param data the array holding initially the baseband signal
 			 *
 			 * @param size the number of elements in data
+			 *
+			 * @param type form of modulation to use
 			 */
-			Modulator(float32 data[], uint32 size, float32 freqInteri = FREQ_IF,
-					uint32 rate = SAMPLING_RATE);
-
-		private:
-			/**
-			 * The frequency of the IF carrier sinusoid
-			 */
-			float32 freqCarrier;
+			Modulator(float32 data[], uint32 size, ModulationType type,
+					float32 freqInter = FREQ_INTERMEDIATE, uint32 rate = SAMPLING_RATE);
 	};
 
-	class DsbLcModulator : Modulator {
-		public:
-			using Modulator::Modulator;
-			void Mod();
-	};
-
-	class DsbScModulator : Modulator {
-		public:
-			using Modulator::Modulator; 
-			void Mod();
-	};
-
-/**
- *
- */
-	class SsbModulator : Modulator {
-		protected:
-			/**
-			 * Creates a single-sideband, supressed-carrier Modulator with the
-			 * default intermediate frequency and sampling rate. This form of
-			 * single-sideband modulation generates a DSB-SC signal and
-			 * filtering out the unwanted sideband.
-			 *
-			 * @param freqInter the frequency of the IF carrier sinusoid
-			 *
-			 * @param rate the sampling rate of the baseband and IF signals
-			 *
-			 * @param data the array holding initially the baseband signal
-			 *
-			 * @param size the number of elements in data
-			 *
-			 * @param sideband to allow in signal
-			 */
-			SsbModulator(float32 data[], uint32 size, Sideband sideband,
-					uint32 freqInter = FREQ_IF, uint32 rate = SAMPLING_RATE)
-				: Modulator(freqInter, rate, data, size);
-
-		private:
-			Sideband sideband;
-	};
-
-	/**
-	 * 
-	 */
-	class FilteredSsbModulator : SsbModulator {
-		public:
-			using SsbModulator::SsbModulator;
-			void Mod();
-	}
-
-	/**
-	 *
-	 */
-	class HilbertSsbModulator : SsbModulator {
-		public:
-			using SsbModulator::SsbModulator;
-			void Mod();
-	}
-
-	Modulator::Modulator(float32 carrier,
-			uint32 rate, float32 data[],
-			uint32 size) {
+	Modulator::Modulator(float32 data[], uint32 size, ModulationType type,
+			float32 freqInter, uint32 rate) {
 		freqCarrier = carrier;
 		this->rate = rate;
 		this->data = data;
 		this->size = size;
-		sinusoid = Sinusoid(carrier, rate);
+		this->type = type;
 	}
 
-	SsbModulator::SsbModulator(float32 data[], uint32 size, Sideband sideband,
-			uint32 freqInter, uint32 rate) {
-		this->sideband = sideband;
-	}
+	void Modulator::Mod() {
+		// these variables should only ever be created once
+		static float32 cummSum = 0;  // cummulative sum used in FM modulation
+		static float32 hilData[size];  // hilbert transform of data array
+		static Filter lsbFilter(data, size, F_LOWERSIDEBAND);
+		static Sinusoid sinusoid(freqCarrier, rate);  // IF carrier sinusoid
+		static Filter usbFilter(data, size, F_UPPERSIDEBAND);
 
-	FilteredSsbModulator(
-
-	void DsbLcModulator::Mod() {
-		for(int i = 0; i < size; i++, carrInd++) {
-			if(carrInd >= rate) carrInd = 0;
-			data[i] = ((data[i] + 1) * carrier[carrInd]) / 2;
+		// take hilbert transform if necessary
+		if(type == ModulationType::USB_HILBERT
+				|| type == ModulationType::LSB_HILBERT) {
+			hilbert(data, hilData, size);
 		}
-	}
 
-	void DsbScModulator::Mod() {
-		float32 temp;
+		// perform main modulation
+		for(uint32 i = 0; i < size; i++) {
+			switch(type) {
+				case ModulationType::DSB_LC:
+					data[i] = ((data[i] + 1) * sinusoid.next()) / 2;
+					break;
 
-		for(int i = 0; i < size; i++,
-				carrInd = (carrInd < rate ? carrInd + 1 : 0)) {
-			temp = ((float)data[i]/128) - 1;
-			data[i] = temp * carrier[carrInd];
+				case ModulationType::DSB_SC:
+				case ModulationType::USB_FILTERED:
+				case ModulationType::LSB_FILTERED:
+					data[i] = data[i] * sinusoid.next();
+					break;
+
+				case ModulationType::USB_HILBERT:
+					data[i] = data[i] * sinusoid.next()
+						- hilData[i] * sinusoid.nextShifted();
+					break;
+
+				case ModulationType::LSB_HILBERT:
+					data[i] = data[i] * sinusoid.next()
+						+ hilData[i] * sinusoid.nextShifted();
+					break;
+
+				case ModulationType::FM_NARROW:
+
+					break;
+
+				case ModulationType::FM_WIDE:
+
+					break;
+
+			}
 		}
-	}
-	
-	FilteredSsbModulator::Mod() {	
-		
-	}
 
-	HilbertSsbModulator() {
-		
+		// filter out a sideband if using filtered SSB modulation
+		if(type == ModulationType::LSB_FILTERED) {
+			lsb.Pass();
+		} else if(type == ModulationType::USB_FILTERED) {
+			usb.Pass();
+		}
 	}
 }
 
