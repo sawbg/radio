@@ -11,13 +11,13 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "fvectors.hpp", "fvectors_8hpp.html", "fvectors_8hpp" ],
     [ "iq_test.cpp", "iq__test_8cpp.html", "iq__test_8cpp" ],
     [ "mic_test.cpp", "mic__test_8cpp.html", "mic__test_8cpp" ],
-    [ "modulation.hpp", "modulation_8hpp.html", [
-      [ "Modulator", "classradio_1_1Modulator.html", "classradio_1_1Modulator" ],
-      [ "DsbLcModulator", "classradio_1_1DsbLcModulator.html", "classradio_1_1DsbLcModulator" ],
-      [ "DsbScModulator", "classradio_1_1DsbScModulator.html", "classradio_1_1DsbScModulator" ]
+    [ "modulation.hpp", "modulation_8hpp.html", "modulation_8hpp" ],
+    [ "piped_test.cpp", "piped__test_8cpp.html", "piped__test_8cpp" ],
+    [ "Sinusoid.hpp", "Sinusoid_8hpp.html", [
+      [ "Sinusoid", "classradio_1_1Sinusoid.html", "classradio_1_1Sinusoid" ]
     ] ],
+    [ "zdomain.hpp", "zdomain_8hpp.html", "zdomain_8hpp" ],
     [ "ZDomain.hpp", "ZDomain_8hpp.html", [
       [ "ZDomain", "classradio_1_1ZDomain.html", "classradio_1_1ZDomain" ]
-    ] ],
-    [ "zdomain.hpp", "zdomain_8hpp.html", "zdomain_8hpp" ]
+    ] ]
 ];

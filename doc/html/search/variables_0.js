@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['carrier',['carrier',['../classradio_1_1Modulator.html#a42d68c4f2d9819ede178b9dea23fecee',1,'radio::Modulator']]],
-  ['carrind',['carrInd',['../classradio_1_1Modulator.html#a9a4b25f4589e30915ef4836c8b01cd93',1,'radio::Modulator']]]
+  ['data',['data',['../classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2',1,'radio::Filter']]],
+  ['diffeq',['diffEq',['../classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56',1,'radio::Filter']]]
 ];

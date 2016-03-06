@@ -5,150 +5,43 @@
 
 {\ttfamily \#include $<$modulation.\+hpp$>$}
 
-
-
-Inheritance diagram for radio\+:\+:Modulator\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=330pt]{classradio_1_1Modulator__inherit__graph}
-\end{center}
-\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \hyperlink{classradio_1_1Modulator_a44e9de3acd9499b31da5064b039e7a15}{Mod} ()=0
-\end{DoxyCompactItemize}
-\subsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classradio_1_1Modulator_a4ce73238d07f8703b7b905c9c6dba28e}{Modulator} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Modulator_a39d698f7720aa3677ecaf1baf83c8fa0}{data}\mbox{[}$\,$\mbox{]}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Modulator_ad1fbba4bdd6a8c8d2ff05cb7be60fc5c}{size})
-\item 
-\hyperlink{classradio_1_1Modulator_a07ffbd7e75e18027c60e77d4fc5b5e37}{Modulator} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} freq\+Inter, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Modulator_a8901a2170e850a767dd40f9494dd7536}{rate}, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Modulator_a39d698f7720aa3677ecaf1baf83c8fa0}{data}\mbox{[}$\,$\mbox{]}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Modulator_ad1fbba4bdd6a8c8d2ff05cb7be60fc5c}{size})
-\end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$ \hyperlink{classradio_1_1Modulator_a42d68c4f2d9819ede178b9dea23fecee}{carrier}
-\item 
-\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Modulator_a9a4b25f4589e30915ef4836c8b01cd93}{carr\+Ind} = 0
-\item 
-\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$ \hyperlink{classradio_1_1Modulator_a39d698f7720aa3677ecaf1baf83c8fa0}{data}
-\item 
-\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Modulator_a8901a2170e850a767dd40f9494dd7536}{rate}
-\item 
-\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Modulator_ad1fbba4bdd6a8c8d2ff05cb7be60fc5c}{size}
+void \hyperlink{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{Mod} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 This class, while not intended to be called directly, is a superclass for the classes of the modulation forms used in this project. 
 
-Definition at line 24 of file modulation.\+hpp.
-
-
-
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{classradio_1_1Modulator_a4ce73238d07f8703b7b905c9c6dba28e}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!Modulator@{Modulator}}
-\index{Modulator@{Modulator}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{Modulator}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Modulator\+::\+Modulator (
-\begin{DoxyParamCaption}
-\item[{{\bf float32}}]{data\mbox{[}$\,$\mbox{]}, }
-\item[{{\bf uint32}}]{size}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classradio_1_1Modulator_a4ce73238d07f8703b7b905c9c6dba28e}
-Creates a \hyperlink{classradio_1_1Modulator}{Modulator} with a default carrier intermediate frequency and default sampling rate. Intended to be called only by subclasses.
-
-
-\begin{DoxyParams}{Parameters}
-{\em data} & the data array initially containing the baseband signal\\
-\hline
-{\em size} & the number of elements in the data array \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 69 of file modulation.\+hpp.
-
-\hypertarget{classradio_1_1Modulator_a07ffbd7e75e18027c60e77d4fc5b5e37}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!Modulator@{Modulator}}
-\index{Modulator@{Modulator}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{Modulator}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Modulator\+::\+Modulator (
-\begin{DoxyParamCaption}
-\item[{{\bf float32}}]{freq\+Inter, }
-\item[{{\bf uint32}}]{rate, }
-\item[{{\bf float32}}]{data\mbox{[}$\,$\mbox{]}, }
-\item[{{\bf uint32}}]{size}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Modulator_a07ffbd7e75e18027c60e77d4fc5b5e37}
-Creates a \hyperlink{classradio_1_1Modulator}{Modulator} with the specified parameters. Intended to be called only by subclasses.
-
-
-\begin{DoxyParams}{Parameters}
-{\em freq\+Inter} & the frequency of the I\+F carrier sinusoid\\
-\hline
-{\em rate} & the sampling rate of the baseband and I\+F signals\\
-\hline
-{\em data} & the array holding initially the baseband signal\\
-\hline
-{\em size} & the number of elements in data \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 176 of file modulation.\+hpp.
+Definition at line 35 of file modulation.\+hpp.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classradio_1_1Modulator_a44e9de3acd9499b31da5064b039e7a15}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!Mod@{Mod}}
+\hypertarget{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!Mod@{Mod}}
 \index{Mod@{Mod}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{Mod}]{\setlength{\rightskip}{0pt plus 5cm}virtual void radio\+::\+Modulator\+::\+Mod (
+\subsubsection[{Mod}]{\setlength{\rightskip}{0pt plus 5cm}void radio\+::\+Modulator\+::\+Mod (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classradio_1_1Modulator_a44e9de3acd9499b31da5064b039e7a15}
-Requires subclasses to implement a \hyperlink{classradio_1_1Modulator_a44e9de3acd9499b31da5064b039e7a15}{Mod()} function. 
+)}}\label{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}
+Modulates the audio currently in the data array. 
 
-Implemented in \hyperlink{classradio_1_1DsbScModulator_a0925dbd82745c282a488a45b0ee1410b}{radio\+::\+Dsb\+Sc\+Modulator}, and \hyperlink{classradio_1_1DsbLcModulator_ad6b7f8af29cadd93ffa104e598485c25}{radio\+::\+Dsb\+Lc\+Modulator}.
+Definition at line 96 of file modulation.\+hpp.
 
 
 
-\subsection{Member Data Documentation}
-\hypertarget{classradio_1_1Modulator_a42d68c4f2d9819ede178b9dea23fecee}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!carrier@{carrier}}
-\index{carrier@{carrier}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{carrier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Modulator\+::carrier\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Modulator_a42d68c4f2d9819ede178b9dea23fecee}
-An array of sinusoid values of the carrier wave 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph}
+\end{center}
+\end{figure}
 
-Definition at line 35 of file modulation.\+hpp.
-
-\hypertarget{classradio_1_1Modulator_a9a4b25f4589e30915ef4836c8b01cd93}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!carr\+Ind@{carr\+Ind}}
-\index{carr\+Ind@{carr\+Ind}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{carr\+Ind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Modulator\+::carr\+Ind = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Modulator_a9a4b25f4589e30915ef4836c8b01cd93}
-The index tracking the value of the carrier sinusoid (held in carrier) to be used in the next calculation 
-
-Definition at line 41 of file modulation.\+hpp.
-
-\hypertarget{classradio_1_1Modulator_a39d698f7720aa3677ecaf1baf83c8fa0}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!data@{data}}
-\index{data@{data}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Modulator\+::data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Modulator_a39d698f7720aa3677ecaf1baf83c8fa0}
-The data to modulate (i.\+e., baseband signal), which is then replaced by its modulated signal of the same sampling rate 
-
-Definition at line 47 of file modulation.\+hpp.
-
-\hypertarget{classradio_1_1Modulator_a8901a2170e850a767dd40f9494dd7536}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!rate@{rate}}
-\index{rate@{rate}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32} radio\+::\+Modulator\+::rate\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Modulator_a8901a2170e850a767dd40f9494dd7536}
-The sampling rate of the baseband and generated I\+F signals 
-
-Definition at line 52 of file modulation.\+hpp.
-
-\hypertarget{classradio_1_1Modulator_ad1fbba4bdd6a8c8d2ff05cb7be60fc5c}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!size@{size}}
-\index{size@{size}!radio\+::\+Modulator@{radio\+::\+Modulator}}
-\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Modulator\+::size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Modulator_ad1fbba4bdd6a8c8d2ff05cb7be60fc5c}
-The number of elements in the data array 
-
-Definition at line 57 of file modulation.\+hpp.
 
 
 

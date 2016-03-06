@@ -1,0 +1,55 @@
+.TH "radio::Sinusoid" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio::Sinusoid \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Sinusoid\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSinusoid\fP (\fBfloat32\fP frequency, \fBuint32\fP samplingRate)"
+.br
+.ti -1c
+.RI "\fB~Sinusoid\fP ()"
+.br
+.ti -1c
+.RI "\fBfloat32\fP \fBnext\fP ()"
+.br
+.ti -1c
+.RI "\fBfloat32\fP \fBnextShifted\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class creates an easy-to-call sinusoid that will preserve its phase throughout its lifespan\&. Essentially, it is a ring buffer\&. 
+.PP
+Definition at line 19 of file Sinusoid\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::Sinusoid::Sinusoid (\fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
+Creates a ring-buffer sinusoid\&. 
+.PP
+Definition at line 71 of file Sinusoid\&.hpp\&.
+.SS "radio::Sinusoid::~Sinusoid ()"
+Free arrays malloc'd in the constructor\&. 
+.PP
+Definition at line 86 of file Sinusoid\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBfloat32\fP radio::Sinusoid::next ()"
+Provides the next value of the sinusoid in a manner consistant with a ring buffer\&. 
+.PP
+Definition at line 91 of file Sinusoid\&.hpp\&.
+.SS "\fBfloat32\fP radio::Sinusoid::nextShifted ()"
+Provides the next value of the sinusoid shifted 90 degrees in a manner consistant with a ring buffer\&. 
+.PP
+Definition at line 96 of file Sinusoid\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

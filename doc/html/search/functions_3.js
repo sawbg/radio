@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fft',['fft',['../classradio_1_1ZDomain.html#a8ce67c0185428f8bf8de998481798593',1,'radio::ZDomain::fft()'],['../fft__test_8cpp.html#a22051cd252d576aec530227d32d95bdd',1,'fft():&#160;fft_test.cpp'],['../namespaceradio.html#ab146b5bf7f1c005939b024c9c4910a77',1,'radio::fft()']]],
-  ['filter',['Filter',['../classradio_1_1Filter.html#a48ab268192e0135e5c9f74ad35a90fa1',1,'radio::Filter']]]
+  ['hilbert',['hilbert',['../classradio_1_1ZDomain.html#ac6de3f5864558c598c4043a551aa073a',1,'radio::ZDomain::hilbert()'],['../fft__test_8cpp.html#adc49b5a69e64611f421bbefee39a4d15',1,'hilbert():&#160;fft_test.cpp'],['../namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0',1,'radio::hilbert()']]]
 ];

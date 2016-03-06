@@ -127,7 +127,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="definitions_8hpp__dep__incl.png" border="0" usemap="#src_2definitions_8hppdep" alt=""/></div>
 <map name="src_2definitions_8hppdep" id="src_2definitions_8hppdep">
-<area shape="rect" id="node2" href="alsa__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="5,80,128,107"/><area shape="rect" id="node3" href="baseband__filter__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="230,155,362,196"/><area shape="rect" id="node4" href="Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="203,80,301,107"/><area shape="rect" id="node5" href="fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="326,80,442,107"/><area shape="rect" id="node6" href="zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="466,80,585,107"/><area shape="rect" id="node7" href="fft__test2_8cpp.html" title="Tests FFT, IFFT, and Hilbert implementations in zdomain.hpp. " alt="" coords="564,162,681,189"/><area shape="rect" id="node9" href="mic__test_8cpp.html" title="Tests getting mic input via ALSA &#160;May not even compile at the moment. " alt="" coords="661,80,779,107"/><area shape="rect" id="node10" href="modulation_8hpp.html" title="Contains the classes for the various types of modulation supported by the program. " alt="" coords="803,80,935,107"/><area shape="rect" id="node11" href="ZDomain_8hpp.html" title="This is an abandoned, overly complicated attempt to have a class housing z&#45;domain functions..." alt="" coords="960,80,1083,107"/><area shape="rect" id="node8" href="iq__test_8cpp.html" title="Generates test IQ signal. " alt="" coords="431,162,539,189"/></map>
+<area shape="rect" id="node2" href="alsa__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="5,80,128,107"/><area shape="rect" id="node3" href="baseband__filter__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="317,155,449,196"/><area shape="rect" id="node4" href="Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="203,80,301,107"/><area shape="rect" id="node5" href="modulation_8hpp.html" title="src/modulation.hpp" alt="" coords="109,162,241,189"/><area shape="rect" id="node7" href="fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="326,80,442,107"/><area shape="rect" id="node8" href="zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="518,80,637,107"/><area shape="rect" id="node9" href="fft__test2_8cpp.html" title="Tests FFT, IFFT, and Hilbert implementations in zdomain.hpp. " alt="" coords="657,162,775,189"/><area shape="rect" id="node11" href="mic__test_8cpp.html" title="Tests getting mic input via ALSA &#160;May not even compile at the moment. " alt="" coords="713,80,831,107"/><area shape="rect" id="node12" href="Sinusoid_8hpp.html" title="src/Sinusoid.hpp" alt="" coords="855,80,974,107"/><area shape="rect" id="node13" href="ZDomain_8hpp.html" title="This is an abandoned, overly complicated attempt to have a class housing z&#45;domain functions..." alt="" coords="999,80,1121,107"/><area shape="rect" id="node6" href="piped__test_8cpp.html" title="src/piped_test.cpp" alt="" coords="214,244,343,271"/><area shape="rect" id="node10" href="iq__test_8cpp.html" title="Generates test IQ signal. " alt="" coords="525,162,633,189"/></map>
 </div>
 </div>
 <p><a href="definitions_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -135,6 +135,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceradio"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html">radio</a></td></tr>
+<tr class="memdesc:namespaceradio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the classes for the various types of modulation supported by the program. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -182,6 +183,19 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">radio::DEN</a>
  }</td></tr>
 <tr class="separator:aa2a4fb91116a2b9a094776a29cce0dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fb7299001138f28b7f69975c58399e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">radio::ModulationType</a> { <br />
+&#160;&#160;<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902">radio::ModulationType::DSB_LC</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31">radio::ModulationType::DSB_SC</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876">radio::ModulationType::USB_FILTERED</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13">radio::ModulationType::USB_HILBERT</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8">radio::ModulationType::LSB_FILTERED</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a">radio::ModulationType::LSB_HILBERT</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a">radio::ModulationType::FM_NARROW</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c">radio::ModulationType::FM_WIDE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a46fb7299001138f28b7f69975c58399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains declarations of system-independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. </p>
@@ -394,7 +408,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="definitions_8hpp.html">definitions.hpp</a></li>
-    <li class="footer">Generated on Mon Feb 15 2016 10:38:51 for My Project by
+    <li class="footer">Generated on Sat Mar 5 2016 22:07:40 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,16 +1,19 @@
 \hypertarget{namespaceradio}{\section{radio Namespace Reference}
 \label{namespaceradio}\index{radio@{radio}}
 }
+
+
+Contains the classes for the various types of modulation supported by the program.  
+
+
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
-\item 
-class \hyperlink{classradio_1_1DsbLcModulator}{Dsb\+Lc\+Modulator}
-\item 
-class \hyperlink{classradio_1_1DsbScModulator}{Dsb\+Sc\+Modulator}
 \item 
 class \hyperlink{classradio_1_1Filter}{Filter}
 \item 
 class \hyperlink{classradio_1_1Modulator}{Modulator}
+\item 
+class \hyperlink{classradio_1_1Sinusoid}{Sinusoid}
 \item 
 class \hyperlink{classradio_1_1ZDomain}{Z\+Domain}
 \end{DoxyCompactItemize}
@@ -23,6 +26,18 @@ enum \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{Age} \{ \hyper
 \item 
 enum \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{Fractional} \{ \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{N\+U\+M}, 
 \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{D\+E\+N}
+ \}
+\item 
+enum \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{Modulation\+Type} \{ \\*
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{Modulation\+Type\+::\+D\+S\+B\+\_\+\+L\+C}, 
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{Modulation\+Type\+::\+D\+S\+B\+\_\+\+S\+C}, 
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{Modulation\+Type\+::\+U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}, 
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{Modulation\+Type\+::\+U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}, 
+\\*
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{Modulation\+Type\+::\+L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}, 
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{Modulation\+Type\+::\+L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}, 
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{Modulation\+Type\+::\+F\+M\+\_\+\+N\+A\+R\+R\+O\+W}, 
+\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{Modulation\+Type\+::\+F\+M\+\_\+\+W\+I\+D\+E}
  \}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -42,11 +57,28 @@ void \hyperlink{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}{make\+I\+Q} (\
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{definitions_8hpp_af19387f95516e2132a08cf60503f22a5}{fparams} \hyperlink{namespaceradio_a9bd902e9216499953a5906de73dc1796}{F\+\_\+\+B\+A\+S\+E\+B\+A\+N\+D}
+\item 
+\hyperlink{definitions_8hpp_af19387f95516e2132a08cf60503f22a5}{fparams} \hyperlink{namespaceradio_a0ffd57d5a11ff70a1f55dbdc8ebe098d}{F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}
+\item 
+\hyperlink{definitions_8hpp_af19387f95516e2132a08cf60503f22a5}{fparams} \hyperlink{namespaceradio_a0ec4548711b6d6ed6867c70b3fc2a413}{F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}
+\item 
+const \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{namespaceradio_aa82ddc6ba206798fd70ffc25665b3cb6}{F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E} = 20000
+\item 
+const \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{namespaceradio_a284213fea4beed2f74bb936927cbe654}{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E} = 48000
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-This namespace contains all the classes, functions, and enumerations used in the application. 
+Contains the classes for the various types of modulation supported by the program. 
+
+contains the \hyperlink{classradio_1_1Sinusoid}{Sinusoid} class
+
+This namespace contains all the classes, functions, and enumerations used in the application.
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
 
 \subsection{Enumeration Type Documentation}
 \hypertarget{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{\index{radio@{radio}!Age@{Age}}
@@ -80,6 +112,34 @@ Describes the numerator and denominator of a z-\/domain transfer function \begin
 
 
 Definition at line 55 of file definitions.\+hpp.
+
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399e}{\index{radio@{radio}!Modulation\+Type@{Modulation\+Type}}
+\index{Modulation\+Type@{Modulation\+Type}!radio@{radio}}
+\subsubsection[{Modulation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf radio\+::\+Modulation\+Type}\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespaceradio_a46fb7299001138f28b7f69975c58399e}
+Describes a form of modulation. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+S\+B\+\_\+\+L\+C@{D\+S\+B\+\_\+\+L\+C}!radio@{radio}}\index{radio@{radio}!D\+S\+B\+\_\+\+L\+C@{D\+S\+B\+\_\+\+L\+C}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{D\+S\+B\+\_\+\+L\+C}\label{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}
+}]\index{D\+S\+B\+\_\+\+S\+C@{D\+S\+B\+\_\+\+S\+C}!radio@{radio}}\index{radio@{radio}!D\+S\+B\+\_\+\+S\+C@{D\+S\+B\+\_\+\+S\+C}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{D\+S\+B\+\_\+\+S\+C}\label{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}
+}]\index{U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D@{U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}!radio@{radio}}\index{radio@{radio}!U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D@{U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}\label{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}
+}]\index{U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T@{U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}!radio@{radio}}\index{radio@{radio}!U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T@{U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}\label{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}
+}]\index{L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D@{L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}!radio@{radio}}\index{radio@{radio}!L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D@{L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}\label{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}
+}]\index{L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T@{L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}!radio@{radio}}\index{radio@{radio}!L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T@{L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}\label{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}
+}]\index{F\+M\+\_\+\+N\+A\+R\+R\+O\+W@{F\+M\+\_\+\+N\+A\+R\+R\+O\+W}!radio@{radio}}\index{radio@{radio}!F\+M\+\_\+\+N\+A\+R\+R\+O\+W@{F\+M\+\_\+\+N\+A\+R\+R\+O\+W}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{F\+M\+\_\+\+N\+A\+R\+R\+O\+W}\label{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}
+}]\index{F\+M\+\_\+\+W\+I\+D\+E@{F\+M\+\_\+\+W\+I\+D\+E}!radio@{radio}}\index{radio@{radio}!F\+M\+\_\+\+W\+I\+D\+E@{F\+M\+\_\+\+W\+I\+D\+E}}\item[{\em 
+\hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{F\+M\+\_\+\+W\+I\+D\+E}\label{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 60 of file definitions.\+hpp.
 
 
 
@@ -195,7 +255,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph}
+\includegraphics[width=350pt]{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph}
 \end{center}
 \end{figure}
 
@@ -309,7 +369,7 @@ Here is the caller graph for this function\+:
             0.001372192986,
             0.001372192986,
             -0.002215694636,
-            0.0008977019461
+            0.0008977019461 
     \}, std::vector<float32> \{
         1,
             -4.678616047,
@@ -319,7 +379,95 @@ Here is the caller graph for this function\+:
             -0.7719064355
     \} \}
 \end{DoxyCode}
-Baseband filter coefficients. 
+Baseband filter coefficients. Generated with M\+A\+T\+L\+A\+B 2015\+A. 
 
 Definition at line 19 of file fvectors.\+hpp.
+
+\hypertarget{namespaceradio_a0ffd57d5a11ff70a1f55dbdc8ebe098d}{\index{radio@{radio}!F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D@{F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}}
+\index{F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D@{F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}!radio@{radio}}
+\subsubsection[{F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fparams} radio\+::\+F\+\_\+\+L\+O\+W\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}}\label{namespaceradio_a0ffd57d5a11ff70a1f55dbdc8ebe098d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ std::vector<float32> \{
+        0.2758038938,
+            2.763578892,
+            12.83915043,
+            36.47584915,
+            70.37084961,
+            96.76893616,
+            96.76893616,
+            70.37084961,
+            36.47584915,
+            12.83915043,
+            2.763578892,
+            0.2758038938
+    \}, std::vector<float32> \{
+        1,
+            7.605497837,
+            27.34180641,
+            60.83375549,
+            92.60908508,
+            100.8363876,
+            79.74796295,
+            45.49822617,
+            18.1356678,
+            4.690036297,
+            0.6617552638,
+            0.0281427335      
+    \} \}
+\end{DoxyCode}
+Lower-\/sideband filter coefficients. Generated with M\+A\+T\+L\+A\+B 2015\+A. 
+
+Definition at line 38 of file fvectors.\+hpp.
+
+\hypertarget{namespaceradio_a0ec4548711b6d6ed6867c70b3fc2a413}{\index{radio@{radio}!F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D@{F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}}
+\index{F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D@{F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}!radio@{radio}}
+\subsubsection[{F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fparams} radio\+::\+F\+\_\+\+U\+P\+P\+E\+R\+S\+I\+D\+E\+B\+A\+N\+D}}\label{namespaceradio_a0ec4548711b6d6ed6867c70b3fc2a413}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ std::vector<float32> \{
+        0.001690387726,
+            0.01145271584,
+            0.03591799363,
+            0.06576926261,
+            0.0711934343,
+            0.03156377375,
+            -0.03156377375,
+            -0.0711934343,
+            -0.06576926261,
+            -0.03591799363,
+            -0.01145271584,
+            -0.001690387726
+    \}, std::vector<float32> \{
+        1,
+            9.465174675,
+            41.62402725,
+            112.0970993,
+            205.2097626,
+            267.9378662,
+            254.4868011,
+            175.7772827,
+            86.5161972,
+            28.89988136,
+            5.897814751,
+            0.5572910309
+    \} \}
+\end{DoxyCode}
+Upper-\/sideband filter coefficients. Generated with M\+A\+T\+L\+A\+B 2015\+A. 
+
+Definition at line 69 of file fvectors.\+hpp.
+
+\hypertarget{namespaceradio_aa82ddc6ba206798fd70ffc25665b3cb6}{\index{radio@{radio}!F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E@{F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E}}
+\index{F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E@{F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E}!radio@{radio}}
+\subsubsection[{F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32} radio\+::\+F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E = 20000}}\label{namespaceradio_aa82ddc6ba206798fd70ffc25665b3cb6}
+The default intermediate carrier frequency 
+
+Definition at line 24 of file modulation.\+hpp.
+
+\hypertarget{namespaceradio_a284213fea4beed2f74bb936927cbe654}{\index{radio@{radio}!S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E@{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E}}
+\index{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E@{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E}!radio@{radio}}
+\subsubsection[{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf uint32} radio\+::\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E = 48000}}\label{namespaceradio_a284213fea4beed2f74bb936927cbe654}
+The default sampling rate (frequency) 
+
+Definition at line 29 of file modulation.\+hpp.
 

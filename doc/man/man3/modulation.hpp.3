@@ -1,11 +1,8 @@
-.TH "src/modulation.hpp" 3 "Mon Feb 15 2016" "My Project" \" -*- nroff -*-
+.TH "src/modulation.hpp" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 src/modulation.hpp \- 
-.PP
-Contains the classes for the various types of modulation supported by the program\&.  
-
 .SH SYNOPSIS
 .br
 .PP
@@ -19,18 +16,16 @@ Contains the classes for the various types of modulation supported by the progra
 .br
 \fC#include 'definitions\&.hpp'\fP
 .br
+\fC#include 'Filter\&.hpp'\fP
+.br
+\fC#include 'fvectors\&.hpp'\fP
+.br
 
 .SS "Classes"
 
 .in +1c
 .ti -1c
 .RI "class \fBradio::Modulator\fP"
-.br
-.ti -1c
-.RI "class \fBradio::DsbLcModulator\fP"
-.br
-.ti -1c
-.RI "class \fBradio::DsbScModulator\fP"
 .br
 .in -1c
 .SS "Namespaces"
@@ -39,21 +34,18 @@ Contains the classes for the various types of modulation supported by the progra
 .ti -1c
 .RI " \fBradio\fP"
 .br
+.RI "\fIContains the classes for the various types of modulation supported by the program\&. \fP"
 .in -1c
-.SH "Detailed Description"
-.PP 
-Contains the classes for the various types of modulation supported by the program\&. 
+.SS "Variables"
 
-
-.PP
-\fBAuthor:\fP
-.RS 4
-Samuel Andrew Wisner, awisner94@gmail.com 
-.RE
-.PP
-
-.PP
-Definition in file \fBmodulation\&.hpp\fP\&.
+.in +1c
+.ti -1c
+.RI "const \fBuint32\fP \fBradio::FREQ_INTERMEDIATE\fP = 20000"
+.br
+.ti -1c
+.RI "const \fBuint32\fP \fBradio::SAMPLING_RATE\fP = 48000"
+.br
+.in -1c
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

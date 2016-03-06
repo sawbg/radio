@@ -21,5 +21,15 @@ var definitions_8hpp =
     [ "Fractional", "definitions_8hpp.html#aa2a4fb91116a2b9a094776a29cce0dac", [
       [ "NUM", "definitions_8hpp.html#aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48", null ],
       [ "DEN", "definitions_8hpp.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe", null ]
+    ] ],
+    [ "ModulationType", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399e", [
+      [ "DSB_LC", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902", null ],
+      [ "DSB_SC", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31", null ],
+      [ "USB_FILTERED", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876", null ],
+      [ "USB_HILBERT", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13", null ],
+      [ "LSB_FILTERED", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8", null ],
+      [ "LSB_HILBERT", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a", null ],
+      [ "FM_NARROW", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a", null ],
+      [ "FM_WIDE", "definitions_8hpp.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c", null ]
     ] ]
 ];

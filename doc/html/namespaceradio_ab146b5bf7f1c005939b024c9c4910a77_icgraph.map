@@ -1,7 +1,8 @@
 <map id="radio::fft" name="radio::fft">
-<area shape="rect" id="node2" href="$fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="413,23,464,50"/>
-<area shape="rect" id="node3" href="$namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="245,74,339,100"/>
-<area shape="rect" id="node6" href="$namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="124,23,197,50"/>
-<area shape="rect" id="node4" href="$namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="387,74,491,100"/>
-<area shape="rect" id="node5" href="$iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="539,74,589,100"/>
+<area shape="rect" id="node2" href="$fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,23,486,50"/>
+<area shape="rect" id="node3" href="$namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="245,74,339,101"/>
+<area shape="rect" id="node7" href="$namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="124,23,197,50"/>
+<area shape="rect" id="node4" href="$classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="387,74,535,101"/>
+<area shape="rect" id="node5" href="$namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="409,125,513,151"/>
+<area shape="rect" id="node6" href="$iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="583,125,633,151"/>
 </map>

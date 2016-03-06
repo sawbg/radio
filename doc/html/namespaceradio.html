@@ -111,16 +111,17 @@ $(document).ready(function(){initNavTree('namespaceradio.html','');});
 <div class="title">radio Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains the classes for the various types of modulation supported by the program.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1DsbLcModulator.html">DsbLcModulator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1DsbScModulator.html">DsbScModulator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1Filter.html">Filter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1Modulator.html">Modulator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1Sinusoid.html">Sinusoid</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1ZDomain.html">ZDomain</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +136,19 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">DEN</a>
  }</td></tr>
 <tr class="separator:aa2a4fb91116a2b9a094776a29cce0dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fb7299001138f28b7f69975c58399e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> { <br />
+&#160;&#160;<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902">ModulationType::DSB_LC</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31">ModulationType::DSB_SC</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876">ModulationType::USB_FILTERED</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13">ModulationType::USB_HILBERT</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8">ModulationType::LSB_FILTERED</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a">ModulationType::LSB_HILBERT</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a">ModulationType::FM_NARROW</a>, 
+<a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c">ModulationType::FM_WIDE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a46fb7299001138f28b7f69975c58399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -153,9 +167,20 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a9bd902e9216499953a5906de73dc1796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5">fparams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#a9bd902e9216499953a5906de73dc1796">F_BASEBAND</a></td></tr>
 <tr class="separator:a9bd902e9216499953a5906de73dc1796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ffd57d5a11ff70a1f55dbdc8ebe098d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5">fparams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#a0ffd57d5a11ff70a1f55dbdc8ebe098d">F_LOWERSIDEBAND</a></td></tr>
+<tr class="separator:a0ffd57d5a11ff70a1f55dbdc8ebe098d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec4548711b6d6ed6867c70b3fc2a413"><td class="memItemLeft" align="right" valign="top"><a class="el" href="definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5">fparams</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#a0ec4548711b6d6ed6867c70b3fc2a413">F_UPPERSIDEBAND</a></td></tr>
+<tr class="separator:a0ec4548711b6d6ed6867c70b3fc2a413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82ddc6ba206798fd70ffc25665b3cb6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#aa82ddc6ba206798fd70ffc25665b3cb6">FREQ_INTERMEDIATE</a> = 20000</td></tr>
+<tr class="separator:aa82ddc6ba206798fd70ffc25665b3cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a284213fea4beed2f74bb936927cbe654"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceradio.html#a284213fea4beed2f74bb936927cbe654">SAMPLING_RATE</a> = 48000</td></tr>
+<tr class="separator:a284213fea4beed2f74bb936927cbe654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This namespace contains all the classes, functions, and enumerations used in the application. </p>
+<div class="textblock"><p>Contains the classes for the various types of modulation supported by the program. </p>
+<p>contains the <a class="el" href="classradio_1_1Sinusoid.html">Sinusoid</a> class</p>
+<p>This namespace contains all the classes, functions, and enumerations used in the application.</p>
+<dl class="section author"><dt>Author</dt><dd>Samuel Andrew Wisner, <a href="#" onclick="location.href='mai'+'lto:'+'awi'+'sn'+'er9'+'4@'+'gma'+'il'+'.co'+'m'; return false;">awisn<span style="display: none;">.nosp@m.</span>er94<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a90839d95c13fa21f45e9cd380e38f1f3"></a>
 <div class="memitem">
@@ -199,6 +224,47 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a46fb7299001138f28b7f69975c58399e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">radio::ModulationType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Describes a form of modulation. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902"></a>DSB_LC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31"></a>DSB_SC&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876"></a>USB_FILTERED&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13"></a>USB_HILBERT&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8"></a>LSB_FILTERED&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a"></a>LSB_HILBERT&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a"></a>FM_NARROW&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c"></a>FM_WIDE&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="definitions_8hpp_source.html#l00060">60</a> of file <a class="el" href="definitions_8hpp_source.html">definitions.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa04bb922c40cafb00a5603f1fc6d9c26"></a>
 <div class="memitem">
@@ -239,7 +305,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.png" border="0" usemap="#namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph" alt=""/></div>
 <map name="namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph" id="namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph">
-<area shape="rect" id="node2" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="143,31,216,57"/><area shape="rect" id="node3" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="432,5,483,32"/><area shape="rect" id="node4" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="264,56,357,83"/><area shape="rect" id="node5" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="405,56,509,83"/><area shape="rect" id="node6" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="557,56,608,83"/></map>
+<area shape="rect" id="node2" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="143,31,216,57"/><area shape="rect" id="node3" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="454,5,505,32"/><area shape="rect" id="node4" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="264,56,357,83"/><area shape="rect" id="node5" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="405,56,553,83"/><area shape="rect" id="node6" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="427,107,531,133"/><area shape="rect" id="node7" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="601,107,652,133"/></map>
 </div>
 </p>
 
@@ -285,7 +351,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.png" border="0" usemap="#namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph" alt=""/></div>
 <map name="namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph" id="namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph">
-<area shape="rect" id="node2" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="413,23,464,50"/><area shape="rect" id="node3" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="245,74,339,100"/><area shape="rect" id="node6" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="124,23,197,50"/><area shape="rect" id="node4" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="387,74,491,100"/><area shape="rect" id="node5" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="539,74,589,100"/></map>
+<area shape="rect" id="node2" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="435,23,486,50"/><area shape="rect" id="node3" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="245,74,339,101"/><area shape="rect" id="node7" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="124,23,197,50"/><area shape="rect" id="node4" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="387,74,535,101"/><area shape="rect" id="node5" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="409,125,513,151"/><area shape="rect" id="node6" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="583,125,633,151"/></map>
 </div>
 </p>
 
@@ -346,7 +412,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.png" border="0" usemap="#namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph" alt=""/></div>
 <map name="namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph" id="namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph">
-<area shape="rect" id="node2" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="173,5,224,32"/><area shape="rect" id="node3" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="147,56,251,83"/><area shape="rect" id="node4" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="299,56,349,83"/></map>
+<area shape="rect" id="node2" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="195,5,246,32"/><area shape="rect" id="node3" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="147,56,295,83"/><area shape="rect" id="node4" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="169,107,273,133"/><area shape="rect" id="node5" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="343,107,393,133"/></map>
 </div>
 </p>
 
@@ -401,7 +467,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.png" border="0" usemap="#namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph" alt=""/></div>
 <map name="namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph" id="namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph">
-<area shape="rect" id="node2" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="295,5,345,32"/><area shape="rect" id="node3" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="127,56,220,83"/><area shape="rect" id="node4" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="268,56,372,83"/><area shape="rect" id="node5" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="420,56,471,83"/></map>
+<area shape="rect" id="node2" href="fft__test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="317,5,367,32"/><area shape="rect" id="node3" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="127,56,220,83"/><area shape="rect" id="node4" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="268,56,416,83"/><area shape="rect" id="node5" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="290,107,394,133"/><area shape="rect" id="node6" href="iq__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="464,107,515,133"/></map>
 </div>
 </p>
 
@@ -484,7 +550,7 @@ Here is the caller graph for this function:</div>
 <div class="line">            0.001372192986,</div>
 <div class="line">            0.001372192986,</div>
 <div class="line">            -0.002215694636,</div>
-<div class="line">            0.0008977019461</div>
+<div class="line">            0.0008977019461 </div>
 <div class="line">    }, std::vector&lt;float32&gt; {</div>
 <div class="line">        1,</div>
 <div class="line">            -4.678616047,</div>
@@ -493,9 +559,123 @@ Here is the caller graph for this function:</div>
 <div class="line">            4.007629871,</div>
 <div class="line">            -0.7719064355</div>
 <div class="line">    } }</div>
-</div><!-- fragment --><p>Baseband filter coefficients. </p>
+</div><!-- fragment --><p>Baseband filter coefficients. Generated with MATLAB 2015A. </p>
 
 <p>Definition at line <a class="el" href="fvectors_8hpp_source.html#l00019">19</a> of file <a class="el" href="fvectors_8hpp_source.html">fvectors.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ffd57d5a11ff70a1f55dbdc8ebe098d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5">fparams</a> radio::F_LOWERSIDEBAND</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= { std::vector&lt;float32&gt; {</div>
+<div class="line">        0.2758038938,</div>
+<div class="line">            2.763578892,</div>
+<div class="line">            12.83915043,</div>
+<div class="line">            36.47584915,</div>
+<div class="line">            70.37084961,</div>
+<div class="line">            96.76893616,</div>
+<div class="line">            96.76893616,</div>
+<div class="line">            70.37084961,</div>
+<div class="line">            36.47584915,</div>
+<div class="line">            12.83915043,</div>
+<div class="line">            2.763578892,</div>
+<div class="line">            0.2758038938</div>
+<div class="line">    }, std::vector&lt;float32&gt; {</div>
+<div class="line">        1,</div>
+<div class="line">            7.605497837,</div>
+<div class="line">            27.34180641,</div>
+<div class="line">            60.83375549,</div>
+<div class="line">            92.60908508,</div>
+<div class="line">            100.8363876,</div>
+<div class="line">            79.74796295,</div>
+<div class="line">            45.49822617,</div>
+<div class="line">            18.1356678,</div>
+<div class="line">            4.690036297,</div>
+<div class="line">            0.6617552638,</div>
+<div class="line">            0.0281427335      </div>
+<div class="line">    } }</div>
+</div><!-- fragment --><p>Lower-sideband filter coefficients. Generated with MATLAB 2015A. </p>
+
+<p>Definition at line <a class="el" href="fvectors_8hpp_source.html#l00038">38</a> of file <a class="el" href="fvectors_8hpp_source.html">fvectors.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ec4548711b6d6ed6867c70b3fc2a413"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5">fparams</a> radio::F_UPPERSIDEBAND</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= { std::vector&lt;float32&gt; {</div>
+<div class="line">        0.001690387726,</div>
+<div class="line">            0.01145271584,</div>
+<div class="line">            0.03591799363,</div>
+<div class="line">            0.06576926261,</div>
+<div class="line">            0.0711934343,</div>
+<div class="line">            0.03156377375,</div>
+<div class="line">            -0.03156377375,</div>
+<div class="line">            -0.0711934343,</div>
+<div class="line">            -0.06576926261,</div>
+<div class="line">            -0.03591799363,</div>
+<div class="line">            -0.01145271584,</div>
+<div class="line">            -0.001690387726</div>
+<div class="line">    }, std::vector&lt;float32&gt; {</div>
+<div class="line">        1,</div>
+<div class="line">            9.465174675,</div>
+<div class="line">            41.62402725,</div>
+<div class="line">            112.0970993,</div>
+<div class="line">            205.2097626,</div>
+<div class="line">            267.9378662,</div>
+<div class="line">            254.4868011,</div>
+<div class="line">            175.7772827,</div>
+<div class="line">            86.5161972,</div>
+<div class="line">            28.89988136,</div>
+<div class="line">            5.897814751,</div>
+<div class="line">            0.5572910309</div>
+<div class="line">    } }</div>
+</div><!-- fragment --><p>Upper-sideband filter coefficients. Generated with MATLAB 2015A. </p>
+
+<p>Definition at line <a class="el" href="fvectors_8hpp_source.html#l00069">69</a> of file <a class="el" href="fvectors_8hpp_source.html">fvectors.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa82ddc6ba206798fd70ffc25665b3cb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> radio::FREQ_INTERMEDIATE = 20000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The default intermediate carrier frequency </p>
+
+<p>Definition at line <a class="el" href="modulation_8hpp_source.html#l00024">24</a> of file <a class="el" href="modulation_8hpp_source.html">modulation.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a284213fea4beed2f74bb936927cbe654"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> radio::SAMPLING_RATE = 48000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The default sampling rate (frequency) </p>
+
+<p>Definition at line <a class="el" href="modulation_8hpp_source.html#l00029">29</a> of file <a class="el" href="modulation_8hpp_source.html">modulation.hpp</a>.</p>
 
 </div>
 </div>
@@ -505,7 +685,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceradio.html">radio</a></li>
-    <li class="footer">Generated on Mon Feb 15 2016 10:38:51 for My Project by
+    <li class="footer">Generated on Sat Mar 5 2016 22:07:40 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

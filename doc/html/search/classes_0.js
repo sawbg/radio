@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['dsblcmodulator',['DsbLcModulator',['../classradio_1_1DsbLcModulator.html',1,'radio']]],
-  ['dsbscmodulator',['DsbScModulator',['../classradio_1_1DsbScModulator.html',1,'radio']]]
+  ['filter',['Filter',['../classradio_1_1Filter.html',1,'radio']]]
 ];

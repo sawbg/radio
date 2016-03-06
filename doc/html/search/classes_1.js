@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filter',['Filter',['../classradio_1_1Filter.html',1,'radio']]]
+  ['modulator',['Modulator',['../classradio_1_1Modulator.html',1,'radio']]]
 ];
