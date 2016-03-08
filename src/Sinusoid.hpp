@@ -40,7 +40,7 @@ namespace radio {
 			 */
 			float32 nextShifted();
 
-		private:
+		protected:
 			/**
 			 * The frequency of the sinusoid
 			 */
