@@ -1,5 +1,4 @@
 /**
- * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief Contains declarations of system-independant (universal size) integers
  * and float types, shortened type names for some commonly used types, and
@@ -10,6 +9,7 @@
 #define definitions_H
 
 #include <complex>
+#include <vector>
 
 #define ENUM signed char
 
@@ -54,6 +54,11 @@ namespace radio {
 	 */
 	enum Fractional { NUM, DEN };
 
+	/**
+	 *
+	 */
+	enum Argument { FREQ = 1, MODE, PL_TONE };
+	
 	/**
 	 * Describes a form of modulation.
 	 */
