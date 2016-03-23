@@ -3,10 +3,14 @@
 }
 
 
-{\ttfamily \#include $<$modulation.\+hpp$>$}
+{\ttfamily \#include $<$Modulator.\+hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{classradio_1_1Modulator_ab202651b368986cc76673b6e997550b8}{Modulator} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} data\mbox{[}$\,$\mbox{]}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{Modulation\+Type} type, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} freq\+Inter=\hyperlink{namespaceradio_aa82ddc6ba206798fd70ffc25665b3cb6}{F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} rate=\hyperlink{namespaceradio_a284213fea4beed2f74bb936927cbe654}{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E})
+\item 
+\hyperlink{classradio_1_1Modulator_a712e6e110c57b29ebdd754bd34bf269b}{$\sim$\+Modulator} ()
 \item 
 void \hyperlink{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{Mod} ()
 \end{DoxyCompactItemize}
@@ -15,7 +19,51 @@ void \hyperlink{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{Mod} 
 \subsection{Detailed Description}
 This class, while not intended to be called directly, is a superclass for the classes of the modulation forms used in this project. 
 
-Definition at line 35 of file modulation.\+hpp.
+Definition at line 37 of file Modulator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classradio_1_1Modulator_ab202651b368986cc76673b6e997550b8}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!Modulator@{Modulator}}
+\index{Modulator@{Modulator}!radio\+::\+Modulator@{radio\+::\+Modulator}}
+\subsubsection[{Modulator}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Modulator\+::\+Modulator (
+\begin{DoxyParamCaption}
+\item[{{\bf float32}}]{data\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf uint32}}]{size, }
+\item[{{\bf Modulation\+Type}}]{type, }
+\item[{{\bf float32}}]{freq\+Inter = {\ttfamily {\bf F\+R\+E\+Q\+\_\+\+I\+N\+T\+E\+R\+M\+E\+D\+I\+A\+T\+E}}, }
+\item[{{\bf uint32}}]{rate = {\ttfamily {\bf S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+R\+A\+T\+E}}}
+\end{DoxyParamCaption}
+)}}\label{classradio_1_1Modulator_ab202651b368986cc76673b6e997550b8}
+Creates a \hyperlink{classradio_1_1Modulator}{Modulator} with the specified parameters. Intended to be called only by subclasses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq\+Inter} & the frequency of the I\+F carrier sinusoid\\
+\hline
+{\em rate} & the sampling rate of the baseband and I\+F signals\\
+\hline
+{\em data} & the array holding initially the baseband signal\\
+\hline
+{\em size} & the number of elements in data\\
+\hline
+{\em type} & form of modulation to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file Modulator.\+hpp.
+
+\hypertarget{classradio_1_1Modulator_a712e6e110c57b29ebdd754bd34bf269b}{\index{radio\+::\+Modulator@{radio\+::\+Modulator}!````~Modulator@{$\sim$\+Modulator}}
+\index{````~Modulator@{$\sim$\+Modulator}!radio\+::\+Modulator@{radio\+::\+Modulator}}
+\subsubsection[{$\sim$\+Modulator}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Modulator\+::$\sim$\+Modulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classradio_1_1Modulator_a712e6e110c57b29ebdd754bd34bf269b}
+
+
+Definition at line 115 of file Modulator.\+hpp.
 
 
 
@@ -29,7 +77,7 @@ Definition at line 35 of file modulation.\+hpp.
 )}}\label{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}
 Modulates the audio currently in the data array. 
 
-Definition at line 96 of file modulation.\+hpp.
+Definition at line 119 of file Modulator.\+hpp.
 
 
 
@@ -45,6 +93,18 @@ Here is the call graph for this function\+:
 
 
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\hyperlink{modulation_8hpp}{modulation.\+hpp}\end{DoxyCompactItemize}
+src/\hyperlink{Modulator_8hpp}{Modulator.\+hpp}\end{DoxyCompactItemize}

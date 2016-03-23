@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['usb_5ffiltered',['USB_FILTERED',['../namespaceradio.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876',1,'radio']]],
-  ['usb_5fhilbert',['USB_HILBERT',['../namespaceradio.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13',1,'radio']]]
+  ['old',['OLD',['../namespaceradio.html#a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82',1,'radio']]]
 ];

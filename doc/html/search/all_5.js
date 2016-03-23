@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['enum',['ENUM',['../definitions_8hpp.html#a378181c29a641d58f55d647b5a9599f2',1,'definitions.hpp']]],
-  ['eqlength',['eqLength',['../classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d',1,'radio::Filter']]]
+  ['f_5fbaseband',['F_BASEBAND',['../namespaceradio.html#a9bd902e9216499953a5906de73dc1796',1,'radio']]],
+  ['f_5flowersideband',['F_LOWERSIDEBAND',['../namespaceradio.html#a0ffd57d5a11ff70a1f55dbdc8ebe098d',1,'radio']]],
+  ['f_5fuppersideband',['F_UPPERSIDEBAND',['../namespaceradio.html#a0ec4548711b6d6ed6867c70b3fc2a413',1,'radio']]],
+  ['fft',['fft',['../fft__test_8cpp.html#a22051cd252d576aec530227d32d95bdd',1,'fft():&#160;fft_test.cpp'],['../namespaceradio.html#ab146b5bf7f1c005939b024c9c4910a77',1,'radio::fft()']]],
+  ['fft_5ftest_2ecpp',['fft_test.cpp',['../fft__test_8cpp.html',1,'']]],
+  ['fft_5ftest2_2ecpp',['fft_test2.cpp',['../fft__test2_8cpp.html',1,'']]],
+  ['filter',['Filter',['../classradio_1_1Filter.html',1,'radio']]],
+  ['filter',['Filter',['../classradio_1_1Filter.html#a48ab268192e0135e5c9f74ad35a90fa1',1,'radio::Filter']]],
+  ['filter_2ehpp',['Filter.hpp',['../Filter_8hpp.html',1,'']]],
+  ['float32',['float32',['../definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1',1,'definitions.hpp']]],
+  ['float64',['float64',['../definitions_8hpp.html#a232fad1b0d6dcc7c16aabde98b2e2a80',1,'definitions.hpp']]],
+  ['fm_5fnarrow',['FM_NARROW',['../namespaceradio.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a',1,'radio']]],
+  ['fm_5fwide',['FM_WIDE',['../namespaceradio.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c',1,'radio']]],
+  ['fparams',['fparams',['../definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5',1,'definitions.hpp']]],
+  ['fractional',['Fractional',['../namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0dac',1,'radio']]],
+  ['freq',['FREQ',['../namespaceradio.html#adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88',1,'radio']]],
+  ['freq_5fintermediate',['FREQ_INTERMEDIATE',['../namespaceradio.html#aa82ddc6ba206798fd70ffc25665b3cb6',1,'radio']]],
+  ['frequency',['frequency',['../classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2',1,'radio::Sinusoid']]],
+  ['fvectors_2ehpp',['fvectors.hpp',['../fvectors_8hpp.html',1,'']]]
 ];

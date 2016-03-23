@@ -1,18 +1,14 @@
 \hypertarget{definitions_8hpp}{\section{src/definitions.hpp File Reference}
 \label{definitions_8hpp}\index{src/definitions.\+hpp@{src/definitions.\+hpp}}
 }
-
-
-Contains declarations of system-\/independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations.  
-
-
 {\ttfamily \#include $<$complex$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
 Include dependency graph for definitions.\+hpp\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=176pt]{definitions_8hpp__incl}
+\includegraphics[width=196pt]{definitions_8hpp__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -27,12 +23,12 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
  \hyperlink{namespaceradio}{radio}
-\begin{DoxyCompactList}\small\item\em Contains the classes for the various types of modulation supported by the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em contains helper-\/functions for \hyperlink{alsa__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{E\+N\+U\+M}~signed char
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Contains declarations of system-\/independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,6 +70,11 @@ enum \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{radio\+::\+Fra
 \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{radio\+::\+D\+E\+N}
  \}
 \item 
+enum \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5}{radio\+::\+Argument} \{ \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88}{radio\+::\+F\+R\+E\+Q} = 1, 
+\hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a70b58e67bda4ad9bd46e010e1f090c7b}{radio\+::\+M\+O\+D\+E}, 
+\hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{radio\+::\+P\+L\+\_\+\+T\+O\+N\+E}
+ \}
+\item 
 enum \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{radio\+::\+Modulation\+Type} \{ \\*
 \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{radio\+::\+Modulation\+Type\+::\+D\+S\+B\+\_\+\+L\+C}, 
 \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{radio\+::\+Modulation\+Type\+::\+D\+S\+B\+\_\+\+S\+C}, 
@@ -88,22 +89,17 @@ enum \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{radio\+::\+Mod
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{Macro Definition Documentation}
+\hypertarget{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{\index{definitions.\+hpp@{definitions.\+hpp}!E\+N\+U\+M@{E\+N\+U\+M}}
+\index{E\+N\+U\+M@{E\+N\+U\+M}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{E\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+U\+M~signed char}}\label{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}
+
+
 Contains declarations of system-\/independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. 
 
 \begin{DoxyAuthor}{Author}
 Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
 \end{DoxyAuthor}
-
-
-Definition in file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
-
-
-
-\subsection{Macro Definition Documentation}
-\hypertarget{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{\index{definitions.\+hpp@{definitions.\+hpp}!E\+N\+U\+M@{E\+N\+U\+M}}
-\index{E\+N\+U\+M@{E\+N\+U\+M}!definitions.\+hpp@{definitions.\+hpp}}
-\subsubsection[{E\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+U\+M~signed char}}\label{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}
 
 
 Definition at line 14 of file definitions.\+hpp.

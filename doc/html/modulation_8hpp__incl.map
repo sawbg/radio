@@ -1,5 +1,0 @@
-<map id="src/modulation.hpp" name="src/modulation.hpp">
-<area shape="rect" id="node6" href="$definitions_8hpp.html" title="Contains declarations of system&#45;independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. " alt="" coords="276,155,383,181"/>
-<area shape="rect" id="node8" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="182,80,258,107"/>
-<area shape="rect" id="node9" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="282,80,377,107"/>
-</map>

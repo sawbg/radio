@@ -1,4 +1,4 @@
-.TH "radio::Modulator" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
+.TH "radio::Modulator" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,10 +7,16 @@ radio::Modulator \-
 .br
 .PP
 .PP
-\fC#include <modulation\&.hpp>\fP
+\fC#include <Modulator\&.hpp>\fP
 .SS "Public Member Functions"
 
 .in +1c
+.ti -1c
+.RI "\fBModulator\fP (\fBfloat32\fP data[], \fBuint32\fP size, \fBModulationType\fP type, \fBfloat32\fP freqInter=\fBFREQ_INTERMEDIATE\fP, \fBuint32\fP rate=\fBSAMPLING_RATE\fP)"
+.br
+.ti -1c
+.RI "\fB~Modulator\fP ()"
+.br
 .ti -1c
 .RI "void \fBMod\fP ()"
 .br
@@ -19,13 +25,38 @@ radio::Modulator \-
 .PP 
 This class, while not intended to be called directly, is a superclass for the classes of the modulation forms used in this project\&. 
 .PP
-Definition at line 35 of file modulation\&.hpp\&.
+Definition at line 37 of file Modulator\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::Modulator::Modulator (\fBfloat32\fPdata[], \fBuint32\fPsize, \fBModulationType\fPtype, \fBfloat32\fPfreqInter = \fC\fBFREQ_INTERMEDIATE\fP\fP, \fBuint32\fPrate = \fC\fBSAMPLING_RATE\fP\fP)"
+Creates a \fBModulator\fP with the specified parameters\&. Intended to be called only by subclasses\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfreqInter\fP the frequency of the IF carrier sinusoid
+.br
+\fIrate\fP the sampling rate of the baseband and IF signals
+.br
+\fIdata\fP the array holding initially the baseband signal
+.br
+\fIsize\fP the number of elements in data
+.br
+\fItype\fP form of modulation to use 
+.RE
+.PP
+
+.PP
+Definition at line 101 of file Modulator\&.hpp\&.
+.SS "radio::Modulator::~Modulator ()"
+
+.PP
+Definition at line 115 of file Modulator\&.hpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::Modulator::Mod ()"
 Modulates the audio currently in the data array\&. 
 .PP
-Definition at line 96 of file modulation\&.hpp\&.
+Definition at line 119 of file Modulator\&.hpp\&.
 
 .SH "Author"
 .PP 

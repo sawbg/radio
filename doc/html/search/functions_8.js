@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sinusoid',['Sinusoid',['../classradio_1_1Sinusoid.html#a3de64ab473d7d1864a18983c4b1eeb52',1,'radio::Sinusoid']]]
+  ['to_5ftype',['to_type',['../namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d',1,'radio']]]
 ];

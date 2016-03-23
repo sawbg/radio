@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['data',['data',['../classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2',1,'radio::Filter']]],
-  ['diffeq',['diffEq',['../classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56',1,'radio::Filter']]]
+  ['amplitude',['amplitude',['../Subcarrier_8hpp.html#a5e811fba6f7ada5fe11de28ffd8f2f87',1,'Subcarrier.hpp']]]
 ];

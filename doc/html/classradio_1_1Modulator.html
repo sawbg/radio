@@ -70,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -111,18 +112,97 @@ $(document).ready(function(){initNavTree('classradio_1_1Modulator.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="modulation_8hpp_source.html">modulation.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab202651b368986cc76673b6e997550b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1Modulator.html#ab202651b368986cc76673b6e997550b8">Modulator</a> (<a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> data[], <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size, <a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> type, <a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> freqInter=<a class="el" href="namespaceradio.html#aa82ddc6ba206798fd70ffc25665b3cb6">FREQ_INTERMEDIATE</a>, <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> rate=<a class="el" href="namespaceradio.html#a284213fea4beed2f74bb936927cbe654">SAMPLING_RATE</a>)</td></tr>
+<tr class="separator:ab202651b368986cc76673b6e997550b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712e6e110c57b29ebdd754bd34bf269b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1Modulator.html#a712e6e110c57b29ebdd754bd34bf269b">~Modulator</a> ()</td></tr>
+<tr class="separator:a712e6e110c57b29ebdd754bd34bf269b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5eac6e4900579486b5871b48e64cdab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab">Mod</a> ()</td></tr>
 <tr class="separator:ab5eac6e4900579486b5871b48e64cdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class, while not intended to be called directly, is a superclass for the classes of the modulation forms used in this project. </p>
 
-<p>Definition at line <a class="el" href="modulation_8hpp_source.html#l00035">35</a> of file <a class="el" href="modulation_8hpp_source.html">modulation.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>Definition at line <a class="el" href="Modulator_8hpp_source.html#l00037">37</a> of file <a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab202651b368986cc76673b6e997550b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">radio::Modulator::Modulator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>&#160;</td>
+          <td class="paramname"><em>data</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>&#160;</td>
+          <td class="paramname"><em>freqInter</em> = <code><a class="el" href="namespaceradio.html#aa82ddc6ba206798fd70ffc25665b3cb6">FREQ_INTERMEDIATE</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>rate</em> = <code><a class="el" href="namespaceradio.html#a284213fea4beed2f74bb936927cbe654">SAMPLING_RATE</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classradio_1_1Modulator.html">Modulator</a> with the specified parameters. Intended to be called only by subclasses.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freqInter</td><td>the frequency of the IF carrier sinusoid</td></tr>
+    <tr><td class="paramname">rate</td><td>the sampling rate of the baseband and IF signals</td></tr>
+    <tr><td class="paramname">data</td><td>the array holding initially the baseband signal</td></tr>
+    <tr><td class="paramname">size</td><td>the number of elements in data</td></tr>
+    <tr><td class="paramname">type</td><td>form of modulation to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Modulator_8hpp_source.html#l00101">101</a> of file <a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a712e6e110c57b29ebdd754bd34bf269b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">radio::Modulator::~Modulator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Modulator_8hpp_source.html#l00115">115</a> of file <a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ab5eac6e4900579486b5871b48e64cdab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -137,21 +217,30 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Modulates the audio currently in the data array. </p>
 
-<p>Definition at line <a class="el" href="modulation_8hpp_source.html#l00096">96</a> of file <a class="el" href="modulation_8hpp_source.html">modulation.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Modulator_8hpp_source.html#l00119">119</a> of file <a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.png" border="0" usemap="#classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph" alt=""/></div>
 <map name="classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph" id="classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph">
-<area shape="rect" id="node2" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="246,31,339,57"/><area shape="rect" id="node6" href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2" title="radio::Sinusoid::next" alt="" coords="222,81,363,108"/><area shape="rect" id="node7" href="classradio_1_1Sinusoid.html#a3f2741e9dd30291e5fa87f2eb2243e7c" title="radio::Sinusoid::nextShifted" alt="" coords="201,132,384,159"/><area shape="rect" id="node3" href="namespaceradio.html#ab146b5bf7f1c005939b024c9c4910a77" title="radio::fft" alt="" coords="563,5,633,32"/><area shape="rect" id="node4" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="432,56,505,83"/><area shape="rect" id="node5" href="namespaceradio.html#aa04bb922c40cafb00a5603f1fc6d9c26" title="radio::aconj" alt="" coords="553,56,643,83"/></map>
+<area shape="rect" id="node2" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="246,31,339,57"/><area shape="rect" id="node6" href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2" title="radio::Sinusoid::next" alt="" coords="222,81,363,108"/><area shape="rect" id="node7" href="classradio_1_1Sinusoid.html#a3f2741e9dd30291e5fa87f2eb2243e7c" title="radio::Sinusoid::nextShifted" alt="" coords="201,132,384,159"/><area shape="rect" id="node8" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197" title="radio::Filter::Pass" alt="" coords="230,183,355,209"/><area shape="rect" id="node3" href="namespaceradio.html#ab146b5bf7f1c005939b024c9c4910a77" title="radio::fft" alt="" coords="563,5,633,32"/><area shape="rect" id="node4" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="432,56,505,83"/><area shape="rect" id="node5" href="namespaceradio.html#aa04bb922c40cafb00a5603f1fc6d9c26" title="radio::aconj" alt="" coords="553,56,643,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph.png" border="0" usemap="#classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph" alt=""/></div>
+<map name="classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph" id="classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="201,5,252,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="modulation_8hpp_source.html">modulation.hpp</a></li>
+<li>src/<a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -159,7 +248,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceradio.html">radio</a></li><li class="navelem"><a class="el" href="classradio_1_1Modulator.html">Modulator</a></li>
-    <li class="footer">Generated on Sat Mar 5 2016 22:07:40 for My Project by
+    <li class="footer">Generated on Tue Mar 22 2016 21:35:49 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

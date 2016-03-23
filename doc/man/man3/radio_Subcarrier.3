@@ -1,0 +1,56 @@
+.TH "radio::Subcarrier" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio::Subcarrier \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Subcarrier\&.hpp>\fP
+.PP
+Inherits \fBradio::Sinusoid\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSubcarrier\fP (\fBfloat32\fP amplitude, \fBfloat32\fP *data, \fBuint32\fP size, \fBfloat32\fP \fBfrequency\fP, \fBuint32\fP \fBsamplingRate\fP)"
+.br
+.ti -1c
+.RI "\fBAdd\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class creates a CTCSS subcarrier (PL tone) at a specified frequency in a baseband signal\&. 
+.PP
+Definition at line 17 of file Subcarrier\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::Subcarrier::Subcarrier (\fBfloat32\fPamplitude, \fBfloat32\fP *data, \fBuint32\fPsize, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
+Creates a \fBSubcarrier\fP object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIamplitude\fP the amplitude (0-1) of the subcarrier\&. Assumes baseband signal has a peak-to-peak range of -1 to 1\&.
+.br
+\fIdata\fP an array containing a portion of the discrete baseband signal
+.br
+\fIsize\fP the number of elemeents in the data array
+.br
+\fIfrequency\fP the frequency of the CTCSS tone in the baseband (not in the IF or RF signals)
+.br
+\fIsamplingRate\fP the sampling frequency of the baseband signal 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "radio::Subcarrier::Add ()"
+Adds the CTCSS tone to the baseband signal\&. 
+.PP
+Definition at line 74 of file Subcarrier\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

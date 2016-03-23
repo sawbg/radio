@@ -1,10 +1,10 @@
-.TH "radio" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
+.TH "radio" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 radio \- 
 .PP
-Contains the classes for the various types of modulation supported by the program\&.  
+contains helper-functions for \fBmain()\fP  
 
 .SH SYNOPSIS
 .br
@@ -22,7 +22,7 @@ Contains the classes for the various types of modulation supported by the progra
 .RI "class \fBSinusoid\fP"
 .br
 .ti -1c
-.RI "class \fBZDomain\fP"
+.RI "class \fBSubcarrier\fP"
 .br
 .in -1c
 .SS "Enumerations"
@@ -35,6 +35,9 @@ Contains the classes for the various types of modulation supported by the progra
 .RI "enum \fBFractional\fP { \fBNUM\fP, \fBDEN\fP }"
 .br
 .ti -1c
+.RI "enum \fBArgument\fP { \fBFREQ\fP = 1, \fBMODE\fP, \fBPL_TONE\fP }"
+.br
+.ti -1c
 .RI "enum \fBModulationType\fP { \fBModulationType::DSB_LC\fP, \fBModulationType::DSB_SC\fP, \fBModulationType::USB_FILTERED\fP, \fBModulationType::USB_HILBERT\fP, \fBModulationType::LSB_FILTERED\fP, \fBModulationType::LSB_HILBERT\fP, \fBModulationType::FM_NARROW\fP, \fBModulationType::FM_WIDE\fP }"
 .br
 .in -1c
@@ -42,19 +45,28 @@ Contains the classes for the various types of modulation supported by the progra
 
 .in +1c
 .ti -1c
-.RI "void \fBaconj\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
+.RI "void \fBShowHelp\fP ()"
 .br
 .ti -1c
-.RI "void \fBfft\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
+.RI "\fBModulationType\fP \fBto_type\fP (std::string str)"
 .br
 .ti -1c
-.RI "void \fBhilbert\fP (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fP size)"
+.RI "\fBradio::Subcarrier\fP \fBSinusoid\fP \fBSubcarrier\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP \fBamplitude\fP, \fBfloat32\fP frequency, \fBuint32\fP samplingRate)"
 .br
 .ti -1c
-.RI "void \fBifft\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
+.RI "void \fBaconj\fP (\fBcfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP)"
 .br
 .ti -1c
-.RI "void \fBmakeIQ\fP (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fP size)"
+.RI "void \fBfft\fP (\fBcfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "void \fBhilbert\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP *dest, \fBuint32\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "void \fBifft\fP (\fBcfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP)"
+.br
+.ti -1c
+.RI "void \fBmakeIQ\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP *dest, \fBuint32\fP \fBsize\fP)"
 .br
 .in -1c
 .SS "Variables"
@@ -78,18 +90,20 @@ Contains the classes for the various types of modulation supported by the progra
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains the classes for the various types of modulation supported by the program\&. 
+contains helper-functions for \fBmain()\fP 
 
+contains the \fBSubcarrier\fP class
+.PP
 contains the \fBSinusoid\fP class
 .PP
-This namespace contains all the classes, functions, and enumerations used in the application\&.
+Contains the classes for the various types of modulation supported by the program\&.
 .PP
 \fBAuthor:\fP
 .RS 4
-Samuel Andrew Wisner, awisner94@gmail.com 
+Samuel Andrew Wisner, awisner94@gmail.com
 .RE
 .PP
-
+This namespace contains all the classes, functions, and enumerations used in the application\&. 
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBradio::Age\fP"
@@ -103,6 +117,19 @@ Describes the age of a filter (from last Pass() or in this Pass())
 \fB\fINEW \fP\fP
 .PP
 Definition at line 50 of file definitions\&.hpp\&.
+.SS "enum \fBradio::Argument\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFREQ \fP\fP
+.TP
+\fB\fIMODE \fP\fP
+.TP
+\fB\fIPL_TONE \fP\fP
+.PP
+Definition at line 60 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Fractional\fP"
 Describes the numerator and denominator of a z-domain transfer function 
 .PP
@@ -136,7 +163,7 @@ Describes a form of modulation\&.
 .TP
 \fB\fIFM_WIDE \fP\fP
 .PP
-Definition at line 60 of file definitions\&.hpp\&.
+Definition at line 65 of file definitions\&.hpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void radio::aconj (\fBcfloat32\fP *data, \fBuint32\fPsize)"
@@ -212,6 +239,18 @@ Produces an interleaved array of first an element from an original array of data
 
 .PP
 Definition at line 168 of file zdomain\&.hpp\&.
+.SS "void radio::ShowHelp ()"
+
+.PP
+Definition at line 20 of file auxiliary\&.hpp\&.
+.SS "\fBradio::Subcarrier\fP \fBSinusoid\fP \fBradio::Subcarrier\fP (\fBfloat32\fP *data, \fBfloat32\fPamplitude, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
+
+.PP
+Definition at line 62 of file Subcarrier\&.hpp\&.
+.SS "\fBModulationType\fP radio::to_type (std::stringstr)"
+
+.PP
+Definition at line 49 of file auxiliary\&.hpp\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBfparams\fP radio::F_BASEBAND"
@@ -310,11 +349,11 @@ Definition at line 69 of file fvectors\&.hpp\&.
 .SS "const \fBuint32\fP radio::FREQ_INTERMEDIATE = 20000"
 The default intermediate carrier frequency 
 .PP
-Definition at line 24 of file modulation\&.hpp\&.
+Definition at line 26 of file Modulator\&.hpp\&.
 .SS "const \fBuint32\fP radio::SAMPLING_RATE = 48000"
 The default sampling rate (frequency) 
 .PP
-Definition at line 29 of file modulation\&.hpp\&.
+Definition at line 31 of file Modulator\&.hpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

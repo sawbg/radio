@@ -1,0 +1,89 @@
+\hypertarget{classradio_1_1Subcarrier}{\section{radio\+:\+:Subcarrier Class Reference}
+\label{classradio_1_1Subcarrier}\index{radio\+::\+Subcarrier@{radio\+::\+Subcarrier}}
+}
+
+
+{\ttfamily \#include $<$Subcarrier.\+hpp$>$}
+
+
+
+Inheritance diagram for radio\+:\+:Subcarrier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classradio_1_1Subcarrier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for radio\+:\+:Subcarrier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classradio_1_1Subcarrier__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classradio_1_1Subcarrier_a623f84ebaa36194a2aa8a8b6ec103d36}{Subcarrier} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} amplitude, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{sampling\+Rate})
+\item 
+\hyperlink{classradio_1_1Subcarrier_aeb366a93b56ebe012bc7076b581557a2}{Add} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class creates a C\+T\+C\+S\+S subcarrier (P\+L tone) at a specified frequency in a baseband signal. 
+
+Definition at line 17 of file Subcarrier.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classradio_1_1Subcarrier_a623f84ebaa36194a2aa8a8b6ec103d36}{\index{radio\+::\+Subcarrier@{radio\+::\+Subcarrier}!Subcarrier@{Subcarrier}}
+\index{Subcarrier@{Subcarrier}!radio\+::\+Subcarrier@{radio\+::\+Subcarrier}}
+\subsubsection[{Subcarrier}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Subcarrier\+::\+Subcarrier (
+\begin{DoxyParamCaption}
+\item[{{\bf float32}}]{amplitude, }
+\item[{{\bf float32} $\ast$}]{data, }
+\item[{{\bf uint32}}]{size, }
+\item[{{\bf float32}}]{frequency, }
+\item[{{\bf uint32}}]{sampling\+Rate}
+\end{DoxyParamCaption}
+)}}\label{classradio_1_1Subcarrier_a623f84ebaa36194a2aa8a8b6ec103d36}
+Creates a \hyperlink{classradio_1_1Subcarrier}{Subcarrier} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amplitude} & the amplitude (0-\/1) of the subcarrier. Assumes baseband signal has a peak-\/to-\/peak range of -\/1 to 1.\\
+\hline
+{\em data} & an array containing a portion of the discrete baseband signal\\
+\hline
+{\em size} & the number of elemeents in the data array\\
+\hline
+{\em frequency} & the frequency of the C\+T\+C\+S\+S tone in the baseband (not in the I\+F or R\+F signals)\\
+\hline
+{\em sampling\+Rate} & the sampling frequency of the baseband signal \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classradio_1_1Subcarrier_aeb366a93b56ebe012bc7076b581557a2}{\index{radio\+::\+Subcarrier@{radio\+::\+Subcarrier}!Add@{Add}}
+\index{Add@{Add}!radio\+::\+Subcarrier@{radio\+::\+Subcarrier}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Subcarrier\+::\+Add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classradio_1_1Subcarrier_aeb366a93b56ebe012bc7076b581557a2}
+Adds the C\+T\+C\+S\+S tone to the baseband signal. 
+
+Definition at line 74 of file Subcarrier.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Subcarrier_8hpp}{Subcarrier.\+hpp}\end{DoxyCompactItemize}

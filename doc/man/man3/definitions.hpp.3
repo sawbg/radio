@@ -1,15 +1,14 @@
-.TH "src/definitions.hpp" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
+.TH "src/definitions.hpp" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 src/definitions.hpp \- 
-.PP
-Contains declarations of system-independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations\&.  
-
 .SH SYNOPSIS
 .br
 .PP
 \fC#include <complex>\fP
+.br
+\fC#include <vector>\fP
 .br
 
 .SS "Namespaces"
@@ -18,7 +17,7 @@ Contains declarations of system-independant (universal size) integers and float 
 .ti -1c
 .RI " \fBradio\fP"
 .br
-.RI "\fIContains the classes for the various types of modulation supported by the program\&. \fP"
+.RI "\fIcontains helper-functions for \fBmain()\fP \fP"
 .in -1c
 .SS "Macros"
 
@@ -26,6 +25,7 @@ Contains declarations of system-independant (universal size) integers and float 
 .ti -1c
 .RI "#define \fBENUM\fP   signed char"
 .br
+.RI "\fIContains declarations of system-independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations\&. \fP"
 .in -1c
 .SS "Typedefs"
 
@@ -82,26 +82,24 @@ Contains declarations of system-independant (universal size) integers and float 
 .RI "enum \fBradio::Fractional\fP { \fBradio::NUM\fP, \fBradio::DEN\fP }"
 .br
 .ti -1c
+.RI "enum \fBradio::Argument\fP { \fBradio::FREQ\fP = 1, \fBradio::MODE\fP, \fBradio::PL_TONE\fP }"
+.br
+.ti -1c
 .RI "enum \fBradio::ModulationType\fP { \fBradio::ModulationType::DSB_LC\fP, \fBradio::ModulationType::DSB_SC\fP, \fBradio::ModulationType::USB_FILTERED\fP, \fBradio::ModulationType::USB_HILBERT\fP, \fBradio::ModulationType::LSB_FILTERED\fP, \fBradio::ModulationType::LSB_HILBERT\fP, \fBradio::ModulationType::FM_NARROW\fP, \fBradio::ModulationType::FM_WIDE\fP }"
 .br
 .in -1c
-.SH "Detailed Description"
+.SH "Macro Definition Documentation"
 .PP 
+.SS "#define ENUM   signed char"
+
+.PP
 Contains declarations of system-independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations\&. 
-
-
 .PP
 \fBAuthor:\fP
 .RS 4
 Samuel Andrew Wisner, awisner94@gmail.com 
 .RE
 .PP
-
-.PP
-Definition in file \fBdefinitions\&.hpp\fP\&.
-.SH "Macro Definition Documentation"
-.PP 
-.SS "#define ENUM   signed char"
 
 .PP
 Definition at line 14 of file definitions\&.hpp\&.

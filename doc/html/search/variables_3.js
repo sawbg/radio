@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orig',['orig',['../classradio_1_1ZDomain.html#afd6f4cc19657c9074d1afb9b89a5fbc2',1,'radio::ZDomain']]]
+  ['eqlength',['eqLength',['../classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d',1,'radio::Filter']]]
 ];

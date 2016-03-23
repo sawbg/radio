@@ -1,4 +1,4 @@
-.TH "radio::Sinusoid" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
+.TH "radio::Sinusoid" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,11 +8,13 @@ radio::Sinusoid \-
 .PP
 .PP
 \fC#include <Sinusoid\&.hpp>\fP
+.PP
+Inherited by \fBradio::Subcarrier\fP\fC [private]\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "\fBSinusoid\fP (\fBfloat32\fP frequency, \fBuint32\fP samplingRate)"
+.RI "\fBSinusoid\fP (\fBfloat32\fP \fBfrequency\fP, \fBuint32\fP \fBsamplingRate\fP=48000)"
 .br
 .ti -1c
 .RI "\fB~Sinusoid\fP ()"
@@ -24,6 +26,25 @@ radio::Sinusoid \-
 .RI "\fBfloat32\fP \fBnextShifted\fP ()"
 .br
 .in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBfloat32\fP \fBfrequency\fP"
+.br
+.ti -1c
+.RI "\fBuint32\fP \fBcarrierIndex\fP = 0"
+.br
+.ti -1c
+.RI "\fBuint32\fP \fBsamplingRate\fP"
+.br
+.ti -1c
+.RI "\fBfloat32\fP * \fBsinusoid\fP"
+.br
+.ti -1c
+.RI "\fBfloat32\fP * \fBsinusoidShift90\fP"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 This class creates an easy-to-call sinusoid that will preserve its phase throughout its lifespan\&. Essentially, it is a ring buffer\&. 
@@ -31,7 +52,7 @@ This class creates an easy-to-call sinusoid that will preserve its phase through
 Definition at line 19 of file Sinusoid\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "radio::Sinusoid::Sinusoid (\fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
+.SS "radio::Sinusoid::Sinusoid (\fBfloat32\fPfrequency, \fBuint32\fPsamplingRate = \fC48000\fP)"
 Creates a ring-buffer sinusoid\&. 
 .PP
 Definition at line 71 of file Sinusoid\&.hpp\&.
@@ -49,6 +70,28 @@ Definition at line 91 of file Sinusoid\&.hpp\&.
 Provides the next value of the sinusoid shifted 90 degrees in a manner consistant with a ring buffer\&. 
 .PP
 Definition at line 96 of file Sinusoid\&.hpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBuint32\fP radio::Sinusoid::carrierIndex = 0\fC [protected]\fP"
+The current index of the sinusoid's arrays 
+.PP
+Definition at line 52 of file Sinusoid\&.hpp\&.
+.SS "\fBfloat32\fP radio::Sinusoid::frequency\fC [protected]\fP"
+The frequency of the sinusoid 
+.PP
+Definition at line 47 of file Sinusoid\&.hpp\&.
+.SS "\fBuint32\fP radio::Sinusoid::samplingRate\fC [protected]\fP"
+The sampling rate 
+.PP
+Definition at line 57 of file Sinusoid\&.hpp\&.
+.SS "\fBfloat32\fP* radio::Sinusoid::sinusoid\fC [protected]\fP"
+Initialized as an array of the sinusoid values 
+.PP
+Definition at line 62 of file Sinusoid\&.hpp\&.
+.SS "\fBfloat32\fP* radio::Sinusoid::sinusoidShift90\fC [protected]\fP"
+Initialized as an array of the sinusoid values shifted 90 degrees 
+.PP
+Definition at line 68 of file Sinusoid\&.hpp\&.
 
 .SH "Author"
 .PP 

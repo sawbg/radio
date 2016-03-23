@@ -18,6 +18,11 @@ var definitions_8hpp =
       [ "OLD", "definitions_8hpp.html#a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82", null ],
       [ "NEW", "definitions_8hpp.html#a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686", null ]
     ] ],
+    [ "Argument", "definitions_8hpp.html#adf83fa57d52181b9779a376c3a98b4f5", [
+      [ "FREQ", "definitions_8hpp.html#adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88", null ],
+      [ "MODE", "definitions_8hpp.html#adf83fa57d52181b9779a376c3a98b4f5a70b58e67bda4ad9bd46e010e1f090c7b", null ],
+      [ "PL_TONE", "definitions_8hpp.html#adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d", null ]
+    ] ],
     [ "Fractional", "definitions_8hpp.html#aa2a4fb91116a2b9a094776a29cce0dac", [
       [ "NUM", "definitions_8hpp.html#aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48", null ],
       [ "DEN", "definitions_8hpp.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe", null ]
