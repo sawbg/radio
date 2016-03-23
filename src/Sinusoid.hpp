@@ -21,7 +21,7 @@ namespace radio {
 			/**
 			 * Creates a ring-buffer sinusoid.
 			 */
-			Sinusoid(float32 frequency, uint32 samplingRate);
+			Sinusoid(float32 frequency, uint32 samplingRate = 48000);
 
 			/**
 			 * Free arrays malloc'd in the constructor.
@@ -68,15 +68,15 @@ namespace radio {
 			float32* sinusoidShift90;
 	};
 
-	Sinusoid::Sinusoid(uint32 frequency, uint32 samplingRate) {
-		this->frequency = carrierFreq;
+	Sinusoid::Sinusoid(float32 frequency, uint32 samplingRate) {
+		this->frequency = frequency;
 		this->samplingRate = samplingRate;
 		sinusoid = (float32*)std::malloc(samplingRate * sizeof(float32));
 		sinusoidShift90 = (float32*)std::malloc(samplingRate * sizeof(float32));
 
 		float32 arg = 2 * M_PI * frequency / samplingRate;
 
-		for(uint32 i; i < samplingRate; i++) {
+		for(uint32 i = 0; i < samplingRate; i++) {
 			// cosine argument evaluates as float due to M_PI and frequency
 			sinusoid[i] = cos(arg * i);
 			sinusoidShift90[i] = sin(arg * i);
