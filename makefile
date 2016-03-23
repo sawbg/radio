@@ -27,3 +27,9 @@ fft-test2:
 
 iq-test:
 	$(GCC) $(CPPFLAGS) src/iq_test.cpp -o bin/iqtest
+
+modulator-test:
+	$(GCC) $(CPPFLAGS) src/modulator_test.cpp -o bin/modulatortest
+
+sdr:
+	$(GCC) $(CPPFLAGS) src/main.cpp -o bin/radio
