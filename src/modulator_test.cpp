@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Declare objects
-	Modulator modulator(dataBuffer, BUFFER_SIZE, type);
+	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 5000);
 	Sinusoid sinusoid(freq);
 
 	while(true) {
