@@ -1,11 +1,10 @@
-GCC = g++
-CPPFLAGS = -g -std=gnu++14 
+GCC = g++ -g -std=gnu++14
 
 alsa-test:
-	$(GCC) $(CPPFLAGS) src/alsa_test.cpp -o bin/alsatest -O0 -lasound
+	$(GCC) src/alsa_test.cpp -o bin/alsatest -O0 -lasound
 
 baseband-filter-test:
-	$(GCC) $(CPPFLAGS) src/baseband_filter_test.cpp -o bin/bbftest
+	$(GCC) src/baseband_filter_test.cpp -o bin/bbftest
 
 count:
 	grep -r "src/" -e "Samuel Andrew Wisner" -l | xargs wc -l
@@ -20,16 +19,22 @@ docs:
 	git push
 
 fft-test:
-	$(GCC) $(CPPFLAGS) src/fft_test.cpp -o bin/fft-test
+	$(GCC) src/fft_test.cpp -o bin/fft-test
 
 fft-test2:
-	$(GCC) $(CPPFLAGS) src/fft_test2.cpp -o bin/fft-test2
+	$(GCC) src/fft_test2.cpp -o bin/fft-test2
 
 iq-test:
-	$(GCC) $(CPPFLAGS) src/iq_test.cpp -o bin/iqtest
+	$(GCC) src/iq_test.cpp -o bin/iqtest
 
 modulator-test:
-	$(GCC) $(CPPFLAGS) src/modulator_test.cpp -o bin/modulatortest
+	$(GCC) src/modulator_test.cpp -o bin/modulatortest
 
-sdr:
-	$(GCC) $(CPPFLAGS) src/main.cpp -o bin/radio
+lsb-filter-test:
+	$(GCC) src/lsb_filter_test.cpp -o bin/lsbftest
+
+radio:
+	$(GCC) src/main.cpp -o bin/sdr
+
+sinusoid-test:
+	$(GCC) src/sinusoid_test.cpp -o bin/sinusoidtest
