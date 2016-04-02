@@ -51,7 +51,7 @@ int main(int argc, char* argv[]) {
 
 	// Declare objects
 	Filter baseFilter(dataBuffer, BUFFER_SIZE, F_BASEBAND);
-	Modulator modulator(dataBuffer, BUFFER_SIZE, type);
+	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 5000);
 
 	while(true) {
 		read(STDIN_FILENO, &dataBuffer, BUFFER_SIZE * sizeof(float32));
