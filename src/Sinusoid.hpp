@@ -52,6 +52,11 @@ namespace radio {
 			uint32 carrierIndex = 0;
 
 			/**
+			 *
+			 */
+			uint32 carrierIndexShifted = 0;
+		
+			/**
 			 * The sampling rate
 			 */
 			uint32 samplingRate;
@@ -94,8 +99,8 @@ namespace radio {
 	}
 
 	float32 Sinusoid::nextShifted() {
-		if(carrierIndex >= samplingRate) carrierIndex = 0;
-		return sinusoidShift90[carrierIndex++];
+		if(carrierIndexShifted >= samplingRate) carrierIndexShifted = 0;
+		return sinusoidShift90[carrierIndexShifted++];
 	}
 }
 
