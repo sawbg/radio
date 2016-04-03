@@ -1,4 +1,5 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief contains the Subcarrier class
  */
@@ -39,7 +40,7 @@ namespace radio {
 			/**
 			 * Adds the CTCSS tone to the baseband signal.
 			 */
-			Add();
+			void Add();
 
 		private:
 			/**
@@ -57,11 +58,11 @@ namespace radio {
 			 * The number of elements in the data array
 			 */
 			uint32 size;
-	}
+	};
 
-	Subcarrier::Subcarrier(float32* data, float32 amplitude,
-			float32 frequency, uint32 samplingRate)
-		: Sinusoid(frequency, samplingRate){
+	Subcarrier::Subcarrier(float32 amplitude, float32* data,
+			uint32 size, float32 frequency, uint32 samplingRate)
+		: Sinusoid(frequency, samplingRate) {
 		this->data = data;
 		this->amplitude = amplitude;
 		this->size = size;
@@ -71,9 +72,10 @@ namespace radio {
 		}
 	}
 
-	Subcarrier::Add() {
+	void Subcarrier::Add() {
 		for(uint32 i = 0; i < size; i++) {
 			data[i] += next();
+			data[i] /= (1 + amplitude);  // ensures value <= 1
 		}
 	}
 }
