@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2',1,'radio::Filter::data()'],['../Subcarrier_8hpp.html#a7e2e55177abd6522b546b51f851e8f22',1,'data():&#160;Subcarrier.hpp']]],
+  ['data',['data',['../classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2',1,'radio::Filter']]],
   ['definitions_2ehpp',['definitions.hpp',['../definitions_8hpp.html',1,'']]],
   ['den',['DEN',['../namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe',1,'radio']]],
   ['diffeq',['diffEq',['../classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56',1,'radio::Filter']]],

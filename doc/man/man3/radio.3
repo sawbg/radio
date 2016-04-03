@@ -1,4 +1,4 @@
-.TH "radio" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
+.TH "radio" 3 "Sun Apr 3 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -51,22 +51,19 @@ contains helper-functions for \fBmain()\fP
 .RI "\fBModulationType\fP \fBto_type\fP (std::string str)"
 .br
 .ti -1c
-.RI "\fBradio::Subcarrier\fP \fBSinusoid\fP \fBSubcarrier\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP \fBamplitude\fP, \fBfloat32\fP frequency, \fBuint32\fP samplingRate)"
+.RI "void \fBaconj\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
 .br
 .ti -1c
-.RI "void \fBaconj\fP (\fBcfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP)"
+.RI "void \fBfft\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
 .br
 .ti -1c
-.RI "void \fBfft\fP (\fBcfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP)"
+.RI "void \fBhilbert\fP (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fP size)"
 .br
 .ti -1c
-.RI "void \fBhilbert\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP *dest, \fBuint32\fP \fBsize\fP)"
+.RI "void \fBifft\fP (\fBcfloat32\fP *data, \fBuint32\fP size)"
 .br
 .ti -1c
-.RI "void \fBifft\fP (\fBcfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP)"
-.br
-.ti -1c
-.RI "void \fBmakeIQ\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP *dest, \fBuint32\fP \fBsize\fP)"
+.RI "void \fBmakeIQ\fP (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fP size)"
 .br
 .in -1c
 .SS "Variables"
@@ -92,10 +89,6 @@ contains helper-functions for \fBmain()\fP
 .PP 
 contains helper-functions for \fBmain()\fP 
 
-contains the \fBSubcarrier\fP class
-.PP
-contains the \fBSinusoid\fP class
-.PP
 Contains the classes for the various types of modulation supported by the program\&.
 .PP
 \fBAuthor:\fP
@@ -240,17 +233,27 @@ Produces an interleaved array of first an element from an original array of data
 .PP
 Definition at line 168 of file zdomain\&.hpp\&.
 .SS "void radio::ShowHelp ()"
-
+Displays the help information\&. 
 .PP
 Definition at line 20 of file auxiliary\&.hpp\&.
-.SS "\fBradio::Subcarrier\fP \fBSinusoid\fP \fBradio::Subcarrier\fP (\fBfloat32\fP *data, \fBfloat32\fPamplitude, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
-
-.PP
-Definition at line 62 of file Subcarrier\&.hpp\&.
 .SS "\fBModulationType\fP radio::to_type (std::stringstr)"
+Converts a string representation of the supported modulation types (see \fBShowHelp()\fP documentation) to the enum ModulationType value\&.
+.PP
+This function is not as elegant as it could be\&. Ideally, I would have used a std::map<string, ModulationType> rather than a long series of if-else's\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstr\fP type of modulation in typed form
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+enum value of the type of modulation 
+.RE
+.PP
 
 .PP
-Definition at line 49 of file auxiliary\&.hpp\&.
+Definition at line 58 of file auxiliary\&.hpp\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBfparams\fP radio::F_BASEBAND"

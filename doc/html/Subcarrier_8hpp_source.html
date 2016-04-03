@@ -107,70 +107,69 @@ $(document).ready(function(){initNavTree('Subcarrier_8hpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="Subcarrier_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef Subcarrier_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define Subcarrier_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="definitions_8hpp.html">definitions.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Sinusoid_8hpp.html">Sinusoid.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceradio.html">radio</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classradio_1_1Subcarrier.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classradio_1_1Subcarrier.html">Subcarrier</a> : <a class="code" href="classradio_1_1Sinusoid.html">Sinusoid</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">Subcarrier</a>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude, <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>* data, <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> <a class="code" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a>, <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="classradio_1_1Subcarrier.html#aeb366a93b56ebe012bc7076b581557a2">Add</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>* data;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="namespaceradio.html#ab6cdb3a30b3a9dda10023da190028d8a">   62</a></span>&#160;    <a class="code" href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">Subcarrier::Subcarrier</a>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>* <a class="code" href="Subcarrier_8hpp.html#a7e2e55177abd6522b546b51f851e8f22">data</a>, <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> <a class="code" href="Subcarrier_8hpp.html#a5e811fba6f7ada5fe11de28ffd8f2f87">amplitude</a>,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> frequency, <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> samplingRate)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        : <a class="code" href="classradio_1_1Sinusoid.html">Sinusoid</a>(frequency, samplingRate){</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        this-&gt;data = <a class="code" href="Subcarrier_8hpp.html#a7e2e55177abd6522b546b51f851e8f22">data</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        this-&gt;amplitude = <a class="code" href="Subcarrier_8hpp.html#a5e811fba6f7ada5fe11de28ffd8f2f87">amplitude</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        this-&gt;<a class="code" href="Subcarrier_8hpp.html#a0d40f1591c12f359c3fa3f982f9a221d">size</a> = <a class="code" href="Subcarrier_8hpp.html#a0d40f1591c12f359c3fa3f982f9a221d">size</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; samplingRate; i++) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            sinusoid[i] *= <a class="code" href="Subcarrier_8hpp.html#a5e811fba6f7ada5fe11de28ffd8f2f87">amplitude</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classradio_1_1Subcarrier.html#aeb366a93b56ebe012bc7076b581557a2">   74</a></span>&#160;    <a class="code" href="Subcarrier_8hpp.html#aa2e99a91685f18d60398172002a8ae85">Subcarrier::Add</a>() {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; <a class="code" href="Subcarrier_8hpp.html#a0d40f1591c12f359c3fa3f982f9a221d">size</a>; i++) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="Subcarrier_8hpp.html#a7e2e55177abd6522b546b51f851e8f22">data</a>[i] += next();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_a964d64aae9acc4ea5d752534a33d76b8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">radio::Sinusoid::samplingRate</a></div><div class="ttdeci">uint32 samplingRate</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00057">Sinusoid.hpp:57</a></div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef Subcarrier_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define Subcarrier_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="definitions_8hpp.html">definitions.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Sinusoid_8hpp.html">Sinusoid.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceradio.html">radio</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classradio_1_1Subcarrier.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classradio_1_1Subcarrier.html">Subcarrier</a> : <a class="code" href="classradio_1_1Sinusoid.html">Sinusoid</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">Subcarrier</a>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude, <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>* data, <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> <a class="code" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a>, <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2">Add</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>* data;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">   63</a></span>&#160;    <a class="code" href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">Subcarrier::Subcarrier</a>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude, <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>* data,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size, <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> frequency, <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> samplingRate)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        : <a class="code" href="classradio_1_1Sinusoid.html">Sinusoid</a>(frequency, samplingRate) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        this-&gt;data = data;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        this-&gt;amplitude = amplitude;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        this-&gt;size = size;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>; i++) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">sinusoid</a>[i] *= amplitude;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2">   75</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2">Subcarrier::Add</a>() {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; size; i++) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            data[i] += <a class="code" href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2">next</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            data[i] /= (1 + amplitude);  <span class="comment">// ensures value &lt;= 1</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_aab44298ea1bd5cb175d5826243cf56f2"><div class="ttname"><a href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2">radio::Sinusoid::next</a></div><div class="ttdeci">float32 next()</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00097">Sinusoid.hpp:97</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a964d64aae9acc4ea5d752534a33d76b8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">radio::Sinusoid::samplingRate</a></div><div class="ttdeci">uint32 samplingRate</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00063">Sinusoid.hpp:63</a></div></div>
 <div class="ttc" id="namespaceradio_html"><div class="ttname"><a href="namespaceradio.html">radio</a></div><div class="ttdoc">contains helper-functions for main() </div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00015">auxiliary.hpp:15</a></div></div>
 <div class="ttc" id="definitions_8hpp_html"><div class="ttname"><a href="definitions_8hpp.html">definitions.hpp</a></div></div>
-<div class="ttc" id="classradio_1_1Subcarrier_html"><div class="ttname"><a href="classradio_1_1Subcarrier.html">radio::Subcarrier</a></div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00017">Subcarrier.hpp:17</a></div></div>
-<div class="ttc" id="Sinusoid_8hpp_html"><div class="ttname"><a href="Sinusoid_8hpp.html">Sinusoid.hpp</a></div></div>
+<div class="ttc" id="classradio_1_1Subcarrier_html"><div class="ttname"><a href="classradio_1_1Subcarrier.html">radio::Subcarrier</a></div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00018">Subcarrier.hpp:18</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a56556c3d3e08d1c9481c18e087ff1c85"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">radio::Sinusoid::sinusoid</a></div><div class="ttdeci">float32 * sinusoid</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00068">Sinusoid.hpp:68</a></div></div>
+<div class="ttc" id="Sinusoid_8hpp_html"><div class="ttname"><a href="Sinusoid_8hpp.html">Sinusoid.hpp</a></div><div class="ttdoc">contains the Sinusoid class </div></div>
 <div class="ttc" id="definitions_8hpp_html_aacdc525d6f7bddb3ae95d5c311bd06a1"><div class="ttname"><a href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a></div><div class="ttdeci">float float32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00029">definitions.hpp:29</a></div></div>
-<div class="ttc" id="Subcarrier_8hpp_html_a0d40f1591c12f359c3fa3f982f9a221d"><div class="ttname"><a href="Subcarrier_8hpp.html#a0d40f1591c12f359c3fa3f982f9a221d">size</a></div><div class="ttdeci">uint32 size</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00110">Subcarrier.hpp:110</a></div></div>
-<div class="ttc" id="Subcarrier_8hpp_html_a5e811fba6f7ada5fe11de28ffd8f2f87"><div class="ttname"><a href="Subcarrier_8hpp.html#a5e811fba6f7ada5fe11de28ffd8f2f87">amplitude</a></div><div class="ttdeci">float32 amplitude</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00100">Subcarrier.hpp:100</a></div></div>
-<div class="ttc" id="Subcarrier_8hpp_html_aa2e99a91685f18d60398172002a8ae85"><div class="ttname"><a href="Subcarrier_8hpp.html#aa2e99a91685f18d60398172002a8ae85">Add</a></div><div class="ttdeci">Add()</div></div>
-<div class="ttc" id="classradio_1_1Sinusoid_html"><div class="ttname"><a href="classradio_1_1Sinusoid.html">radio::Sinusoid</a></div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00019">Sinusoid.hpp:19</a></div></div>
-<div class="ttc" id="classradio_1_1Subcarrier_html_aeb366a93b56ebe012bc7076b581557a2"><div class="ttname"><a href="classradio_1_1Subcarrier.html#aeb366a93b56ebe012bc7076b581557a2">radio::Subcarrier::Add</a></div><div class="ttdeci">Add()</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00074">Subcarrier.hpp:74</a></div></div>
+<div class="ttc" id="classradio_1_1Subcarrier_html_adb2f047eac0a1cb07bc2d5ff1312ddf2"><div class="ttname"><a href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2">radio::Subcarrier::Add</a></div><div class="ttdeci">void Add()</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00075">Subcarrier.hpp:75</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html"><div class="ttname"><a href="classradio_1_1Sinusoid.html">radio::Sinusoid</a></div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00020">Sinusoid.hpp:20</a></div></div>
 <div class="ttc" id="definitions_8hpp_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00023">definitions.hpp:23</a></div></div>
-<div class="ttc" id="classradio_1_1Subcarrier_html_a623f84ebaa36194a2aa8a8b6ec103d36"><div class="ttname"><a href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">radio::Subcarrier::Subcarrier</a></div><div class="ttdeci">Subcarrier(float32 amplitude, float32 *data, uint32 size, float32 frequency, uint32 samplingRate)</div></div>
-<div class="ttc" id="Subcarrier_8hpp_html_a7e2e55177abd6522b546b51f851e8f22"><div class="ttname"><a href="Subcarrier_8hpp.html#a7e2e55177abd6522b546b51f851e8f22">data</a></div><div class="ttdeci">float32 * data</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00105">Subcarrier.hpp:105</a></div></div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_ad429b5dd330e96aaf89a0d48ef59d3f2"><div class="ttname"><a href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">radio::Sinusoid::frequency</a></div><div class="ttdeci">float32 frequency</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00047">Sinusoid.hpp:47</a></div></div>
+<div class="ttc" id="classradio_1_1Subcarrier_html_a623f84ebaa36194a2aa8a8b6ec103d36"><div class="ttname"><a href="classradio_1_1Subcarrier.html#a623f84ebaa36194a2aa8a8b6ec103d36">radio::Subcarrier::Subcarrier</a></div><div class="ttdeci">Subcarrier(float32 amplitude, float32 *data, uint32 size, float32 frequency, uint32 samplingRate)</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00063">Subcarrier.hpp:63</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_ad429b5dd330e96aaf89a0d48ef59d3f2"><div class="ttname"><a href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">radio::Sinusoid::frequency</a></div><div class="ttdeci">float32 frequency</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00048">Sinusoid.hpp:48</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="Subcarrier_8hpp.html">Subcarrier.hpp</a></li>
-    <li class="footer">Generated on Tue Mar 22 2016 21:35:48 for My Project by
+    <li class="footer">Generated on Sun Apr 3 2016 03:00:18 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -107,80 +107,109 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="auxiliary_8hpp.html">auxiliary.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Filter_8hpp.html">Filter.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Modulator_8hpp.html">Modulator.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="zdomain_8hpp.html">zdomain.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceradio.html">radio</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="auxiliary_8hpp.html">auxiliary.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Filter_8hpp.html">Filter.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Subcarrier_8hpp.html">Subcarrier.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Modulator_8hpp.html">Modulator.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="zdomain_8hpp.html">zdomain.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   19</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Constants</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> ERROR = -1;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> NUM_TYPES = 8;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> BUFFER_SIZE = 16384;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> FREQ_MIN = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> FREQ_MAX = 62;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Ensure 1 or 2 arguments given</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span>(argc &lt; 2) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: too many arguments!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(argc &gt; 3) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: too few arguments!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Declare primative Variables</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> dataBuffer[BUFFER_SIZE];</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> iqBuffer[2 * BUFFER_SIZE];</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> type;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceradio.html">radio</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Constants</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> ERROR = -1;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> NUM_TYPES = 8;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> BUFFER_SIZE = 16384;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="namespaceradio.html#a284213fea4beed2f74bb936927cbe654">SAMPLING_RATE</a> = 48000;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// Ensure 1 or 2 arguments given</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span>(argc &gt; 3) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: too many arguments!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(argc &lt; 2) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: too few arguments!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">try</span>{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        type = <a class="code" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">to_type</a>(<span class="keywordtype">string</span>(argv[1]));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    } <span class="keywordflow">catch</span>(std::exception ex) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::cerr &lt;&lt; ex.what() &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Declare objects</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classradio_1_1Filter.html">Filter</a> baseFilter(dataBuffer, BUFFER_SIZE, <a class="code" href="namespaceradio.html#a9bd902e9216499953a5906de73dc1796">F_BASEBAND</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classradio_1_1Modulator.html">Modulator</a> modulator(dataBuffer, BUFFER_SIZE, type);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        read(STDIN_FILENO, &amp;dataBuffer, BUFFER_SIZE * <span class="keyword">sizeof</span>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        baseFilter.<a class="code" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197">Pass</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        modulator.<a class="code" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab">Mod</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275">makeIQ</a>(dataBuffer, iqBuffer, BUFFER_SIZE);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        write(STDOUT_FILENO, &amp;iqBuffer,  2 * BUFFER_SIZE * <span class="keyword">sizeof</span>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Declare primative Variables</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> toneFreq = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> dataBuffer[BUFFER_SIZE];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> iqBuffer[2 * BUFFER_SIZE];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> type;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// validate modulation type</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">try</span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        type = <a class="code" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">to_type</a>(<span class="keywordtype">string</span>(argv[1]));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    } <span class="keywordflow">catch</span>(std::exception ex) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;The given modulation type is invalid!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> ERROR;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// validate CTCSS tone</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span>(argc == 3) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            toneFreq = std::stof(argv[2]);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span>(toneFreq &lt; 60 || toneFreq &gt; 260) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        } <span class="keywordflow">catch</span>(std::out_of_range ex) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;The specified CTCSS frequency is outside of the &quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="stringliteral">&quot;standard PL tone range.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        } <span class="keywordflow">catch</span>(std::invalid_argument ex) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::cerr &lt;&lt; <span class="stringliteral">&quot;The specified CTCSS frequency is not a number.&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// Declare objects</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classradio_1_1Filter.html">Filter</a> baseFilter(dataBuffer, BUFFER_SIZE, <a class="code" href="namespaceradio.html#a9bd902e9216499953a5906de73dc1796">F_BASEBAND</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classradio_1_1Modulator.html">Modulator</a> modulator(dataBuffer, BUFFER_SIZE, type, 5000);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classradio_1_1Subcarrier.html">Subcarrier</a> pltone(0.15, dataBuffer, BUFFER_SIZE, toneFreq, SAMPLING_RATE);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        read(STDIN_FILENO, &amp;dataBuffer, BUFFER_SIZE * <span class="keyword">sizeof</span>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        baseFilter.<a class="code" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197">Pass</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        pltone.<a class="code" href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2">Add</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        modulator.<a class="code" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab">Mod</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275">makeIQ</a>(dataBuffer, iqBuffer, BUFFER_SIZE);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        write(STDOUT_FILENO, &amp;iqBuffer,  2 * BUFFER_SIZE * <span class="keyword">sizeof</span>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="ttc" id="Subcarrier_8hpp_html"><div class="ttname"><a href="Subcarrier_8hpp.html">Subcarrier.hpp</a></div><div class="ttdoc">contains the Subcarrier class </div></div>
 <div class="ttc" id="namespaceradio_html"><div class="ttname"><a href="namespaceradio.html">radio</a></div><div class="ttdoc">contains helper-functions for main() </div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00015">auxiliary.hpp:15</a></div></div>
 <div class="ttc" id="namespaceradio_html_a6db7c682d0f9aeac8cb5042717b8ae7f"><div class="ttname"><a href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">radio::ShowHelp</a></div><div class="ttdeci">void ShowHelp()</div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00020">auxiliary.hpp:20</a></div></div>
 <div class="ttc" id="zdomain_8hpp_html"><div class="ttname"><a href="zdomain_8hpp.html">zdomain.hpp</a></div><div class="ttdoc">Contains the functions to manipulate sequential data in the frequency (z) domain. ...</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classradio_1_1Subcarrier_html"><div class="ttname"><a href="classradio_1_1Subcarrier.html">radio::Subcarrier</a></div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00018">Subcarrier.hpp:18</a></div></div>
 <div class="ttc" id="classradio_1_1Filter_html_ad2793821801780809af385463bf8f197"><div class="ttname"><a href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197">radio::Filter::Pass</a></div><div class="ttdeci">void Pass()</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00111">Filter.hpp:111</a></div></div>
 <div class="ttc" id="classradio_1_1Modulator_html_ab5eac6e4900579486b5871b48e64cdab"><div class="ttname"><a href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab">radio::Modulator::Mod</a></div><div class="ttdeci">void Mod()</div><div class="ttdef"><b>Definition:</b> <a href="Modulator_8hpp_source.html#l00119">Modulator.hpp:119</a></div></div>
 <div class="ttc" id="definitions_8hpp_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="definitions_8hpp.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00020">definitions.hpp:20</a></div></div>
 <div class="ttc" id="definitions_8hpp_html_aacdc525d6f7bddb3ae95d5c311bd06a1"><div class="ttname"><a href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a></div><div class="ttdeci">float float32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00029">definitions.hpp:29</a></div></div>
 <div class="ttc" id="namespaceradio_html_a9bd902e9216499953a5906de73dc1796"><div class="ttname"><a href="namespaceradio.html#a9bd902e9216499953a5906de73dc1796">radio::F_BASEBAND</a></div><div class="ttdeci">fparams F_BASEBAND</div><div class="ttdef"><b>Definition:</b> <a href="fvectors_8hpp_source.html#l00019">fvectors.hpp:19</a></div></div>
+<div class="ttc" id="classradio_1_1Subcarrier_html_adb2f047eac0a1cb07bc2d5ff1312ddf2"><div class="ttname"><a href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2">radio::Subcarrier::Add</a></div><div class="ttdeci">void Add()</div><div class="ttdef"><b>Definition:</b> <a href="Subcarrier_8hpp_source.html#l00075">Subcarrier.hpp:75</a></div></div>
 <div class="ttc" id="namespaceradio_html_a7166522e76ff88e8d482491b1b6e2275"><div class="ttname"><a href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275">radio::makeIQ</a></div><div class="ttdeci">void makeIQ(float32 *data, float32 *dest, uint32 size)</div><div class="ttdef"><b>Definition:</b> <a href="zdomain_8hpp_source.html#l00168">zdomain.hpp:168</a></div></div>
 <div class="ttc" id="classradio_1_1Filter_html"><div class="ttname"><a href="classradio_1_1Filter.html">radio::Filter</a></div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00031">Filter.hpp:31</a></div></div>
 <div class="ttc" id="Filter_8hpp_html"><div class="ttname"><a href="Filter_8hpp.html">Filter.hpp</a></div><div class="ttdoc">Defines the Filter class. </div></div>
-<div class="ttc" id="namespaceradio_html_a402fe28e2e2bb2be7a0d2d9f74cc640d"><div class="ttname"><a href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">radio::to_type</a></div><div class="ttdeci">ModulationType to_type(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00049">auxiliary.hpp:49</a></div></div>
+<div class="ttc" id="namespaceradio_html_a284213fea4beed2f74bb936927cbe654"><div class="ttname"><a href="namespaceradio.html#a284213fea4beed2f74bb936927cbe654">radio::SAMPLING_RATE</a></div><div class="ttdeci">const uint32 SAMPLING_RATE</div><div class="ttdef"><b>Definition:</b> <a href="Modulator_8hpp_source.html#l00031">Modulator.hpp:31</a></div></div>
+<div class="ttc" id="namespaceradio_html_a402fe28e2e2bb2be7a0d2d9f74cc640d"><div class="ttname"><a href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">radio::to_type</a></div><div class="ttdeci">ModulationType to_type(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00058">auxiliary.hpp:58</a></div></div>
 <div class="ttc" id="Modulator_8hpp_html"><div class="ttname"><a href="Modulator_8hpp.html">Modulator.hpp</a></div></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399e"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">radio::ModulationType</a></div><div class="ttdeci">ModulationType</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00065">definitions.hpp:65</a></div></div>
-<div class="ttc" id="main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00019">main.cpp:19</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00023">definitions.hpp:23</a></div></div>
+<div class="ttc" id="main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00025">main.cpp:25</a></div></div>
 <div class="ttc" id="classradio_1_1Modulator_html"><div class="ttname"><a href="classradio_1_1Modulator.html">radio::Modulator</a></div><div class="ttdef"><b>Definition:</b> <a href="Modulator_8hpp_source.html#l00037">Modulator.hpp:37</a></div></div>
 <div class="ttc" id="auxiliary_8hpp_html"><div class="ttname"><a href="auxiliary_8hpp.html">auxiliary.hpp</a></div></div>
 <div class="ttc" id="definitions_8hpp_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00017">definitions.hpp:17</a></div></div>
@@ -190,7 +219,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Tue Mar 22 2016 21:35:48 for My Project by
+    <li class="footer">Generated on Sun Apr 3 2016 03:00:18 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

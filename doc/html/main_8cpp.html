@@ -108,12 +108,17 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 <div class="title">main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>contains the "brains" of the entire project  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="auxiliary_8hpp_source.html">auxiliary.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Subcarrier_8hpp_source.html">Subcarrier.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Modulator_8hpp_source.html">Modulator.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="zdomain_8hpp_source.html">zdomain.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -121,7 +126,7 @@ Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#src_2main_8cpp" alt=""/></div>
 <map name="src_2main_8cpp" id="src_2main_8cpp">
-<area shape="rect" id="node6" href="auxiliary_8hpp.html" title="auxiliary.hpp" alt="" coords="191,80,286,107"/><area shape="rect" id="node11" href="Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="751,155,827,181"/><area shape="rect" id="node13" href="Modulator_8hpp.html" title="Modulator.hpp" alt="" coords="576,80,680,107"/><area shape="rect" id="node18" href="zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="335,155,431,181"/><area shape="rect" id="node8" href="definitions_8hpp.html" title="definitions.hpp" alt="" coords="461,229,568,256"/><area shape="rect" id="node16" href="fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="581,155,675,181"/><area shape="rect" id="node17" href="Sinusoid_8hpp.html" title="Sinusoid.hpp" alt="" coords="903,155,1001,181"/></map>
+<area shape="rect" id="node7" href="auxiliary_8hpp.html" title="auxiliary.hpp" alt="" coords="189,80,284,107"/><area shape="rect" id="node11" href="Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="345,155,421,181"/><area shape="rect" id="node13" href="Subcarrier_8hpp.html" title="contains the Subcarrier class " alt="" coords="410,80,517,107"/><area shape="rect" id="node16" href="Modulator_8hpp.html" title="Modulator.hpp" alt="" coords="631,80,735,107"/><area shape="rect" id="node19" href="zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="1017,155,1113,181"/><area shape="rect" id="node8" href="definitions_8hpp.html" title="definitions.hpp" alt="" coords="555,229,662,256"/><area shape="rect" id="node14" href="Sinusoid_8hpp.html" title="contains the Sinusoid class " alt="" coords="548,155,645,181"/><area shape="rect" id="node18" href="fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="897,155,992,181"/></map>
 </div>
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -131,7 +136,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>contains the "brains" of the entire project </p>
+<dl class="section author"><dt>Author</dt><dd>Samuel Andrew Wisner, <a href="#" onclick="location.href='mai'+'lto:'+'awi'+'sn'+'er9'+'4@'+'gma'+'il'+'.co'+'m'; return false;">awisn<span style="display: none;">.nosp@m.</span>er94<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition in file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <div class="memitem">
 <div class="memproto">
@@ -155,15 +165,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Final result of the entire project. Completes all goals and more! </p>
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00025">25</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" id="node2" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f" title="radio::ShowHelp" alt="" coords="119,5,237,32"/><area shape="rect" id="node3" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d" title="radio::to_type" alt="" coords="127,56,229,83"/><area shape="rect" id="node4" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197" title="radio::Filter::Pass" alt="" coords="329,107,454,133"/><area shape="rect" id="node5" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="104,208,252,235"/><area shape="rect" id="node12" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="126,157,230,184"/><area shape="rect" id="node6" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="345,157,438,184"/><area shape="rect" id="node10" href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2" title="radio::Sinusoid::next" alt="" coords="321,208,462,235"/><area shape="rect" id="node11" href="classradio_1_1Sinusoid.html#a3f2741e9dd30291e5fa87f2eb2243e7c" title="radio::Sinusoid::nextShifted" alt="" coords="300,259,483,285"/><area shape="rect" id="node7" href="namespaceradio.html#ab146b5bf7f1c005939b024c9c4910a77" title="radio::fft" alt="" coords="661,132,732,159"/><area shape="rect" id="node8" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="531,183,604,209"/><area shape="rect" id="node9" href="namespaceradio.html#aa04bb922c40cafb00a5603f1fc6d9c26" title="radio::aconj" alt="" coords="652,183,741,209"/></map>
+<area shape="rect" id="node2" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f" title="radio::ShowHelp" alt="" coords="119,5,237,32"/><area shape="rect" id="node3" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d" title="radio::to_type" alt="" coords="127,56,229,83"/><area shape="rect" id="node4" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197" title="radio::Filter::Pass" alt="" coords="329,107,454,133"/><area shape="rect" id="node5" href="classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2" title="radio::Subcarrier::Add" alt="" coords="104,157,252,184"/><area shape="rect" id="node7" href="classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="104,208,252,235"/><area shape="rect" id="node13" href="namespaceradio.html#a7166522e76ff88e8d482491b1b6e2275" title="radio::makeIQ" alt="" coords="126,259,230,285"/><area shape="rect" id="node6" href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2" title="radio::Sinusoid::next" alt="" coords="321,157,462,184"/><area shape="rect" id="node8" href="namespaceradio.html#a285a47b4ed81e5662d2b6b4bae0188d0" title="radio::hilbert" alt="" coords="345,259,438,285"/><area shape="rect" id="node12" href="classradio_1_1Sinusoid.html#a3f2741e9dd30291e5fa87f2eb2243e7c" title="radio::Sinusoid::nextShifted" alt="" coords="300,208,483,235"/><area shape="rect" id="node9" href="namespaceradio.html#ab146b5bf7f1c005939b024c9c4910a77" title="radio::fft" alt="" coords="661,233,732,260"/><area shape="rect" id="node10" href="namespaceradio.html#a51add4e2faf6d58cabc3b4a3892420eb" title="radio::ifft" alt="" coords="531,284,604,311"/><area shape="rect" id="node11" href="namespaceradio.html#aa04bb922c40cafb00a5603f1fc6d9c26" title="radio::aconj" alt="" coords="652,284,741,311"/></map>
 </div>
 </p>
 
@@ -175,7 +186,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Tue Mar 22 2016 21:35:48 for My Project by
+    <li class="footer">Generated on Sun Apr 3 2016 03:00:18 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

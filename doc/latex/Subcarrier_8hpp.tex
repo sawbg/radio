@@ -1,6 +1,11 @@
 \hypertarget{Subcarrier_8hpp}{\section{src/\+Subcarrier.hpp File Reference}
 \label{Subcarrier_8hpp}\index{src/\+Subcarrier.\+hpp@{src/\+Subcarrier.\+hpp}}
 }
+
+
+contains the Subcarrier class  
+
+
 {\ttfamily \#include \char`\"{}definitions.\+hpp\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}Sinusoid.\+hpp\char`\"{}}\\*
 Include dependency graph for Subcarrier.\+hpp\+:
@@ -9,6 +14,14 @@ Include dependency graph for Subcarrier.\+hpp\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=305pt]{Subcarrier_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{Subcarrier_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -21,81 +34,15 @@ class \hyperlink{classradio_1_1Subcarrier}{radio\+::\+Subcarrier}
 \item 
  \hyperlink{namespaceradio}{radio}
 \begin{DoxyCompactList}\small\item\em contains helper-\/functions for \hyperlink{alsa__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()} \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classradio_1_1Subcarrier}{radio\+::\+Subcarrier} Sinusoid \hyperlink{namespaceradio_ab6cdb3a30b3a9dda10023da190028d8a}{radio\+::\+Subcarrier} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$\hyperlink{Subcarrier_8hpp_a7e2e55177abd6522b546b51f851e8f22}{data}, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{Subcarrier_8hpp_a5e811fba6f7ada5fe11de28ffd8f2f87}{amplitude}, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} frequency, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} sampling\+Rate)
-\item 
-\hyperlink{Subcarrier_8hpp_af205cafe44c4edb76f17a4b0e4f58168}{Subcarrier} (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{Subcarrier_8hpp_a5e811fba6f7ada5fe11de28ffd8f2f87}{amplitude}, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$\hyperlink{Subcarrier_8hpp_a7e2e55177abd6522b546b51f851e8f22}{data}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{Subcarrier_8hpp_a0d40f1591c12f359c3fa3f982f9a221d}{size}, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} frequency, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} sampling\+Rate)
-\item 
-\hyperlink{Subcarrier_8hpp_aa2e99a91685f18d60398172002a8ae85}{Add} ()
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{Subcarrier_8hpp_a5e811fba6f7ada5fe11de28ffd8f2f87}{amplitude}
-\item 
-\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} $\ast$ \hyperlink{Subcarrier_8hpp_a7e2e55177abd6522b546b51f851e8f22}{data}
-\item 
-\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{Subcarrier_8hpp_a0d40f1591c12f359c3fa3f982f9a221d}{size}
-\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
-\hypertarget{Subcarrier_8hpp_aa2e99a91685f18d60398172002a8ae85}{\index{Subcarrier.\+hpp@{Subcarrier.\+hpp}!Add@{Add}}
-\index{Add@{Add}!Subcarrier.\+hpp@{Subcarrier.\+hpp}}
-\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}Subcarrier\+::\+Add (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{Subcarrier_8hpp_aa2e99a91685f18d60398172002a8ae85}
-Adds the C\+T\+C\+S\+S tone to the baseband signal. \hypertarget{Subcarrier_8hpp_af205cafe44c4edb76f17a4b0e4f58168}{\index{Subcarrier.\+hpp@{Subcarrier.\+hpp}!Subcarrier@{Subcarrier}}
-\index{Subcarrier@{Subcarrier}!Subcarrier.\+hpp@{Subcarrier.\+hpp}}
-\subsubsection[{Subcarrier}]{\setlength{\rightskip}{0pt plus 5cm}Subcarrier\+::\+Subcarrier (
-\begin{DoxyParamCaption}
-\item[{{\bf float32}}]{amplitude, }
-\item[{{\bf float32} $\ast$}]{data, }
-\item[{{\bf uint32}}]{size, }
-\item[{{\bf float32}}]{frequency, }
-\item[{{\bf uint32}}]{sampling\+Rate}
-\end{DoxyParamCaption}
-)}}\label{Subcarrier_8hpp_af205cafe44c4edb76f17a4b0e4f58168}
-Creates a Subcarrier object.
+\subsection{Detailed Description}
+contains the Subcarrier class 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
 
 
-\begin{DoxyParams}{Parameters}
-{\em amplitude} & the amplitude (0-\/1) of the subcarrier. Assumes baseband signal has a peak-\/to-\/peak range of -\/1 to 1.\\
-\hline
-{\em data} & an array containing a portion of the discrete baseband signal\\
-\hline
-{\em size} & the number of elemeents in the data array\\
-\hline
-{\em frequency} & the frequency of the C\+T\+C\+S\+S tone in the baseband (not in the I\+F or R\+F signals)\\
-\hline
-{\em sampling\+Rate} & the sampling frequency of the baseband signal \\
-\hline
-\end{DoxyParams}
-
-
-\subsection{Variable Documentation}
-\hypertarget{Subcarrier_8hpp_a5e811fba6f7ada5fe11de28ffd8f2f87}{\index{Subcarrier.\+hpp@{Subcarrier.\+hpp}!amplitude@{amplitude}}
-\index{amplitude@{amplitude}!Subcarrier.\+hpp@{Subcarrier.\+hpp}}
-\subsubsection[{amplitude}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32} amplitude}}\label{Subcarrier_8hpp_a5e811fba6f7ada5fe11de28ffd8f2f87}
-The amplitude of the subcarrier. Typically around 0.\+15 for C\+T\+C\+S\+S tones. 
-
-Definition at line 100 of file Subcarrier.\+hpp.
-
-\hypertarget{Subcarrier_8hpp_a7e2e55177abd6522b546b51f851e8f22}{\index{Subcarrier.\+hpp@{Subcarrier.\+hpp}!data@{data}}
-\index{data@{data}!Subcarrier.\+hpp@{Subcarrier.\+hpp}}
-\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ data}}\label{Subcarrier_8hpp_a7e2e55177abd6522b546b51f851e8f22}
-The baseband signal to which to add the P\+L tone is added. 
-
-Definition at line 105 of file Subcarrier.\+hpp.
-
-\hypertarget{Subcarrier_8hpp_a0d40f1591c12f359c3fa3f982f9a221d}{\index{Subcarrier.\+hpp@{Subcarrier.\+hpp}!size@{size}}
-\index{size@{size}!Subcarrier.\+hpp@{Subcarrier.\+hpp}}
-\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} size}}\label{Subcarrier_8hpp_a0d40f1591c12f359c3fa3f982f9a221d}
-The number of elements in the data array 
-
-Definition at line 110 of file Subcarrier.\+hpp.
+Definition in file \hyperlink{Subcarrier_8hpp_source}{Subcarrier.\+hpp}.
 

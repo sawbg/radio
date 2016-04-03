@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['carrierindex',['carrierIndex',['../classradio_1_1Sinusoid.html#a611746540f71ae39fe9f3d611253d842',1,'radio::Sinusoid']]]
+  ['eqlength',['eqLength',['../classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d',1,'radio::Filter']]]
 ];

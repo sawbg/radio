@@ -1,6 +1,7 @@
 <map id="src/Sinusoid.hpp" name="src/Sinusoid.hpp">
-<area shape="rect" id="node2" href="$Modulator_8hpp.html" title="src/Modulator.hpp" alt="" coords="65,80,192,107"/>
-<area shape="rect" id="node5" href="$Subcarrier_8hpp.html" title="src/Subcarrier.hpp" alt="" coords="217,80,345,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,155,103,181"/>
-<area shape="rect" id="node4" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="127,155,282,181"/>
+<area shape="rect" id="node2" href="$Subcarrier_8hpp.html" title="contains the Subcarrier class " alt="" coords="5,80,133,107"/>
+<area shape="rect" id="node4" href="$Modulator_8hpp.html" title="src/Modulator.hpp" alt="" coords="158,80,285,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="21,155,118,181"/>
+<area shape="rect" id="node5" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="143,155,297,181"/>
+<area shape="rect" id="node6" href="$sinusoid__test_8cpp.html" title="src/sinusoid_test.cpp" alt="" coords="321,155,468,181"/>
 </map>

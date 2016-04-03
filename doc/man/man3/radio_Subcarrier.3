@@ -1,4 +1,4 @@
-.TH "radio::Subcarrier" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
+.TH "radio::Subcarrier" 3 "Sun Apr 3 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,14 +17,14 @@ Inherits \fBradio::Sinusoid\fP\&.
 .RI "\fBSubcarrier\fP (\fBfloat32\fP amplitude, \fBfloat32\fP *data, \fBuint32\fP size, \fBfloat32\fP \fBfrequency\fP, \fBuint32\fP \fBsamplingRate\fP)"
 .br
 .ti -1c
-.RI "\fBAdd\fP ()"
+.RI "void \fBAdd\fP ()"
 .br
 .in -1c
 .SH "Detailed Description"
 .PP 
 This class creates a CTCSS subcarrier (PL tone) at a specified frequency in a baseband signal\&. 
 .PP
-Definition at line 17 of file Subcarrier\&.hpp\&.
+Definition at line 18 of file Subcarrier\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "radio::Subcarrier::Subcarrier (\fBfloat32\fPamplitude, \fBfloat32\fP *data, \fBuint32\fPsize, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
@@ -44,12 +44,14 @@ Creates a \fBSubcarrier\fP object\&.
 .RE
 .PP
 
+.PP
+Definition at line 63 of file Subcarrier\&.hpp\&.
 .SH "Member Function Documentation"
 .PP 
-.SS "radio::Subcarrier::Add ()"
+.SS "void radio::Subcarrier::Add ()"
 Adds the CTCSS tone to the baseband signal\&. 
 .PP
-Definition at line 74 of file Subcarrier\&.hpp\&.
+Definition at line 75 of file Subcarrier\&.hpp\&.
 
 .SH "Author"
 .PP 

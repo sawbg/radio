@@ -1,14 +1,19 @@
-.TH "src/main.cpp" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
+.TH "src/main.cpp" 3 "Sun Apr 3 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 src/main.cpp \- 
+.PP
+contains the 'brains' of the entire project  
+
 .SH SYNOPSIS
 .br
 .PP
 \fC#include <cstdio>\fP
 .br
 \fC#include <iostream>\fP
+.br
+\fC#include <stdexcept>\fP
 .br
 \fC#include <string>\fP
 .br
@@ -17,6 +22,8 @@ src/main.cpp \-
 \fC#include 'auxiliary\&.hpp'\fP
 .br
 \fC#include 'Filter\&.hpp'\fP
+.br
+\fC#include 'Subcarrier\&.hpp'\fP
 .br
 \fC#include 'Modulator\&.hpp'\fP
 .br
@@ -30,12 +37,26 @@ src/main.cpp \-
 .RI "int \fBmain\fP (int argc, char *argv[])"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+contains the 'brains' of the entire project 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBmain\&.cpp\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "int main (intargc, char *argv[])"
-
+Final result of the entire project\&. Completes all goals and more! 
 .PP
-Definition at line 19 of file main\&.cpp\&.
+Definition at line 25 of file main\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

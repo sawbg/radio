@@ -119,9 +119,9 @@ $(document).ready(function(){initNavTree('auxiliary_8hpp_source.html','');});
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespaceradio.html">   15</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceradio.html">radio</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">ShowHelp</a>() {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;Usage: radio [MODE] [PL TONE]&quot;</span> &lt;&lt; std::endl</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::cerr &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Usage: radio [MODE] [PL TONE]&quot;</span> &lt;&lt; std::endl</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            &lt;&lt; std::endl</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;MODE: one of the following types&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;MODE: one of the following types &quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="stringliteral">&quot;of modulation&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;dsblc\t\tDouble sideband, large carrier&quot;</span> &lt;&lt; std::endl</div>
@@ -138,40 +138,40 @@ $(document).ready(function(){initNavTree('auxiliary_8hpp_source.html','');});
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;nfm\t\tFrequency modulation, 2.5 kHz bandwidth&quot;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            &lt;&lt; std::endl</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;wfm\t\tFrequency modulation, 5 kHz bandwidth&quot;</span> &lt;&lt; std::endl</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;fm\t\talias for wfm&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;fm\t\talias for wfm&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;PL TONE: Optional specification for CTCSS tone from &quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="stringliteral">&quot;60-260 Hz&quot;</span> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">   49</a></span>&#160;    <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> <a class="code" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">to_type</a>(std::string str) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> type;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;dsblc&quot;</span> || str == <span class="stringliteral">&quot;am&quot;</span>) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902">ModulationType::DSB_LC</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;dsbsc&quot;</span>) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31">ModulationType::DSB_SC</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;lsbhil&quot;</span>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a">ModulationType::LSB_HILBERT</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;lsbfilt&quot;</span>) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8">ModulationType::LSB_FILTERED</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;usbhil&quot;</span>) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13">ModulationType::USB_HILBERT</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;usbfilt&quot;</span>) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876">ModulationType::USB_FILTERED</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;wfm&quot;</span> || str == <span class="stringliteral">&quot;fm&quot;</span>) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a">ModulationType::FM_NARROW</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;nfm&quot;</span>) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c">ModulationType::FM_WIDE</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;The given modulation type is invalid!&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> type;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">   58</a></span>&#160;    <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> <a class="code" href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">to_type</a>(std::string str) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">ModulationType</a> type;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;dsblc&quot;</span> || str == <span class="stringliteral">&quot;am&quot;</span>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902">ModulationType::DSB_LC</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;dsbsc&quot;</span>) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31">ModulationType::DSB_SC</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;lsbhil&quot;</span>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a">ModulationType::LSB_HILBERT</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;lsbfilt&quot;</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8">ModulationType::LSB_FILTERED</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;usbhil&quot;</span>) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13">ModulationType::USB_HILBERT</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;usbfilt&quot;</span>) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876">ModulationType::USB_FILTERED</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;wfm&quot;</span> || str == <span class="stringliteral">&quot;fm&quot;</span>) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a">ModulationType::FM_NARROW</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(str == <span class="stringliteral">&quot;nfm&quot;</span>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            type = <a class="code" href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c">ModulationType::FM_WIDE</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;The given modulation type is invalid!&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13">radio::ModulationType::USB_HILBERT</a></div></div>
 <div class="ttc" id="namespaceradio_html"><div class="ttname"><a href="namespaceradio.html">radio</a></div><div class="ttdoc">contains helper-functions for main() </div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00015">auxiliary.hpp:15</a></div></div>
 <div class="ttc" id="namespaceradio_html_a6db7c682d0f9aeac8cb5042717b8ae7f"><div class="ttname"><a href="namespaceradio.html#a6db7c682d0f9aeac8cb5042717b8ae7f">radio::ShowHelp</a></div><div class="ttdeci">void ShowHelp()</div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00020">auxiliary.hpp:20</a></div></div>
@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('auxiliary_8hpp_source.html','');});
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a">radio::ModulationType::FM_NARROW</a></div></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876">radio::ModulationType::USB_FILTERED</a></div></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31">radio::ModulationType::DSB_SC</a></div></div>
-<div class="ttc" id="namespaceradio_html_a402fe28e2e2bb2be7a0d2d9f74cc640d"><div class="ttname"><a href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">radio::to_type</a></div><div class="ttdeci">ModulationType to_type(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00049">auxiliary.hpp:49</a></div></div>
+<div class="ttc" id="namespaceradio_html_a402fe28e2e2bb2be7a0d2d9f74cc640d"><div class="ttname"><a href="namespaceradio.html#a402fe28e2e2bb2be7a0d2d9f74cc640d">radio::to_type</a></div><div class="ttdeci">ModulationType to_type(std::string str)</div><div class="ttdef"><b>Definition:</b> <a href="auxiliary_8hpp_source.html#l00058">auxiliary.hpp:58</a></div></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399e"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399e">radio::ModulationType</a></div><div class="ttdeci">ModulationType</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00065">definitions.hpp:65</a></div></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c">radio::ModulationType::FM_WIDE</a></div></div>
 <div class="ttc" id="namespaceradio_html_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a"><div class="ttname"><a href="namespaceradio.html#a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a">radio::ModulationType::LSB_HILBERT</a></div></div>
@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('auxiliary_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="auxiliary_8hpp.html">auxiliary.hpp</a></li>
-    <li class="footer">Generated on Tue Mar 22 2016 21:35:48 for My Project by
+    <li class="footer">Generated on Sun Apr 3 2016 03:00:18 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

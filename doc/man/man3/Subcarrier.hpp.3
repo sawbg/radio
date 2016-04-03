@@ -1,8 +1,11 @@
-.TH "src/Subcarrier.hpp" 3 "Tue Mar 22 2016" "My Project" \" -*- nroff -*-
+.TH "src/Subcarrier.hpp" 3 "Sun Apr 3 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 src/Subcarrier.hpp \- 
+.PP
+contains the Subcarrier class  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -26,67 +29,20 @@ src/Subcarrier.hpp \-
 .br
 .RI "\fIcontains helper-functions for \fBmain()\fP \fP"
 .in -1c
-.SS "Functions"
-
-.in +1c
-.ti -1c
-.RI "\fBradio::Subcarrier\fP Sinusoid \fBradio::Subcarrier\fP (\fBfloat32\fP *\fBdata\fP, \fBfloat32\fP \fBamplitude\fP, \fBfloat32\fP frequency, \fBuint32\fP samplingRate)"
-.br
-.ti -1c
-.RI "\fBSubcarrier\fP (\fBfloat32\fP \fBamplitude\fP, \fBfloat32\fP *\fBdata\fP, \fBuint32\fP \fBsize\fP, \fBfloat32\fP frequency, \fBuint32\fP samplingRate)"
-.br
-.ti -1c
-.RI "\fBAdd\fP ()"
-.br
-.in -1c
-.SS "Variables"
-
-.in +1c
-.ti -1c
-.RI "\fBfloat32\fP \fBamplitude\fP"
-.br
-.ti -1c
-.RI "\fBfloat32\fP * \fBdata\fP"
-.br
-.ti -1c
-.RI "\fBuint32\fP \fBsize\fP"
-.br
-.in -1c
-.SH "Function Documentation"
+.SH "Detailed Description"
 .PP 
-.SS "Subcarrier::Add ()"
-Adds the CTCSS tone to the baseband signal\&. 
-.SS "Subcarrier::Subcarrier (\fBfloat32\fPamplitude, \fBfloat32\fP *data, \fBuint32\fPsize, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
-Creates a Subcarrier object\&.
+contains the Subcarrier class 
+
+
 .PP
-\fBParameters:\fP
+\fBAuthor:\fP
 .RS 4
-\fIamplitude\fP the amplitude (0-1) of the subcarrier\&. Assumes baseband signal has a peak-to-peak range of -1 to 1\&.
-.br
-\fIdata\fP an array containing a portion of the discrete baseband signal
-.br
-\fIsize\fP the number of elemeents in the data array
-.br
-\fIfrequency\fP the frequency of the CTCSS tone in the baseband (not in the IF or RF signals)
-.br
-\fIsamplingRate\fP the sampling frequency of the baseband signal 
+Samuel Andrew Wisner, awisner94@gmail.com 
 .RE
 .PP
 
-.SH "Variable Documentation"
-.PP 
-.SS "\fBfloat32\fP amplitude"
-The amplitude of the subcarrier\&. Typically around 0\&.15 for CTCSS tones\&. 
 .PP
-Definition at line 100 of file Subcarrier\&.hpp\&.
-.SS "\fBfloat32\fP* data"
-The baseband signal to which to add the PL tone is added\&. 
-.PP
-Definition at line 105 of file Subcarrier\&.hpp\&.
-.SS "\fBuint32\fP size"
-The number of elements in the data array 
-.PP
-Definition at line 110 of file Subcarrier\&.hpp\&.
+Definition in file \fBSubcarrier\&.hpp\fP\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

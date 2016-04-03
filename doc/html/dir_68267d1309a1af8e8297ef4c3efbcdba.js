@@ -11,6 +11,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     ] ],
     [ "fvectors.hpp", "fvectors_8hpp.html", "fvectors_8hpp" ],
     [ "iq_test.cpp", "iq__test_8cpp.html", "iq__test_8cpp" ],
+    [ "lsb_filter_test.cpp", "lsb__filter__test_8cpp.html", "lsb__filter__test_8cpp" ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "mic_test.cpp", "mic__test_8cpp.html", "mic__test_8cpp" ],
     [ "Modulator.hpp", "Modulator_8hpp.html", "Modulator_8hpp" ],
@@ -19,6 +20,9 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Sinusoid.hpp", "Sinusoid_8hpp.html", [
       [ "Sinusoid", "classradio_1_1Sinusoid.html", "classradio_1_1Sinusoid" ]
     ] ],
-    [ "Subcarrier.hpp", "Subcarrier_8hpp.html", "Subcarrier_8hpp" ],
+    [ "sinusoid_test.cpp", "sinusoid__test_8cpp.html", "sinusoid__test_8cpp" ],
+    [ "Subcarrier.hpp", "Subcarrier_8hpp.html", [
+      [ "Subcarrier", "classradio_1_1Subcarrier.html", "classradio_1_1Subcarrier" ]
+    ] ],
     [ "zdomain.hpp", "zdomain_8hpp.html", "zdomain_8hpp" ]
 ];

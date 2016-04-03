@@ -1,5 +1,6 @@
 <map id="radio::Sinusoid::next" name="radio::Sinusoid::next">
 <area shape="rect" id="node2" href="$classradio_1_1Modulator.html#ab5eac6e4900579486b5871b48e64cdab" title="radio::Modulator::Mod" alt="" coords="195,5,343,32"/>
 <area shape="rect" id="node4" href="$modulator__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="243,56,294,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="391,5,441,32"/>
+<area shape="rect" id="node5" href="$classradio_1_1Subcarrier.html#adb2f047eac0a1cb07bc2d5ff1312ddf2" title="radio::Subcarrier::Add" alt="" coords="195,107,343,133"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="391,56,441,83"/>
 </map>

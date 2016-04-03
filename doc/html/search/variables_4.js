@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['f_5fbaseband',['F_BASEBAND',['../namespaceradio.html#a9bd902e9216499953a5906de73dc1796',1,'radio']]],
-  ['f_5flowersideband',['F_LOWERSIDEBAND',['../namespaceradio.html#a0ffd57d5a11ff70a1f55dbdc8ebe098d',1,'radio']]],
-  ['f_5fuppersideband',['F_UPPERSIDEBAND',['../namespaceradio.html#a0ec4548711b6d6ed6867c70b3fc2a413',1,'radio']]],
-  ['freq_5fintermediate',['FREQ_INTERMEDIATE',['../namespaceradio.html#aa82ddc6ba206798fd70ffc25665b3cb6',1,'radio']]],
-  ['frequency',['frequency',['../classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2',1,'radio::Sinusoid']]]
+  ['sampling_5frate',['SAMPLING_RATE',['../namespaceradio.html#a284213fea4beed2f74bb936927cbe654',1,'radio']]],
+  ['samplingrate',['samplingRate',['../classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8',1,'radio::Sinusoid']]],
+  ['sinindex',['sinIndex',['../classradio_1_1Sinusoid.html#a2e7d029c5e7307967c77959367cc0224',1,'radio::Sinusoid']]],
+  ['sinindexshifted',['sinIndexShifted',['../classradio_1_1Sinusoid.html#a4acf2add824249c39046fe87f9a64f93',1,'radio::Sinusoid']]],
+  ['sinusoid',['sinusoid',['../classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85',1,'radio::Sinusoid']]],
+  ['sinusoidshift90',['sinusoidShift90',['../classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8',1,'radio::Sinusoid']]],
+  ['size',['size',['../classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9',1,'radio::Filter']]]
 ];

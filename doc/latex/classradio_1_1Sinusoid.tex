@@ -31,7 +31,9 @@ Inheritance diagram for radio\+:\+:Sinusoid\+:
 \item 
 \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}
 \item 
-\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a611746540f71ae39fe9f3d611253d842}{carrier\+Index} = 0
+\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sin\+Index} = 0
+\item 
+\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sin\+Index\+Shifted} = 0
 \item 
 \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{sampling\+Rate}
 \item 
@@ -44,7 +46,7 @@ Inheritance diagram for radio\+:\+:Sinusoid\+:
 \subsection{Detailed Description}
 This class creates an easy-\/to-\/call sinusoid that will preserve its phase throughout its lifespan. Essentially, it is a ring buffer. 
 
-Definition at line 19 of file Sinusoid.\+hpp.
+Definition at line 20 of file Sinusoid.\+hpp.
 
 
 
@@ -59,7 +61,7 @@ Definition at line 19 of file Sinusoid.\+hpp.
 )}}\label{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}
 Creates a ring-\/buffer sinusoid. 
 
-Definition at line 71 of file Sinusoid.\+hpp.
+Definition at line 77 of file Sinusoid.\+hpp.
 
 \hypertarget{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!````~Sinusoid@{$\sim$\+Sinusoid}}
 \index{````~Sinusoid@{$\sim$\+Sinusoid}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
@@ -70,7 +72,7 @@ Definition at line 71 of file Sinusoid.\+hpp.
 )}}\label{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}
 Free arrays malloc'd in the constructor. 
 
-Definition at line 86 of file Sinusoid.\+hpp.
+Definition at line 92 of file Sinusoid.\+hpp.
 
 
 
@@ -84,7 +86,7 @@ Definition at line 86 of file Sinusoid.\+hpp.
 )}}\label{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}
 Provides the next value of the sinusoid in a manner consistant with a ring buffer. 
 
-Definition at line 91 of file Sinusoid.\+hpp.
+Definition at line 97 of file Sinusoid.\+hpp.
 
 
 
@@ -107,7 +109,7 @@ Here is the caller graph for this function\+:
 )}}\label{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}
 Provides the next value of the sinusoid shifted 90 degrees in a manner consistant with a ring buffer. 
 
-Definition at line 96 of file Sinusoid.\+hpp.
+Definition at line 102 of file Sinusoid.\+hpp.
 
 
 
@@ -124,40 +126,47 @@ Here is the caller graph for this function\+:
 
 
 \subsection{Member Data Documentation}
-\hypertarget{classradio_1_1Sinusoid_a611746540f71ae39fe9f3d611253d842}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!carrier\+Index@{carrier\+Index}}
-\index{carrier\+Index@{carrier\+Index}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
-\subsubsection[{carrier\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::carrier\+Index = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a611746540f71ae39fe9f3d611253d842}
-The current index of the sinusoid's arrays 
-
-Definition at line 52 of file Sinusoid.\+hpp.
-
 \hypertarget{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!frequency@{frequency}}
 \index{frequency@{frequency}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32} radio\+::\+Sinusoid\+::frequency\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}
 The frequency of the sinusoid 
 
-Definition at line 47 of file Sinusoid.\+hpp.
+Definition at line 48 of file Sinusoid.\+hpp.
 
 \hypertarget{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sampling\+Rate@{sampling\+Rate}}
 \index{sampling\+Rate@{sampling\+Rate}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sampling\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::sampling\+Rate\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}
 The sampling rate 
 
-Definition at line 57 of file Sinusoid.\+hpp.
+Definition at line 63 of file Sinusoid.\+hpp.
+
+\hypertarget{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sin\+Index@{sin\+Index}}
+\index{sin\+Index@{sin\+Index}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
+\subsubsection[{sin\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::sin\+Index = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}
+The current index of the sinusoid's unshifted array 
+
+Definition at line 53 of file Sinusoid.\+hpp.
+
+\hypertarget{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sin\+Index\+Shifted@{sin\+Index\+Shifted}}
+\index{sin\+Index\+Shifted@{sin\+Index\+Shifted}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
+\subsubsection[{sin\+Index\+Shifted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::sin\+Index\+Shifted = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}
+The current index of the shifted sinusoid's array 
+
+Definition at line 58 of file Sinusoid.\+hpp.
 
 \hypertarget{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sinusoid@{sinusoid}}
 \index{sinusoid@{sinusoid}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sinusoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Sinusoid\+::sinusoid\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}
 Initialized as an array of the sinusoid values 
 
-Definition at line 62 of file Sinusoid.\+hpp.
+Definition at line 68 of file Sinusoid.\+hpp.
 
 \hypertarget{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sinusoid\+Shift90@{sinusoid\+Shift90}}
 \index{sinusoid\+Shift90@{sinusoid\+Shift90}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sinusoid\+Shift90}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Sinusoid\+::sinusoid\+Shift90\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}
 Initialized as an array of the sinusoid values shifted 90 degrees 
 
-Definition at line 68 of file Sinusoid.\+hpp.
+Definition at line 74 of file Sinusoid.\+hpp.
 
 
 
