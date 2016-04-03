@@ -1,4 +1,5 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief contains the Sinusoid class
  */
@@ -47,14 +48,14 @@ namespace radio {
 			float32 frequency;
 
 			/**
-			 * The current index of the sinusoid's arrays
+			 * The current index of the sinusoid's unshifted array
 			 */
-			uint32 carrierIndex = 0;
+			uint32 sinIndex = 0;
 
 			/**
-			 *
+			 * The current index of the shifted sinusoid's array
 			 */
-			uint32 carrierIndexShifted = 0;
+			uint32 sinIndexShifted = 0;
 		
 			/**
 			 * The sampling rate
@@ -94,13 +95,13 @@ namespace radio {
 	}
 
 	float32 Sinusoid::next() {
-		if(carrierIndex >= samplingRate) carrierIndex = 0;
-		return sinusoid[carrierIndex++];
+		if(sinIndex >= samplingRate) sinIndex = 0;
+		return sinusoid[sinIndex++];
 	}
 
 	float32 Sinusoid::nextShifted() {
-		if(carrierIndexShifted >= samplingRate) carrierIndexShifted = 0;
-		return sinusoidShift90[carrierIndexShifted++];
+		if(sinIndexShifted >= samplingRate) sinIndexShifted = 0;
+		return sinusoidShift90[sinIndexShifted++];
 	}
 }
 
