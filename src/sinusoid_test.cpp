@@ -16,7 +16,7 @@ using namespace std;
 using namespace radio;
 
 /**
- *
+ * Program to test the Sinusoid class.
  */
 int main(int argc, char* argv[]) {
 

@@ -16,7 +16,7 @@ using namespace std;
 using namespace radio;
 
 /**
- *
+ * Program to test the Modulator class with a self-generated sinusoidal input.
  */
 int main(int argc, char* argv[]) {
 

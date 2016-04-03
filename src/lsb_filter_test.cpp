@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief 
+ * @brief contains a program to test the LSB-via-filter implementation
  */
 
 #include <iostream>
@@ -18,8 +18,7 @@ using namespace std;
 using namespace radio;
 
 /**
- * 
- * 
+ * Tests an implementation of LSB modulation through a filter.
  */
 int main() {
 	const uint32 len = 65536;
