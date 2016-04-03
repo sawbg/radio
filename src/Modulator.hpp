@@ -78,7 +78,7 @@ namespace radio {
 
 
 			/**
-			 *
+			 * THe Hilbert transform of the signal in the data array
 			 */
 			float32* hilData = nullptr;
 
@@ -93,7 +93,7 @@ namespace radio {
 			uint32 size;
 
 			/**
-			 *
+			 * The type of modulation to implement
 			 */
 			ModulationType type;
 	};
@@ -118,7 +118,9 @@ namespace radio {
 
 	void Modulator::Mod() {
 		// these variables should only ever be created once
-		static float32 cummSum = 0;  // cummulative sum used in FM modulation
+		static float32 fmArg = 2 * M_PI * freqCarrier / (float32)rate;
+		static float32 fmK = 2 * M_PI / rate;
+		static float32 fmSum = 0;  // cummulative sum used in FM modulation
 		static Filter lsbFilter(data, size, F_LOWERSIDEBAND);
 		static Sinusoid sinusoid(freqCarrier, rate);  // IF carrier sinusoid
 		static Filter usbFilter(data, size, F_UPPERSIDEBAND);
@@ -127,6 +129,10 @@ namespace radio {
 		if(type == ModulationType::USB_HILBERT
 				|| type == ModulationType::LSB_HILBERT) {
 			hilbert(data, hilData, size);
+		} else if(type == ModulationType::FM_NARROW) {
+			fmK *= 2.5;
+		} else if(type == ModulationType::FM_WIDE) {
+			fmK *= 5;
 		}
 
 		// perform main modulation
@@ -143,23 +149,20 @@ namespace radio {
 					break;
 
 				case ModulationType::USB_HILBERT:
-					data[i] = (data[i] * sinusoid.next()
-						- hilData[i] * sinusoid.nextShifted()) / 2;
+					data[i] = data[i] * sinusoid.next()
+						- hilData[i] * sinusoid.nextShifted();
 					break;
 
 				case ModulationType::LSB_HILBERT:
-					data[i] = (data[i] * sinusoid.next()
-						+ hilData[i] * sinusoid.nextShifted()) / 2;
+					data[i] = data[i] * sinusoid.next()
+						+ hilData[i] * sinusoid.nextShifted();
 					break;
 
 				case ModulationType::FM_NARROW:
-
-					break;
-
 				case ModulationType::FM_WIDE:
-
+					fmSum += fmK * data[i];
+					data[i] = cos(fmArg * i + fmSum);
 					break;
-
 			}
 		}
 
