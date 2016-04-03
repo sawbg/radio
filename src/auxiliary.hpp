@@ -15,12 +15,12 @@
 namespace radio {
 
 	/**
-	 *
+	 * Displays the help information.
 	 */
 	void ShowHelp() {
-		std::cerr << "Usage: radio [MODE] [PL TONE]" << std::endl
+		std::cerr << std::endl << "Usage: radio [MODE] [PL TONE]" << std::endl
 			<< std::endl
-			<< "MODE: one of the following types"
+			<< "MODE: one of the following types "
 			"of modulation" << std::endl << std::endl;
 
 		std::cerr << "dsblc\t\tDouble sideband, large carrier" << std::endl
@@ -37,14 +37,23 @@ namespace radio {
 			<< "nfm\t\tFrequency modulation, 2.5 kHz bandwidth"
 			<< std::endl
 			<< "wfm\t\tFrequency modulation, 5 kHz bandwidth" << std::endl
-			<< "fm\t\talias for wfm" << std::endl;
+			<< "fm\t\talias for wfm" << std::endl << std::endl;
 
 		std::cerr << "PL TONE: Optional specification for CTCSS tone from "
 			"60-260 Hz" << std::endl << std::endl;
 	}
 
 	/**
+	 * Converts a string representation of the supported modulation types (see
+	 * ShowHelp() documentation) to the enum ModulationType value.
 	 *
+	 * This function is not as elegant as it could be. Ideally, I would have
+	 * used a std::map<string, ModulationType> rather than a long series of
+	 * if-else's.
+	 *
+	 * @param str type of modulation in typed form
+	 *
+	 * @return enum value of the type of modulation
 	 */
 	ModulationType to_type(std::string str) {
 		ModulationType type;
