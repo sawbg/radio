@@ -77,15 +77,21 @@ int main(int argc, char* argv[]) {
 
 	// Declare objects
 	Filter baseFilter(dataBuffer, BUFFER_SIZE, F_BASEBAND);
-	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 5000);
+	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 20000);
 	Subcarrier pltone(0.15, dataBuffer, BUFFER_SIZE, toneFreq, SAMPLING_RATE);
 
 	while(true) {
 		read(STDIN_FILENO, &dataBuffer, BUFFER_SIZE * sizeof(float32));
+
+		for(uint32 i = 0; i < BUFFER_SIZE; i++) {
+//			dataBuffer[i] *= 2;
+		}
+
 		baseFilter.Pass();
 		pltone.Add();
 		modulator.Mod();
 		makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
+		to_sint32(iqBuffer, 2 * BUFFER_SIZE);
 		write(STDOUT_FILENO, &iqBuffer,  2 * BUFFER_SIZE * sizeof(float32));
 	}
 }

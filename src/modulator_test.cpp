@@ -53,6 +53,7 @@ int main(int argc, char* argv[]) {
 
 		modulator.Mod();
 		makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
-		write(STDOUT_FILENO, &iqBuffer,  2 * BUFFER_SIZE * sizeof(float32));
+		to_sint32(iqBuffer, 2 * BUFFER_SIZE);
+		write(STDOUT_FILENO, &iqBuffer,  2 * BUFFER_SIZE * sizeof(sint32));
 	}
 }
