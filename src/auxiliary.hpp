@@ -6,6 +6,7 @@
 #ifndef auxiliary_H
 #define auxiliary_H
 
+#include <climits>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -41,6 +42,21 @@ namespace radio {
 
 		std::cerr << "PL TONE: Optional specification for CTCSS tone from "
 			"60-260 Hz" << std::endl << std::endl;
+	}
+
+	/**
+	 * Converts float32 samples to sint32 samples. Rounds conversion to nearest
+	 * integer.
+	 *
+	 * @param data the array containing the float32 samples that are directly
+	 * replaced by their respective sint32 representations
+	 *
+	 * @param size the number of elements in the data array
+	 */
+	void to_sint32(float32* data, uint32 size) {
+		for(uint32 i = 0; i < size; i++) {
+			((sint32*)data)[i] = (sint32)(data[i] * INT_MAX + 0.5);
+		}
 	}
 
 	/**
