@@ -1,0 +1,52 @@
+.TH "radio::Gain" 3 "Sun Apr 10 2016" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+radio::Gain \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Gain\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGain\fP (\fBfloat32\fP *data, \fBuint32\fP size, \fBfloat32\fP gaindB)"
+.br
+.ti -1c
+.RI "void \fBApply\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Applies a gain to a (baseband) signal\&. 
+.PP
+Definition at line 12 of file Gain\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "radio::Gain::Gain (\fBfloat32\fP *data, \fBuint32\fPsize, \fBfloat32\fPgaindB)"
+Initializes a \fBGain\fP object and converts gain from decibels to a standard value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the signal to which the gain is applied
+.br
+\fIsize\fP the number of elements in the data array
+.br
+\fIgaindB\fP the desired gain in decibels (of power) 
+.RE
+.PP
+
+.PP
+Definition at line 55 of file Gain\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void radio::Gain::Apply ()"
+Applies the gain to the signal contained in the data array 
+.PP
+Definition at line 61 of file Gain\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

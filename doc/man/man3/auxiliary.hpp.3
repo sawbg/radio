@@ -1,4 +1,4 @@
-.TH "src/auxiliary.hpp" 3 "Sun Apr 3 2016" "My Project" \" -*- nroff -*-
+.TH "src/auxiliary.hpp" 3 "Sun Apr 10 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ src/auxiliary.hpp \-
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <climits>\fP
+.br
 \fC#include <iostream>\fP
 .br
 \fC#include <stdexcept>\fP
@@ -28,6 +30,9 @@ src/auxiliary.hpp \-
 .in +1c
 .ti -1c
 .RI "void \fBradio::ShowHelp\fP ()"
+.br
+.ti -1c
+.RI "void \fBradio::to_sint32\fP (\fBfloat32\fP *data, \fBuint32\fP size)"
 .br
 .ti -1c
 .RI "ModulationType \fBradio::to_type\fP (std::string str)"

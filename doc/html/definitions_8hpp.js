@@ -1,11 +1,12 @@
 var definitions_8hpp =
 [
     [ "ENUM", "definitions_8hpp.html#a378181c29a641d58f55d647b5a9599f2", null ],
+    [ "ERROR", "definitions_8hpp.html#a8fe83ac76edc595f6b98cd4a4127aed5", null ],
     [ "byte", "definitions_8hpp.html#a0c8186d9b9b7880309c27230bbb5e69d", null ],
     [ "cfloat32", "definitions_8hpp.html#a960be6b6614c08090c16574dba10a421", null ],
     [ "float32", "definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1", null ],
     [ "float64", "definitions_8hpp.html#a232fad1b0d6dcc7c16aabde98b2e2a80", null ],
-    [ "fparams", "definitions_8hpp.html#af19387f95516e2132a08cf60503f22a5", null ],
+    [ "fparams", "definitions_8hpp.html#a7615684c2af56be5f302c5b367d71f6b", null ],
     [ "sint16", "definitions_8hpp.html#a74df79fde3c518e55b29ce6360a9c76e", null ],
     [ "sint32", "definitions_8hpp.html#a0573de65958b4fda3a0460ed417dafb8", null ],
     [ "sint64", "definitions_8hpp.html#ad91d7e42d1c1abce1d9eeacd54cc0497", null ],

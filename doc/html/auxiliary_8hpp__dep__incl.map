@@ -1,5 +1,8 @@
 <map id="src/auxiliary.hpp" name="src/auxiliary.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="127,80,282,107"/>
-<area shape="rect" id="node4" href="$sinusoid__test_8cpp.html" title="src/sinusoid_test.cpp" alt="" coords="306,80,453,107"/>
+<area shape="rect" id="node2" href="$baseband__filter__test_8cpp.html" title="src/baseband_filter\l_test.cpp" alt="" coords="5,80,137,121"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="161,87,259,114"/>
+<area shape="rect" id="node4" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="283,87,438,114"/>
+<area shape="rect" id="node5" href="$multi__sinusoid__test_8cpp.html" title="src/multi_sinusoid\l_test.cpp" alt="" coords="463,80,589,121"/>
+<area shape="rect" id="node6" href="$pl__tone__test_8cpp.html" title="src/pl_tone_test.cpp" alt="" coords="613,87,753,114"/>
+<area shape="rect" id="node7" href="$sinusoid__test_8cpp.html" title="src/sinusoid_test.cpp" alt="" coords="778,87,925,114"/>
 </map>

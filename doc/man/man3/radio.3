@@ -1,4 +1,4 @@
-.TH "radio" 3 "Sun Apr 3 2016" "My Project" \" -*- nroff -*-
+.TH "radio" 3 "Sun Apr 10 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,13 +16,16 @@ contains helper-functions for \fBmain()\fP
 .RI "class \fBFilter\fP"
 .br
 .ti -1c
+.RI "class \fBGain\fP"
+.br
+.ti -1c
 .RI "class \fBModulator\fP"
 .br
 .ti -1c
-.RI "class \fBSinusoid\fP"
+.RI "class \fBPlTone\fP"
 .br
 .ti -1c
-.RI "class \fBSubcarrier\fP"
+.RI "class \fBSinusoid\fP"
 .br
 .in -1c
 .SS "Enumerations"
@@ -46,6 +49,9 @@ contains helper-functions for \fBmain()\fP
 .in +1c
 .ti -1c
 .RI "void \fBShowHelp\fP ()"
+.br
+.ti -1c
+.RI "void \fBto_sint32\fP (\fBfloat32\fP *data, \fBuint32\fP size)"
 .br
 .ti -1c
 .RI "\fBModulationType\fP \fBto_type\fP (std::string str)"
@@ -109,7 +115,7 @@ Describes the age of a filter (from last Pass() or in this Pass())
 .TP
 \fB\fINEW \fP\fP
 .PP
-Definition at line 50 of file definitions\&.hpp\&.
+Definition at line 51 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Argument\fP"
 
 .PP
@@ -122,7 +128,7 @@ Definition at line 50 of file definitions\&.hpp\&.
 .TP
 \fB\fIPL_TONE \fP\fP
 .PP
-Definition at line 60 of file definitions\&.hpp\&.
+Definition at line 61 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Fractional\fP"
 Describes the numerator and denominator of a z-domain transfer function 
 .PP
@@ -133,7 +139,7 @@ Describes the numerator and denominator of a z-domain transfer function
 .TP
 \fB\fIDEN \fP\fP
 .PP
-Definition at line 55 of file definitions\&.hpp\&.
+Definition at line 56 of file definitions\&.hpp\&.
 .SS "enum \fBradio::ModulationType\fP\fC [strong]\fP"
 Describes a form of modulation\&. 
 .PP
@@ -156,7 +162,7 @@ Describes a form of modulation\&.
 .TP
 \fB\fIFM_WIDE \fP\fP
 .PP
-Definition at line 65 of file definitions\&.hpp\&.
+Definition at line 66 of file definitions\&.hpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void radio::aconj (\fBcfloat32\fP *data, \fBuint32\fPsize)"
@@ -216,7 +222,7 @@ This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transfo
 .PP
 
 .PP
-Definition at line 158 of file zdomain\&.hpp\&.
+Definition at line 161 of file zdomain\&.hpp\&.
 .SS "void radio::makeIQ (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fPsize)"
 Produces an interleaved array of first an element from an original array of data and then an element from the original data's Hilbert transform\&. This function is intended to generate a two-channel output (I/Q output) for mixing applications\&.
 .PP
@@ -231,11 +237,24 @@ Produces an interleaved array of first an element from an original array of data
 .PP
 
 .PP
-Definition at line 168 of file zdomain\&.hpp\&.
+Definition at line 171 of file zdomain\&.hpp\&.
 .SS "void radio::ShowHelp ()"
 Displays the help information\&. 
 .PP
-Definition at line 20 of file auxiliary\&.hpp\&.
+Definition at line 21 of file auxiliary\&.hpp\&.
+.SS "void radio::to_sint32 (\fBfloat32\fP *data, \fBuint32\fPsize)"
+Converts float32 samples to sint32 samples\&. Rounds conversion to nearest integer\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP the array containing the float32 samples that are directly replaced by their respective sint32 representations
+.br
+\fIsize\fP the number of elements in the data array 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file auxiliary\&.hpp\&.
 .SS "\fBModulationType\fP radio::to_type (std::stringstr)"
 Converts a string representation of the supported modulation types (see \fBShowHelp()\fP documentation) to the enum ModulationType value\&.
 .PP
@@ -253,21 +272,21 @@ enum value of the type of modulation
 .PP
 
 .PP
-Definition at line 58 of file auxiliary\&.hpp\&.
+Definition at line 79 of file auxiliary\&.hpp\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBfparams\fP radio::F_BASEBAND"
 \fBInitial value:\fP
 .PP
 .nf
-= { std::vector<float32> {
+= { std::vector<float64> {
         0\&.0008977019461,
             -0\&.002215694636,
             0\&.001372192986,
             0\&.001372192986,
             -0\&.002215694636,
             0\&.0008977019461  
-    }, std::vector<float32> {
+    }, std::vector<float64> {
         1,
             -4\&.678616047,
             8\&.822912216,
@@ -283,32 +302,32 @@ Definition at line 19 of file fvectors\&.hpp\&.
 \fBInitial value:\fP
 .PP
 .nf
-= { std::vector<float32> {
-        0\&.2758038938,
-            2\&.763578892,
-            12\&.83915043,
-            36\&.47584915,
-            70\&.37084961,
-            96\&.76893616,
-            96\&.76893616,
-            70\&.37084961,
-            36\&.47584915,
-            12\&.83915043,
-            2\&.763578892,
-            0\&.2758038938
-    }, std::vector<float32> {
+= { std::vector<float64> {
+        0\&.2758039069174,   
+            2\&.763578787693,   
+            12\&.83915022756,   
+            36\&.47584850651,
+            70\&.37084637368,   
+            96\&.76893503179,   
+            96\&.76893503179,   
+            70\&.37084637368,
+            36\&.47584850651,   
+            12\&.83915022756,   
+            2\&.763578787693,  
+            0\&.2758039069174    
+    }, std::vector<float64> {
         1,
-            7\&.605497837,
-            27\&.34180641,
-            60\&.83375549,
-            92\&.60908508,
-            100\&.8363876,
-            79\&.74796295,
-            45\&.49822617,
-            18\&.1356678,
-            4\&.690036297,
-            0\&.6617552638,
-            0\&.0281427335   
+            7\&.605497780083,   
+            27\&.34180552438,   
+            60\&.83375457605,
+            92\&.60908886875,       
+            100\&.8363857,    
+            79\&.74796574736,     
+            45\&.4982252145,
+            18\&.13566776308,    
+            4\&.690036472717,   
+            0\&.6617552879305,   
+            0\&.0281427334611
     } }
 .fi
 Lower-sideband filter coefficients\&. Generated with MATLAB 2015A\&. 
@@ -318,32 +337,32 @@ Definition at line 38 of file fvectors\&.hpp\&.
 \fBInitial value:\fP
 .PP
 .nf
-= { std::vector<float32> {
-        0\&.001690387726,
-            0\&.01145271584,
-            0\&.03591799363,
-            0\&.06576926261,
-            0\&.0711934343,
-            0\&.03156377375,
-            -0\&.03156377375,
-            -0\&.0711934343,
-            -0\&.06576926261,
-            -0\&.03591799363,
-            -0\&.01145271584,
-            -0\&.001690387726
-    }, std::vector<float32> {
-        1,
-            9\&.465174675,
-            41\&.62402725,
-            112\&.0970993,
-            205\&.2097626,
-            267\&.9378662,
-            254\&.4868011,
-            175\&.7772827,
-            86\&.5161972,
-            28\&.89988136,
-            5\&.897814751,
-            0\&.5572910309
+= { std::vector<float64> {
+        0\&.001690387681463, 
+            0\&.01145271586989, 
+            0\&.03591799189724, 
+            0\&.06576926098562,
+            0\&.07119343282702,
+            0\&.03156377419766,
+            -0\&.03156377419766,
+            -0\&.07119343282702,
+            -0\&.06576926098562,
+            -0\&.03591799189724,
+            -0\&.01145271586989,
+            -0\&.001690387681463
+    }, std::vector<float64> {
+        1,  
+            9\&.465175013624,
+            41\&.62402815905,
+            112\&.0971027069,
+            205\&.2097686473,    
+            267\&.9378582311,     
+            254\&.486805213,
+            175\&.7772755115,
+            86\&.51619894548,   
+            28\&.89988093561,     
+            5\&.89781461091,
+            0\&.5572910543053    
     } }
 .fi
 Upper-sideband filter coefficients\&. Generated with MATLAB 2015A\&. 

@@ -1,19 +1,22 @@
 <map id="src/definitions.hpp" name="src/definitions.hpp">
-<area shape="rect" id="node2" href="$alsa__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="5,80,128,107"/>
-<area shape="rect" id="node3" href="$auxiliary_8hpp.html" title="src/auxiliary.hpp" alt="" coords="47,162,164,189"/>
-<area shape="rect" id="node7" href="$baseband__filter__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="491,155,623,196"/>
-<area shape="rect" id="node8" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="640,80,739,107"/>
-<area shape="rect" id="node9" href="$lsb__filter__test_8cpp.html" title="contains a program to test the LSB&#45;via&#45;filter implementation " alt="" coords="699,162,845,189"/>
-<area shape="rect" id="node10" href="$Modulator_8hpp.html" title="src/Modulator.hpp" alt="" coords="341,162,467,189"/>
-<area shape="rect" id="node12" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="499,80,615,107"/>
-<area shape="rect" id="node13" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="814,80,933,107"/>
-<area shape="rect" id="node14" href="$fft__test2_8cpp.html" title="Tests FFT, IFFT, and Hilbert implementations in zdomain.hpp. " alt="" coords="1208,162,1325,189"/>
-<area shape="rect" id="node16" href="$Subcarrier_8hpp.html" title="contains the Subcarrier class " alt="" coords="188,162,316,189"/>
-<area shape="rect" id="node17" href="$Sinusoid_8hpp.html" title="contains the Sinusoid class " alt="" coords="254,80,373,107"/>
-<area shape="rect" id="node18" href="$mic__test_8cpp.html" title="Tests getting mic input via ALSA &#160;May not even compile at the moment. " alt="" coords="1009,80,1127,107"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="382,244,479,271"/>
-<area shape="rect" id="node5" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="203,244,357,271"/>
-<area shape="rect" id="node6" href="$sinusoid__test_8cpp.html" title="src/sinusoid_test.cpp" alt="" coords="32,244,179,271"/>
-<area shape="rect" id="node11" href="$piped__test_8cpp.html" title="containts the original program used to test the piping&#45;in idea " alt="" coords="870,162,999,189"/>
-<area shape="rect" id="node15" href="$iq__test_8cpp.html" title="Generates test IQ signal. " alt="" coords="1075,162,1183,189"/>
+<area shape="rect" id="node2" href="$alsa__test_8cpp.html" title="Tests sinusoidal tone generation. " alt="" coords="124,80,247,107"/>
+<area shape="rect" id="node3" href="$auxiliary_8hpp.html" title="src/auxiliary.hpp" alt="" coords="321,80,439,107"/>
+<area shape="rect" id="node4" href="$baseband__filter__test_8cpp.html" title="src/baseband_filter\l_test.cpp" alt="" coords="586,155,718,196"/>
+<area shape="rect" id="node7" href="$multi__sinusoid__test_8cpp.html" title="src/multi_sinusoid\l_test.cpp" alt="" coords="435,155,562,196"/>
+<area shape="rect" id="node10" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="900,80,999,107"/>
+<area shape="rect" id="node11" href="$lsb__filter__test_8cpp.html" title="contains a program to test the LSB&#45;via&#45;filter implementation " alt="" coords="944,162,1091,189"/>
+<area shape="rect" id="node12" href="$Modulator_8hpp.html" title="src/Modulator.hpp" alt="" coords="742,162,869,189"/>
+<area shape="rect" id="node14" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="709,80,825,107"/>
+<area shape="rect" id="node15" href="$Sinusoid_8hpp.html" title="contains the Sinusoid class " alt="" coords="514,80,633,107"/>
+<area shape="rect" id="node16" href="$PlTone_8hpp.html" title="contains the PlTone class " alt="" coords="27,162,138,189"/>
+<area shape="rect" id="node17" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="1074,80,1193,107"/>
+<area shape="rect" id="node18" href="$fft__test2_8cpp.html" title="Tests FFT, IFFT, and Hilbert implementations in zdomain.hpp. " alt="" coords="1504,162,1621,189"/>
+<area shape="rect" id="node20" href="$Gain_8hpp.html" title="src/Gain.hpp" alt="" coords="1268,80,1364,107"/>
+<area shape="rect" id="node21" href="$mic__test_8cpp.html" title="Tests getting mic input via ALSA &#160;May not even compile at the moment. " alt="" coords="1389,80,1507,107"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="807,244,905,271"/>
+<area shape="rect" id="node6" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="5,244,160,271"/>
+<area shape="rect" id="node8" href="$pl__tone__test_8cpp.html" title="src/pl_tone_test.cpp" alt="" coords="277,244,417,271"/>
+<area shape="rect" id="node9" href="$sinusoid__test_8cpp.html" title="src/sinusoid_test.cpp" alt="" coords="163,162,309,189"/>
+<area shape="rect" id="node13" href="$piped__test_8cpp.html" title="containts the original program used to test the piping&#45;in idea " alt="" coords="1115,162,1245,189"/>
+<area shape="rect" id="node19" href="$iq__test_8cpp.html" title="Generates test IQ signal. " alt="" coords="1321,162,1429,189"/>
 </map>

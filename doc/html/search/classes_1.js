@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modulator',['Modulator',['../classradio_1_1Modulator.html',1,'radio']]]
+  ['gain',['Gain',['../classradio_1_1Gain.html',1,'radio']]]
 ];
