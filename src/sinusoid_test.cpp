@@ -10,7 +10,6 @@
 #include <unistd.h>
 
 #include "auxiliary.hpp"
-#include "Modulator.hpp"
 
 using namespace std;
 using namespace radio;
