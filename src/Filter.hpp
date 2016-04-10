@@ -14,20 +14,16 @@
 
 namespace radio {
 	/**
-	 * This class implements a z-domain filter on a specified array of float32'''s
-	 * (a.k.a. singles, floats). It requires the transfer function coefficients
-	 * already be calculated (i.e., it does not generate the coefficients based
-	 * on desired filter characteristics). MATLAB and its Signal Processing
-	 * Toolbox can be used to generate the coefficients.
+	 * This class implements a z-domain filter on a specified array of
+	 * float32'''s (a.k.a. singles, floats). It requires the transfer function
+	 * coefficients already be calculated (i.e., it does not generate the
+	 * coefficients based on desired filter characteristics). MATLAB and its
+	 * Signal Processing Toolbox can be used to generate the coefficients.
 	 *
 	 * While this class is designed to implement a single-section filter,
 	 * several instances of the class can be created and run over the data array
 	 * sequentially to effectively implement a multi-section filter.
-	 *
-	 * The class is designed (but not tested!) to allow for a z-domain transfer
-	 * function with different orders of the zeros (numerator) and poles
-	 * (denominator).
-	 */
+ 	 */
 	class Filter {
 		public:
 			/**
@@ -47,15 +43,16 @@ namespace radio {
 			Filter(float32* data, uint32 size, fparams& diffEq);
 
 			/**
-			 * Passes the data array through the digital filter and accounts for
-			 * x[n] and y[n] values from the previous call to Pass().
+			 * Passes the data array through the digital filter but does not
+			 * account for previous x[n] and y[n] values from the previous call
+			 * to Pass().
 			 */
 			void Pass();
 
 		protected:
 			/**
-			 * The order of the filter transfer function (i.e., the maximum of
-			 * the orders of the numerator and denominator).
+			 * The number of terms in the numerator (or denomenator) of the
+			 * transfer function.
 			 */
 			uint8 eqLength;
 
@@ -77,52 +74,28 @@ namespace radio {
 			 * in decending order (z^0, z^-1, z^-2, etc.).
 			 */
 			fparams diffEq;
-
-			/**
-			 * Vectors of the original (x[n]) and filtered (y[n]) values of the
-			 * data array used to calculate the first filtered values of the
-			 * data array. In spite of the type name, this variable does NOT
-			 * contains filter parameters but rather the same data type that
-			 * fparams represents.
-			 */
-			fparams prev;
 	};
 
 	Filter::Filter(float32* data, uint32 size, fparams& diffEq) {
 		this->data = data;
 		this->size = size;
 		this->diffEq = diffEq;
-		eqLength = std::max(this->diffEq[NUM].size(),
-				this->diffEq[DEN].size());
-
-		for(int i = 0; i < 2; i++) {
-			prev.push_back(std::vector<float32>());
-		}
-
-		for(int i = 0; i < this->diffEq[NUM].size(); i++) {
-			prev[OLD].push_back(0);
-		}
-
-		for(int i = 0; i < this->diffEq[DEN].size(); i++) {
-			prev[NEW].push_back(0);
-		}
+		eqLength = this->diffEq[DEN].size();
 	}
 
 	void Filter::Pass() {
-		float32 temp[size];
+		float64 temp[size];
 
 		// create first values in filtered data
-		for(int i = 0; i< diffEq[NUM].size(); i++) {
+		for(int i = 0; i< eqLength; i++) {
 			temp[i] = 0;
 
-			for(int j = 0; j < prev[OLD].size(); j++) {
-				temp[i] += diffEq[NUM][j] * (j > i 
-						? prev[OLD][prev[OLD].size() - (j - i)] : data[i - j]);
+			for(int j = 0; j < eqLength; j++) {
+				temp[i] += diffEq[NUM][j] * (j > i ? 0 : data[i - j]);
 			}
 
-			for(int j = 1; j < prev[NEW].size(); j++) {
-				temp[i] -= diffEq[DEN][j] * (j > i
-						? prev[NEW][prev[NEW].size() - (j - i)] : temp[i - j]);
+			for(int j = 1; j < eqLength; j++) {
+				temp[i] -= diffEq[DEN][j] * (j > i ? 0 : temp[i - j]);
 			}
 		}
 
@@ -130,26 +103,17 @@ namespace radio {
 		for(int i = eqLength; i < size; i++) {
 			temp[i] = 0;
 
-			for(int j = 0; j < diffEq[NUM].size(); j++) {
+			for(int j = 0; j < eqLength; j++) {
 				temp[i] += diffEq[NUM][j] * data[i - j];
 			}
 
-			for(int j = 1; j < diffEq[NUM].size(); j++) {
+			for(int j = 1; j < eqLength; j++) {
 				temp[i] -= diffEq[DEN][j] * temp[i - j];
 			}
 		}
 
 		// save final values of data and filtered data
-		for(int i = size - diffEq[NUM].size(), j = 0; i < size; i++, j++) {
-			prev[OLD][j] = data[i];
-		}
-
-		for(int i = size - diffEq[DEN].size(), j = 0; i < size; i++, j++) {
-			prev[NEW][j] = temp[i];
-		}
-
-		// transfer filtered data to original data's buffer
-		for(int i = 0; i < size; i++) {
+	for(int i = 0; i < size; i++) {
 			data[i] = temp[i];
 		}
 	}
