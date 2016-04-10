@@ -12,6 +12,7 @@
 #include <vector>
 
 #define ENUM signed char
+#define ERROR -1
 
 typedef unsigned char byte;
 typedef unsigned char uint8;
@@ -37,7 +38,7 @@ typedef std::complex<float32> cfloat32;
 /**
  * Defines a type for the filter coefficients.
  */
-typedef std::vector<std::vector<float32>> fparams;
+typedef std::vector<std::vector<float64>> fparams;
 
 /**
  * This namespace contains all the classes, functions, and enumerations used in
