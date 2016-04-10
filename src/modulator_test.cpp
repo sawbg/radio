@@ -11,6 +11,7 @@
 
 #include "auxiliary.hpp"
 #include "Modulator.hpp"
+#include "PlTone.hpp"
 
 using namespace std;
 using namespace radio;
@@ -21,7 +22,6 @@ using namespace radio;
 int main(int argc, char* argv[]) {
 
 	// Constants
-	const uint8 ERROR = -1;
 	const uint16 BUFFER_SIZE = 16384;
 
 	// Declare primative Variables
@@ -29,6 +29,9 @@ int main(int argc, char* argv[]) {
 	float32 iqBuffer[2 * BUFFER_SIZE];
 	ModulationType type;
 	float32 freq = atof(argv[2]);
+	float32 tone = 0;
+
+	if(argc >= 4) tone = atof(argv[3]);
 
 	try{
 		type = to_type(string(argv[1]));
@@ -43,8 +46,9 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Declare objects
-	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 5000);
+	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 20000);
 	Sinusoid sinusoid(freq);
+	PlTone(tone > 0 ? 0.15 : 0, dataBuffer, BUFFER_SIZE, tone, 48000);
 
 	while(true) {
 		for(uint16 i = 0; i < BUFFER_SIZE; i++) {
