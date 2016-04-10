@@ -12,8 +12,9 @@
 
 #include "auxiliary.hpp"
 #include "Filter.hpp"
-#include "Subcarrier.hpp"
+#include "Gain.hpp"
 #include "Modulator.hpp"
+#include "PlTone.hpp"
 #include "zdomain.hpp"
 
 using namespace std;
@@ -25,13 +26,15 @@ using namespace radio;
 int main(int argc, char* argv[]) {
 
 	// Constants
-	const uint8 ERROR = -1;
 	const uint8 NUM_TYPES = 8;
 	const uint16 BUFFER_SIZE = 16384;
+	const uint32 BUFFER_BYTE_COUNT = BUFFER_SIZE * sizeof(sint32);
+	const uint32 IQ_BUFFER_SIZE = 2 * BUFFER_SIZE;
+	const uint32 IQ_BUFFER_BYTE_COUNT = BUFFER_BYTE_COUNT * 2;
 	const uint32 SAMPLING_RATE = 48000;
 
 	// Ensure 1 or 2 arguments given
-	if(argc > 3) {
+	if(argc > 4) {
 		std::cerr << "Error: too many arguments!" << std::endl;
 		ShowHelp();
 		return ERROR;
@@ -42,9 +45,10 @@ int main(int argc, char* argv[]) {
 	}
 
 	// Declare primative Variables
+	float32 micGain = 0;
 	float32 toneFreq = 0;
 	float32 dataBuffer[BUFFER_SIZE];
-	float32 iqBuffer[2 * BUFFER_SIZE];
+	float32 iqBuffer[IQ_BUFFER_SIZE];
 	ModulationType type;
 
 	// validate modulation type
@@ -53,13 +57,23 @@ int main(int argc, char* argv[]) {
 	} catch(std::exception ex) {
 		std::cerr << "The given modulation type is invalid!" << std::endl;
 		ShowHelp();
-		return ERROR;
+	}
+
+	// process mic gain
+	if(argc >= 3) {
+		try {
+			micGain = std::stof(argv[2]);
+		} catch(std::invalid_argument ex) {
+			std::cerr << "The specified microphone gain is not a number."
+				<< std::endl;
+			ShowHelp();
+		}
 	}
 
 	// validate CTCSS tone
-	if(argc == 3) {
+	if(argc == 4) {
 		try {
-			toneFreq = std::stof(argv[2]);
+			toneFreq = std::stof(argv[3]);
 
 			if(toneFreq < 60 || toneFreq > 260) {
 				throw std::out_of_range("");
@@ -77,21 +91,24 @@ int main(int argc, char* argv[]) {
 
 	// Declare objects
 	Filter baseFilter(dataBuffer, BUFFER_SIZE, F_BASEBAND);
+	Gain gain(dataBuffer, BUFFER_SIZE, micGain);
+	PlTone pltone(0.15, dataBuffer, BUFFER_SIZE, toneFreq, SAMPLING_RATE);
 	Modulator modulator(dataBuffer, BUFFER_SIZE, type, 20000);
-	Subcarrier pltone(0.15, dataBuffer, BUFFER_SIZE, toneFreq, SAMPLING_RATE);
 
+	// SDR guts of the program
 	while(true) {
-		read(STDIN_FILENO, &dataBuffer, BUFFER_SIZE * sizeof(float32));
-
-		for(uint32 i = 0; i < BUFFER_SIZE; i++) {
-//			dataBuffer[i] *= 2;
-		}
-
+		// get next samples
+		read(STDIN_FILENO, &dataBuffer, BUFFER_BYTE_COUNT);
+		
+		// process/modulate samples
 		baseFilter.Pass();
-		pltone.Add();
+//		pltone.Add();
+		gain.Apply();
 		modulator.Mod();
 		makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
-		to_sint32(iqBuffer, 2 * BUFFER_SIZE);
-		write(STDOUT_FILENO, &iqBuffer,  2 * BUFFER_SIZE * sizeof(float32));
+		to_sint32(iqBuffer, IQ_BUFFER_SIZE);
+		
+		// write samples
+		write(STDOUT_FILENO, &iqBuffer, IQ_BUFFER_BYTE_COUNT);
 	}
 }
