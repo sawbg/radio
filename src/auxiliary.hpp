@@ -19,8 +19,8 @@ namespace radio {
 	 * Displays the help information.
 	 */
 	void ShowHelp() {
-		std::cerr << std::endl << "Usage: radio [MODE] [PL TONE]" << std::endl
-			<< std::endl
+		std::cerr << std::endl << "Usage: radio [MODE] [MIC GAIN] "
+			"[PL TONE]" << std::endl << std::endl
 			<< "MODE: one of the following types "
 			"of modulation" << std::endl << std::endl;
 
@@ -35,13 +35,18 @@ namespace radio {
 			<< std::endl
 			<< "usbfilt\t\tUpper sideband created via digital high-pass filter"
 			<< std::endl
-			<< "nfm\t\tFrequency modulation, 2.5 kHz bandwidth"
-			<< std::endl
-			<< "wfm\t\tFrequency modulation, 5 kHz bandwidth" << std::endl
-			<< "fm\t\talias for wfm" << std::endl << std::endl;
+//			<< "nfm\t\tFrequency modulation, 2.5 kHz bandwidth"
+			<< std::endl;
+//			<< "wfm\t\tFrequency modulation, 5 kHz bandwidth" << std::endl
+//			<< "fm\t\talias for wfm" << std::endl << std::endl;
+
+		std::cerr << "MIC GAIN: Microphone power gain expressed in decibels"
+		<< std::endl << std::endl;
 
 		std::cerr << "PL TONE: Optional specification for CTCSS tone from "
 			"60-260 Hz" << std::endl << std::endl;
+
+		std::exit(ERROR);
 	}
 
 	/**
