@@ -4,7 +4,7 @@ alsa-test:
 	$(GCC) src/alsa_test.cpp -o bin/alsatest -O0 -lasound
 
 baseband-filter-test:
-	$(GCC) src/baseband_filter_test.cpp -o bin/bbftest
+	$(GCC) src/baseband_filter_test.cpp -o bin/basebandfiltertest
 
 count:
 	grep -r "src/" -e "Samuel Andrew Wisner" -l | xargs wc -l
@@ -27,11 +27,17 @@ fft-test2:
 iq-test:
 	$(GCC) src/iq_test.cpp -o bin/iqtest
 
+multi-sinusoid-test:
+	$(GCC) src/multi_sinusoid_test.cpp -o bin/multisinusoidtest
+
 modulator-test:
 	$(GCC) src/modulator_test.cpp -o bin/modulatortest
 
 lsb-filter-test:
 	$(GCC) src/lsb_filter_test.cpp -o bin/lsbftest
+
+pl-tone-test:
+	$(GCC) src/pl_tone_test.cpp -o bin/pltonetest
 
 radio:
 	$(GCC) src/main.cpp -o bin/sdr
