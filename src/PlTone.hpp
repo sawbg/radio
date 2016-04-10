@@ -1,11 +1,11 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains the Subcarrier class
+ * @brief contains the PlTone class
  */
 
-#ifndef Subcarrier_H
-#define Subcarrier_H
+#ifndef PlTone_H
+#define PlTone_H
 
 #include "definitions.hpp"
 #include "Sinusoid.hpp"
@@ -15,10 +15,10 @@ namespace radio {
 	 * This class creates a CTCSS subcarrier (PL tone) at a specified frequency
 	 * in a baseband signal.
 	 */
-	class Subcarrier : Sinusoid {
+	class PlTone : Sinusoid {
 		public:
 			/**
-			 * Creates a Subcarrier object.
+			 * Creates a PlTone object.
 			 *
 			 * @param amplitude the amplitude (0-1) of the subcarrier. Assumes
 			 * baseband signal has a peak-to-peak range of -1 to 1.
@@ -34,7 +34,7 @@ namespace radio {
 			 * @param samplingRate the sampling frequency of the baseband
 			 * signal
 			 */
-			Subcarrier(float32 amplitude, float32* data, uint32 size,
+			PlTone(float32 amplitude, float32* data, uint32 size,
 					float32 frequency, uint32 samplingRate);
 
 			/**
@@ -60,7 +60,7 @@ namespace radio {
 			uint32 size;
 	};
 
-	Subcarrier::Subcarrier(float32 amplitude, float32* data,
+	PlTone::PlTone(float32 amplitude, float32* data,
 			uint32 size, float32 frequency, uint32 samplingRate)
 		: Sinusoid(frequency, samplingRate) {
 		this->data = data;
@@ -72,9 +72,9 @@ namespace radio {
 		}
 	}
 
-	void Subcarrier::Add() {
+	void PlTone::Add() {
 		for(uint32 i = 0; i < size; i++) {
-			data[i] += next();
+			data[i] += amplitude * next();
 			data[i] /= (1 + amplitude);  // ensures value <= 1
 		}
 	}
