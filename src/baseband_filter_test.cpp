@@ -1,45 +1,60 @@
 /**
- * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief Tests sinusoidal tone generation
+ * @brief contains a program to demonstrate the the baseband/AF filter
  */
 
-#include <iostream>
-#include <cmath>
 #include <cstdio>
+#include <cstdlib>
+#include <iostream>
 #include <unistd.h>
 
+#include "auxiliary.hpp"
 #include "definitions.hpp"
 #include "Filter.hpp"
 #include "fvectors.hpp"
+#include "Sinusoid.hpp"
 #include "zdomain.hpp"
 
 using namespace std;
 using namespace radio;
 
 /**
- * This prgram tests and demonstrates the Filter class and the baseband
- * low-pass filter (fp = 1.7 kHz, fs = 3 kHz, Ap = 0.5 dB, As = 60 dB).
+ * Program to test the Filter class and the baseband filter coefficients.
  */
-int main() {
-	const uint32 len = 65536;
-	float32 data[len];
-	float32 temp[len];
-	Filter baseFilter(temp, len, F_BASEBAND);
+int main(int argc, char* argv[]) {
 
-	for(int i = 0; i < len; i++) {
-		data[i] = 0.95 * (sin(2*M_PI*440*i/48000)
-				+ sin(2*M_PI*2000*i/48000) + sin(2*M_PI*2500*i/48000)
-				+ sin(2*M_PI*3000*i/48000));
+	// Constants
+	const uint16 BUFFER_SIZE = 48000;
+
+	// Declare primative Variables
+	uint8 i = 0;
+	uint8 size = 0;
+	uint16 delta = 250;
+	float32 dataBuffer[BUFFER_SIZE];
+	float32 iqBuffer[2 * BUFFER_SIZE];
+
+	// create 1 sec of audio
+	for(uint16 f = delta; f <= 3000; f += delta, i++) {
+		Sinusoid sinusoid(f);
+
+		for(uint16 i = 0; i < BUFFER_SIZE; i++) {
+			dataBuffer[i] += sinusoid.next();
+		}
 	}
+
+	size = i;
+	
+	// adjust dataBuffer so values are between -1 and 1
+	for(uint16 i = 0; i < BUFFER_SIZE; i++) {
+		dataBuffer[i] /= size;
+	}
+	
+	Filter filter(dataBuffer, BUFFER_SIZE, F_BASEBAND);
+	filter.Pass();
+	makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
+	to_sint32(iqBuffer, 2 * BUFFER_SIZE);
 
 	while(true) {
-		for(int i = 0; i < len; i++) {
-			temp[i] = data[i];
-		}
-
-		baseFilter.Pass();
-		write(STDOUT_FILENO, &temp,  len * sizeof(float32));
+		write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
 	}
-
 }
