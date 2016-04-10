@@ -136,7 +136,7 @@ namespace radio {
 	}
 
 	void hilbert(float32* data, float32* dest, uint32 size) {
-		cfloat32 temp[size];
+		cfloat32* temp = (cfloat32*)std::malloc(sizeof(cfloat32) * size);
 
 		for(int i = 0; i < size; i++) {
 			temp[i] = data[i];
@@ -151,8 +151,11 @@ namespace radio {
 		ifft(temp, size);
 
 		for(int i = 0; i < size; i++) {
-			dest[i] = -2 * temp[i].imag();
+			// parentheses around temp prevent free() error
+			dest[i] = -2 * (temp[i].imag());
 		}
+
+		free(temp);
 	}
 
 	void ifft(cfloat32* data, uint32 size) {
