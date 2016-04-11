@@ -1,2 +1,10 @@
 *
 !.gitignore
+!bbftest
+!iqtest
+!modtest
+!msintest
+!pltest
+!radio
+!sintest
+
