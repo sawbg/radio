@@ -1,0 +1,2 @@
+OPTIONS="-c 2 -r 48000 -t raw -f S32_LE -q"
+modulatortest $1 $2 $3 | aplay $OPTIONS -D plughw:0,0

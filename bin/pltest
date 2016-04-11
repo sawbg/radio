@@ -1,0 +1,2 @@
+OPTIONS="-c 2 -r 48000 -t raw -f S32_LE"
+pltonetest $1 | aplay $OPTIONS

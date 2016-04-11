@@ -1,0 +1,3 @@
+OPTIONS="-r 48000 -t raw -q"
+arecord $OPTIONS -c 1 -D plughw:1,0 -f FLOAT_LE | sdr $1 $2 $3 | \
+aplay $OPTIONS -c 2 -f S32_LE -D plughw:0,0
