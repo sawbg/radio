@@ -15,6 +15,8 @@ docs:
 	cd doc/latex; make pdf;
 	git reset
 	git add doc/.
+	git --no-pager log > etc/log.txt
+	git add etc/log.txt
 	git commit -m "Updated documentation."
 	git push
 
