@@ -10,6 +10,8 @@
 #include <unistd.h>
 
 #include "auxiliary.hpp"
+#include "Sinusoid.hpp"
+#include "zdomain.hpp"
 
 using namespace std;
 using namespace radio;
@@ -20,7 +22,6 @@ using namespace radio;
 int main(int argc, char* argv[]) {
 
 	// Constants
-	const uint8 ERROR = -1;
 	const uint16 BUFFER_SIZE = 16384;
 
 	// Declare primative Variables
@@ -42,11 +43,6 @@ int main(int argc, char* argv[]) {
 		
 		makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
 		to_sint32(iqBuffer, 2 * BUFFER_SIZE);
-
-		/*for(int i = 0; i < 2 * BUFFER_SIZE; i += 2) {
-			iqBuffer[i + 1] = iqBuffer[i];
-		}*/
-
 		write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
 	}
 }
