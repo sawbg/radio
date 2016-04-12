@@ -36,7 +36,7 @@ modulator-test:
 	$(GCC) src/modulator_test.cpp -o bin/modulatortest
 
 lsb-filter-test:
-	$(GCC) src/lsb_filter_test.cpp -o bin/lsbftest
+	$(GCC) src/lsb_filter_test.cpp -o bin/lowersidebandftest
 
 pl-tone-test:
 	$(GCC) src/pl_tone_test.cpp -o bin/pltonetest
@@ -46,3 +46,8 @@ radio:
 
 sinusoid-test:
 	$(GCC) src/sinusoid_test.cpp -o bin/sinusoidtest
+
+usb-filter-test:
+	$(GCC) src/usb_filter_test.cpp -o bin/uppersidebandftest
+
+
