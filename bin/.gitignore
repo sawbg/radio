@@ -4,7 +4,8 @@
 !iqtest
 !modtest
 !msintest
+!lsbftest
 !pltest
 !radio
 !sintest
-
+!usbftest
