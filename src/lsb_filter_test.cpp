@@ -1,44 +1,60 @@
 /**
- * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a program to test the LSB-via-filter implementation
+ * @brief contains a program to demonstrate the the LSB/AF filter
  */
 
-#include <iostream>
-#include <cmath>
 #include <cstdio>
+#include <cstdlib>
+#include <iostream>
 #include <unistd.h>
 
+#include "auxiliary.hpp"
 #include "definitions.hpp"
 #include "Filter.hpp"
 #include "fvectors.hpp"
+#include "Sinusoid.hpp"
 #include "zdomain.hpp"
 
 using namespace std;
 using namespace radio;
 
 /**
- * Tests an implementation of LSB modulation through a filter.
+ * Program to test the Filter class and the LSB filter coefficients.
  */
-int main() {
-	const uint32 len = 65536;
-	float32 data[len];
-	float32 temp[len];
-	Filter baseFilter(temp, len, F_LOWERSIDEBAND);
+int main(int argc, char* argv[]) {
 
-	for(int i = 0; i < len; i++) {
-		data[i] = 0.95 * (sin(2*M_PI*440*i/48000)
-				+ sin(2*M_PI*2000*i/48000) + sin(2*M_PI*2500*i/48000)
-				+ sin(2*M_PI*3000*i/48000));
+	// Constants
+	const uint16 BUFFER_SIZE = 48000;
+
+	// Declare primative Variables
+	uint8 i = 0;
+	uint8 size = 0;
+	uint16 delta = 250;
+	float32 dataBuffer[BUFFER_SIZE];
+	float32 iqBuffer[2 * BUFFER_SIZE];
+
+	// create 1 sec of audio
+	for(uint16 f = 17000; f <= 23000; f += delta, i++) {
+		Sinusoid sinusoid(f);
+
+		for(uint16 i = 0; i < BUFFER_SIZE; i++) {
+			dataBuffer[i] += sinusoid.next();
+		}
 	}
+
+	size = i;
+	
+	// adjust dataBuffer so values are between -1 and 1
+	for(uint16 i = 0; i < BUFFER_SIZE; i++) {
+		dataBuffer[i] /= size;
+	}
+	
+	Filter filter(dataBuffer, BUFFER_SIZE, F_LOWERSIDEBAND);
+	filter.Pass();
+	makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
+	to_sint32(iqBuffer, 2 * BUFFER_SIZE);
 
 	while(true) {
-		for(int i = 0; i < len; i++) {
-			temp[i] = data[i];
-		}
-
-		baseFilter.Pass();
-		write(STDOUT_FILENO, &temp,  len * sizeof(float32));
+		write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
 	}
-
 }
