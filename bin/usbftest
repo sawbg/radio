@@ -1,0 +1,1 @@
+uppersidebandftest | aplay -c 2 -r 48000 -t raw -f S32_LE
