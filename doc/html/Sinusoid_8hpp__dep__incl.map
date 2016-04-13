@@ -1,9 +1,12 @@
 <map id="src/Sinusoid.hpp" name="src/Sinusoid.hpp">
-<area shape="rect" id="node2" href="$baseband__filter__test_8cpp.html" title="src/baseband_filter\l_test.cpp" alt="" coords="5,80,137,121"/>
-<area shape="rect" id="node3" href="$Modulator_8hpp.html" title="src/Modulator.hpp" alt="" coords="161,87,288,114"/>
-<area shape="rect" id="node6" href="$PlTone_8hpp.html" title="contains the PlTone class " alt="" coords="312,87,423,114"/>
-<area shape="rect" id="node8" href="$multi__sinusoid__test_8cpp.html" title="src/multi_sinusoid\l_test.cpp" alt="" coords="447,80,573,121"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="319,169,416,196"/>
-<area shape="rect" id="node5" href="$modulator__test_8cpp.html" title="src/modulator_test.cpp" alt="" coords="139,169,294,196"/>
-<area shape="rect" id="node7" href="$pl__tone__test_8cpp.html" title="src/pl_tone_test.cpp" alt="" coords="440,169,580,196"/>
+<area shape="rect" id="node2" href="$baseband__filter__test_8cpp.html" title="Contains a program to demonstrate the the baseband/AF filter. " alt="" coords="5,80,137,121"/>
+<area shape="rect" id="node3" href="$lsb__filter__test_8cpp.html" title="src/lsb_filter_test.cpp" alt="" coords="162,87,309,114"/>
+<area shape="rect" id="node4" href="$Modulator_8hpp.html" title="src/Modulator.hpp" alt="" coords="333,87,460,114"/>
+<area shape="rect" id="node7" href="$PlTone_8hpp.html" title="contains the PlTone class " alt="" coords="484,87,595,114"/>
+<area shape="rect" id="node9" href="$multi__sinusoid__test_8cpp.html" title="contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate si..." alt="" coords="619,80,745,121"/>
+<area shape="rect" id="node10" href="$sinusoid__test_8cpp.html" title="contains a test program to test the Sinusoid class " alt="" coords="770,87,917,114"/>
+<area shape="rect" id="node11" href="$usb__filter__test_8cpp.html" title="src/usb_filter_test.cpp" alt="" coords="941,87,1092,114"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="491,169,588,196"/>
+<area shape="rect" id="node6" href="$modulator__test_8cpp.html" title="contains a test program to test the Modulator class " alt="" coords="311,169,466,196"/>
+<area shape="rect" id="node8" href="$pl__tone__test_8cpp.html" title="contains a test program to test the PlTone class " alt="" coords="612,169,752,196"/>
 </map>

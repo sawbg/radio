@@ -1,6 +1,8 @@
 <map id="src/lsb_filter_test.cpp" name="src/lsb_filter_test.cpp">
-<area shape="rect" id="node6" href="$definitions_8hpp.html" title="definitions.hpp" alt="" coords="327,155,433,181"/>
-<area shape="rect" id="node9" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="153,80,229,107"/>
-<area shape="rect" id="node10" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="253,80,347,107"/>
-<area shape="rect" id="node11" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="423,80,519,107"/>
+<area shape="rect" id="node6" href="$auxiliary_8hpp.html" title="Contains helper&#45;functions for main(). " alt="" coords="703,80,797,107"/>
+<area shape="rect" id="node10" href="$definitions_8hpp.html" title="Contains declarations of system&#45;independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. " alt="" coords="385,155,491,181"/>
+<area shape="rect" id="node13" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="432,80,508,107"/>
+<area shape="rect" id="node15" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="532,80,627,107"/>
+<area shape="rect" id="node16" href="$Sinusoid_8hpp.html" title="contains the Sinusoid class " alt="" coords="139,80,236,107"/>
+<area shape="rect" id="node17" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="261,80,357,107"/>
 </map>

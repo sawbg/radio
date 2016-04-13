@@ -1,0 +1,38 @@
+\hypertarget{doxygen_8config_source}{\section{doxygen.\+config}
+\label{doxygen_8config_source}\index{etc/doxygen.\+config@{etc/doxygen.\+config}}
+}
+
+\begin{DoxyCode}
+00001 PROJECT\_NAME = "An Inexpensive, Software-Defined IF Modulator"
+00002 
+00003 INPUT = makefile src/ etc/doxygen.config bin/bbftest bin/modtest bin/msintest bin/lsbftest bin/pltest
+       bin/radio bin/sintest bin/usbftest
+00004 OUTPUT\_DIRECTORY = doc/
+00005 
+00006 GENERATE\_HTML = YES
+00007 GENERATE\_RTF = YES
+00008 GENERATE\_LATEX = YES
+00009 GENERATE\_MAN = YES
+00010 GENERATE\_XML = NO
+00011 GENERATE\_DOCBOOK = NO
+00012 
+00013 USE\_PDF\_LATEX = YES
+00014 USE\_PDF\_HYPERLINKS = YES
+00015 
+00016 RECURSIVE = YES
+00017 SOURCE\_BROWSER = YES
+00018 SOURCE\_TOOLTIPS = YES
+00019 EXTRACT\_ALL = YES
+00020 #USE\_MDFILE\_AS\_MAINPAGE = README.md
+00021 LATEX\_SOURCE\_CODE = YES
+00022 STRIP\_CODE\_COMMENTS = YES
+00023 INLINE\_SOURCES = YES
+00024 DISABLE\_INDEX = NO
+00025 GENERATE\_TREEVIEW = YES
+00026 SEARCHENGINE = YES
+00027 SERVER\_BASED\_SEARCH = NO
+00028 
+00029 HAVE\_DOT = YES
+00030 CALL\_GRAPH = YES
+00031 CALLER\_GRAPH = YES
+\end{DoxyCode}

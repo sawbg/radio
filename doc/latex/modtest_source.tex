@@ -1,0 +1,8 @@
+\hypertarget{modtest_source}{\section{modtest}
+\label{modtest_source}\index{bin/modtest@{bin/modtest}}
+}
+
+\begin{DoxyCode}
+00001 OPTIONS="-c 2 -r 48000 -t raw -f S32\_LE -q"
+00002 modulatortest $1 $2 $3 | aplay $OPTIONS -D plughw:0,0
+\end{DoxyCode}

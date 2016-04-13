@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.4.2)  10 APR 2016 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.4.2)  13 APR 2016 05:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -999,10 +999,50 @@ Package hyperref Info: Option `unicode' set `true' on input line 122.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 127.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 127.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 12
+7.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 12
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 12
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 12
+7.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 127.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 127.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 129.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 131.
-[1
+ [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -1021,52 +1061,12 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 1.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 1.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for U+wasy on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 1.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 17.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
  [3
 
 ]
@@ -1074,12 +1074,12 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 69.
- [4] [5] [6])
+ [4] [5] [6] [7]
+[8])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
-
-[7] [8
+ [9] [10
 
 ]
 Package hyperref Info: Option `pageanchor' set `true' on input line 138.
@@ -1118,9 +1118,11 @@ Chapter 4.
 
 ]
 Chapter 5.
-(./files.tex) [9] [10
+(./files.tex
+Underfull \vbox (badness 1997) has occurred while \output is active []
 
-]
+ [9])
+[10]
 Chapter 6.
 (./namespaceradio.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
@@ -1142,7 +1144,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--49
 tion[]Type[]::[]F[]M[]_[][]N[]A[]R[]R[]O[]W[][],
  []
 
-[11]
+[11
+
+]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 8.99994pt on input line 89.
 
@@ -1154,204 +1158,199 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 90.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 10000) detected at line 99
+Underfull \hbox (badness 10000) detected at line 103
 [][][]
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 103.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 107.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 103.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 107.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 8.99994pt on input line 103.
+(Font)              scaled to size 8.99994pt on input line 107.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <7> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 103.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 107.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <7> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 103.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 107.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 6.29996pt on input line 103.
+(Font)              scaled to size 6.29996pt on input line 107.
 
-Underfull \hbox (badness 10000) detected at line 115
+Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 133
-[][][]
- []
-
-
-LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 147.
-
-
-Underfull \hbox (badness 10000) detected at line 149
+Underfull \hbox (badness 10000) detected at line 145
 [][][]
  []
 
 [12]
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 183.
-LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
-(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 183.
-LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
-(Font)              scaled to size 8.99994pt on input line 183.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 188.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 188.
 
-<namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.pdf, id=1133, 567.118
+LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 163.
+
+
+Underfull \hbox (badness 10000) detected at line 165
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 6.29996pt on input line 206.
+LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 206.
+LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
+(Font)              scaled to size 8.99994pt on input line 206.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 211.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.99994pt on input line 211.
+
+<namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.pdf, id=1509, 567.118
 74pt x 176.66pt>
 File: namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgra
-ph.pdf used on input line 204.
+ph.pdf used on input line 235.
 (pdftex.def)             Requested size: 350.0pt x 109.02937pt.
- [13 <./namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.pdf>]
-<namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.pdf, id=1150, 553.066
+ [13]
+<namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.pdf, id=1537, 553.066
 25pt x 190.7125pt>
 File: namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgra
-ph.pdf used on input line 239.
+ph.pdf used on input line 320.
 (pdftex.def)             Requested size: 350.0pt x 120.68785pt.
-
-<namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgraph.pdf, id=1151, 345.29pt
+ [14 <./namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26_icgraph.pdf>]
+<namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgraph.pdf, id=1559, 345.29pt
  x 138.5175pt>
 File: namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgraph.pdf Graphic file 
 (type pdf)
 
 <use namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgraph.pdf>
 Package pdftex.def Info: namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgrap
-h.pdf used on input line 275.
+h.pdf used on input line 381.
 (pdftex.def)             Requested size: 344.0pt x 138.00142pt.
 
-<namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.pdf, id=1152, 372.391
+<namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.pdf, id=1560, 372.391
 25pt x 176.66pt>
 File: namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgra
-ph.pdf used on input line 287.
+ph.pdf used on input line 393.
 (pdftex.def)             Requested size: 350.0pt x 166.04424pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <./namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.pdf> <./namesp
+ [15 <./namespaceradio_ab146b5bf7f1c005939b024c9c4910a77_icgraph.pdf> <./namesp
 aceradio_a285a47b4ed81e5662d2b6b4bae0188d0_cgraph.pdf
 
 pdfTeX warning: pdflatex (file ./namespaceradio_a285a47b4ed81e5662d2b6b4bae0188
 d0_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >]
-<namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgraph.pdf, id=1169, 238.8925
+<namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgraph.pdf, id=1587, 238.8925
 pt x 138.5175pt>
 File: namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgraph.pdf Graphic file 
 (type pdf)
 
 <use namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgraph.pdf>
 Package pdftex.def Info: namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgrap
-h.pdf used on input line 322.
+h.pdf used on input line 440.
 (pdftex.def)             Requested size: 238.0pt x 137.99931pt.
 
-<namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.pdf, id=1170, 463.732
+<namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.pdf, id=1588, 463.732
 5pt x 176.66pt>
 File: namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgra
-ph.pdf used on input line 334.
+ph.pdf used on input line 452.
 (pdftex.def)             Requested size: 350.0pt x 133.3357pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3098) has occurred while \output is active []
 
- [15 <./namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.pdf> <./namesp
+ [16 <./namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0_icgraph.pdf> <./namesp
 aceradio_a51add4e2faf6d58cabc3b4a3892420eb_cgraph.pdf
 
 pdfTeX warning: pdflatex (file ./namespaceradio_a51add4e2faf6d58cabc3b4a3892420
 eb_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >]
-<namespaceradio_a7166522e76ff88e8d482491b1b6e2275_cgraph.pdf, id=1187, 459.7175
+<namespaceradio_a7166522e76ff88e8d482491b1b6e2275_cgraph.pdf, id=1610, 459.7175
 pt x 138.5175pt>
 File: namespaceradio_a7166522e76ff88e8d482491b1b6e2275_cgraph.pdf Graphic file 
 (type pdf)
 
 <use namespaceradio_a7166522e76ff88e8d482491b1b6e2275_cgraph.pdf>
 Package pdftex.def Info: namespaceradio_a7166522e76ff88e8d482491b1b6e2275_cgrap
-h.pdf used on input line 370.
+h.pdf used on input line 500.
 (pdftex.def)             Requested size: 350.0pt x 105.4646pt.
 
-<namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph.pdf, id=1188, 232.87p
+<namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph.pdf, id=1611, 232.87p
 t x 100.375pt>
 File: namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgra
-ph.pdf used on input line 382.
+ph.pdf used on input line 512.
 (pdftex.def)             Requested size: 232.0pt x 100.00409pt.
- [16 <./namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.pdf> <./namesp
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <./namespaceradio_a51add4e2faf6d58cabc3b4a3892420eb_icgraph.pdf> <./namesp
 aceradio_a7166522e76ff88e8d482491b1b6e2275_cgraph.pdf
 
 pdfTeX warning: pdflatex (file ./namespaceradio_a7166522e76ff88e8d482491b1b6e22
 75_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
-> <./namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./namespaceradio_a7166522e76ff88e8d482491b1b6e22
-75_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
-gle page
 >]
-<namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgraph.pdf, id=1209, 243.911
+<namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgraph.pdf, id=1632, 243.911
 25pt x 100.375pt>
 File: namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgra
-ph.pdf used on input line 405.
+ph.pdf used on input line 568.
 (pdftex.def)             Requested size: 243.0pt x 100.00102pt.
+ [18 <./namespaceradio_a7166522e76ff88e8d482491b1b6e2275_icgraph.pdf> <./namesp
+aceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgraph.pdf
 
-<namespaceradio_ae4b2334c4366dcdf0311ad79d2067945_icgraph.pdf, id=1210, 237.888
+pdfTeX warning: pdflatex (file ./namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae
+7f_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>]
+<namespaceradio_ae4b2334c4366dcdf0311ad79d2067945_icgraph.pdf, id=1656, 237.888
 75pt x 100.375pt>
 File: namespaceradio_ae4b2334c4366dcdf0311ad79d2067945_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_ae4b2334c4366dcdf0311ad79d2067945_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_ae4b2334c4366dcdf0311ad79d2067945_icgra
-ph.pdf used on input line 438.
+ph.pdf used on input line 609.
 (pdftex.def)             Requested size: 237.0pt x 100.00409pt.
 
-Underfull \hbox (badness 10000) detected at line 459
+Underfull \hbox (badness 10000) detected at line 630
 [][][]
  []
 
 
-<namespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgraph.pdf, id=1212, 230.862
+<namespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgraph.pdf, id=1661, 230.862
 5pt x 100.375pt>
 File: namespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgraph.pdf Graphic file
  (type pdf)
 
 <use namespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgraph.pdf>
 Package pdftex.def Info: namespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgra
-ph.pdf used on input line 473.
+ph.pdf used on input line 672.
 (pdftex.def)             Requested size: 230.0pt x 100.00102pt.
- [17 <./namespaceradio_a6db7c682d0f9aeac8cb5042717b8ae7f_icgraph.pdf> <./namesp
-aceradio_ae4b2334c4366dcdf0311ad79d2067945_icgraph.pdf
-
-pdfTeX warning: pdflatex (file ./namespaceradio_ae4b2334c4366dcdf0311ad79d20679
-45_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
-gle page
->] [18 <./namespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgraph.pdf>])
-[19] [20
+ [19 <./namespaceradio_ae4b2334c4366dcdf0311ad79d2067945_icgraph.pdf>] [20 <./n
+amespaceradio_a402fe28e2e2bb2be7a0d2d9f74cc640d_icgraph.pdf>]) [21] [22
 
 ]
 Chapter 7.
@@ -1360,35 +1359,38 @@ LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <7> not available
 (Font)              Font shape `T1/phv/bc/sl' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
 (Font)              scaled to size 6.29996pt on input line 46.
- [21]
+ [23]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 55.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 55.
 
-<classradio_1_1Filter_ad2793821801780809af385463bf8f197_icgraph.pdf, id=1279, 3
+<classradio_1_1Filter_ad2793821801780809af385463bf8f197_icgraph.pdf, id=1780, 3
 96.48125pt x 138.5175pt>
 File: classradio_1_1Filter_ad2793821801780809af385463bf8f197_icgraph.pdf Graphi
 c file (type pdf)
 
 <use classradio_1_1Filter_ad2793821801780809af385463bf8f197_icgraph.pdf>
 Package pdftex.def Info: classradio_1_1Filter_ad2793821801780809af385463bf8f197
-_icgraph.pdf used on input line 83.
+_icgraph.pdf used on input line 129.
 (pdftex.def)             Requested size: 350.0pt x 122.28044pt.
 
-[22 <./classradio_1_1Filter_ad2793821801780809af385463bf8f197_icgraph.pdf>])
-(./classradio_1_1Gain.tex
-<classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d_icgraph.pdf, id=1298, 249
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24])
+(./classradio_1_1Gain.tex [25 <./classradio_1_1Filter_ad2793821801780809af38546
+3bf8f197_icgraph.pdf>]
+<classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d_icgraph.pdf, id=1829, 249
 .93375pt x 100.375pt>
 File: classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d_icgraph.pdf Graphic 
 file (type pdf)
 
 <use classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d_icgraph.pdf>
 Package pdftex.def Info: classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d_i
-cgraph.pdf used on input line 70.
+cgraph.pdf used on input line 92.
 (pdftex.def)             Requested size: 249.0pt x 100.00409pt.
 )
-(./classradio_1_1Modulator.tex [23 <./classradio_1_1Gain_a8c6df2c5989da0e560c8f
+(./classradio_1_1Modulator.tex [26 <./classradio_1_1Gain_a8c6df2c5989da0e560c8f
 276e6138a2d_icgraph.pdf>]
 
 LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
@@ -1396,42 +1398,42 @@ LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 63.
+(hyperref)                removing `math shift' on input line 78.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sim' on input line 63.
+(hyperref)                removing `\sim' on input line 78.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 63.
+(hyperref)                removing `math shift' on input line 78.
 
-
-<classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.pdf, id=1326,
+[27]
+<classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.pdf, id=1902,
  560.0925pt x 233.87375pt>
 File: classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.pdf Grap
 hic file (type pdf)
 
 <use classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.pdf>
 Package pdftex.def Info: classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64c
-dab_cgraph.pdf used on input line 89.
+dab_cgraph.pdf used on input line 170.
 (pdftex.def)             Requested size: 350.0pt x 146.15288pt.
 
-Underfull \vbox (badness 2980) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-<classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph.pdf, id=1335
+ [28]
+<classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph.pdf, id=1909
 , 265.99374pt x 100.375pt>
 File: classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph.pdf Gra
 phic file (type pdf)
 
 <use classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph.pdf>
 Package pdftex.def Info: classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64c
-dab_icgraph.pdf used on input line 101.
+dab_icgraph.pdf used on input line 182.
 (pdftex.def)             Requested size: 265.0pt x 100.00868pt.
 )
 (./classradio_1_1PlTone.tex
-<classradio_1_1PlTone__inherit__graph.pdf, id=1337, 161.60374pt x 156.585pt>
+<classradio_1_1PlTone__inherit__graph.pdf, id=1911, 161.60374pt x 156.585pt>
 File: classradio_1_1PlTone__inherit__graph.pdf Graphic file (type pdf)
 
 <use classradio_1_1PlTone__inherit__graph.pdf>
@@ -1439,7 +1441,7 @@ Package pdftex.def Info: classradio_1_1PlTone__inherit__graph.pdf used on input
  line 15.
 (pdftex.def)             Requested size: 161.0pt x 156.00879pt.
 
-<classradio_1_1PlTone__coll__graph.pdf, id=1338, 161.60374pt x 156.585pt>
+<classradio_1_1PlTone__coll__graph.pdf, id=1912, 161.60374pt x 156.585pt>
 File: classradio_1_1PlTone__coll__graph.pdf Graphic file (type pdf)
 
 <use classradio_1_1PlTone__coll__graph.pdf>
@@ -1449,7 +1451,7 @@ ne 25.
 
 Underfull \vbox (badness 1565) has occurred while \output is active []
 
- [25 <./classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.pdf> <
+ [29 <./classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_cgraph.pdf> <
 ./classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab_icgraph.pdf
 
 pdfTeX warning: pdflatex (file ./classradio_1_1Modulator_ab5eac6e4900579486b587
@@ -1459,162 +1461,217 @@ pdfTeX warning: pdflatex (file ./classradio_1_1Modulator_ab5eac6e4900579486b587
 
 pdfTeX warning: pdflatex (file ./classradio_1_1PlTone__inherit__graph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->]
-<classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_cgraph.pdf, id=1369, 32
+>] [30 <./classradio_1_1PlTone__coll__graph.pdf>]
+<classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_cgraph.pdf, id=1977, 32
 1.2pt x 100.375pt>
 File: classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_cgraph.pdf Graphic
  file (type pdf)
 
 <use classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_cgraph.pdf>
 Package pdftex.def Info: classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95
-_cgraph.pdf used on input line 96.
+_cgraph.pdf used on input line 117.
 (pdftex.def)             Requested size: 320.0pt x 100.00255pt.
 
-[26 <./classradio_1_1PlTone__coll__graph.pdf>]
-<classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_icgraph.pdf, id=1385, 2
+<classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_icgraph.pdf, id=1978, 2
 52.945pt x 100.375pt>
 File: classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_icgraph.pdf Graphi
 c file (type pdf)
 
 <use classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_icgraph.pdf>
 Package pdftex.def Info: classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95
-_icgraph.pdf used on input line 108.
+_icgraph.pdf used on input line 129.
 (pdftex.def)             Requested size: 252.0pt x 100.00255pt.
 )
 (./classradio_1_1Sinusoid.tex
-<classradio_1_1Sinusoid__inherit__graph.pdf, id=1387, 161.60374pt x 156.585pt>
+<classradio_1_1Sinusoid__inherit__graph.pdf, id=1980, 161.60374pt x 156.585pt>
 File: classradio_1_1Sinusoid__inherit__graph.pdf Graphic file (type pdf)
 
 <use classradio_1_1Sinusoid__inherit__graph.pdf>
 Package pdftex.def Info: classradio_1_1Sinusoid__inherit__graph.pdf used on inp
 ut line 15.
 (pdftex.def)             Requested size: 161.0pt x 156.00879pt.
- [27 <./classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_cgraph.pdf> <./c
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31 <./classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_cgraph.pdf> <./c
 lassradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95_icgraph.pdf
 
 pdfTeX warning: pdflatex (file ./classradio_1_1PlTone_a9e19b2d5106b35626d4839f0
 4f9b9f95_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in
  a single page
-> <./classradio_1_1Sinusoid__inherit__graph.pdf
-
-pdfTeX warning: pdflatex (file ./classradio_1_1Sinusoid__inherit__graph.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
->]
+>] [32 <./classradio_1_1Sinusoid__inherit__graph.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 72.
+(hyperref)                removing `math shift' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sim' on input line 72.
+(hyperref)                removing `\sim' on input line 91.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 72.
+(hyperref)                removing `math shift' on input line 91.
 
 
-<classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2_icgraph.pdf, id=1436,
+<classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2_icgraph.pdf, id=2075,
  408.52625pt x 176.66pt>
 File: classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2_icgraph.pdf Grap
 hic file (type pdf)
 
 <use classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2_icgraph.pdf>
 Package pdftex.def Info: classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56
-f2_icgraph.pdf used on input line 98.
+f2_icgraph.pdf used on input line 131.
 (pdftex.def)             Requested size: 350.0pt x 151.35855pt.
 
-[28 <./classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2_icgraph.pdf>]
-<classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c_icgraph.pdf, id=1452,
+<classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c_icgraph.pdf, id=2083,
  439.6425pt x 100.375pt>
 File: classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c_icgraph.pdf Grap
 hic file (type pdf)
 
 <use classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c_icgraph.pdf>
 Package pdftex.def Info: classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e
-7c_icgraph.pdf used on input line 121.
+7c_icgraph.pdf used on input line 162.
 (pdftex.def)             Requested size: 350.0pt x 79.91107pt.
-)
-[29 <./classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c_icgraph.pdf>]
-[30
 
-]
+[33 <./classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2_icgraph.pdf>])
+[34 <./classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c_icgraph.pdf>]
 Chapter 8.
-(./doxygen_8config.tex) (./makefile.tex) (./alsa__test_8cpp.tex
-<alsa__test_8cpp__incl.pdf, id=1469, 480.79625pt x 212.795pt>
+(./bbftest.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./bbftest_source.tex) (./lsbftest.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./lsbftest_source.tex) (./modtest.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./modtest_source.tex [35
+
+]) (./msintest.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./msintest_source.tex) (./pltest.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./pltest_source.tex) (./radio.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./radio_source.tex) (./sintest.tex [36]
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./sintest_source.tex) (./usbftest.tex
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
+
+) (./usbftest_source.tex) (./doxygen_8config.tex
+Underfull \hbox (badness 10000) detected at line 14
+[][][]
+ []
+
+) (./doxygen_8config_source.tex [37]) (./makefile.tex
+Underfull \hbox (badness 10000) detected at line 14
+[][][]
+ []
+
+) (./makefile_source.tex [38]) (./alsa__test_8cpp.tex
+<alsa__test_8cpp__incl.pdf, id=2175, 480.79625pt x 212.795pt>
 File: alsa__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use alsa__test_8cpp__incl.pdf>
 Package pdftex.def Info: alsa__test_8cpp__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 154.91045pt.
- [31 <./alsa__test_8cpp__incl.pdf>]
+
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
-) (./auxiliary_8hpp.tex
-<auxiliary_8hpp__incl.pdf, id=1485, 449.68pt x 212.795pt>
+[39 <./alsa__test_8cpp__incl.pdf>] [40]) (./alsa__test_8cpp_source.tex [41])
+(./auxiliary_8hpp.tex
+<auxiliary_8hpp__incl.pdf, id=2224, 449.68pt x 212.795pt>
 File: auxiliary_8hpp__incl.pdf Graphic file (type pdf)
 
 <use auxiliary_8hpp__incl.pdf>
-Package pdftex.def Info: auxiliary_8hpp__incl.pdf used on input line 14.
+Package pdftex.def Info: auxiliary_8hpp__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 165.63199pt.
 
-<auxiliary_8hpp__dep__incl.pdf, id=1486, 772.8875pt x 167.62625pt>
+<auxiliary_8hpp__dep__incl.pdf, id=2225, 1033.8625pt x 167.62625pt>
 File: auxiliary_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use auxiliary_8hpp__dep__incl.pdf>
-Package pdftex.def Info: auxiliary_8hpp__dep__incl.pdf used on input line 22.
-(pdftex.def)             Requested size: 350.0pt x 75.90941pt.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 29.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 29.
- [32 <./auxiliary_8hpp__incl.pdf> <./auxiliary_8hpp__dep__incl.pdf
+Package pdftex.def Info: auxiliary_8hpp__dep__incl.pdf used on input line 27.
+(pdftex.def)             Requested size: 350.0pt x 56.74661pt.
+ [42 <./auxiliary_8hpp__incl.pdf> <./auxiliary_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./auxiliary_8hpp__dep__incl.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
->]) (./baseband__filter__test_8cpp.tex
-<baseband__filter__test_8cpp__incl.pdf, id=1512, 799.98875pt x 280.04625pt>
+>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 34.
+
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+) (./auxiliary_8hpp_source.tex [43]) (./baseband__filter__test_8cpp.tex
+<baseband__filter__test_8cpp__incl.pdf, id=2282, 799.98875pt x 280.04625pt>
 File: baseband__filter__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use baseband__filter__test_8cpp__incl.pdf>
 Package pdftex.def Info: baseband__filter__test_8cpp__incl.pdf used on input li
-ne 19.
+ne 24.
 (pdftex.def)             Requested size: 350.0pt x 122.52419pt.
+ [44 <./baseband__filter__test_8cpp__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 37
+[][][]
+ []
 
-<baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=1
-514, 562.1pt x 214.8025pt>
+
+<baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=2
+316, 562.1pt x 214.8025pt>
 File: baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf 
 Graphic file (type pdf)
 
 <use baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f
-499fa97_cgraph.pdf used on input line 49.
+499fa97_cgraph.pdf used on input line 106.
 (pdftex.def)             Requested size: 350.0pt x 133.74976pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33 <./baseband__filter__test_8cpp__incl.pdf>]) (./definitions_8hpp.tex
-<definitions_8hpp__incl.pdf, id=1528, 196.735pt x 156.585pt>
+) (./baseband__filter__test_8cpp_source.tex [45 <./baseband__filter__test_8cpp_
+a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>]) (./definitions_8hpp.tex
+<definitions_8hpp__incl.pdf, id=2357, 196.735pt x 156.585pt>
 File: definitions_8hpp__incl.pdf Graphic file (type pdf)
 
 <use definitions_8hpp__incl.pdf>
-Package pdftex.def Info: definitions_8hpp__incl.pdf used on input line 11.
+Package pdftex.def Info: definitions_8hpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 196.0pt x 155.99922pt.
 
-<definitions_8hpp__dep__incl.pdf, id=1529, 1319.93124pt x 280.04625pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+<definitions_8hpp__dep__incl.pdf, id=2362, 1474.50874pt x 280.04625pt>
 File: definitions_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use definitions_8hpp__dep__incl.pdf>
-Package pdftex.def Info: definitions_8hpp__dep__incl.pdf used on input line 19.
+Package pdftex.def Info: definitions_8hpp__dep__incl.pdf used on input line 24.
 
-(pdftex.def)             Requested size: 350.0pt x 74.2589pt.
- [34 <./baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pd
-f> <./definitions_8hpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./definitions_8hpp__incl.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
-> <./definitions_8hpp__dep__incl.pdf
+(pdftex.def)             Requested size: 350.0pt x 66.4732pt.
+ [47 <./definitions_8hpp__incl.pdf> <./definitions_8hpp__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./definitions_8hpp__dep__incl.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
@@ -1623,417 +1680,432 @@ Underfull \hbox (badness 10000) detected at line 102
 [][][]
  []
 
-[35]) (./fft__test_8cpp.tex [36]
-<fft__test_8cpp__incl.pdf, id=1614, 353.32pt x 156.585pt>
+[48]) (./definitions_8hpp_source.tex [49]) (./fft__test_8cpp.tex
+<fft__test_8cpp__incl.pdf, id=2534, 353.32pt x 156.585pt>
 File: fft__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use fft__test_8cpp__incl.pdf>
 Package pdftex.def Info: fft__test_8cpp__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 155.11519pt.
-
+ [50 <./fft__test_8cpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 48
 [][][]
  []
 
-[37 <./fft__test_8cpp__incl.pdf>]
-<fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph.pdf, id=1646, 248.93p
+[51]
+<fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph.pdf, id=2575, 248.93p
 t x 119.44624pt>
 File: fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph.pdf Graphic file
  (type pdf)
 
 <use fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph.pdf>
 Package pdftex.def Info: fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgra
-ph.pdf used on input line 86.
+ph.pdf used on input line 134.
 (pdftex.def)             Requested size: 248.0pt x 119.00304pt.
 
-<fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph.pdf, id=1647, 197.738
+<fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph.pdf, id=2578, 197.738
 75pt x 100.375pt>
 File: fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph.pdf Graphic file
  (type pdf)
 
 <use fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph.pdf>
 Package pdftex.def Info: fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgra
-ph.pdf used on input line 109.
+ph.pdf used on input line 163.
 (pdftex.def)             Requested size: 197.0pt x 100.00102pt.
 
-<fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph.pdf, id=1648, 174.6525
+<fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph.pdf, id=2582, 174.6525
 pt x 100.375pt>
 File: fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph.pdf Graphic file 
 (type pdf)
 
 <use fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph.pdf>
 Package pdftex.def Info: fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgrap
-h.pdf used on input line 132.
+h.pdf used on input line 202.
 (pdftex.def)             Requested size: 174.0pt x 100.00562pt.
+ [52 <./fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph.pdf> <./fft__t
+est_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph.pdf
 
-<fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgraph.pdf, id=1649, 183.686
+pdfTeX warning: pdflatex (file ./fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d
+15_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>]
+<fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgraph.pdf, id=2600, 183.686
 25pt x 100.375pt>
 File: fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgraph.pdf Graphic file
  (type pdf)
 
 <use fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgraph.pdf>
 Package pdftex.def Info: fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgra
-ph.pdf used on input line 144.
+ph.pdf used on input line 214.
 (pdftex.def)             Requested size: 183.0pt x 100.00716pt.
- [38 <./fft__test_8cpp_a22051cd252d576aec530227d32d95bdd_icgraph.pdf> <./fft__t
-est_8cpp_adc49b5a69e64611f421bbefee39a4d15_icgraph.pdf
 
-pdfTeX warning: pdflatex (file ./fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d
-15_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
-gle page
-> <./fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph.pdf
-
-pdfTeX warning: pdflatex (file ./fft__test_8cpp_a6234aee8acb83780e803805365617f
-36_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
->]
-<fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1670, 262.9825
+<fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=2607, 262.9825
 pt x 157.58875pt>
 File: fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file 
 (type pdf)
 
 <use fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
 Package pdftex.def Info: fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgrap
-h.pdf used on input line 167.
+h.pdf used on input line 276.
 (pdftex.def)             Requested size: 262.0pt x 157.00642pt.
-)
-(./fft__test2_8cpp.tex
-<fft__test2_8cpp__incl.pdf, id=1672, 273.02pt x 269.005pt>
+
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
+ [53 <./fft__test_8cpp_a6234aee8acb83780e803805365617f36_cgraph.pdf> <./fft__te
+st_8cpp_a6234aee8acb83780e803805365617f36_icgraph.pdf
+
+pdfTeX warning: pdflatex (file ./fft__test_8cpp_a6234aee8acb83780e803805365617f
+36_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>]) (./fft__test_8cpp_source.tex [54 <./fft__test_8cpp_ae66f6b31b5ad750f1fe042a
+706a4e3d4_cgraph.pdf>]) (./fft__test2_8cpp.tex
+<fft__test2_8cpp__incl.pdf, id=2657, 273.02pt x 269.005pt>
 File: fft__test2_8cpp__incl.pdf Graphic file (type pdf)
 
 <use fft__test2_8cpp__incl.pdf>
 Package pdftex.def Info: fft__test2_8cpp__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 272.0pt x 268.01509pt.
 
-Underfull \vbox (badness 5607) has occurred while \output is active []
+Underfull \vbox (badness 3460) has occurred while \output is active []
 
- [39 <./fft__test_8cpp_a6234aee8acb83780e803805365617f36_icgraph.pdf> <./fft__t
-est_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf
-
-pdfTeX warning: pdflatex (file ./fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3
-d4_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a sing
-le page
->]
+ [55]
 Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
 
-
-<fft__test2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1698, 419.567
+[56 <./fft__test2_8cpp__incl.pdf>]
+<fft__test2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=2694, 419.567
 5pt x 152.57pt>
 File: fft__test2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file
  (type pdf)
 
 <use fft__test2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
 Package pdftex.def Info: fft__test2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgra
-ph.pdf used on input line 61.
+ph.pdf used on input line 101.
 (pdftex.def)             Requested size: 350.0pt x 127.27327pt.
-
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
- [40 <./fft__test2_8cpp__incl.pdf>]) (./Filter_8hpp.tex
-<Filter_8hpp__incl.pdf, id=1713, 260.975pt x 212.795pt>
+)
+(./fft__test2_8cpp_source.tex [57 <./fft__test2_8cpp_ae66f6b31b5ad750f1fe042a70
+6a4e3d4_cgraph.pdf>]) (./Filter_8hpp.tex
+<Filter_8hpp__incl.pdf, id=2716, 260.975pt x 212.795pt>
 File: Filter_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Filter_8hpp__incl.pdf>
 Package pdftex.def Info: Filter_8hpp__incl.pdf used on input line 17.
 (pdftex.def)             Requested size: 260.0pt x 212.0022pt.
 
-<Filter_8hpp__dep__incl.pdf, id=1714, 576.1525pt x 223.83624pt>
+<Filter_8hpp__dep__incl.pdf, id=2717, 707.64375pt x 223.83624pt>
 File: Filter_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Filter_8hpp__dep__incl.pdf>
 Package pdftex.def Info: Filter_8hpp__dep__incl.pdf used on input line 25.
-(pdftex.def)             Requested size: 350.0pt x 135.97977pt.
+(pdftex.def)             Requested size: 350.0pt x 110.70877pt.
+ [58 <./Filter_8hpp__incl.pdf> <./Filter_8hpp__dep__incl.pdf
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41 <./fft__test2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf> <./Filter
-_8hpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./Filter_8hpp__incl.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./Filter_8hpp__dep__incl.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
 >]
 Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
 
-) (./fvectors_8hpp.tex
-<fvectors_8hpp__incl.pdf, id=1736, 210.7875pt x 212.795pt>
+) (./Filter_8hpp_source.tex [59]) (./fvectors_8hpp.tex
+<fvectors_8hpp__incl.pdf, id=2801, 210.7875pt x 212.795pt>
 File: fvectors_8hpp__incl.pdf Graphic file (type pdf)
 
 <use fvectors_8hpp__incl.pdf>
 Package pdftex.def Info: fvectors_8hpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 210.0pt x 212.00543pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42 <./Filter_8hpp__dep__incl.pdf>]
-<fvectors_8hpp__dep__incl.pdf, id=1750, 489.83pt x 223.83624pt>
+<fvectors_8hpp__dep__incl.pdf, id=2802, 554.07pt x 223.83624pt>
 File: fvectors_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use fvectors_8hpp__dep__incl.pdf>
 Package pdftex.def Info: fvectors_8hpp__dep__incl.pdf used on input line 24.
-(pdftex.def)             Requested size: 350.0pt x 159.94264pt.
- [43 <./fvectors_8hpp__incl.pdf> <./fvectors_8hpp__dep__incl.pdf
+(pdftex.def)             Requested size: 350.0pt x 141.39328pt.
 
-pdfTeX warning: pdflatex (file ./fvectors_8hpp__dep__incl.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60 <./fvectors_8hpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
 
-) (./Gain_8hpp.tex <Gain_8hpp__incl.pdf, id=1778, 237.88875pt x 212.795pt>
+) (./fvectors_8hpp_source.tex [61 <./fvectors_8hpp__dep__incl.pdf>])
+(./Gain_8hpp.tex <Gain_8hpp__incl.pdf, id=2845, 237.88875pt x 212.795pt>
 File: Gain_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Gain_8hpp__incl.pdf>
-Package pdftex.def Info: Gain_8hpp__incl.pdf used on input line 11.
+Package pdftex.def Info: Gain_8hpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 237.0pt x 212.00868pt.
 
-<Gain_8hpp__dep__incl.pdf, id=1779, 153.57375pt x 156.585pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+<Gain_8hpp__dep__incl.pdf, id=2851, 153.57375pt x 156.585pt>
 File: Gain_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Gain_8hpp__dep__incl.pdf>
-Package pdftex.def Info: Gain_8hpp__dep__incl.pdf used on input line 19.
+Package pdftex.def Info: Gain_8hpp__dep__incl.pdf used on input line 24.
 (pdftex.def)             Requested size: 153.0pt x 156.00879pt.
- [44 <./Gain_8hpp__incl.pdf> <./Gain_8hpp__dep__incl.pdf
+
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+) (./Gain_8hpp_source.tex [63 <./Gain_8hpp__incl.pdf> <./Gain_8hpp__dep__incl.p
+df
 
 pdfTeX warning: pdflatex (file ./Gain_8hpp__dep__incl.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]) (./iq__test_8cpp.tex
-<iq__test_8cpp__incl.pdf, id=1802, 394.47375pt x 269.005pt>
+<iq__test_8cpp__incl.pdf, id=2894, 394.47375pt x 269.005pt>
 File: iq__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use iq__test_8cpp__incl.pdf>
 Package pdftex.def Info: iq__test_8cpp__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 238.67894pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
 Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
 
 
-<iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1807, 533.995pt
+<iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=2911, 533.995pt
  x 138.5175pt>
 File: iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file (
 type pdf)
 
 <use iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
 Package pdftex.def Info: iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph
-.pdf used on input line 59.
+.pdf used on input line 77.
 (pdftex.def)             Requested size: 350.0pt x 90.79196pt.
- [45 <./iq__test_8cpp__incl.pdf>]) (./lsb__filter__test_8cpp.tex
-<lsb__filter__test_8cpp__incl.pdf, id=1821, 598.235pt x 269.005pt>
+ [65 <./iq__test_8cpp__incl.pdf>]) (./iq__test_8cpp_source.tex) (./lsb__filter_
+_test_8cpp.tex
+<lsb__filter__test_8cpp__incl.pdf, id=2937, 799.98875pt x 269.005pt>
 File: lsb__filter__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use lsb__filter__test_8cpp__incl.pdf>
-Package pdftex.def Info: lsb__filter__test_8cpp__incl.pdf used on input line 22
+Package pdftex.def Info: lsb__filter__test_8cpp__incl.pdf used on input line 19
 .
-(pdftex.def)             Requested size: 350.0pt x 157.38576pt.
+(pdftex.def)             Requested size: 350.0pt x 117.6935pt.
 
-Underfull \hbox (badness 10000) detected at line 35
-[][][]
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[46 <./iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf> <./lsb__filt
-er__test_8cpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./lsb__filter__test_8cpp__incl.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->]
-<lsb__filter__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1843, 
-248.93pt x 100.375pt>
-File: lsb__filter__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graph
+ [66 <./iq__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>]
+<lsb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=2967, 
+562.1pt x 214.8025pt>
+File: lsb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graph
 ic file (type pdf)
 
-<use lsb__filter__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
-Package pdftex.def Info: lsb__filter__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3
-d4_cgraph.pdf used on input line 63.
-(pdftex.def)             Requested size: 248.0pt x 100.00255pt.
-)
-(./main_8cpp.tex <main_8cpp__incl.pdf, id=1844, 1045.9075pt x 325.215pt>
+<use lsb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
+Package pdftex.def Info: lsb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa
+97_cgraph.pdf used on input line 89.
+(pdftex.def)             Requested size: 350.0pt x 133.74976pt.
+
+Underfull \vbox (badness 6691) has occurred while \output is active []
+
+ [67 <./lsb__filter__test_8cpp__incl.pdf>]) (./lsb__filter__test_8cpp_source.te
+x)
+(./main_8cpp.tex
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+ [68 <./lsb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>]
+<main_8cpp__incl.pdf, id=3019, 1045.9075pt x 325.215pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 
 <use main_8cpp__incl.pdf>
 Package pdftex.def Info: main_8cpp__incl.pdf used on input line 25.
 (pdftex.def)             Requested size: 350.0pt x 108.82983pt.
- [47 <./lsb__filter__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf> <.
-/main_8cpp__incl.pdf
 
-pdfTeX warning: pdflatex (file ./main_8cpp__incl.pdf): PDF inclusion: multiple 
-pdfs with page group included in a single page
->]
 Underfull \hbox (badness 10000) detected at line 38
 [][][]
  []
 
-
-<main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=1866, 634.37pt x 32
+[69 <./main_8cpp__incl.pdf>]
+<main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=3069, 634.37pt x 32
 9.23pt>
 File: main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic file (type
  pdf)
  <use main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf
- used on input line 67.
+ used on input line 159.
 (pdftex.def)             Requested size: 350.0pt x 181.64975pt.
-)
-(./mic__test_8cpp.tex
-<mic__test_8cpp__incl.pdf, id=1867, 480.79625pt x 212.795pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70])
+(./main_8cpp_source.tex [71 <./main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgra
+ph.pdf>]) (./mic__test_8cpp.tex
+<mic__test_8cpp__incl.pdf, id=3127, 480.79625pt x 212.795pt>
 File: mic__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use mic__test_8cpp__incl.pdf>
 Package pdftex.def Info: mic__test_8cpp__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 154.91045pt.
- [48 <./main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf> <./mic__test_8c
-pp__incl.pdf
 
-pdfTeX warning: pdflatex (file ./mic__test_8cpp__incl.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
-) (./Modulator_8hpp.tex
-<Modulator_8hpp__incl.pdf, id=1887, 619.31375pt x 269.005pt>
+[73 <./mic__test_8cpp__incl.pdf>]) (./mic__test_8cpp_source.tex [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75])
+(./Modulator_8hpp.tex
+<Modulator_8hpp__incl.pdf, id=3175, 619.31375pt x 269.005pt>
 File: Modulator_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Modulator_8hpp__incl.pdf>
 Package pdftex.def Info: Modulator_8hpp__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 152.03325pt.
 
-<Modulator_8hpp__dep__incl.pdf, id=1888, 289.08pt x 156.585pt>
+<Modulator_8hpp__dep__incl.pdf, id=3176, 289.08pt x 156.585pt>
 File: Modulator_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Modulator_8hpp__dep__incl.pdf>
 Package pdftex.def Info: Modulator_8hpp__dep__incl.pdf used on input line 26.
 (pdftex.def)             Requested size: 288.0pt x 156.00879pt.
+ [76 <./Modulator_8hpp__incl.pdf> <./Modulator_8hpp__dep__incl.pdf
 
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
- [49 <./Modulator_8hpp__incl.pdf>]) (./modulator__test_8cpp.tex
-<modulator__test_8cpp__incl.pdf, id=1909, 1025.8325pt x 325.215pt>
+pdfTeX warning: pdflatex (file ./Modulator_8hpp__dep__incl.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>]) (./Modulator_8hpp_source.tex [77]) (./modulator__test_8cpp.tex
+<modulator__test_8cpp__incl.pdf, id=3281, 1025.8325pt x 325.215pt>
 File: modulator__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use modulator__test_8cpp__incl.pdf>
-Package pdftex.def Info: modulator__test_8cpp__incl.pdf used on input line 17.
+Package pdftex.def Info: modulator__test_8cpp__incl.pdf used on input line 22.
 (pdftex.def)             Requested size: 350.0pt x 110.9587pt.
- [50 <./Modulator_8hpp__dep__incl.pdf> <./modulator__test_8cpp__incl.pdf
 
-pdfTeX warning: pdflatex (file ./modulator__test_8cpp__incl.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->]
-<modulator__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=1930, 63
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+[79 <./modulator__test_8cpp__incl.pdf>]
+<modulator__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=3323, 63
 4.37pt x 252.945pt>
 File: modulator__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic
  file (type pdf)
 
 <use modulator__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: modulator__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97
-_cgraph.pdf used on input line 47.
+_cgraph.pdf used on input line 111.
 (pdftex.def)             Requested size: 350.0pt x 139.56017pt.
 )
-(./multi__sinusoid__test_8cpp.tex
-<multi__sinusoid__test_8cpp__incl.pdf, id=1931, 697.60625pt x 280.04625pt>
+(./modulator__test_8cpp_source.tex [80 <./modulator__test_8cpp_a0ddf1224851353f
+c92bfbff6f499fa97_cgraph.pdf>]) (./multi__sinusoid__test_8cpp.tex
+<multi__sinusoid__test_8cpp__incl.pdf, id=3359, 697.60625pt x 280.04625pt>
 File: multi__sinusoid__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use multi__sinusoid__test_8cpp__incl.pdf>
 Package pdftex.def Info: multi__sinusoid__test_8cpp__incl.pdf used on input lin
-e 19.
+e 24.
 (pdftex.def)             Requested size: 350.0pt x 140.50563pt.
- [51 <./modulator__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf> <./m
-ulti__sinusoid__test_8cpp__incl.pdf
+ [81 <./multi__sinusoid__test_8cpp__incl.pdf>]
+Underfull \hbox (badness 10000) detected at line 37
+[][][]
+ []
 
-pdfTeX warning: pdflatex (file ./multi__sinusoid__test_8cpp__incl.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->]
-<multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=19
-50, 562.1pt x 176.66pt>
+
+<multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=33
+92, 562.1pt x 176.66pt>
 File: multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf G
 raphic file (type pdf)
 
 <use multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f4
-99fa97_cgraph.pdf used on input line 49.
+99fa97_cgraph.pdf used on input line 113.
 (pdftex.def)             Requested size: 350.0pt x 109.99979pt.
-)
-(./piped__test_8cpp.tex
-<piped__test_8cpp__incl.pdf, id=1951, 532.99126pt x 269.005pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82])
+(./multi__sinusoid__test_8cpp_source.tex) (./piped__test_8cpp.tex [83 <./multi_
+_sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>]
+<piped__test_8cpp__incl.pdf, id=3431, 532.99126pt x 269.005pt>
 File: piped__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use piped__test_8cpp__incl.pdf>
 Package pdftex.def Info: piped__test_8cpp__incl.pdf used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 176.65312pt.
- [52 <./multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf
-> <./piped__test_8cpp__incl.pdf
 
-pdfTeX warning: pdflatex (file ./piped__test_8cpp__incl.pdf): PDF inclusion: mu
-ltiple pdfs with page group included in a single page
->]
 Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
-
-<piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1974, 533.99
+[84 <./piped__test_8cpp__incl.pdf>]
+<piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=3458, 533.99
 5pt x 138.5175pt>
 File: piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic fil
 e (type pdf)
 
 <use piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
 Package pdftex.def Info: piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgr
-aph.pdf used on input line 61.
+aph.pdf used on input line 76.
 (pdftex.def)             Requested size: 350.0pt x 90.79196pt.
 )
-(./pl__tone__test_8cpp.tex
-<pl__tone__test_8cpp__incl.pdf, id=1975, 757.83125pt x 325.215pt>
+(./piped__test_8cpp_source.tex) (./pl__tone__test_8cpp.tex
+<pl__tone__test_8cpp__incl.pdf, id=3471, 757.83125pt x 325.215pt>
 File: pl__tone__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use pl__tone__test_8cpp__incl.pdf>
-Package pdftex.def Info: pl__tone__test_8cpp__incl.pdf used on input line 18.
+Package pdftex.def Info: pl__tone__test_8cpp__incl.pdf used on input line 23.
 (pdftex.def)             Requested size: 350.0pt x 150.20116pt.
- [53 <./piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf> <./pl__t
-one__test_8cpp__incl.pdf
 
-pdfTeX warning: pdflatex (file ./pl__tone__test_8cpp__incl.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
->]
-<pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=1994, 590
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85 <./piped__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>]
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+
+<pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=3498, 590
 .205pt x 176.66pt>
 File: pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic 
 file (type pdf)
 
 <use pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_
-cgraph.pdf used on input line 48.
+cgraph.pdf used on input line 95.
 (pdftex.def)             Requested size: 350.0pt x 104.76222pt.
-)
-(./PlTone_8hpp.tex <PlTone_8hpp__incl.pdf, id=1995, 306.14375pt x 269.005pt>
+ [86 <./pl__tone__test_8cpp__incl.pdf>]) (./pl__tone__test_8cpp_source.tex)
+(./PlTone_8hpp.tex <PlTone_8hpp__incl.pdf, id=3531, 306.14375pt x 269.005pt>
 File: PlTone_8hpp__incl.pdf Graphic file (type pdf)
 
 <use PlTone_8hpp__incl.pdf>
 Package pdftex.def Info: PlTone_8hpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 305.0pt x 268.01509pt.
 
-<PlTone_8hpp__dep__incl.pdf, id=1996, 412.54124pt x 156.585pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87 <./pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>]
+<PlTone_8hpp__dep__incl.pdf, id=3543, 412.54124pt x 156.585pt>
 File: PlTone_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use PlTone_8hpp__dep__incl.pdf>
 Package pdftex.def Info: PlTone_8hpp__dep__incl.pdf used on input line 24.
 (pdftex.def)             Requested size: 350.0pt x 132.84938pt.
- [54 <./pl__tone__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf> <./Pl
-Tone_8hpp__incl.pdf
+ [88 <./PlTone_8hpp__incl.pdf> <./PlTone_8hpp__dep__incl.pdf
 
-pdfTeX warning: pdflatex (file ./PlTone_8hpp__incl.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./PlTone_8hpp__dep__incl.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
 >]
 Underfull \hbox (badness 10000) detected at line 42
 [][][]
  []
 
-) (./Sinusoid_8hpp.tex
-<Sinusoid_8hpp__incl.pdf, id=2019, 302.12875pt x 212.795pt>
+) (./PlTone_8hpp_source.tex) (./Sinusoid_8hpp.tex
+<Sinusoid_8hpp__incl.pdf, id=3599, 302.12875pt x 212.795pt>
 File: Sinusoid_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Sinusoid_8hpp__incl.pdf>
@@ -2042,129 +2114,122 @@ Package pdftex.def Info: Sinusoid_8hpp__incl.pdf used on input line 17.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55 <./PlTone_8hpp__dep__incl.pdf>]
-<Sinusoid_8hpp__dep__incl.pdf, id=2034, 512.91624pt x 223.83624pt>
+ [89]
+<Sinusoid_8hpp__dep__incl.pdf, id=3604, 898.35625pt x 223.83624pt>
 File: Sinusoid_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Sinusoid_8hpp__dep__incl.pdf>
 Package pdftex.def Info: Sinusoid_8hpp__dep__incl.pdf used on input line 25.
-(pdftex.def)             Requested size: 350.0pt x 152.73944pt.
+(pdftex.def)             Requested size: 350.0pt x 87.20697pt.
 
 Underfull \hbox (badness 10000) detected at line 43
 [][][]
  []
 
-) (./sinusoid__test_8cpp.tex [56 <./Sinusoid_8hpp__incl.pdf> <./Sinusoid_8hpp__
-dep__incl.pdf
+) (./Sinusoid_8hpp_source.tex [90 <./Sinusoid_8hpp__incl.pdf> <./Sinusoid_8hpp_
+_dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./Sinusoid_8hpp__dep__incl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
->] <sinusoid__test_8cpp__incl.pdf, id=2058, 531.9875pt x 269.005pt>
+>]) (./sinusoid__test_8cpp.tex
+<sinusoid__test_8cpp__incl.pdf, id=3696, 621.32124pt x 269.005pt>
 File: sinusoid__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use sinusoid__test_8cpp__incl.pdf>
-Package pdftex.def Info: sinusoid__test_8cpp__incl.pdf used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 176.9856pt.
+Package pdftex.def Info: sinusoid__test_8cpp__incl.pdf used on input line 22.
+(pdftex.def)             Requested size: 350.0pt x 151.53247pt.
 
-<sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=2060, 562
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+[92 <./sinusoid__test_8cpp__incl.pdf>]
+<sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=3731, 562
 .1pt x 176.66pt>
 File: sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic 
 file (type pdf)
 
 <use sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
 Package pdftex.def Info: sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_
-cgraph.pdf used on input line 45.
+cgraph.pdf used on input line 94.
 (pdftex.def)             Requested size: 350.0pt x 109.99979pt.
 )
-(./zdomain_8hpp.tex <zdomain_8hpp__incl.pdf, id=2061, 215.80624pt x 212.795pt>
+(./sinusoid__test_8cpp_source.tex) (./usb__filter__test_8cpp.tex
+<usb__filter__test_8cpp__incl.pdf, id=3750, 799.98875pt x 269.005pt>
+File: usb__filter__test_8cpp__incl.pdf Graphic file (type pdf)
+
+<use usb__filter__test_8cpp__incl.pdf>
+Package pdftex.def Info: usb__filter__test_8cpp__incl.pdf used on input line 19
+.
+(pdftex.def)             Requested size: 350.0pt x 117.6935pt.
+ [93 <./sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>] [94 
+<./usb__filter__test_8cpp__incl.pdf>]
+<usb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=3795, 
+562.1pt x 214.8025pt>
+File: usb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graph
+ic file (type pdf)
+
+<use usb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf>
+Package pdftex.def Info: usb__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa
+97_cgraph.pdf used on input line 89.
+(pdftex.def)             Requested size: 350.0pt x 133.74976pt.
+)
+(./usb__filter__test_8cpp_source.tex [95 <./usb__filter__test_8cpp_a0ddf1224851
+353fc92bfbff6f499fa97_cgraph.pdf>]) (./zdomain_8hpp.tex
+<zdomain_8hpp__incl.pdf, id=3833, 215.80624pt x 212.795pt>
 File: zdomain_8hpp__incl.pdf Graphic file (type pdf)
 
 <use zdomain_8hpp__incl.pdf>
 Package pdftex.def Info: zdomain_8hpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 215.0pt x 212.00543pt.
- [57 <./sinusoid__test_8cpp__incl.pdf> <./sinusoid__test_8cpp_a0ddf1224851353fc
-92bfbff6f499fa97_cgraph.pdf
 
-pdfTeX warning: pdflatex (file ./sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f
-499fa97_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a
- single page
->] <zdomain_8hpp__dep__incl.pdf, id=2079, 1019.81pt x 223.83624pt>
+<zdomain_8hpp__dep__incl.pdf, id=3834, 1280.785pt x 223.83624pt>
 File: zdomain_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use zdomain_8hpp__dep__incl.pdf>
 Package pdftex.def Info: zdomain_8hpp__dep__incl.pdf used on input line 24.
-(pdftex.def)             Requested size: 350.0pt x 76.82056pt.
+(pdftex.def)             Requested size: 350.0pt x 61.1675pt.
+ [96 <./zdomain_8hpp__incl.pdf> <./zdomain_8hpp__dep__incl.pdf
 
+pdfTeX warning: pdflatex (file ./zdomain_8hpp__dep__incl.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]
 Underfull \hbox (badness 10000) detected at line 50
 [][][]
  []
 
-) [58 <./zdomain_8hpp__incl.pdf> <./zdomain_8hpp__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./zdomain_8hpp__dep__incl.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->] (./refman.ind [59
+) (./zdomain_8hpp_source.tex [97]) [98] (./refman.ind [99
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 6E5CB7EA709C1C1EAD2981B4E5374718;31416.
+(rerunfilecheck)             Checksum: 3F550D44F06C0E119BEA5227A071FCF3;42413.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 236.
  ) 
 Here is how much of TeX's memory you used:
- 13502 strings out of 495020
- 206243 string characters out of 6181325
- 267425 words of memory out of 5000000
- 15943 multiletter control sequences out of 15000+600000
+ 13930 strings out of 495020
+ 214817 string characters out of 6181325
+ 270624 words of memory out of 5000000
+ 16057 multiletter control sequences out of 15000+600000
  91992 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,17n,43p,2067b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{zdomain_8hpp_source} has been referenced but does
- not exist, replaced by a fixed one
+ 48i,17n,43p,2067b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{namespacelolz} has been referenced but does not e
+xist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Sinusoid_8hpp_source} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{PlTone_8hpp_source} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{piped__test_8cpp_source} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{mic__test_8cpp_source} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{main_8cpp_source} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lsb__filter__test_8cpp_source} has been referenced 
-but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{iq__test_8cpp_source} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{fvectors_8hpp_source} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Filter_8hpp_source} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{fft__test2_8cpp_source} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{fft__test_8cpp_source} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{alsa__test_8cpp_source} has been referenced but doe
-s not exist, replaced by a fixed one
+pdfTeX warning (dest): name{namespacestd} has been referenced but does not exis
+t, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
@@ -2175,10 +2240,10 @@ hvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (67 pages, 369773 bytes).
+Output written on refman.pdf (109 pages, 532142 bytes).
 PDF statistics:
- 2291 PDF objects out of 2487 (max. 8388607)
- 2055 compressed objects within 21 object streams
- 408 named destinations out of 1000 (max. 500000)
- 1677 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4174 PDF objects out of 4296 (max. 8388607)
+ 3871 compressed objects within 39 object streams
+ 625 named destinations out of 1000 (max. 500000)
+ 2175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

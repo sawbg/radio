@@ -1,0 +1,52 @@
+\hypertarget{Gain_8hpp_source}{\section{Gain.\+hpp}
+\label{Gain_8hpp_source}\index{src/\+Gain.\+hpp@{src/\+Gain.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef Gain\_H}
+00008 \textcolor{preprocessor}{#define Gain\_H}
+00009 
+00010 \textcolor{preprocessor}{#include <cmath>}
+00011 
+00012 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00013 
+00014 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
+\hypertarget{Gain_8hpp_source_l00018}{}\hyperlink{classradio_1_1Gain}{00018}     \textcolor{keyword}{class }\hyperlink{classradio_1_1Gain}{Gain} \{
+00019         \textcolor{keyword}{public}:
+00030             \hyperlink{classradio_1_1Gain_a11f137515c0ecc04333c7d92eea2cf79}{Gain}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} gaindB);
+00031 
+00035             \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d}{Apply}();
+00036 
+00037         \textcolor{keyword}{private}:
+00041             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data;
+00042 
+00046             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} gainCoeff;
+00047 
+00052             \textcolor{keywordtype}{bool} hasClipped = \textcolor{keyword}{false};
+00053 
+00057             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size;
+00058 
+00059     \};
+00060 
+\hypertarget{Gain_8hpp_source_l00061}{}\hyperlink{classradio_1_1Gain_a11f137515c0ecc04333c7d92eea2cf79}{00061}     \hyperlink{classradio_1_1Gain_a11f137515c0ecc04333c7d92eea2cf79}{Gain::Gain}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} gaindB) \{
+00062         this->data = data;
+00063         this->size = size;
+00064         gainCoeff = pow(10, gaindB / 20);
+00065     \}
+00066 
+\hypertarget{Gain_8hpp_source_l00067}{}\hyperlink{classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d}{00067}     \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Gain_a8c6df2c5989da0e560c8f276e6138a2d}{Gain::Apply}() \{
+00068         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < size; i++) \{
+00069             data[i] *= gainCoeff;
+00070 
+00071             \textcolor{keywordflow}{if}((data[i] > 1 || data[i] < -1) && !hasClipped) \{
+00072                 hasClipped = \textcolor{keyword}{true};
+00073                 std::cerr << \textcolor{stringliteral}{"Baseband clipping has occurred!"}
+00074                     << std::endl;
+00075             \}
+00076         \}
+00077     \}
+00078 \}
+00079 
+00080 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

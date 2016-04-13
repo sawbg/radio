@@ -29,5 +29,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
       [ "Sinusoid", "classradio_1_1Sinusoid.html", "classradio_1_1Sinusoid" ]
     ] ],
     [ "sinusoid_test.cpp", "sinusoid__test_8cpp.html", "sinusoid__test_8cpp" ],
+    [ "usb_filter_test.cpp", "usb__filter__test_8cpp.html", "usb__filter__test_8cpp" ],
     [ "zdomain.hpp", "zdomain_8hpp.html", "zdomain_8hpp" ]
 ];

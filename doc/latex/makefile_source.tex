@@ -1,0 +1,58 @@
+\hypertarget{makefile_source}{\section{makefile}
+}
+
+\begin{DoxyCode}
+00001 GCC = g++ -g -std=gnu++14
+00002 
+00003 alsa-test:
+00004    $(GCC) src/alsa\_test.cpp -o bin/alsatest -O0 -lasound
+00005 
+00006 baseband-filter-test:
+00007    $(GCC) src/baseband\_filter\_test.cpp -o bin/basebandfiltertest
+00008 
+00009 count:
+00010    grep -r "src/" -e "Samuel Andrew Wisner" -l | xargs wc -l
+00011 
+00012 docs:
+00013    rm -r doc/
+00014    doxygen etc/doxygen.config
+00015    cd doc/latex; make pdf;
+00016    git reset
+00017    git add doc/.
+00018    git --no-pager log > etc/log.txt
+00019    git add etc/log.txt
+00020    git commit -m "Updated documentation."
+00021    git push
+00022 
+00023 fft-test:
+00024    $(GCC) src/fft\_test.cpp -o bin/fft-test
+00025 
+00026 fft-test2:
+00027    $(GCC) src/fft\_test2.cpp -o bin/fft-test2
+00028 
+00029 iq-test:
+00030    $(GCC) src/iq\_test.cpp -o bin/iqtest
+00031 
+00032 multi-sinusoid-test:
+00033    $(GCC) src/multi\_sinusoid\_test.cpp -o bin/multisinusoidtest
+00034 
+00035 modulator-test:
+00036    $(GCC) src/modulator\_test.cpp -o bin/modulatortest
+00037 
+00038 lsb-filter-test:
+00039    $(GCC) src/lsb\_filter\_test.cpp -o bin/lowersidebandftest
+00040 
+00041 pl-tone-test:
+00042    $(GCC) src/pl\_tone\_test.cpp -o bin/pltonetest
+00043 
+00044 radio:
+00045    $(GCC) src/main.cpp -o bin/sdr
+00046 
+00047 sinusoid-test:
+00048    $(GCC) src/sinusoid\_test.cpp -o bin/sinusoidtest
+00049 
+00050 usb-filter-test:
+00051    $(GCC) src/usb\_filter\_test.cpp -o bin/uppersidebandftest
+00052 
+00053 
+\end{DoxyCode}

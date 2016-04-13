@@ -60,7 +60,7 @@ Definition in file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 \subsubsection[{C\+Array}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::valarray$<$std\+::complex$<$double$>$ $>$ {\bf C\+Array}}}\label{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}
 
 
-Definition at line 14 of file fft\+\_\+test.\+cpp.
+Definition at line \hyperlink{fft__test_8cpp_source_l00014}{14} of file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 
 
 
@@ -74,8 +74,56 @@ Definition at line 14 of file fft\+\_\+test.\+cpp.
 )}}\label{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}
 This code was taken from \href{http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B}{\tt http\+://rosettacode.\+org/wiki/\+Fast\+\_\+\+Fourier\+\_\+transform\#\+C.\+2\+B.\+2\+B}. 
 
-Definition at line 23 of file fft\+\_\+test.\+cpp.
+Definition at line \hyperlink{fft__test_8cpp_source_l00023}{23} of file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00024 \{
+00025     \textcolor{comment}{// DFT}
+00026     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} N = x.size(), k = N, n;
+00027     \textcolor{keywordtype}{double} thetaT = 3.14159265358979323846264338328L / N;
+00028     std::complex<double> phiT(cos(thetaT), sin(thetaT)), T;
+00029     \textcolor{keywordflow}{while} (k > 1)
+00030     \{
+00031         n = k;
+00032         k >>= 1;
+00033         phiT = phiT * phiT;
+00034         T = 1.0L;
+00035         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} l = 0; l < k; l++)
+00036         \{
+00037             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a = l; a < N; a += n)
+00038             \{
+00039                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} b = a + k;
+00040                 std::complex<double> t = x[a] - x[b];
+00041                 x[a] += x[b];
+00042                 x[b] = t * T;
+00043             \}
+00044             T *= phiT;
+00045         \}
+00046     \}
+00047     \textcolor{comment}{// Decimate}
+00048     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m = (\textcolor{keywordtype}{unsigned} int)log2(N);
+00049     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a = 0; a < N; a++)
+00050     \{
+00051         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} b = a;
+00052         \textcolor{comment}{// Reverse bits}
+00053         b = (((b & 0xaaaaaaaa) >> 1) | ((b & 0x55555555) << 1));
+00054         b = (((b & 0xcccccccc) >> 2) | ((b & 0x33333333) << 2));
+00055         b = (((b & 0xf0f0f0f0) >> 4) | ((b & 0x0f0f0f0f) << 4));
+00056         b = (((b & 0xff00ff00) >> 8) | ((b & 0x00ff00ff) << 8));
+00057         b = ((b >> 16) | (b << 16)) >> (32 - m);
+00058         \textcolor{keywordflow}{if} (b > a)
+00059         \{
+00060             std::complex<double> t = x[a];
+00061             x[a] = x[b];
+00062             x[b] = t;
+00063         \}
+00064     \}
+00066     \textcolor{comment}{//std::complex<double> f = 1.0 / sqrt(N);}
+00067     \textcolor{comment}{//for (unsigned int i = 0; i < N; i++)}
+00068     \textcolor{comment}{//  x[i] *= f;}
+00069 \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -97,8 +145,14 @@ Here is the caller graph for this function\+:
 )}}\label{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}
 
 
-Definition at line 87 of file fft\+\_\+test.\+cpp.
+Definition at line \hyperlink{fft__test_8cpp_source_l00087}{87} of file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00087                                                  \{
+00088     \textcolor{keywordflow}{return} std::complex<double>(-2 * n.imag(), 0);
+00089 \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -120,8 +174,24 @@ Here is the caller graph for this function\+:
 )}}\label{fft__test_8cpp_a6234aee8acb83780e803805365617f36}
 
 
-Definition at line 72 of file fft\+\_\+test.\+cpp.
+Definition at line \hyperlink{fft__test_8cpp_source_l00072}{72} of file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00073 \{
+00074     \textcolor{comment}{// conjugate the complex numbers}
+00075     x = x.apply(std::conj);
+00076 
+00077     \textcolor{comment}{// forward fft}
+00078     \hyperlink{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{fft}( x );
+00079 
+00080     \textcolor{comment}{// conjugate the complex numbers again}
+00081     x = x.apply(std::conj);
+00082 
+00083     \textcolor{comment}{// scale the numbers}
+00084     x /= x.size();
+00085 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -155,8 +225,47 @@ Here is the caller graph for this function\+:
 )}}\label{fft__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
 
 
-Definition at line 91 of file fft\+\_\+test.\+cpp.
+Definition at line \hyperlink{fft__test_8cpp_source_l00091}{91} of file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00092 \{
+00093     \textcolor{keyword}{const} std::complex<double> test[] = \{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 \};
+00094     \hyperlink{fft__test_8cpp_ac43c8a7b2d97f3ccbd6f7a48beaa472c}{CArray} data(test, 16);
+00095 
+00096     \textcolor{comment}{// forward fft}
+00097     \hyperlink{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{fft}(data);
+00098 
+00099     std::cout << \textcolor{stringliteral}{"fft"} << std::endl;
+00100     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 16; ++i)
+00101     \{
+00102     \textcolor{comment}{//  std::cout << data[i] << std::endl;}
+00103     \}
+00104 
+00105     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 8; i < 16; i++) \{
+00106         data[i] = 0;
+00107     \}
+00108 
+00109     \textcolor{comment}{// inverse fft}
+00110     \hyperlink{fft__test_8cpp_a6234aee8acb83780e803805365617f36}{ifft}(data);
+00111     std::cout << std::endl << \textcolor{stringliteral}{"ifft"} << std::endl;
+00112 
+00113     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 16; ++i)
+00114     \{
+00115     \textcolor{comment}{//  std::cout << data[i] << std::endl;}
+00116     \}
+00117 
+00118     data = data.apply(\hyperlink{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}{hilbert});
+00119 
+00120     std::cout << std::endl;
+00121 
+00122     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 16; i++) \{
+00123         std::cout << data[i].real() << std::endl;
+00124     \}
+00125 
+00126     \textcolor{keywordflow}{return} 0;
+00127 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -177,5 +286,5 @@ Here is the call graph for this function\+:
 \subsubsection[{P\+I}]{\setlength{\rightskip}{0pt plus 5cm}const double P\+I = 3.\+141592653589793238460}}\label{fft__test_8cpp_a952eac791b596a61bba0a133a3bb439f}
 
 
-Definition at line 12 of file fft\+\_\+test.\+cpp.
+Definition at line \hyperlink{fft__test_8cpp_source_l00012}{12} of file \hyperlink{fft__test_8cpp_source}{fft\+\_\+test.\+cpp}.
 

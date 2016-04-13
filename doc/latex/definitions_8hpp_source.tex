@@ -1,0 +1,53 @@
+\hypertarget{definitions_8hpp_source}{\section{definitions.\+hpp}
+\label{definitions_8hpp_source}\index{src/definitions.\+hpp@{src/definitions.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00009 \textcolor{preprocessor}{#ifndef definitions\_H}
+00010 \textcolor{preprocessor}{#define definitions\_H}
+00011 
+00012 \textcolor{preprocessor}{#include <complex>}
+00013 \textcolor{preprocessor}{#include <vector>}
+00014 
+\hypertarget{definitions_8hpp_source_l00015}{}\hyperlink{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{00015} \textcolor{preprocessor}{#define ENUM signed char}
+\hypertarget{definitions_8hpp_source_l00016}{}\hyperlink{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}{00016} \textcolor{preprocessor}{#define ERROR -1}
+00017 
+\hypertarget{definitions_8hpp_source_l00018}{}\hyperlink{definitions_8hpp_a0c8186d9b9b7880309c27230bbb5e69d}{00018} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \hyperlink{definitions_8hpp_a0c8186d9b9b7880309c27230bbb5e69d}{byte};
+\hypertarget{definitions_8hpp_source_l00019}{}\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{00019} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8};
+\hypertarget{definitions_8hpp_source_l00020}{}\hyperlink{definitions_8hpp_a1a6408291ee3cfd0760a61ac64084154}{00020} \textcolor{keyword}{typedef} \textcolor{keywordtype}{signed} \textcolor{keywordtype}{char} \hyperlink{definitions_8hpp_a1a6408291ee3cfd0760a61ac64084154}{sint8};
+00021 
+\hypertarget{definitions_8hpp_source_l00022}{}\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{00022} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16};
+\hypertarget{definitions_8hpp_source_l00023}{}\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{00023} \textcolor{keyword}{typedef} \textcolor{keywordtype}{signed} \textcolor{keywordtype}{short} \hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16};
+00024 
+\hypertarget{definitions_8hpp_source_l00025}{}\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{00025} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32};
+\hypertarget{definitions_8hpp_source_l00026}{}\hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{00026} \textcolor{keyword}{typedef} \textcolor{keywordtype}{signed} \textcolor{keywordtype}{int} \hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32};
+00027 
+\hypertarget{definitions_8hpp_source_l00028}{}\hyperlink{definitions_8hpp_a29940ae63ec06c9998bba873e25407ad}{00028} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \hyperlink{definitions_8hpp_a29940ae63ec06c9998bba873e25407ad}{uint64};
+\hypertarget{definitions_8hpp_source_l00029}{}\hyperlink{definitions_8hpp_ad91d7e42d1c1abce1d9eeacd54cc0497}{00029} \textcolor{keyword}{typedef} \textcolor{keywordtype}{signed} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \hyperlink{definitions_8hpp_ad91d7e42d1c1abce1d9eeacd54cc0497}{sint64};
+00030 
+\hypertarget{definitions_8hpp_source_l00031}{}\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{00031} \textcolor{keyword}{typedef} \textcolor{keywordtype}{float} \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32};
+\hypertarget{definitions_8hpp_source_l00032}{}\hyperlink{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{00032} \textcolor{keyword}{typedef} \textcolor{keywordtype}{double} \hyperlink{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{float64};
+00033 
+\hypertarget{definitions_8hpp_source_l00037}{}\hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{00037} \textcolor{keyword}{typedef} std::complex<float32> \hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32};
+00038 
+\hypertarget{definitions_8hpp_source_l00042}{}\hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{00042} \textcolor{keyword}{typedef} std::vector<std::vector<float64>> \hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{fparams};
+00043 
+00048 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
+\hypertarget{definitions_8hpp_source_l00052}{}\hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{00052}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{Age} \{ \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{OLD}, \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}{NEW} \};
+00053 
+\hypertarget{definitions_8hpp_source_l00057}{}\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{00057}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{Fractional} \{ \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}, \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN} \};
+00058 
+\hypertarget{definitions_8hpp_source_l00062}{}\hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{00062}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5}{Argument} \{ \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88}{FREQ} = 1, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a70b58e67bda4ad9bd46e010e1f090c7b}{MODE}, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{PL\_TONE} \};
+00063     
+\hypertarget{definitions_8hpp_source_l00067}{}\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{00067}     \textcolor{keyword}{enum class} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} \{ \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{DSB\_LC}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{DSB\_SC}, 
+      \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{USB\_FILTERED}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{USB\_HILBERT},
+00068         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{LSB\_FILTERED}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{LSB\_HILBERT}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{FM\_NARROW}, 
+      \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{FM\_WIDE} \};
+00069 \}
+00070 
+00071 \textcolor{preprocessor}{#endif}
+00072 
+00073 \textcolor{comment}{// Doxygen descriptions for non-code files}
+00074 
+\end{DoxyCode}

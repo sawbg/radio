@@ -46,7 +46,7 @@ Inheritance diagram for radio\+:\+:Sinusoid\+:
 \subsection{Detailed Description}
 This class creates an easy-\/to-\/call sinusoid that will preserve its phase throughout its lifespan. Essentially, it is a ring buffer. 
 
-Definition at line 20 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00020}{20} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 
 
@@ -61,8 +61,27 @@ Definition at line 20 of file Sinusoid.\+hpp.
 )}}\label{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}
 Creates a ring-\/buffer sinusoid. 
 
-Definition at line 77 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00077}{77} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
+
+\begin{DoxyCode}
+00077                                                              \{
+00078         this->\hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency} = \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency};
+00079         this->\hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate} = \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
+00080         \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid} = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)std::malloc(\hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate} * \textcolor{keyword}{sizeof}(
+      \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}));
+00081         \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90} = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)std::malloc(
+      \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate} * \textcolor{keyword}{sizeof}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}));
+00082 
+00083         \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} arg = 2 * M\_PI * \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency} / \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
+00084 
+00085         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}; i++) \{
+00086             \textcolor{comment}{// cosine argument evaluates as float due to M\_PI and frequency}
+00087             \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[i] = cos(arg * i);
+00088             \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90}[i] = sin(arg * i);
+00089         \}
+00090     \}
+\end{DoxyCode}
 \hypertarget{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!````~Sinusoid@{$\sim$\+Sinusoid}}
 \index{````~Sinusoid@{$\sim$\+Sinusoid}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{$\sim$\+Sinusoid}]{\setlength{\rightskip}{0pt plus 5cm}radio\+::\+Sinusoid\+::$\sim$\+Sinusoid (
@@ -72,8 +91,15 @@ Definition at line 77 of file Sinusoid.\+hpp.
 )}}\label{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}
 Free arrays malloc'd in the constructor. 
 
-Definition at line 92 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00092}{92} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
+
+\begin{DoxyCode}
+00092                         \{
+00093         free(\hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid});
+00094         free(\hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90});
+00095     \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -86,8 +112,15 @@ Definition at line 92 of file Sinusoid.\+hpp.
 )}}\label{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}
 Provides the next value of the sinusoid in a manner consistant with a ring buffer. 
 
-Definition at line 97 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00097}{97} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
+
+\begin{DoxyCode}
+00097                            \{
+00098         \textcolor{keywordflow}{if}(\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} >= \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) \hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} = 0;
+00099         \textcolor{keywordflow}{return} \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex}++];
+00100     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -109,8 +142,16 @@ Here is the caller graph for this function\+:
 )}}\label{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}
 Provides the next value of the sinusoid shifted 90 degrees in a manner consistant with a ring buffer. 
 
-Definition at line 102 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00102}{102} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
+
+\begin{DoxyCode}
+00102                                   \{
+00103         \textcolor{keywordflow}{if}(\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} >= \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) 
+      \hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} = 0;
+00104         \textcolor{keywordflow}{return} \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90}[\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted}++];
+00105     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -131,42 +172,42 @@ Here is the caller graph for this function\+:
 \subsubsection[{frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32} radio\+::\+Sinusoid\+::frequency\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}
 The frequency of the sinusoid 
 
-Definition at line 48 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00048}{48} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 \hypertarget{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sampling\+Rate@{sampling\+Rate}}
 \index{sampling\+Rate@{sampling\+Rate}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sampling\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::sampling\+Rate\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}
 The sampling rate 
 
-Definition at line 63 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00063}{63} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 \hypertarget{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sin\+Index@{sin\+Index}}
 \index{sin\+Index@{sin\+Index}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sin\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::sin\+Index = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}
 The current index of the sinusoid's unshifted array 
 
-Definition at line 53 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00053}{53} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 \hypertarget{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sin\+Index\+Shifted@{sin\+Index\+Shifted}}
 \index{sin\+Index\+Shifted@{sin\+Index\+Shifted}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sin\+Index\+Shifted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Sinusoid\+::sin\+Index\+Shifted = 0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}
 The current index of the shifted sinusoid's array 
 
-Definition at line 58 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00058}{58} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 \hypertarget{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sinusoid@{sinusoid}}
 \index{sinusoid@{sinusoid}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sinusoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Sinusoid\+::sinusoid\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}
 Initialized as an array of the sinusoid values 
 
-Definition at line 68 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00068}{68} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 \hypertarget{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{\index{radio\+::\+Sinusoid@{radio\+::\+Sinusoid}!sinusoid\+Shift90@{sinusoid\+Shift90}}
 \index{sinusoid\+Shift90@{sinusoid\+Shift90}!radio\+::\+Sinusoid@{radio\+::\+Sinusoid}}
 \subsubsection[{sinusoid\+Shift90}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Sinusoid\+::sinusoid\+Shift90\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}
 Initialized as an array of the sinusoid values shifted 90 degrees 
 
-Definition at line 74 of file Sinusoid.\+hpp.
+Definition at line \hyperlink{Sinusoid_8hpp_source_l00074}{74} of file \hyperlink{Sinusoid_8hpp_source}{Sinusoid.\+hpp}.
 
 
 

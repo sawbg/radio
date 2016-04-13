@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: radio::Sinusoid Class Reference</title>
+<title>An Inexpensive, Software-Defined IF Modulator: radio::Sinusoid Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">An Inexpensive, Software-Defined IF Modulator
    </div>
   </td>
  </tr>
@@ -179,7 +179,27 @@ Protected Attributes</h2></td></tr>
 <p>Creates a ring-buffer sinusoid. </p>
 
 <p>Definition at line <a class="el" href="Sinusoid_8hpp_source.html#l00077">77</a> of file <a class="el" href="Sinusoid_8hpp_source.html">Sinusoid.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                             {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        this-&gt;<a class="code" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a> = <a class="code" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        this-&gt;<a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a> = <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">sinusoid</a> = (<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>*)std::malloc(<a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a> * <span class="keyword">sizeof</span>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">sinusoidShift90</a> = (<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>*)std::malloc(<a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a> * <span class="keyword">sizeof</span>(<a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a>));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> arg = 2 * M_PI * <a class="code" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a> / <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>; i++) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// cosine argument evaluates as float due to M_PI and frequency</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">sinusoid</a>[i] = cos(arg * i);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">sinusoidShift90</a>[i] = sin(arg * i);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a964d64aae9acc4ea5d752534a33d76b8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">radio::Sinusoid::samplingRate</a></div><div class="ttdeci">uint32 samplingRate</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00063">Sinusoid.hpp:63</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a56556c3d3e08d1c9481c18e087ff1c85"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">radio::Sinusoid::sinusoid</a></div><div class="ttdeci">float32 * sinusoid</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00068">Sinusoid.hpp:68</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_aacdc525d6f7bddb3ae95d5c311bd06a1"><div class="ttname"><a href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a></div><div class="ttdeci">float float32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00031">definitions.hpp:31</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a556db1dca1d5af3d9c6ba2d51f9e3cf8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">radio::Sinusoid::sinusoidShift90</a></div><div class="ttdeci">float32 * sinusoidShift90</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00074">Sinusoid.hpp:74</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00025">definitions.hpp:25</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_ad429b5dd330e96aaf89a0d48ef59d3f2"><div class="ttname"><a href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">radio::Sinusoid::frequency</a></div><div class="ttdeci">float32 frequency</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00048">Sinusoid.hpp:48</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad9e8edf233f8146891a14f20d1c903d2"></a>
@@ -197,7 +217,13 @@ Protected Attributes</h2></td></tr>
 <p>Free arrays malloc'd in the constructor. </p>
 
 <p>Definition at line <a class="el" href="Sinusoid_8hpp_source.html#l00092">92</a> of file <a class="el" href="Sinusoid_8hpp_source.html">Sinusoid.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        free(<a class="code" href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">sinusoid</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        free(<a class="code" href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">sinusoidShift90</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a56556c3d3e08d1c9481c18e087ff1c85"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">radio::Sinusoid::sinusoid</a></div><div class="ttdeci">float32 * sinusoid</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00068">Sinusoid.hpp:68</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a556db1dca1d5af3d9c6ba2d51f9e3cf8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">radio::Sinusoid::sinusoidShift90</a></div><div class="ttdeci">float32 * sinusoidShift90</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00074">Sinusoid.hpp:74</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -216,7 +242,14 @@ Protected Attributes</h2></td></tr>
 <p>Provides the next value of the sinusoid in a manner consistant with a ring buffer. </p>
 
 <p>Definition at line <a class="el" href="Sinusoid_8hpp_source.html#l00097">97</a> of file <a class="el" href="Sinusoid_8hpp_source.html">Sinusoid.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                           {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classradio_1_1Sinusoid.html#a2e7d029c5e7307967c77959367cc0224">sinIndex</a> &gt;= <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>) <a class="code" href="classradio_1_1Sinusoid.html#a2e7d029c5e7307967c77959367cc0224">sinIndex</a> = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">sinusoid</a>[<a class="code" href="classradio_1_1Sinusoid.html#a2e7d029c5e7307967c77959367cc0224">sinIndex</a>++];</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a964d64aae9acc4ea5d752534a33d76b8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">radio::Sinusoid::samplingRate</a></div><div class="ttdeci">uint32 samplingRate</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00063">Sinusoid.hpp:63</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a56556c3d3e08d1c9481c18e087ff1c85"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">radio::Sinusoid::sinusoid</a></div><div class="ttdeci">float32 * sinusoid</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00068">Sinusoid.hpp:68</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a2e7d029c5e7307967c77959367cc0224"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a2e7d029c5e7307967c77959367cc0224">radio::Sinusoid::sinIndex</a></div><div class="ttdeci">uint32 sinIndex</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00053">Sinusoid.hpp:53</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -243,7 +276,14 @@ Here is the caller graph for this function:</div>
 <p>Provides the next value of the sinusoid shifted 90 degrees in a manner consistant with a ring buffer. </p>
 
 <p>Definition at line <a class="el" href="Sinusoid_8hpp_source.html#l00102">102</a> of file <a class="el" href="Sinusoid_8hpp_source.html">Sinusoid.hpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                  {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classradio_1_1Sinusoid.html#a4acf2add824249c39046fe87f9a64f93">sinIndexShifted</a> &gt;= <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>) <a class="code" href="classradio_1_1Sinusoid.html#a4acf2add824249c39046fe87f9a64f93">sinIndexShifted</a> = 0;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">sinusoidShift90</a>[<a class="code" href="classradio_1_1Sinusoid.html#a4acf2add824249c39046fe87f9a64f93">sinIndexShifted</a>++];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a964d64aae9acc4ea5d752534a33d76b8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">radio::Sinusoid::samplingRate</a></div><div class="ttdeci">uint32 samplingRate</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00063">Sinusoid.hpp:63</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a556db1dca1d5af3d9c6ba2d51f9e3cf8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a556db1dca1d5af3d9c6ba2d51f9e3cf8">radio::Sinusoid::sinusoidShift90</a></div><div class="ttdeci">float32 * sinusoidShift90</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00074">Sinusoid.hpp:74</a></div></div>
+<div class="ttc" id="classradio_1_1Sinusoid_html_a4acf2add824249c39046fe87f9a64f93"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a4acf2add824249c39046fe87f9a64f93">radio::Sinusoid::sinIndexShifted</a></div><div class="ttdeci">uint32 sinIndexShifted</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00058">Sinusoid.hpp:58</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -403,7 +443,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceradio.html">radio</a></li><li class="navelem"><a class="el" href="classradio_1_1Sinusoid.html">Sinusoid</a></li>
-    <li class="footer">Generated on Sun Apr 10 2016 22:37:10 for My Project by
+    <li class="footer">Generated on Wed Apr 13 2016 05:16:49 for An Inexpensive, Software-Defined IF Modulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,8 +1,11 @@
-.TH "src/sinusoid_test.cpp" 3 "Sun Apr 10 2016" "My Project" \" -*- nroff -*-
+.TH "src/sinusoid_test.cpp" 3 "Wed Apr 13 2016" "An Inexpensive, Software-Defined IF Modulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 src/sinusoid_test.cpp \- 
+.PP
+contains a test program to test the Sinusoid class  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -18,6 +21,10 @@ src/sinusoid_test.cpp \-
 .br
 \fC#include 'auxiliary\&.hpp'\fP
 .br
+\fC#include 'Sinusoid\&.hpp'\fP
+.br
+\fC#include 'zdomain\&.hpp'\fP
+.br
 
 .SS "Functions"
 
@@ -26,12 +33,56 @@ src/sinusoid_test.cpp \-
 .RI "int \fBmain\fP (int argc, char *argv[])"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+contains a test program to test the Sinusoid class 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBsinusoid_test\&.cpp\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "int main (intargc, char *argv[])"
 Program to test the Sinusoid class\&. 
 .PP
-Definition at line 20 of file sinusoid_test\&.cpp\&.
+Definition at line 23 of file sinusoid_test\&.cpp\&.
+.PP
+.nf
+23                                  {
+24 
+25     // Constants
+26     const uint16 BUFFER_SIZE = 16384;
+27 
+28     // Declare primative Variables
+29     float32 dataBuffer[BUFFER_SIZE];
+30     float32 iqBuffer[2 * BUFFER_SIZE];
+31     float32 freq = atof(argv[1]);
+32 
+33     if(freq < 0) {
+34         cerr << "The given tone was invalid\&." << endl;
+35         return ERROR;
+36     }
+37 
+38     Sinusoid sinusoid(freq, 48000);
+39 
+40     while(true) {
+41         for(uint16 i = 0; i < BUFFER_SIZE; i++) {
+42             dataBuffer[i] = sinusoid\&.next();
+43         }
+44         
+45         makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
+46         to_sint32(iqBuffer, 2 * BUFFER_SIZE);
+47         write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
+48     }
+49 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for My Project from the source code\&.
+Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

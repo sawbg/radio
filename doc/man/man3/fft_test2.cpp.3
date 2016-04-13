@@ -1,4 +1,4 @@
-.TH "src/fft_test2.cpp" 3 "Sun Apr 10 2016" "My Project" \" -*- nroff -*-
+.TH "src/fft_test2.cpp" 3 "Wed Apr 13 2016" "An Inexpensive, Software-Defined IF Modulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,6 +47,46 @@ This program tests the \fBfft()\fP, \fBifft()\fP, and \fBhilbert()\fP functions 
 This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&. 
 .PP
 Definition at line 22 of file fft_test2\&.cpp\&.
+.PP
+.nf
+23 {
+24     std::complex<float32> test[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };
+25     float32 ftest[16];  
+26     float32 dest[16];
+27 
+28     for(int i = 0; i < 16; i++) {
+29         ftest[i] = test[i]\&.real();
+30     }
+31 
+32     // forward fft
+33     fft(test, 16);
+34 
+35     std::cout << "fft" << std::endl;
+36 
+37     for (int i = 0; i < 16; ++i)
+38     {
+39     //  std::cout << test[i] << std::endl;
+40     }
+41 
+42     // inverse fft
+43     ifft(test, 16);
+44     std::cout << std::endl << "ifft" << std::endl;
+45 
+46     for (int i = 0; i < 16; ++i)
+47     {
+48         std::cout << test[i] << std::endl;
+49     }
+50 
+51     hilbert(ftest, dest, 16);
+52     std::cout << std::endl << "hilbert" << std::endl;
+53 
+54     for(int i = 0; i < 16; i++) {
+55         std::cout << dest[i] << std::endl;
+56     }
+57 
+58     return 0;
+59 }
+.fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for My Project from the source code\&.
+Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

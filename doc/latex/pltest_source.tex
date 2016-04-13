@@ -1,0 +1,8 @@
+\hypertarget{pltest_source}{\section{pltest}
+\label{pltest_source}\index{bin/pltest@{bin/pltest}}
+}
+
+\begin{DoxyCode}
+00001 OPTIONS="-c 2 -r 48000 -t raw -f S32\_LE"
+00002 pltonetest $1 | aplay $OPTIONS
+\end{DoxyCode}

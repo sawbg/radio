@@ -1,0 +1,8 @@
+\hypertarget{sintest_source}{\section{sintest}
+\label{sintest_source}\index{bin/sintest@{bin/sintest}}
+}
+
+\begin{DoxyCode}
+00001 OPTIONS="-c 2 -r 48000 -t raw -f S32\_LE"
+00002 sinusoidtest $1 | aplay $OPTIONS
+\end{DoxyCode}

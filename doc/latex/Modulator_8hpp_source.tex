@@ -1,0 +1,132 @@
+\hypertarget{Modulator_8hpp_source}{\section{Modulator.\+hpp}
+\label{Modulator_8hpp_source}\index{src/\+Modulator.\+hpp@{src/\+Modulator.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00009 \textcolor{preprocessor}{#ifndef modulation\_H}
+00010 \textcolor{preprocessor}{#define modulation\_H}
+00011 
+00012 \textcolor{preprocessor}{#include <array>}
+00013 \textcolor{preprocessor}{#include <cmath>}
+00014 \textcolor{preprocessor}{#include <cstdlib>}
+00015 \textcolor{preprocessor}{#include <vector>}
+00016 
+00017 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00018 \textcolor{preprocessor}{#include "\hyperlink{Filter_8hpp}{Filter.hpp}"}
+00019 \textcolor{preprocessor}{#include "\hyperlink{fvectors_8hpp}{fvectors.hpp}"}
+00020 \textcolor{preprocessor}{#include "\hyperlink{Sinusoid_8hpp}{Sinusoid.hpp}"}
+00021 \textcolor{preprocessor}{#include "\hyperlink{zdomain_8hpp}{zdomain.hpp}"}
+00022 
+00023 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
+00024 
+\hypertarget{Modulator_8hpp_source_l00028}{}\hyperlink{namespaceradio_aa82ddc6ba206798fd70ffc25665b3cb6}{00028}     \textcolor{keyword}{const} \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{namespaceradio_aa82ddc6ba206798fd70ffc25665b3cb6}{FREQ\_INTERMEDIATE} = 20000;
+00029 
+\hypertarget{Modulator_8hpp_source_l00033}{}\hyperlink{namespaceradio_a284213fea4beed2f74bb936927cbe654}{00033}     \textcolor{keyword}{const} \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{namespaceradio_a284213fea4beed2f74bb936927cbe654}{SAMPLING\_RATE} = 48000;
+00034 
+\hypertarget{Modulator_8hpp_source_l00039}{}\hyperlink{classradio_1_1Modulator}{00039}     \textcolor{keyword}{class }\hyperlink{classradio_1_1Modulator}{Modulator} \{
+00040         \textcolor{keyword}{public}:
+00055             \hyperlink{classradio_1_1Modulator_ab202651b368986cc76673b6e997550b8}{Modulator}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} data[], \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, 
+      \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} type,
+00056                     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} freqInter = FREQ\_INTERMEDIATE,
+00057                     \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} rate = SAMPLING\_RATE);
+00058 
+00062             \hyperlink{classradio_1_1Modulator_a712e6e110c57b29ebdd754bd34bf269b}{~Modulator}();
+00063 
+00067             \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{Mod}();
+00068 
+00069         \textcolor{keyword}{private}:
+00074             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data;
+00075 
+00079             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} freqCarrier;
+00080 
+00081 
+00085             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* hilData = \textcolor{keyword}{nullptr};
+00086 
+00090             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} rate;
+00091 
+00095             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size;
+00096 
+00100             \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} type;
+00101     \};
+00102 
+\hypertarget{Modulator_8hpp_source_l00103}{}\hyperlink{classradio_1_1Modulator_ab202651b368986cc76673b6e997550b8}{00103}     \hyperlink{classradio_1_1Modulator_ab202651b368986cc76673b6e997550b8}{Modulator::Modulator}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} data[], \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, 
+      \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} type,
+00104             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} freqInter, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} rate) \{
+00105         freqCarrier = freqInter;
+00106         this->rate = rate;
+00107         this->data = data;
+00108         this->size = size;
+00109         this->type = type;
+00110 
+00111         \textcolor{keywordflow}{if}(type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{ModulationType::USB\_HILBERT}
+00112                 || type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{ModulationType::LSB\_HILBERT}) \{
+00113             hilData = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)malloc(size*\textcolor{keyword}{sizeof}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}));
+00114         \}
+00115     \}
+00116 
+\hypertarget{Modulator_8hpp_source_l00117}{}\hyperlink{classradio_1_1Modulator_a712e6e110c57b29ebdd754bd34bf269b}{00117}     \hyperlink{classradio_1_1Modulator_a712e6e110c57b29ebdd754bd34bf269b}{Modulator::~Modulator}() \{
+00118         \textcolor{keywordflow}{if}(hilData != \textcolor{keyword}{nullptr}) free(hilData);
+00119     \}
+00120 
+\hypertarget{Modulator_8hpp_source_l00121}{}\hyperlink{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{00121}     \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Modulator_ab5eac6e4900579486b5871b48e64cdab}{Modulator::Mod}() \{
+00122         \textcolor{comment}{// these variables should only ever be created once}
+00123         \textcolor{keyword}{static} \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} fmArg = 2 * M\_PI * freqCarrier / (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32})rate;
+00124         \textcolor{keyword}{static} \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} fmK = 2 * M\_PI / rate;
+00125         \textcolor{keyword}{static} \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} fmSum = 0;  \textcolor{comment}{// cummulative sum used in FM modulation}
+00126         \textcolor{keyword}{static} \hyperlink{classradio_1_1Filter}{Filter} lsbFilter(data, size, \hyperlink{namespaceradio_a0ffd57d5a11ff70a1f55dbdc8ebe098d}{F\_LOWERSIDEBAND});
+00127         \textcolor{keyword}{static} \hyperlink{classradio_1_1Sinusoid}{Sinusoid} sinusoid(freqCarrier, rate);  \textcolor{comment}{// IF carrier sinusoid}
+00128         \textcolor{keyword}{static} \hyperlink{classradio_1_1Filter}{Filter} usbFilter(data, size, \hyperlink{namespaceradio_a0ec4548711b6d6ed6867c70b3fc2a413}{F\_UPPERSIDEBAND});
+00129 
+00130         \textcolor{comment}{// take hilbert transform if necessary}
+00131         \textcolor{keywordflow}{if}(type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{ModulationType::USB\_HILBERT}
+00132                 || type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{ModulationType::LSB\_HILBERT}) \{
+00133             \hyperlink{namespaceradio_a285a47b4ed81e5662d2b6b4bae0188d0}{hilbert}(data, hilData, size);
+00134         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{ModulationType::FM\_NARROW}) \{
+00135             fmK *= 2.5;
+00136         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{ModulationType::FM\_WIDE}) \{
+00137             fmK *= 5;
+00138         \}
+00139 
+00140         \textcolor{comment}{// perform main modulation}
+00141         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < size; i++) \{
+00142             \textcolor{keywordflow}{switch}(type) \{
+00143                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{ModulationType::DSB\_LC}:
+00144                     data[i] = ((data[i] + 1) * sinusoid.\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}()) / 2;
+00145                     \textcolor{keywordflow}{break};
+00146 
+00147                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{ModulationType::DSB\_SC}:
+00148                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{ModulationType::USB\_FILTERED}:
+00149                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{ModulationType::LSB\_FILTERED}:
+00150                     data[i] = data[i] * sinusoid.\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}();
+00151                     \textcolor{keywordflow}{break};
+00152 
+00153                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{ModulationType::USB\_HILBERT}:
+00154                     data[i] = data[i] * sinusoid.\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}()
+00155                         - hilData[i] * sinusoid.\hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{nextShifted}();
+00156                     \textcolor{keywordflow}{break};
+00157 
+00158                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{ModulationType::LSB\_HILBERT}:
+00159                     data[i] = data[i] * sinusoid.\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}()
+00160                         + hilData[i] * sinusoid.\hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{nextShifted}();
+00161                     \textcolor{keywordflow}{break};
+00162 
+00163                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{ModulationType::FM\_NARROW}:
+00164                 \textcolor{keywordflow}{case} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{ModulationType::FM\_WIDE}:
+00165                     fmSum += fmK * data[i];
+00166                     data[i] = cos(fmArg * i + fmSum);
+00167                     \textcolor{keywordflow}{break};
+00168             \}
+00169         \}
+00170 
+00171         \textcolor{comment}{// filter out a sideband if using filtered SSB modulation}
+00172         \textcolor{keywordflow}{if}(type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{ModulationType::LSB\_FILTERED}) \{
+00173             lsbFilter.\hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass}();
+00174         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{ModulationType::USB\_FILTERED}) \{
+00175             usbFilter.\hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass}();
+00176         \}
+00177     \}
+00178 \}
+00179 
+00180 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

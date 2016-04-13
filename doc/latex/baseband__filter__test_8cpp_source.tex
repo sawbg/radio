@@ -1,0 +1,59 @@
+\hypertarget{baseband__filter__test_8cpp_source}{\section{baseband\+\_\+filter\+\_\+test.\+cpp}
+\label{baseband__filter__test_8cpp_source}\index{src/baseband\+\_\+filter\+\_\+test.\+cpp@{src/baseband\+\_\+filter\+\_\+test.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <cstdio>}
+00008 \textcolor{preprocessor}{#include <cstdlib>}
+00009 \textcolor{preprocessor}{#include <iostream>}
+00010 \textcolor{preprocessor}{#include <unistd.h>}
+00011 
+00012 \textcolor{preprocessor}{#include "\hyperlink{auxiliary_8hpp}{auxiliary.hpp}"}
+00013 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00014 \textcolor{preprocessor}{#include "\hyperlink{Filter_8hpp}{Filter.hpp}"}
+00015 \textcolor{preprocessor}{#include "\hyperlink{fvectors_8hpp}{fvectors.hpp}"}
+00016 \textcolor{preprocessor}{#include "\hyperlink{Sinusoid_8hpp}{Sinusoid.hpp}"}
+00017 \textcolor{preprocessor}{#include "\hyperlink{zdomain_8hpp}{zdomain.hpp}"}
+00018 
+00019 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00020 \textcolor{keyword}{using namespace }\hyperlink{namespaceradio}{radio};
+00021 
+\hypertarget{baseband__filter__test_8cpp_source_l00025}{}\hyperlink{baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00025} \textcolor{keywordtype}{int} \hyperlink{baseband__filter__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[]) \{
+00026 
+00027     \textcolor{comment}{// Constants}
+00028     \textcolor{keyword}{const} \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} BUFFER\_SIZE = 48000;
+00029 
+00030     \textcolor{comment}{// Declare primative Variables}
+00031     \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} i = 0;
+00032     \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} size = 0;
+00033     \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} delta = 250;
+00034     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} dataBuffer[BUFFER\_SIZE];
+00035     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} iqBuffer[2 * BUFFER\_SIZE];
+00036 
+00037     \textcolor{comment}{// create 1 sec of audio}
+00038     \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} f = delta; f <= 3000; f += delta, i++) \{
+00039         \hyperlink{classradio_1_1Sinusoid}{Sinusoid} sinusoid(f);
+00040 
+00041         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} i = 0; i < BUFFER\_SIZE; i++) \{
+00042             dataBuffer[i] += sinusoid.\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}();
+00043         \}
+00044     \}
+00045 
+00046     size = i;
+00047     
+00048     \textcolor{comment}{// adjust dataBuffer so values are between -1 and 1}
+00049     \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} i = 0; i < BUFFER\_SIZE; i++) \{
+00050         dataBuffer[i] /= size;
+00051     \}
+00052     
+00053     \hyperlink{classradio_1_1Filter}{Filter} filter(dataBuffer, BUFFER\_SIZE, \hyperlink{namespaceradio_a9bd902e9216499953a5906de73dc1796}{F\_BASEBAND});
+00054     filter.\hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass}();
+00055     \hyperlink{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}{makeIQ}(dataBuffer, iqBuffer, BUFFER\_SIZE);
+00056     \hyperlink{namespaceradio_ae4b2334c4366dcdf0311ad79d2067945}{to\_sint32}(iqBuffer, 2 * BUFFER\_SIZE);
+00057 
+00058     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00059         write(STDOUT\_FILENO, &iqBuffer, 2 * BUFFER\_SIZE * \textcolor{keyword}{sizeof}(\hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32}));
+00060     \}
+00061 \}
+\end{DoxyCode}

@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
+  [ "An Inexpensive, Software-Defined IF Modulator", "index.html", [
     [ "Bug List", "bug.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],

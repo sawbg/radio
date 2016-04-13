@@ -1,3 +1,57 @@
+commit 526476db9b9926e37f719b7d9d98bd6764f4c483
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:24:55 2016 +0000
+
+    Just created.
+
+commit 5f41e6c0c9ee8c56c657c483f99a8348d7f1e703
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:24:38 2016 +0000
+
+    Updated this so it would compile.
+
+commit 853e25b8c5462a8011cd61cb49e0697ab02568b5
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:24:17 2016 +0000
+
+    Completely restructured code.
+
+commit 8a5c77b0755eedf136ee32dfc388c18ce171c880
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:23:44 2016 +0000
+
+    "Added recipe for LSB/USB filter tests.
+
+commit 8f01bf9c65b8d9cc1b6657943d5bf1e2e100c336
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:23:03 2016 +0000
+
+    Ensured new LSB/USB filter test scripts are included in repo.
+
+commit b7c75e2311c492f1b76bbaa12de8ecf4b6b6d072
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Apr 11 16:37:49 2016 +0000
+
+    Added BASH scripts for first time.
+
+commit bdd000eef3559aeb78d435300f477286f9c37a04
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Apr 11 16:36:41 2016 +0000
+
+    Added lines to ensure the BASH scripts in the bin directory were included in the repo.
+
+commit 80af0e1faa46c617c576aa21ef771c8578cc9618
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Apr 11 16:36:02 2016 +0000
+
+    Added commands to docs recipe to generate a text-file version of the commit log in the project's etc directory.
+
+commit e03211e14ac7fbf1e4623b99fbdc767545db2bf3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:38:09 2016 +0000
+
+    Updated documentation.
+
 commit b0a6b1d1b91d71773cf17cc604e4127e63b15dcc
 Author: Andrew Wisner <awisner94@gmail.com>
 Date:   Sun Apr 10 22:34:04 2016 +0000

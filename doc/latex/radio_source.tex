@@ -1,0 +1,9 @@
+\hypertarget{radio_source}{\section{radio}
+\label{radio_source}\index{bin/radio@{bin/radio}}
+}
+
+\begin{DoxyCode}
+00001 OPTIONS="-r 48000 -t raw -q"
+00002 arecord $OPTIONS -c 1 -D plughw:1,0 -f FLOAT\_LE | sdr $1 $2 $3 | \(\backslash\)
+00003 aplay $OPTIONS -c 2 -f S32\_LE -D plughw:0,0
+\end{DoxyCode}

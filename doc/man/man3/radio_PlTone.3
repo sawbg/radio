@@ -1,4 +1,4 @@
-.TH "radio::PlTone" 3 "Sun Apr 10 2016" "My Project" \" -*- nroff -*-
+.TH "radio::PlTone" 3 "Wed Apr 13 2016" "An Inexpensive, Software-Defined IF Modulator" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,13 +46,35 @@ Creates a \fBPlTone\fP object\&.
 
 .PP
 Definition at line 63 of file PlTone\&.hpp\&.
+.PP
+.nf
+65         : Sinusoid(frequency, samplingRate) {
+66         this->data = data;
+67         this->amplitude = amplitude;
+68         this->size = size;
+69 
+70         for(uint32 i = 0; i < samplingRate; i++) {
+71             sinusoid[i] *= amplitude;
+72         }
+73     }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::PlTone::Add ()"
 Adds the CTCSS tone to the baseband signal\&. 
 .PP
 Definition at line 75 of file PlTone\&.hpp\&.
+.PP
+.nf
+75                      {
+76         for(uint32 i = 0; i < size; i++) {
+77             data[i] += amplitude * next();
+78             data[i] /= (1 + amplitude);  // ensures value <= 1
+79         }
+80     }
+.fi
+
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for My Project from the source code\&.
+Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.
