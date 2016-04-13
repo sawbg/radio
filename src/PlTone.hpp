@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains the PlTone class
+ * @brief Contains the PlTone class.
  */
 
 #ifndef PlTone_H
@@ -12,7 +12,7 @@
 
 namespace radio {
 	/**
-	 * This class creates a CTCSS subcarrier (PL tone) at a specified frequency
+	 * This class creates a PL tone (CTCSS tone) at a specified frequency
 	 * in a baseband signal.
 	 */
 	class PlTone : Sinusoid {
@@ -35,10 +35,10 @@ namespace radio {
 			 * signal
 			 */
 			PlTone(float32 amplitude, float32* data, uint32 size,
-					float32 frequency, uint32 samplingRate);
+					float32 frequency, uint32 samplingRate = 48000);
 
 			/**
-			 * Adds the CTCSS tone to the baseband signal.
+			 * Adds the PL tone to the baseband signal.
 			 */
 			void Add();
 

@@ -2,6 +2,7 @@
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief Defines the Filter class.
+ * @bug Discontinuities created at the beginning of each pass
  */
 
 #ifndef Filter_H
@@ -15,14 +16,14 @@
 namespace radio {
 	/**
 	 * This class implements a z-domain filter on a specified array of
-	 * float32'''s (a.k.a. singles, floats). It requires the transfer function
-	 * coefficients already be calculated (i.e., it does not generate the
+	 * float32's (a.k.a. singles, floats). It requires the transfer function
+	 * coefficients be already calculated (i.e., it does not generate the
 	 * coefficients based on desired filter characteristics). MATLAB and its
 	 * Signal Processing Toolbox can be used to generate the coefficients.
 	 *
 	 * While this class is designed to implement a single-section filter,
 	 * several instances of the class can be created and run over the data array
-	 * sequentially to effectively implement a multi-section filter.
+	 * in sequence to effectively implement a multi-section filter.
  	 */
 	class Filter {
 		public:
@@ -34,8 +35,8 @@ namespace radio {
 			 *
 			 * @param size number of elements in the data array
 			 *
-			 * @param diffEq a vector containing two vectors of float32'''s
-			 * (a.k.a. singles, floats), containing the numerator and
+			 * @param diffEq a vector containing two vectors of float32's
+			 * (a.k.a. singles, floats), that contains the numerator and
 			 * denominator coefficients, respectively, of the z-domain tranfer
 			 * function of the filter in decending order (z^0, z^-1, z^-2,
 			 * etc.).
@@ -52,7 +53,7 @@ namespace radio {
 		protected:
 			/**
 			 * The number of terms in the numerator (or denomenator) of the
-			 * transfer function.
+			 * transfer function (i.e., function order + 1).
 			 */
 			uint8 eqLength;
 
@@ -62,13 +63,13 @@ namespace radio {
 			uint32 size;
 
 			/**
-			 * A pointer to the data array that should be filtered when Pass()
-			 * is called.
+			 * A pointer to the start of the data array to be filtered when
+			 * Pass() is called.
 			 */
 			float32* data;
 
 			/**
-			 * A vector containing two vectors of float32'''s (a.k.a. singles,
+			 * A vector containing two vectors of float32's (a.k.a. singles,
 			 * floats), containing the numerator and denominator coefficients,
 			 * respectively, of the z-domain tranfer function of the filter
 			 * in decending order (z^0, z^-1, z^-2, etc.).

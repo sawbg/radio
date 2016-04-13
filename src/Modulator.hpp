@@ -1,16 +1,17 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief Contains the classes for the various types of modulation supported by
  * the program.
+ * @bug Both FM modulations don't work
+ * @bug Clicking on the filtered SSB
  */
 
 #ifndef modulation_H
 #define modulation_H
 
-#include <array>
 #include <cmath>
 #include <cstdlib>
-#include <vector>
 
 #include "definitions.hpp"
 #include "Filter.hpp"
@@ -31,14 +32,12 @@ namespace radio {
 	const uint32 SAMPLING_RATE = 48000;
 
 	/**
-	 * This class, while not intended to be called directly, is a superclass for
-	 * the classes of the modulation forms used in this project.
+	 * This class implements various types of modulation.
 	 */
 	class Modulator {
 		public:
 			/**
-			 * Creates a Modulator with the specified parameters. Intended to be
-			 * called only by subclasses.
+			 * Creates a Modulator with the specified parameters.
 			 *
 			 * @param freqInter the frequency of the IF carrier sinusoid
 			 *
@@ -46,7 +45,7 @@ namespace radio {
 			 *
 			 * @param data the array holding initially the baseband signal
 			 *
-			 * @param size the number of elements in data
+			 * @param size the number of elements in the data array
 			 *
 			 * @param type form of modulation to use
 			 */
@@ -55,7 +54,7 @@ namespace radio {
 					uint32 rate = SAMPLING_RATE);
 
 			/**
-			 *
+			 * Frees the memory needed for the Hilbert transform.
 			 */
 			~Modulator();
 

@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief Tests getting mic input via ALSA
+ * @brief Tests getting mic input via ALSA.
  * @bugs May not even compile at the moment
  */
 

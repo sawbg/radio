@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains helper-functions for main()
+ * @brief Contains helper-functions for main().
  */
 
 #ifndef auxiliary_H
@@ -16,7 +17,7 @@
 namespace radio {
 
 	/**
-	 * Displays the help information.
+	 * Displays the help information and exits the program.
 	 */
 	void ShowHelp() {
 		std::cerr << std::endl << "Usage: radio [MODE] [MIC GAIN] "
@@ -50,8 +51,8 @@ namespace radio {
 	}
 
 	/**
-	 * Converts float32 samples to sint32 samples. Rounds conversion to nearest
-	 * integer.
+	 * Replaces float32 samples with sint32 equivalents. Rounds conversion to
+	 * nearest integer.
 	 *
 	 * @param data the array containing the float32 samples that are directly
 	 * replaced by their respective sint32 representations
@@ -66,7 +67,7 @@ namespace radio {
 
 	/**
 	 * Converts a string representation of the supported modulation types (see
-	 * ShowHelp() documentation) to the enum ModulationType value.
+	 * ShowHelp() documentation) to the enum class ModulationType value.
 	 *
 	 * This function is not as elegant as it could be. Ideally, I would have
 	 * used a std::map<string, ModulationType> rather than a long series of

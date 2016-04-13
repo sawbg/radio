@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains the Sinusoid class
+ * @brief Contains the Sinusoid class.
  */
 
 #ifndef Sinusoid_H
@@ -14,18 +14,19 @@
 
 namespace radio {
 /**
- * This class creates an easy-to-call sinusoid that will preserve its phase
- * throughout its lifespan. Essentially, it is a ring buffer.
+ * This class creates an easy-to-call pair of sinusoids, pi/2 radians out of
+ * phase with each other, that will preserve its phase throughout its
+ * lifespan. Essentially, it is a ring buffer.
  */
 	class Sinusoid {
 		public:
 			/**
-			 * Creates a ring-buffer sinusoid.
+			 * Creates two ring-buffer sinusoids.
 			 */
 			Sinusoid(float32 frequency, uint32 samplingRate = 48000);
 
 			/**
-			 * Free arrays malloc'd in the constructor.
+			 * Frees arrays malloc'ed in the constructor.
 			 */
 			~Sinusoid();
 
@@ -36,40 +37,40 @@ namespace radio {
 			float32 next();
 
 			/**
-			 * Provides the next value of the sinusoid shifted 90 degrees in a
+			 * Provides the next value of the shifted sinusoid in a
 			 * manner consistant with a ring buffer.
 			 */
 			float32 nextShifted();
 
 		protected:
 			/**
-			 * The frequency of the sinusoid
+			 * The frequency of the sinusoid.
 			 */
 			float32 frequency;
 
 			/**
-			 * The current index of the sinusoid's unshifted array
+			 * The current index of the sinusoid's unshifted array.
 			 */
 			uint32 sinIndex = 0;
 
 			/**
-			 * The current index of the shifted sinusoid's array
+			 * The current index of the shifted sinusoid's array.
 			 */
 			uint32 sinIndexShifted = 0;
 		
 			/**
-			 * The sampling rate
+			 * The sampling rate.
 			 */
 			uint32 samplingRate;
 
 			/**
-			 * Initialized as an array of the sinusoid values
+			 * Initialized as an array of the sinusoid values.
 			 */
 			float32* sinusoid;
 
 			/**
 			 * Initialized as an array of the sinusoid values shifted 90
-			 * degrees
+			 * degrees.
 			 */
 			float32* sinusoidShift90;
 	};

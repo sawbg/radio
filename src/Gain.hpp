@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Contains the Gain class.
+ */
+
 #ifndef Gain_H
 #define Gain_H
 
@@ -7,7 +13,7 @@
 
 namespace radio {
 	/**
-	 * Applies a gain to a (baseband) signal.
+	 *  Increases the power of a (baseband) signal.
 	 */
 	class Gain {
 		public:
@@ -24,7 +30,7 @@ namespace radio {
 			Gain(float32* data, uint32 size, float32 gaindB);
 
 			/**
-			 * Applies the gain to the signal contained in the data array
+			 * Applies the gain to the signal contained in the data array.
 			 */
 			void Apply();
 

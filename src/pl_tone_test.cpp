@@ -1,10 +1,10 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a test program to test the PlTone class
+ * @brief Contains a test program to test the PlTone class.
  */
 
 #include <cstdio>
-#include <cstring>
 #include <cstdlib>
 #include <iostream>
 #include <string>

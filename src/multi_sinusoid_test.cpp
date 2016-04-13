@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a program to demonstrate the ability of the Sinusoid class
+ * @brief Contains a program to demonstrate the ability of the Sinusoid class
  * and the sound card to generate sinusoids accross the spectrum.
  */
 

@@ -2,7 +2,8 @@
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief Defines the transfer function coefficients used in the instances of
- * the Filter class in this program.
+ * the Filter class in this program. The coefficients are listed by greatest
+ * order to least.
  */
 
 #ifndef fvectors_H

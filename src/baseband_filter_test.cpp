@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a program to demonstrate the the baseband/AF filter
+ * @brief Contains a program to demonstrate the the baseband/AF filter.
  */
 
 #include <cstdio>

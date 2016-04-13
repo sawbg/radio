@@ -66,9 +66,9 @@ namespace radio {
 	void ifft(cfloat32* data, uint32 size);
 
 	/**
-	 * Produces an interleaved array of first an element from an original array
-	 * of data and then an element from the original data's Hilbert transform.
-	 * This function is intended to generate a two-channel output (I/Q output)
+	 * Produces an interleaved array with an element from an original array
+	 * of data first and then an element from the original data's Hilbert
+	 * transform second. This function is intended to generate a two-channel output (I/Q output)
 	 * for mixing applications.
 	 *
 	 * @param data the original data (left channel)

@@ -1,15 +1,15 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief containts the original program used to test the piping-in idea
+ * @brief Contains the original program used to test the piping-in idea.
  */
 
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 #include <unistd.h>
 
 #include "Filter.hpp"
-#include "modulation.hpp"
+#include "Modulator.hpp"
 #include "zdomain.hpp"
 
 using namespace std;

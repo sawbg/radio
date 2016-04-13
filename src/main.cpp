@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains the "brains" of the entire project
+ * @brief Contains the "brains" of the entire project.
  */
 
 #include <cstdio>

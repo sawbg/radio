@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a test program to test the Sinusoid class
+ * @brief Contains a test program to test the Sinusoid class.
  */
 
 #include <cstdio>

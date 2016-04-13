@@ -1,6 +1,8 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a test program to test the Modulator class
+ * @brief Contains a test program to test the Modulator class.
+ * @bug Filtered SSB clicking
  */
 
 #include <cstdio>
@@ -11,13 +13,14 @@
 
 #include "auxiliary.hpp"
 #include "Modulator.hpp"
+#include "Sinusoid.hpp"
 #include "PlTone.hpp"
 
 using namespace std;
 using namespace radio;
 
 /**
- * Program to test the Modulator class with a self-generated sinusoidal input.
+ * Program to test the Modulator class.
  */
 int main(int argc, char* argv[]) {
 

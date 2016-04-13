@@ -1,12 +1,12 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief Tests sinusoidal tone generation
- * @bug clicking noise from sinusoidal discontinuity
+ * @brief Contains program to tests sinusoidal tone generation.
+ * @bug Clicking noise from sinusoidal discontinuity
  */
 
-#include <cmath>
 #include <climits>
+#include <cmath>
 #include <iostream>
 #include <alsa/asoundlib.h>
 
@@ -16,8 +16,8 @@ using namespace std;
 
 /**
  * This program tests sinusoidal speaker output through the ALSA API. Not sure
- * if it works. When it did at least compile and run, it produced a sinusoid
- * with an approximately twice-per-second clicking noise.
+ * if it currently works. When it did at least compile and run, it produced
+ * a sinusoid with an approximately twice-per-second clicking noise.
  */
 int main() {
 	int ret;

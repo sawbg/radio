@@ -1,6 +1,8 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a program to demonstrate the the LSB/AF filter
+ * @brief Contains a program to demonstrate the the LSB/AF filter.
+ * @bug Clicking occurs at start of each filter pass
  */
 
 #include <cstdio>

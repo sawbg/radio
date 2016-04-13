@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief Generates test IQ signal
+ * @brief Generates test IQ signal.
  */
 
 #include <iostream>
