@@ -1,3 +1,9 @@
+commit ca624b9d6bad74fce2ae523e97f8a5e82b691e0d
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:34:10 2016 +0000
+
+    Updated documentation.
+
 commit d719bbbb2c74badac4d1263d162b55e69f77fbd1
 Author: Andrew Wisner <awisner94@gmail.com>
 Date:   Wed Apr 13 22:30:57 2016 +0000
