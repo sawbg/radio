@@ -13,8 +13,8 @@
 00013 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
 \hypertarget{PlTone_8hpp_source_l00018}{}\hyperlink{classradio_1_1PlTone}{00018}     \textcolor{keyword}{class }\hyperlink{classradio_1_1PlTone}{PlTone} : \hyperlink{classradio_1_1Sinusoid}{Sinusoid} \{
 00019         \textcolor{keyword}{public}:
-00037             \hyperlink{classradio_1_1PlTone_aaf1bc146478693f3e921bdc6f8ea2379}{PlTone}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} amplitude, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size,
-00038                     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate});
+00037             \hyperlink{classradio_1_1PlTone_a4fc745767c58044e79c4537fdc23d2a5}{PlTone}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} amplitude, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size,
+00038                     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate} = 48000);
 00039 
 00043             \textcolor{keywordtype}{void} \hyperlink{classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95}{Add}();
 00044 
@@ -26,7 +26,7 @@
 00060             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size;
 00061     \};
 00062 
-\hypertarget{PlTone_8hpp_source_l00063}{}\hyperlink{classradio_1_1PlTone_aaf1bc146478693f3e921bdc6f8ea2379}{00063}     \hyperlink{classradio_1_1PlTone_aaf1bc146478693f3e921bdc6f8ea2379}{PlTone::PlTone}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} amplitude, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data,
+\hypertarget{PlTone_8hpp_source_l00063}{}\hyperlink{classradio_1_1PlTone_a4fc745767c58044e79c4537fdc23d2a5}{00063}     \hyperlink{classradio_1_1PlTone_a4fc745767c58044e79c4537fdc23d2a5}{PlTone::PlTone}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} amplitude, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data,
 00064             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} frequency, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} samplingRate)
 00065         : \hyperlink{classradio_1_1Sinusoid}{Sinusoid}(frequency, samplingRate) \{
 00066         this->data = data;

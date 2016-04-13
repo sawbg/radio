@@ -134,8 +134,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:abe705768a267844edfa2aaabfdac9f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class implements a z-domain filter on a specified array of float32'''s (a.k.a. singles, floats). It requires the transfer function coefficients already be calculated (i.e., it does not generate the coefficients based on desired filter characteristics). MATLAB and its Signal Processing Toolbox can be used to generate the coefficients.</p>
-<p>While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array sequentially to effectively implement a multi-section filter. </p>
+<div class="textblock"><p>This class implements a z-domain filter on a specified array of float32's (a.k.a. singles, floats). It requires the transfer function coefficients be already calculated (i.e., it does not generate the coefficients based on desired filter characteristics). MATLAB and its Signal Processing Toolbox can be used to generate the coefficients.</p>
+<p>While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array in sequence to effectively implement a multi-section filter. </p>
 
 <p>Definition at line <a class="el" href="Filter_8hpp_source.html#l00028">28</a> of file <a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -173,24 +173,13 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">data</td><td>array to be filtered. The filtered data will be placed here.</td></tr>
     <tr><td class="paramname">size</td><td>number of elements in the data array</td></tr>
-    <tr><td class="paramname">diffEq</td><td>a vector containing two vectors of float32'''s (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </td></tr>
+    <tr><td class="paramname">diffEq</td><td>a vector containing two vectors of float32's (a.k.a. singles, floats), that contains the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Definition at line <a class="el" href="Filter_8hpp_source.html#l00080">80</a> of file <a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                                              {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        this-&gt;<a class="code" href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">data</a> = <a class="code" href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">data</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        this-&gt;<a class="code" href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">size</a> = <a class="code" href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">size</a>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        this-&gt;<a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a> = <a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">eqLength</a> = this-&gt;<a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a>[<a class="code" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">DEN</a>].size();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="ttc" id="namespaceradio_html_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe"><div class="ttname"><a href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">radio::DEN</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00057">definitions.hpp:57</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_abe705768a267844edfa2aaabfdac9f56"><div class="ttname"><a href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">radio::Filter::diffEq</a></div><div class="ttdeci">fparams diffEq</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00077">Filter.hpp:77</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_a7285b4c7263d8278e38abb14b5dca5d9"><div class="ttname"><a href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">radio::Filter::size</a></div><div class="ttdeci">uint32 size</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00063">Filter.hpp:63</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_a26a32320c4dffa8925ab5f0f06689e8d"><div class="ttname"><a href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">radio::Filter::eqLength</a></div><div class="ttdeci">uint8 eqLength</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00058">Filter.hpp:58</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_a25459a2b762120df0102f00553344be2"><div class="ttname"><a href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">radio::Filter::data</a></div><div class="ttdeci">float32 * data</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00069">Filter.hpp:69</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -209,48 +198,7 @@ Protected Attributes</h2></td></tr>
 <p>Passes the data array through the digital filter but does not account for previous x[n] and y[n] values from the previous call to <a class="el" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197">Pass()</a>. </p>
 
 <p>Definition at line <a class="el" href="Filter_8hpp_source.html#l00087">87</a> of file <a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                      {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="definitions_8hpp.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a> temp[<a class="code" href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">size</a>];</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// create first values in filtered data</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i&lt; <a class="code" href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">eqLength</a>; i++) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            temp[i] = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">eqLength</a>; j++) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                temp[i] += <a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a>[<a class="code" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48">NUM</a>][j] * (j &gt; i ? 0 : <a class="code" href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">data</a>[i - j]);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; <a class="code" href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">eqLength</a>; j++) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                temp[i] -= <a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a>[<a class="code" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">DEN</a>][j] * (j &gt; i ? 0 : temp[i - j]);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">// create the REST of the values in filtered data</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = eqLength; i &lt; <a class="code" href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">size</a>; i++) {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            temp[i] = 0;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">eqLength</a>; j++) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                temp[i] += <a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a>[<a class="code" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48">NUM</a>][j] * <a class="code" href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">data</a>[i - j];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 1; j &lt; <a class="code" href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">eqLength</a>; j++) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                temp[i] -= <a class="code" href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">diffEq</a>[<a class="code" href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">DEN</a>][j] * temp[i - j];</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">// save final values of data and filtered data</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">size</a>; i++) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">data</a>[i] = temp[i];</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="ttc" id="namespaceradio_html_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe"><div class="ttname"><a href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe">radio::DEN</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00057">definitions.hpp:57</a></div></div>
-<div class="ttc" id="definitions_8hpp_html_a232fad1b0d6dcc7c16aabde98b2e2a80"><div class="ttname"><a href="definitions_8hpp.html#a232fad1b0d6dcc7c16aabde98b2e2a80">float64</a></div><div class="ttdeci">double float64</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00032">definitions.hpp:32</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_abe705768a267844edfa2aaabfdac9f56"><div class="ttname"><a href="classradio_1_1Filter.html#abe705768a267844edfa2aaabfdac9f56">radio::Filter::diffEq</a></div><div class="ttdeci">fparams diffEq</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00077">Filter.hpp:77</a></div></div>
-<div class="ttc" id="namespaceradio_html_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48"><div class="ttname"><a href="namespaceradio.html#aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48">radio::NUM</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00057">definitions.hpp:57</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_a7285b4c7263d8278e38abb14b5dca5d9"><div class="ttname"><a href="classradio_1_1Filter.html#a7285b4c7263d8278e38abb14b5dca5d9">radio::Filter::size</a></div><div class="ttdeci">uint32 size</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00063">Filter.hpp:63</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_a26a32320c4dffa8925ab5f0f06689e8d"><div class="ttname"><a href="classradio_1_1Filter.html#a26a32320c4dffa8925ab5f0f06689e8d">radio::Filter::eqLength</a></div><div class="ttdeci">uint8 eqLength</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00058">Filter.hpp:58</a></div></div>
-<div class="ttc" id="classradio_1_1Filter_html_a25459a2b762120df0102f00553344be2"><div class="ttname"><a href="classradio_1_1Filter.html#a25459a2b762120df0102f00553344be2">radio::Filter::data</a></div><div class="ttdeci">float32 * data</div><div class="ttdef"><b>Definition:</b> <a href="Filter_8hpp_source.html#l00069">Filter.hpp:69</a></div></div>
-</div><!-- fragment -->
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -280,7 +228,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A pointer to the data array that should be filtered when <a class="el" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197">Pass()</a> is called. </p>
+<p>A pointer to the start of the data array to be filtered when <a class="el" href="classradio_1_1Filter.html#ad2793821801780809af385463bf8f197">Pass()</a> is called. </p>
 
 <p>Definition at line <a class="el" href="Filter_8hpp_source.html#l00069">69</a> of file <a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>.</p>
 
@@ -303,7 +251,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A vector containing two vectors of float32'''s (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </p>
+<p>A vector containing two vectors of float32's (a.k.a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc.). </p>
 
 <p>Definition at line <a class="el" href="Filter_8hpp_source.html#l00077">77</a> of file <a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>.</p>
 
@@ -326,7 +274,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The number of terms in the numerator (or denomenator) of the transfer function. </p>
+<p>The number of terms in the numerator (or denomenator) of the transfer function (i.e., function order + 1). </p>
 
 <p>Definition at line <a class="el" href="Filter_8hpp_source.html#l00058">58</a> of file <a class="el" href="Filter_8hpp_source.html">Filter.hpp</a>.</p>
 
@@ -364,7 +312,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceradio.html">radio</a></li><li class="navelem"><a class="el" href="classradio_1_1Filter.html">Filter</a></li>
-    <li class="footer">Generated on Wed Apr 13 2016 05:22:39 for An Inexpensive, Software-Defined IF Modulator by
+    <li class="footer">Generated on Wed Apr 13 2016 22:14:09 for An Inexpensive, Software-Defined IF Modulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

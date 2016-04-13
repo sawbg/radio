@@ -4,7 +4,7 @@
 .SH NAME
 src/multi_sinusoid_test.cpp \- 
 .PP
-contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum\&.  
+Contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum\&.  
 
 .SH SYNOPSIS
 .br
@@ -39,7 +39,7 @@ contains a program to demonstrate the ability of the Sinusoid class and the soun
 .in -1c
 .SH "Detailed Description"
 .PP 
-contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum\&. 
+Contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum\&. 
 
 
 .PP
@@ -57,53 +57,6 @@ Definition in file \fBmulti_sinusoid_test\&.cpp\fP\&.
 Program to test the Sinusoid class and demonstrate the frequency range of the sound card\&. 
 .PP
 Definition at line 27 of file multi_sinusoid_test\&.cpp\&.
-.PP
-.nf
-27                                  {
-28 
-29     // Constants
-30     const uint16 BUFFER_SIZE = 48000;
-31 
-32     // Declare primative Variables
-33     uint8 i = 0;
-34     uint8 size = 0;
-35     uint16 delta = 100;
-36     float32 dataBuffer[BUFFER_SIZE];
-37     float32 iqBuffer[2 * BUFFER_SIZE];
-38 
-39     for(uint16 f = 100; f < 24000; f += delta, i++) {
-40         Sinusoid sinusoid(f);
-41 
-42         for(uint16 i = 0; i < BUFFER_SIZE; i++) {
-43             dataBuffer[i] += sinusoid\&.next();
-44         }
-45 
-46         switch(f) {
-47             case 500:
-48                 delta = 1000;
-49                 f = 1000;
-50                 break;
-51 
-52             case 2000:
-53                 delta = 2000;
-54                 break;
-55         }
-56     }
-57 
-58     size = i;
-59     
-60     for(uint16 i = 0; i < BUFFER_SIZE; i++) {
-61         dataBuffer[i] /= size;
-62     }
-63     
-64     makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
-65     to_sint32(iqBuffer, 2 * BUFFER_SIZE);
-66 
-67     while(true) {
-68         write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
-69     }
-70 }
-.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

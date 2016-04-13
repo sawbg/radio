@@ -36,9 +36,9 @@ radio::Filter \-
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class implements a z-domain filter on a specified array of float32'''s (a\&.k\&.a\&. singles, floats)\&. It requires the transfer function coefficients already be calculated (i\&.e\&., it does not generate the coefficients based on desired filter characteristics)\&. MATLAB and its Signal Processing Toolbox can be used to generate the coefficients\&.
+This class implements a z-domain filter on a specified array of float32's (a\&.k\&.a\&. singles, floats)\&. It requires the transfer function coefficients be already calculated (i\&.e\&., it does not generate the coefficients based on desired filter characteristics)\&. MATLAB and its Signal Processing Toolbox can be used to generate the coefficients\&.
 .PP
-While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array sequentially to effectively implement a multi-section filter\&. 
+While this class is designed to implement a single-section filter, several instances of the class can be created and run over the data array in sequence to effectively implement a multi-section filter\&. 
 .PP
 Definition at line 28 of file Filter\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
@@ -52,76 +52,30 @@ Initializes \fBFilter\fP based on a difference equation\&.
 .br
 \fIsize\fP number of elements in the data array
 .br
-\fIdiffEq\fP a vector containing two vectors of float32'''s (a\&.k\&.a\&. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc\&.)\&. 
+\fIdiffEq\fP a vector containing two vectors of float32's (a\&.k\&.a\&. singles, floats), that contains the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc\&.)\&. 
 .RE
 .PP
 
 .PP
 Definition at line 80 of file Filter\&.hpp\&.
-.PP
-.nf
-80                                                               {
-81         this->data = data;
-82         this->size = size;
-83         this->diffEq = diffEq;
-84         eqLength = this->diffEq[DEN]\&.size();
-85     }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::Filter::Pass ()"
 Passes the data array through the digital filter but does not account for previous x[n] and y[n] values from the previous call to \fBPass()\fP\&. 
 .PP
 Definition at line 87 of file Filter\&.hpp\&.
-.PP
-.nf
-87                       {
-88         float64 temp[size];
-89 
-90         // create first values in filtered data
-91         for(int i = 0; i< eqLength; i++) {
-92             temp[i] = 0;
-93 
-94             for(int j = 0; j < eqLength; j++) {
-95                 temp[i] += diffEq[NUM][j] * (j > i ? 0 : data[i - j]);
-96             }
-97 
-98             for(int j = 1; j < eqLength; j++) {
-99                 temp[i] -= diffEq[DEN][j] * (j > i ? 0 : temp[i - j]);
-100             }
-101         }
-102 
-103         // create the REST of the values in filtered data
-104         for(int i = eqLength; i < size; i++) {
-105             temp[i] = 0;
-106 
-107             for(int j = 0; j < eqLength; j++) {
-108                 temp[i] += diffEq[NUM][j] * data[i - j];
-109             }
-110 
-111             for(int j = 1; j < eqLength; j++) {
-112                 temp[i] -= diffEq[DEN][j] * temp[i - j];
-113             }
-114         }
-115 
-116         // save final values of data and filtered data
-117     for(int i = 0; i < size; i++) {
-118             data[i] = temp[i];
-119         }
-120     }
-.fi
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBfloat32\fP* radio::Filter::data\fC [protected]\fP"
-A pointer to the data array that should be filtered when \fBPass()\fP is called\&. 
+A pointer to the start of the data array to be filtered when \fBPass()\fP is called\&. 
 .PP
 Definition at line 69 of file Filter\&.hpp\&.
 .SS "\fBfparams\fP radio::Filter::diffEq\fC [protected]\fP"
-A vector containing two vectors of float32'''s (a\&.k\&.a\&. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc\&.)\&. 
+A vector containing two vectors of float32's (a\&.k\&.a\&. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-domain tranfer function of the filter in decending order (z^0, z^-1, z^-2, etc\&.)\&. 
 .PP
 Definition at line 77 of file Filter\&.hpp\&.
 .SS "\fBuint8\fP radio::Filter::eqLength\fC [protected]\fP"
-The number of terms in the numerator (or denomenator) of the transfer function\&. 
+The number of terms in the numerator (or denomenator) of the transfer function (i\&.e\&., function order + 1)\&. 
 .PP
 Definition at line 58 of file Filter\&.hpp\&.
 .SS "\fBuint32\fP radio::Filter::size\fC [protected]\fP"

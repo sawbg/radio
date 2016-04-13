@@ -13,64 +13,64 @@
 00013 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
 00014 
 00015 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
-\hypertarget{Sinusoid_8hpp_source_l00020}{}\hyperlink{classradio_1_1Sinusoid}{00020}     \textcolor{keyword}{class }\hyperlink{classradio_1_1Sinusoid}{Sinusoid} \{
-00021         \textcolor{keyword}{public}:
-00025             \hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{Sinusoid}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} 
+\hypertarget{Sinusoid_8hpp_source_l00021}{}\hyperlink{classradio_1_1Sinusoid}{00021}     \textcolor{keyword}{class }\hyperlink{classradio_1_1Sinusoid}{Sinusoid} \{
+00022         \textcolor{keyword}{public}:
+00026             \hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{Sinusoid}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} 
       \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate} = 48000);
-00026 
-00030             \hyperlink{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{~Sinusoid}();
-00031 
-00036             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}();
-00037 
-00042             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{nextShifted}();
-00043 
-00044         \textcolor{keyword}{protected}:
-\hypertarget{Sinusoid_8hpp_source_l00048}{}\hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{00048}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency};
-00049 
-\hypertarget{Sinusoid_8hpp_source_l00053}{}\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{00053}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} = 0;
-00054 
-\hypertarget{Sinusoid_8hpp_source_l00058}{}\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{00058}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} = 0;
-00059         
-\hypertarget{Sinusoid_8hpp_source_l00063}{}\hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{00063}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
-00064 
-\hypertarget{Sinusoid_8hpp_source_l00068}{}\hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{00068}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid};
-00069 
-\hypertarget{Sinusoid_8hpp_source_l00074}{}\hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{00074}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90};
-00075     \};
-00076 
-\hypertarget{Sinusoid_8hpp_source_l00077}{}\hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{00077}     \hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{Sinusoid::Sinusoid}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} frequency, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} samplingRate) \{
-00078         this->frequency = \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency};
-00079         this->samplingRate = \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
-00080         \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid} = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)std::malloc(samplingRate * \textcolor{keyword}{sizeof}(
+00027 
+00031             \hyperlink{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{~Sinusoid}();
+00032 
+00037             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}();
+00038 
+00043             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{nextShifted}();
+00044 
+00045         \textcolor{keyword}{protected}:
+\hypertarget{Sinusoid_8hpp_source_l00049}{}\hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{00049}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency};
+00050 
+\hypertarget{Sinusoid_8hpp_source_l00054}{}\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{00054}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} = 0;
+00055 
+\hypertarget{Sinusoid_8hpp_source_l00059}{}\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{00059}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} = 0;
+00060         
+\hypertarget{Sinusoid_8hpp_source_l00064}{}\hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{00064}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
+00065 
+\hypertarget{Sinusoid_8hpp_source_l00069}{}\hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{00069}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid};
+00070 
+\hypertarget{Sinusoid_8hpp_source_l00075}{}\hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{00075}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90};
+00076     \};
+00077 
+\hypertarget{Sinusoid_8hpp_source_l00078}{}\hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{00078}     \hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{Sinusoid::Sinusoid}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} frequency, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} samplingRate) \{
+00079         this->frequency = \hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency};
+00080         this->samplingRate = \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
+00081         \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid} = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)std::malloc(samplingRate * \textcolor{keyword}{sizeof}(
       \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}));
-00081         \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90} = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)std::malloc(samplingRate * \textcolor{keyword}{sizeof}(
+00082         \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90} = (\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}*)std::malloc(samplingRate * \textcolor{keyword}{sizeof}(
       \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}));
-00082 
-00083         \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} arg = 2 * M\_PI * frequency / \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
-00084 
-00085         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}; i++) \{
-00086             \textcolor{comment}{// cosine argument evaluates as float due to M\_PI and frequency}
-00087             \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[i] = cos(arg * i);
-00088             \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90}[i] = sin(arg * i);
-00089         \}
-00090     \}
-00091 
-\hypertarget{Sinusoid_8hpp_source_l00092}{}\hyperlink{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{00092}     \hyperlink{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{Sinusoid::~Sinusoid}() \{
-00093         free(\hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid});
-00094         free(\hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90});
-00095     \}
-00096 
-\hypertarget{Sinusoid_8hpp_source_l00097}{}\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{00097}     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{Sinusoid::next}() \{
-00098         \textcolor{keywordflow}{if}(\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} >= \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) \hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} = 0;
-00099         \textcolor{keywordflow}{return} \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex}++];
-00100     \}
-00101 
-\hypertarget{Sinusoid_8hpp_source_l00102}{}\hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{00102}     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{Sinusoid::nextShifted}() \{
-00103         \textcolor{keywordflow}{if}(\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} >= \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) 
+00083 
+00084         \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} arg = 2 * M\_PI * frequency / \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate};
+00085 
+00086         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}; i++) \{
+00087             \textcolor{comment}{// cosine argument evaluates as float due to M\_PI and frequency}
+00088             \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[i] = cos(arg * i);
+00089             \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90}[i] = sin(arg * i);
+00090         \}
+00091     \}
+00092 
+\hypertarget{Sinusoid_8hpp_source_l00093}{}\hyperlink{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{00093}     \hyperlink{classradio_1_1Sinusoid_ad9e8edf233f8146891a14f20d1c903d2}{Sinusoid::~Sinusoid}() \{
+00094         free(\hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid});
+00095         free(\hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90});
+00096     \}
+00097 
+\hypertarget{Sinusoid_8hpp_source_l00098}{}\hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{00098}     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{Sinusoid::next}() \{
+00099         \textcolor{keywordflow}{if}(\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} >= \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) \hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex} = 0;
+00100         \textcolor{keywordflow}{return} \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[\hyperlink{classradio_1_1Sinusoid_a2e7d029c5e7307967c77959367cc0224}{sinIndex}++];
+00101     \}
+00102 
+\hypertarget{Sinusoid_8hpp_source_l00103}{}\hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{00103}     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} \hyperlink{classradio_1_1Sinusoid_a3f2741e9dd30291e5fa87f2eb2243e7c}{Sinusoid::nextShifted}() \{
+00104         \textcolor{keywordflow}{if}(\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} >= \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) 
       \hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted} = 0;
-00104         \textcolor{keywordflow}{return} \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90}[\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted}++];
-00105     \}
-00106 \}
-00107 
-00108 \textcolor{preprocessor}{#endif}
+00105         \textcolor{keywordflow}{return} \hyperlink{classradio_1_1Sinusoid_a556db1dca1d5af3d9c6ba2d51f9e3cf8}{sinusoidShift90}[\hyperlink{classradio_1_1Sinusoid_a4acf2add824249c39046fe87f9a64f93}{sinIndexShifted}++];
+00106     \}
+00107 \}
+00108 
+00109 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

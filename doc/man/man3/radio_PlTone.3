@@ -14,7 +14,7 @@ Inherits \fBradio::Sinusoid\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBPlTone\fP (\fBfloat32\fP amplitude, \fBfloat32\fP *data, \fBuint32\fP size, \fBfloat32\fP \fBfrequency\fP, \fBuint32\fP \fBsamplingRate\fP)"
+.RI "\fBPlTone\fP (\fBfloat32\fP amplitude, \fBfloat32\fP *data, \fBuint32\fP size, \fBfloat32\fP \fBfrequency\fP, \fBuint32\fP \fBsamplingRate\fP=48000)"
 .br
 .ti -1c
 .RI "void \fBAdd\fP ()"
@@ -22,12 +22,12 @@ Inherits \fBradio::Sinusoid\fP\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-This class creates a CTCSS subcarrier (PL tone) at a specified frequency in a baseband signal\&. 
+This class creates a PL tone (CTCSS tone) at a specified frequency in a baseband signal\&. 
 .PP
 Definition at line 18 of file PlTone\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "radio::PlTone::PlTone (\fBfloat32\fPamplitude, \fBfloat32\fP *data, \fBuint32\fPsize, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate)"
+.SS "radio::PlTone::PlTone (\fBfloat32\fPamplitude, \fBfloat32\fP *data, \fBuint32\fPsize, \fBfloat32\fPfrequency, \fBuint32\fPsamplingRate = \fC48000\fP)"
 Creates a \fBPlTone\fP object\&.
 .PP
 \fBParameters:\fP
@@ -46,34 +46,12 @@ Creates a \fBPlTone\fP object\&.
 
 .PP
 Definition at line 63 of file PlTone\&.hpp\&.
-.PP
-.nf
-65         : Sinusoid(frequency, samplingRate) {
-66         this->data = data;
-67         this->amplitude = amplitude;
-68         this->size = size;
-69 
-70         for(uint32 i = 0; i < samplingRate; i++) {
-71             sinusoid[i] *= amplitude;
-72         }
-73     }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::PlTone::Add ()"
-Adds the CTCSS tone to the baseband signal\&. 
+Adds the PL tone to the baseband signal\&. 
 .PP
 Definition at line 75 of file PlTone\&.hpp\&.
-.PP
-.nf
-75                      {
-76         for(uint32 i = 0; i < size; i++) {
-77             data[i] += amplitude * next();
-78             data[i] /= (1 + amplitude);  // ensures value <= 1
-79         }
-80     }
-.fi
-
 
 .SH "Author"
 .PP 

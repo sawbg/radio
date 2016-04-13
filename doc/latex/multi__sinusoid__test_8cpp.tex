@@ -3,7 +3,7 @@
 }
 
 
-contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum.  
+Contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum.  
 
 
 {\ttfamily \#include $<$cstdio$>$}\\*
@@ -32,7 +32,7 @@ int \hyperlink{multi__sinusoid__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{mai
 
 
 \subsection{Detailed Description}
-contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum. 
+Contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate sinusoids accross the spectrum. 
 
 \begin{DoxyAuthor}{Author}
 Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
@@ -56,53 +56,6 @@ Program to test the Sinusoid class and demonstrate the frequency range of the so
 
 Definition at line \hyperlink{multi__sinusoid__test_8cpp_source_l00027}{27} of file \hyperlink{multi__sinusoid__test_8cpp_source}{multi\+\_\+sinusoid\+\_\+test.\+cpp}.
 
-
-\begin{DoxyCode}
-00027                                  \{
-00028 
-00029     \textcolor{comment}{// Constants}
-00030     \textcolor{keyword}{const} \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} BUFFER\_SIZE = 48000;
-00031 
-00032     \textcolor{comment}{// Declare primative Variables}
-00033     \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} i = 0;
-00034     \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} size = 0;
-00035     \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} delta = 100;
-00036     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} dataBuffer[BUFFER\_SIZE];
-00037     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} iqBuffer[2 * BUFFER\_SIZE];
-00038 
-00039     \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} f = 100; f < 24000; f += delta, i++) \{
-00040         \hyperlink{classradio_1_1Sinusoid}{Sinusoid} sinusoid(f);
-00041 
-00042         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} i = 0; i < BUFFER\_SIZE; i++) \{
-00043             dataBuffer[i] += sinusoid.next();
-00044         \}
-00045 
-00046         \textcolor{keywordflow}{switch}(f) \{
-00047             \textcolor{keywordflow}{case} 500:
-00048                 delta = 1000;
-00049                 f = 1000;
-00050                 \textcolor{keywordflow}{break};
-00051 
-00052             \textcolor{keywordflow}{case} 2000:
-00053                 delta = 2000;
-00054                 \textcolor{keywordflow}{break};
-00055         \}
-00056     \}
-00057 
-00058     size = i;
-00059     
-00060     \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} i = 0; i < BUFFER\_SIZE; i++) \{
-00061         dataBuffer[i] /= size;
-00062     \}
-00063     
-00064     \hyperlink{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}{makeIQ}(dataBuffer, iqBuffer, BUFFER\_SIZE);
-00065     \hyperlink{namespaceradio_ae4b2334c4366dcdf0311ad79d2067945}{to\_sint32}(iqBuffer, 2 * BUFFER\_SIZE);
-00066 
-00067     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
-00068         write(STDOUT\_FILENO, &iqBuffer, 2 * BUFFER\_SIZE * \textcolor{keyword}{sizeof}(\hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32}));
-00069     \}
-00070 \}
-\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

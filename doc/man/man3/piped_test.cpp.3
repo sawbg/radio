@@ -4,20 +4,20 @@
 .SH NAME
 src/piped_test.cpp \- 
 .PP
-containts the original program used to test the piping-in idea  
+Contains the original program used to test the piping-in idea\&.  
 
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <iostream>\fP
-.br
 \fC#include <cstdio>\fP
+.br
+\fC#include <iostream>\fP
 .br
 \fC#include <unistd\&.h>\fP
 .br
 \fC#include 'Filter\&.hpp'\fP
 .br
-\fC#include 'modulation\&.hpp'\fP
+\fC#include 'Modulator\&.hpp'\fP
 .br
 \fC#include 'zdomain\&.hpp'\fP
 .br
@@ -31,7 +31,7 @@ containts the original program used to test the piping-in idea
 .in -1c
 .SH "Detailed Description"
 .PP 
-containts the original program used to test the piping-in idea 
+Contains the original program used to test the piping-in idea\&. 
 
 
 .PP
@@ -49,21 +49,6 @@ Definition in file \fBpiped_test\&.cpp\fP\&.
 Program originally used to test whether baseband audio could be piped into the program in real time\&. 
 .PP
 Definition at line 22 of file piped_test\&.cpp\&.
-.PP
-.nf
-22            {
-23     const uint16 len = 16384;
-24     float32 data[len];
-25     float32 iqData[2*len];
-26 
-27     while(true) {
-28         read(STDIN_FILENO, &data, len * sizeof(float32));
-29         makeIQ(data, iqData, len);
-30         write(STDOUT_FILENO, &iqData,  2 * len * sizeof(float32));
-31     }
-32 
-33 }
-.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

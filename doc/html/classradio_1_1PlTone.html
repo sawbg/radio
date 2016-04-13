@@ -130,17 +130,17 @@ Collaboration diagram for radio::PlTone:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaf1bc146478693f3e921bdc6f8ea2379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1PlTone.html#aaf1bc146478693f3e921bdc6f8ea2379">PlTone</a> (<a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude, <a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> *data, <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size, <a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> <a class="el" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a>, <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="el" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>)</td></tr>
-<tr class="separator:aaf1bc146478693f3e921bdc6f8ea2379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc745767c58044e79c4537fdc23d2a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1PlTone.html#a4fc745767c58044e79c4537fdc23d2a5">PlTone</a> (<a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> amplitude, <a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> *data, <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> size, <a class="el" href="definitions_8hpp.html#aacdc525d6f7bddb3ae95d5c311bd06a1">float32</a> <a class="el" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a>, <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="el" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>=48000)</td></tr>
+<tr class="separator:a4fc745767c58044e79c4537fdc23d2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e19b2d5106b35626d4839f04f9b9f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classradio_1_1PlTone.html#a9e19b2d5106b35626d4839f04f9b9f95">Add</a> ()</td></tr>
 <tr class="separator:a9e19b2d5106b35626d4839f04f9b9f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class creates a CTCSS subcarrier (PL tone) at a specified frequency in a baseband signal. </p>
+<div class="textblock"><p>This class creates a PL tone (CTCSS tone) at a specified frequency in a baseband signal. </p>
 
 <p>Definition at line <a class="el" href="PlTone_8hpp_source.html#l00018">18</a> of file <a class="el" href="PlTone_8hpp_source.html">PlTone.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aaf1bc146478693f3e921bdc6f8ea2379"></a>
+<a class="anchor" id="a4fc745767c58044e79c4537fdc23d2a5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
-          <td class="paramname"><em>samplingRate</em>&#160;</td>
+          <td class="paramname"><em>samplingRate</em> = <code>48000</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,21 +194,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="PlTone_8hpp_source.html#l00063">63</a> of file <a class="el" href="PlTone_8hpp_source.html">PlTone.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        : <a class="code" href="classradio_1_1Sinusoid.html#a9494c3cb2bca12effdf770e10dfbe8a5">Sinusoid</a>(<a class="code" href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">frequency</a>, <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        this-&gt;data = data;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        this-&gt;amplitude = amplitude;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        this-&gt;size = size;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; <a class="code" href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">samplingRate</a>; i++) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">sinusoid</a>[i] *= amplitude;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_a964d64aae9acc4ea5d752534a33d76b8"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a964d64aae9acc4ea5d752534a33d76b8">radio::Sinusoid::samplingRate</a></div><div class="ttdeci">uint32 samplingRate</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00063">Sinusoid.hpp:63</a></div></div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_a56556c3d3e08d1c9481c18e087ff1c85"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a56556c3d3e08d1c9481c18e087ff1c85">radio::Sinusoid::sinusoid</a></div><div class="ttdeci">float32 * sinusoid</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00068">Sinusoid.hpp:68</a></div></div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_a9494c3cb2bca12effdf770e10dfbe8a5"><div class="ttname"><a href="classradio_1_1Sinusoid.html#a9494c3cb2bca12effdf770e10dfbe8a5">radio::Sinusoid::Sinusoid</a></div><div class="ttdeci">Sinusoid(float32 frequency, uint32 samplingRate=48000)</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00077">Sinusoid.hpp:77</a></div></div>
-<div class="ttc" id="definitions_8hpp_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00025">definitions.hpp:25</a></div></div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_ad429b5dd330e96aaf89a0d48ef59d3f2"><div class="ttname"><a href="classradio_1_1Sinusoid.html#ad429b5dd330e96aaf89a0d48ef59d3f2">radio::Sinusoid::frequency</a></div><div class="ttdeci">float32 frequency</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00048">Sinusoid.hpp:48</a></div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -224,18 +210,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds the CTCSS tone to the baseband signal. </p>
+<p>Adds the PL tone to the baseband signal. </p>
 
 <p>Definition at line <a class="el" href="PlTone_8hpp_source.html#l00075">75</a> of file <a class="el" href="PlTone_8hpp_source.html">PlTone.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                     {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> i = 0; i &lt; size; i++) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            data[i] += amplitude * <a class="code" href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2">next</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            data[i] /= (1 + amplitude);  <span class="comment">// ensures value &lt;= 1</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="ttc" id="classradio_1_1Sinusoid_html_aab44298ea1bd5cb175d5826243cf56f2"><div class="ttname"><a href="classradio_1_1Sinusoid.html#aab44298ea1bd5cb175d5826243cf56f2">radio::Sinusoid::next</a></div><div class="ttdeci">float32 next()</div><div class="ttdef"><b>Definition:</b> <a href="Sinusoid_8hpp_source.html#l00097">Sinusoid.hpp:97</a></div></div>
-<div class="ttc" id="definitions_8hpp_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00025">definitions.hpp:25</a></div></div>
-</div><!-- fragment -->
+
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -265,7 +243,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceradio.html">radio</a></li><li class="navelem"><a class="el" href="classradio_1_1PlTone.html">PlTone</a></li>
-    <li class="footer">Generated on Wed Apr 13 2016 05:22:39 for An Inexpensive, Software-Defined IF Modulator by
+    <li class="footer">Generated on Wed Apr 13 2016 22:14:09 for An Inexpensive, Software-Defined IF Modulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

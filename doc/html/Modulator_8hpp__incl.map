@@ -1,7 +1,7 @@
 <map id="src/Modulator.hpp" name="src/Modulator.hpp">
-<area shape="rect" id="node6" href="$definitions_8hpp.html" title="Contains declarations of system&#45;independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. " alt="" coords="415,155,521,181"/>
-<area shape="rect" id="node8" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="354,80,430,107"/>
-<area shape="rect" id="node9" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="506,80,601,107"/>
-<area shape="rect" id="node10" href="$Sinusoid_8hpp.html" title="contains the Sinusoid class " alt="" coords="233,80,330,107"/>
-<area shape="rect" id="node11" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="625,80,721,107"/>
+<area shape="rect" id="node4" href="$definitions_8hpp.html" title="Contains declarations of system&#45;independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. " alt="" coords="358,155,465,181"/>
+<area shape="rect" id="node7" href="$Filter_8hpp.html" title="Defines the Filter class. " alt="" coords="203,80,279,107"/>
+<area shape="rect" id="node8" href="$fvectors_8hpp.html" title="Defines the transfer function coefficients used in the instances of the Filter class in this program..." alt="" coords="303,80,397,107"/>
+<area shape="rect" id="node9" href="$Sinusoid_8hpp.html" title="Contains the Sinusoid class. " alt="" coords="29,80,127,107"/>
+<area shape="rect" id="node10" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="473,80,569,107"/>
 </map>

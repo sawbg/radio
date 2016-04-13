@@ -40,46 +40,6 @@ src/usb_filter_test.cpp \-
 Program to test the Filter class and the USB filter coefficients\&. 
 .PP
 Definition at line 25 of file usb_filter_test\&.cpp\&.
-.PP
-.nf
-25                                  {
-26 
-27     // Constants
-28     const uint16 BUFFER_SIZE = 48000;
-29 
-30     // Declare primative Variables
-31     uint8 i = 0;
-32     uint8 size = 0;
-33     uint16 delta = 250;
-34     float32 dataBuffer[BUFFER_SIZE];
-35     float32 iqBuffer[2 * BUFFER_SIZE];
-36 
-37     // create 1 sec of audio
-38     for(uint16 f = 17000; f <= 23000; f += delta, i++) {
-39         Sinusoid sinusoid(f);
-40 
-41         for(uint16 i = 0; i < BUFFER_SIZE; i++) {
-42             dataBuffer[i] += sinusoid\&.next();
-43         }
-44     }
-45 
-46     size = i;
-47     
-48     // adjust dataBuffer so values are between -1 and 1
-49     for(uint16 i = 0; i < BUFFER_SIZE; i++) {
-50         dataBuffer[i] /= size;
-51     }
-52     
-53     Filter filter(dataBuffer, BUFFER_SIZE, F_UPPERSIDEBAND);
-54     filter\&.Pass();
-55     makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
-56     to_sint32(iqBuffer, 2 * BUFFER_SIZE);
-57 
-58     while(true) {
-59         write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
-60     }
-61 }
-.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

@@ -1,4 +1,5 @@
 <map id="src/Modulator.hpp" name="src/Modulator.hpp">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="contains the &quot;brains&quot; of the entire project " alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$modulator__test_8cpp.html" title="contains a test program to test the Modulator class " alt="" coords="127,80,282,107"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="Contains the &quot;brains&quot; of the entire project. " alt="" coords="5,80,103,107"/>
+<area shape="rect" id="node3" href="$modulator__test_8cpp.html" title="Contains a test program to test the Modulator class. " alt="" coords="127,80,282,107"/>
+<area shape="rect" id="node4" href="$piped__test_8cpp.html" title="Contains the original program used to test the piping&#45;in idea. " alt="" coords="305,80,435,107"/>
 </map>

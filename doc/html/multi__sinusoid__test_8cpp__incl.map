@@ -1,6 +1,6 @@
 <map id="src/multi_sinusoid_test.cpp" name="src/multi_sinusoid_test.cpp">
 <area shape="rect" id="node8" href="$auxiliary_8hpp.html" title="Contains helper&#45;functions for main(). " alt="" coords="560,95,655,121"/>
 <area shape="rect" id="node11" href="$definitions_8hpp.html" title="Contains declarations of system&#45;independant (universal size) integers and float types, shortened type names for some commonly used types, and enumerations. " alt="" coords="306,169,413,196"/>
-<area shape="rect" id="node13" href="$Sinusoid_8hpp.html" title="contains the Sinusoid class " alt="" coords="211,95,308,121"/>
+<area shape="rect" id="node13" href="$Sinusoid_8hpp.html" title="Contains the Sinusoid class. " alt="" coords="211,95,308,121"/>
 <area shape="rect" id="node15" href="$zdomain_8hpp.html" title="Contains the functions to manipulate sequential data in the frequency (z) domain. ..." alt="" coords="389,95,485,121"/>
 </map>

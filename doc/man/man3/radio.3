@@ -3,9 +3,6 @@
 .nh
 .SH NAME
 radio \- 
-.PP
-Contains the classes for the various types of modulation supported by the program\&.  
-
 .SH SYNOPSIS
 .br
 .PP
@@ -93,27 +90,11 @@ Contains the classes for the various types of modulation supported by the progra
 .in -1c
 .SH "Detailed Description"
 .PP 
-Contains the classes for the various types of modulation supported by the program\&. 
-
-This namespace contains all the classes, functions, and enumerations used in the application\&.
-.PP
-\fBAuthor:\fP
-.RS 4
-Samuel Andrew Wisner, awisner94@gmail.com 
-.RE
-.PP
-\fBBug\fP
-.RS 4
-both FM modulations don't work 
-.PP
-clicking on the filtered SSB 
-.RE
-.PP
-
+This namespace contains all the classes, functions, and enumerations used in the application\&. 
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBradio::Age\fP"
-Describes the age of a filter (from last Pass() or in this Pass()) 
+Describes the age of a filter (from last Pass() or in this Pass())\&. Not currently used\&. 
 .PP
 \fBEnumerator\fP
 .in +1c
@@ -122,11 +103,7 @@ Describes the age of a filter (from last Pass() or in this Pass())
 .TP
 \fB\fINEW \fP\fP
 .PP
-Definition at line 52 of file definitions\&.hpp\&.
-.PP
-.nf
-52 { OLD, NEW };
-.fi
+Definition at line 60 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Argument\fP"
 Describes the arguments in argv\&. Never actually used\&. 
 .PP
@@ -139,11 +116,7 @@ Describes the arguments in argv\&. Never actually used\&.
 .TP
 \fB\fIPL_TONE \fP\fP
 .PP
-Definition at line 62 of file definitions\&.hpp\&.
-.PP
-.nf
-62 { FREQ = 1, MODE, PL_TONE };
-.fi
+Definition at line 70 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Fractional\fP"
 Describes the numerator and denominator of a z-domain transfer function 
 .PP
@@ -154,11 +127,7 @@ Describes the numerator and denominator of a z-domain transfer function
 .TP
 \fB\fIDEN \fP\fP
 .PP
-Definition at line 57 of file definitions\&.hpp\&.
-.PP
-.nf
-57 { NUM, DEN };
-.fi
+Definition at line 65 of file definitions\&.hpp\&.
 .SS "enum \fBradio::ModulationType\fP\fC [strong]\fP"
 Describes a form of modulation\&. 
 .PP
@@ -181,12 +150,7 @@ Describes a form of modulation\&.
 .TP
 \fB\fIFM_WIDE \fP\fP
 .PP
-Definition at line 67 of file definitions\&.hpp\&.
-.PP
-.nf
-67                               { DSB_LC, DSB_SC, USB_FILTERED, USB_HILBERT,
-68         LSB_FILTERED, LSB_HILBERT, FM_NARROW, FM_WIDE };
-.fi
+Definition at line 75 of file definitions\&.hpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void radio::aconj (\fBcfloat32\fP *data, \fBuint32\fPsize)"
@@ -202,14 +166,6 @@ Replaces the values in an array of complex float32's with their respective conju
 
 .PP
 Definition at line 84 of file zdomain\&.hpp\&.
-.PP
-.nf
-84                                             {
-85         for(int i = 0; i < size; i++) {
-86             data[i] = std::conj(data[i]);
-87         }
-88     }
-.fi
 .SS "void radio::fft (\fBcfloat32\fP *data, \fBuint32\fPsize)"
 Replaces the values of an array of cfloat32's with the array's DFT using a decimation-in-frequency algorithm\&.
 .PP
@@ -225,56 +181,6 @@ This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transfo
 
 .PP
 Definition at line 90 of file zdomain\&.hpp\&.
-.PP
-.nf
-90                                           {
-91         // DFT
-92         uint32 k = size;
-93         uint32 n;
-94         float32 thetaT = M_PI / size;
-95         cfloat32 phiT(cos(thetaT), sin(thetaT));
-96         cfloat32 T;
-97 
-98         while(k > 1) {
-99             n = k;
-100             k >>= 1;
-101             phiT = phiT * phiT;
-102             T = 1\&.0L;
-103 
-104             for(uint32 l = 0; l < k; l++) {
-105                 for(uint32 a = l; a < size; a += n) {
-106                     uint32 b = a + k;
-107                     cfloat32 t = data[a] -data[b];
-108                     data[a] +=data[b];
-109                     data[b] = t * T;
-110                 }
-111 
-112                 T *= phiT;
-113             }
-114         }
-115 
-116         // Decimate
-117         uint32 m = (uint32)log2(size);
-118 
-119         for(uint32 a = 0; a < size; a++) {
-120             uint32 b = a;
-121 
-122             // Reverse bits
-123             b = (((b & 0xaaaaaaaa) >> 1) | ((b & 0x55555555) << 1));
-124             b = (((b & 0xcccccccc) >> 2) | ((b & 0x33333333) << 2));
-125             b = (((b & 0xf0f0f0f0) >> 4) | ((b & 0x0f0f0f0f) << 4));
-126             b = (((b & 0xff00ff00) >> 8) | ((b & 0x00ff00ff) << 8));
-127             b = ((b >> 16) | (b << 16)) >> (32 - m);
-128 
-129             if (b > a)
-130             {
-131                 cfloat32 t = data[a];
-132                 data[a] =data[b];
-133                 data[b] = t;
-134             }
-135         }
-136     }
-.fi
 .SS "void radio::hilbert (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fPsize)"
 Performs the hilbert transfor of an array of float32's\&.
 .PP
@@ -290,31 +196,6 @@ Performs the hilbert transfor of an array of float32's\&.
 
 .PP
 Definition at line 138 of file zdomain\&.hpp\&.
-.PP
-.nf
-138                                                             {
-139         cfloat32* temp = (cfloat32*)std::malloc(sizeof(cfloat32) * size);
-140 
-141         for(int i = 0; i < size; i++) {
-142             temp[i] = data[i];
-143         }
-144         
-145         fft(temp, size);
-146 
-147         for(int i = size/2; i < size; i++) {
-148             temp[i] = 0;
-149         }
-150 
-151         ifft(temp, size);
-152 
-153         for(int i = 0; i < size; i++) {
-154             // parentheses around temp prevent free() error
-155             dest[i] = -2 * (temp[i]\&.imag());
-156         }
-157 
-158         free(temp);
-159     }
-.fi
 .SS "void radio::ifft (\fBcfloat32\fP *data, \fBuint32\fPsize)"
 Replaces the values of an array of cfloat32's with the array's inverse DFT\&.
 .PP
@@ -330,20 +211,8 @@ This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transfo
 
 .PP
 Definition at line 161 of file zdomain\&.hpp\&.
-.PP
-.nf
-161                                            {
-162         aconj(data, size);
-163         fft(data, size);
-164         aconj(data, size);
-165 
-166         for(int i = 0; i < size; i++) {
-167             data[i] /= size;
-168         }
-169     }
-.fi
 .SS "void radio::makeIQ (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fPsize)"
-Produces an interleaved array of first an element from an original array of data and then an element from the original data's Hilbert transform\&. This function is intended to generate a two-channel output (I/Q output) for mixing applications\&.
+Produces an interleaved array with an element from an original array of data first and then an element from the original data's Hilbert transform second\&. This function is intended to generate a two-channel output (I/Q output) for mixing applications\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -357,57 +226,12 @@ Produces an interleaved array of first an element from an original array of data
 
 .PP
 Definition at line 171 of file zdomain\&.hpp\&.
-.PP
-.nf
-171                                                            {
-172         float32 quadData[size];
-173         hilbert(data, quadData, size);
-174 
-175         for(int i = 0; i < 2 * size; i += 2) {
-176             dest[i] = quadData[i/2];
-177             dest[i+1] = data[i/2];
-178         }
-179     }
-.fi
 .SS "void radio::ShowHelp ()"
-Displays the help information\&. 
+Displays the help information and exits the program\&. 
 .PP
 Definition at line 22 of file auxiliary\&.hpp\&.
-.PP
-.nf
-22                     {
-23         std::cerr << std::endl << "Usage: radio [MODE] [MIC GAIN] "
-24             "[PL TONE]" << std::endl << std::endl
-25             << "MODE: one of the following types "
-26             "of modulation" << std::endl << std::endl;
-27 
-28         std::cerr << "dsblc\t\tDouble sideband, large carrier" << std::endl
-29             << "am\t\tAlias for dsblc" << std::endl
-30             << "dsbsc\t\tDouble sideband, suppressed carrier" << std::endl
-31             << "lsbhil\t\tLower sideband created via Hilbert transform"
-32             << std::endl
-33             << "lsbfilt\t\tLower sideband created via digital low-pass filter"
-34             << std::endl
-35             << "usbhil\t\tUpper sideband created via Hilbert transform"
-36             << std::endl
-37             << "usbfilt\t\tUpper sideband created via digital high-pass filter"
-38             << std::endl
-39 //          << "nfm\t\tFrequency modulation, 2\&.5 kHz bandwidth"
-40             << std::endl;
-41 //          << "wfm\t\tFrequency modulation, 5 kHz bandwidth" << std::endl
-42 //          << "fm\t\talias for wfm" << std::endl << std::endl;
-43 
-44         std::cerr << "MIC GAIN: Microphone power gain expressed in decibels"
-45         << std::endl << std::endl;
-46 
-47         std::cerr << "PL TONE: Optional specification for CTCSS tone from "
-48             "60-260 Hz" << std::endl << std::endl;
-49 
-50         std::exit(ERROR);
-51     }
-.fi
 .SS "void radio::to_sint32 (\fBfloat32\fP *data, \fBuint32\fPsize)"
-Converts float32 samples to sint32 samples\&. Rounds conversion to nearest integer\&.
+Replaces float32 samples with sint32 equivalents\&. Rounds conversion to nearest integer\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -419,16 +243,8 @@ Converts float32 samples to sint32 samples\&. Rounds conversion to nearest integ
 
 .PP
 Definition at line 62 of file auxiliary\&.hpp\&.
-.PP
-.nf
-62                                                {
-63         for(uint32 i = 0; i < size; i++) {
-64             ((sint32*)data)[i] = (sint32)(data[i] * INT_MAX + 0\&.5);
-65         }
-66     }
-.fi
 .SS "\fBModulationType\fP radio::to_type (std::stringstr)"
-Converts a string representation of the supported modulation types (see \fBShowHelp()\fP documentation) to the enum ModulationType value\&.
+Converts a string representation of the supported modulation types (see \fBShowHelp()\fP documentation) to the enum class ModulationType value\&.
 .PP
 This function is not as elegant as it could be\&. Ideally, I would have used a std::map<string, ModulationType> rather than a long series of if-else's\&.
 .PP
@@ -445,34 +261,6 @@ enum value of the type of modulation
 
 .PP
 Definition at line 80 of file auxiliary\&.hpp\&.
-.PP
-.nf
-80                                           {
-81         ModulationType type;
-82 
-83         if(str == "dsblc" || str == "am") {
-84             type = ModulationType::DSB_LC;
-85         } else if(str == "dsbsc") {
-86             type = ModulationType::DSB_SC;
-87         } else if(str == "lsbhil") {
-88             type = ModulationType::LSB_HILBERT;
-89         } else if(str == "lsbfilt") {
-90             type = ModulationType::LSB_FILTERED;
-91         } else if(str == "usbhil") {
-92             type = ModulationType::USB_HILBERT;
-93         } else if(str == "usbfilt") {
-94             type = ModulationType::USB_FILTERED;
-95         } else if(str == "wfm" || str == "fm") {
-96             type = ModulationType::FM_NARROW;
-97         } else if(str == "nfm") {
-98             type = ModulationType::FM_WIDE;
-99         } else {
-100             throw std::logic_error("The given modulation type is invalid!");
-101         }
-102 
-103         return type;
-104     }
-.fi
 .SH "Variable Documentation"
 .PP 
 .SS "\fBfparams\fP radio::F_BASEBAND"
@@ -497,7 +285,7 @@ Definition at line 80 of file auxiliary\&.hpp\&.
 .fi
 Baseband filter coefficients\&. Generated with MATLAB 2015A\&. 
 .PP
-Definition at line 19 of file fvectors\&.hpp\&.
+Definition at line 20 of file fvectors\&.hpp\&.
 .SS "\fBfparams\fP radio::F_LOWERSIDEBAND"
 \fBInitial value:\fP
 .PP
@@ -532,7 +320,7 @@ Definition at line 19 of file fvectors\&.hpp\&.
 .fi
 Lower-sideband filter coefficients\&. Generated with MATLAB 2015A\&. 
 .PP
-Definition at line 38 of file fvectors\&.hpp\&.
+Definition at line 39 of file fvectors\&.hpp\&.
 .SS "\fBfparams\fP radio::F_UPPERSIDEBAND"
 \fBInitial value:\fP
 .PP
@@ -567,15 +355,15 @@ Definition at line 38 of file fvectors\&.hpp\&.
 .fi
 Upper-sideband filter coefficients\&. Generated with MATLAB 2015A\&. 
 .PP
-Definition at line 69 of file fvectors\&.hpp\&.
+Definition at line 70 of file fvectors\&.hpp\&.
 .SS "const \fBuint32\fP radio::FREQ_INTERMEDIATE = 20000"
 The default intermediate carrier frequency 
 .PP
-Definition at line 28 of file Modulator\&.hpp\&.
+Definition at line 27 of file Modulator\&.hpp\&.
 .SS "const \fBuint32\fP radio::SAMPLING_RATE = 48000"
 The default sampling rate (frequency) 
 .PP
-Definition at line 33 of file Modulator\&.hpp\&.
+Definition at line 32 of file Modulator\&.hpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.
