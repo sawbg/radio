@@ -1,8 +1,8 @@
 <map id="src/fvectors.hpp" name="src/fvectors.hpp">
 <area shape="rect" id="node2" href="$baseband__filter__test_8cpp.html" title="Contains a program to demonstrate the the baseband/AF filter. " alt="" coords="5,80,137,121"/>
-<area shape="rect" id="node3" href="$lsb__filter__test_8cpp.html" title="src/lsb_filter_test.cpp" alt="" coords="162,87,309,114"/>
+<area shape="rect" id="node3" href="$lsb__filter__test_8cpp.html" title="Contains a program to demonstrate the the LSB/AF filter. " alt="" coords="162,87,309,114"/>
 <area shape="rect" id="node4" href="$Modulator_8hpp.html" title="Contains the classes for the various types of modulation supported by the program. " alt="" coords="333,87,460,114"/>
-<area shape="rect" id="node8" href="$usb__filter__test_8cpp.html" title="src/usb_filter_test.cpp" alt="" coords="484,87,635,114"/>
+<area shape="rect" id="node8" href="$usb__filter__test_8cpp.html" title="Contains a program to demonstrate the the USB filter. " alt="" coords="484,87,635,114"/>
 <area shape="rect" id="node5" href="$main_8cpp.html" title="Contains the &quot;brains&quot; of the entire project. " alt="" coords="197,169,295,196"/>
 <area shape="rect" id="node6" href="$modulator__test_8cpp.html" title="Contains a test program to test the Modulator class. " alt="" coords="319,169,474,196"/>
 <area shape="rect" id="node7" href="$piped__test_8cpp.html" title="Contains the original program used to test the piping&#45;in idea. " alt="" coords="497,169,627,196"/>

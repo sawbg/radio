@@ -1,12 +1,12 @@
 <map id="src/Sinusoid.hpp" name="src/Sinusoid.hpp">
 <area shape="rect" id="node2" href="$baseband__filter__test_8cpp.html" title="Contains a program to demonstrate the the baseband/AF filter. " alt="" coords="5,80,137,121"/>
-<area shape="rect" id="node3" href="$lsb__filter__test_8cpp.html" title="src/lsb_filter_test.cpp" alt="" coords="162,87,309,114"/>
+<area shape="rect" id="node3" href="$lsb__filter__test_8cpp.html" title="Contains a program to demonstrate the the LSB/AF filter. " alt="" coords="162,87,309,114"/>
 <area shape="rect" id="node4" href="$Modulator_8hpp.html" title="Contains the classes for the various types of modulation supported by the program. " alt="" coords="468,87,595,114"/>
 <area shape="rect" id="node6" href="$modulator__test_8cpp.html" title="Contains a test program to test the Modulator class. " alt="" coords="462,169,617,196"/>
 <area shape="rect" id="node8" href="$PlTone_8hpp.html" title="Contains the PlTone class. " alt="" coords="333,87,444,114"/>
 <area shape="rect" id="node10" href="$multi__sinusoid__test_8cpp.html" title="Contains a program to demonstrate the ability of the Sinusoid class and the sound card to generate si..." alt="" coords="671,80,797,121"/>
 <area shape="rect" id="node11" href="$sinusoid__test_8cpp.html" title="Contains a test program to test the Sinusoid class. " alt="" coords="822,87,969,114"/>
-<area shape="rect" id="node12" href="$usb__filter__test_8cpp.html" title="src/usb_filter_test.cpp" alt="" coords="993,87,1144,114"/>
+<area shape="rect" id="node12" href="$usb__filter__test_8cpp.html" title="Contains a program to demonstrate the the USB filter. " alt="" coords="993,87,1144,114"/>
 <area shape="rect" id="node5" href="$main_8cpp.html" title="Contains the &quot;brains&quot; of the entire project. " alt="" coords="340,169,437,196"/>
 <area shape="rect" id="node7" href="$piped__test_8cpp.html" title="Contains the original program used to test the piping&#45;in idea. " alt="" coords="640,169,769,196"/>
 <area shape="rect" id="node9" href="$pl__tone__test_8cpp.html" title="Contains a test program to test the PlTone class. " alt="" coords="176,169,316,196"/>

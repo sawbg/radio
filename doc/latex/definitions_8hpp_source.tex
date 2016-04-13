@@ -34,26 +34,26 @@
 00045 
 \hypertarget{definitions_8hpp_source_l00049}{}\hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{00049} \textcolor{keyword}{typedef} std::vector<std::vector<float64>> \hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{fparams};
 00050 
-00056 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
-\hypertarget{definitions_8hpp_source_l00061}{}\hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{00061}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{Age} \{ \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{OLD}, \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}{NEW} \};
-00062 
-\hypertarget{definitions_8hpp_source_l00066}{}\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{00066}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{Fractional} \{ \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}, \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN} \};
-00067 
-\hypertarget{definitions_8hpp_source_l00071}{}\hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{00071}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5}{Argument} \{ \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88}{FREQ} = 1, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a70b58e67bda4ad9bd46e010e1f090c7b}{MODE}, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{PL\_TONE} \};
-00072     
-\hypertarget{definitions_8hpp_source_l00076}{}\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{00076}     \textcolor{keyword}{enum class} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} \{
-00077         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{DSB\_LC}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{DSB\_SC},
-00078         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{USB\_FILTERED},
-00079         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{USB\_HILBERT},
-00080         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{LSB\_FILTERED},
-00081         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{LSB\_HILBERT},
-00082         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{FM\_NARROW},
-00083         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{FM\_WIDE}
-00084     \};
-00085 \}
-00086 
-00087 \textcolor{preprocessor}{#endif}
-00088 
-00089 \textcolor{comment}{// Doxygen descriptions for non-code files}
-00090 
+00055 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
+\hypertarget{definitions_8hpp_source_l00060}{}\hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{00060}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3}{Age} \{ \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{OLD}, \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}{NEW} \};
+00061 
+\hypertarget{definitions_8hpp_source_l00065}{}\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{00065}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{Fractional} \{ \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}, \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN} \};
+00066 
+\hypertarget{definitions_8hpp_source_l00070}{}\hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{00070}     \textcolor{keyword}{enum} \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5}{Argument} \{ \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88}{FREQ} = 1, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a70b58e67bda4ad9bd46e010e1f090c7b}{MODE}, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{PL\_TONE} \};
+00071     
+\hypertarget{definitions_8hpp_source_l00075}{}\hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{00075}     \textcolor{keyword}{enum class} \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} \{
+00076         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{DSB\_LC}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{DSB\_SC},
+00077         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{USB\_FILTERED},
+00078         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{USB\_HILBERT},
+00079         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{LSB\_FILTERED},
+00080         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{LSB\_HILBERT},
+00081         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{FM\_NARROW},
+00082         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{FM\_WIDE}
+00083     \};
+00084 \}
+00085 
+00086 \textcolor{preprocessor}{#endif}
+00087 
+00088 \textcolor{comment}{// Doxygen descriptions for non-code files}
+00089 
 \end{DoxyCode}
