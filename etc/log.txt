@@ -1,554 +1,14 @@
-commit a0bf0215c40e6b093f71f0c9a727a9b50bb385bc
+commit 3e7785b90eb5eaba3ab5aca9cb9360544882800b
 Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:44:45 2016 +0000
+Date:   Tue Dec 29 18:00:14 2015 -0600
 
-    Updated documentation.
+    Initial commit
 
-commit d4983a7bfc23f63e5818f49a2df558dcf2027a10
+commit 49eed0ec47b80f4a05dfe809408c9aa50e5de5a7
 Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:36:27 2016 +0000
+Date:   Wed Dec 30 00:05:56 2015 +0000
 
-    Updated documentation.
-
-commit ca624b9d6bad74fce2ae523e97f8a5e82b691e0d
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:34:10 2016 +0000
-
-    Updated documentation.
-
-commit d719bbbb2c74badac4d1263d162b55e69f77fbd1
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:30:57 2016 +0000
-
-    Updated documentation.
-
-commit 6636c455a865453df221d0cb1365891cf3dbfc74
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:24:57 2016 +0000
-
-    Updated documentation.
-
-commit 99837c435b9ff2fd366ee03b733beb3f6a4a7f3d
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:20:37 2016 +0000
-
-    Updated documentation.
-
-commit 5b8a775721897ba35a870bcb75c5526d1e381c03
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 22:15:22 2016 +0000
-
-    Updated documentation.
-
-commit 00c7f5084fd0b9ba1916e4287b9b2546267c8784
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 05:23:58 2016 +0000
-
-    Updated documentation.
-
-commit a0162d97f88224b8a1889cebc60c23f39fa52858
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 05:20:43 2016 +0000
-
-    Updated documentation.
-
-commit 7217667ab30a1586142f96f03cf84e0e0b7aa977
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Apr 13 05:18:06 2016 +0000
-
-    Updated documentation.
-
-commit 526476db9b9926e37f719b7d9d98bd6764f4c483
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Apr 12 03:24:55 2016 +0000
-
-    Just created.
-
-commit 5f41e6c0c9ee8c56c657c483f99a8348d7f1e703
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Apr 12 03:24:38 2016 +0000
-
-    Updated this so it would compile.
-
-commit 853e25b8c5462a8011cd61cb49e0697ab02568b5
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Apr 12 03:24:17 2016 +0000
-
-    Completely restructured code.
-
-commit 8a5c77b0755eedf136ee32dfc388c18ce171c880
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Apr 12 03:23:44 2016 +0000
-
-    "Added recipe for LSB/USB filter tests.
-
-commit 8f01bf9c65b8d9cc1b6657943d5bf1e2e100c336
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Apr 12 03:23:03 2016 +0000
-
-    Ensured new LSB/USB filter test scripts are included in repo.
-
-commit b7c75e2311c492f1b76bbaa12de8ecf4b6b6d072
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Apr 11 16:37:49 2016 +0000
-
-    Added BASH scripts for first time.
-
-commit bdd000eef3559aeb78d435300f477286f9c37a04
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Apr 11 16:36:41 2016 +0000
-
-    Added lines to ensure the BASH scripts in the bin directory were included in the repo.
-
-commit 80af0e1faa46c617c576aa21ef771c8578cc9618
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Apr 11 16:36:02 2016 +0000
-
-    Added commands to docs recipe to generate a text-file version of the commit log in the project's etc directory.
-
-commit e03211e14ac7fbf1e4623b99fbdc767545db2bf3
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:38:09 2016 +0000
-
-    Updated documentation.
-
-commit b0a6b1d1b91d71773cf17cc604e4127e63b15dcc
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:34:04 2016 +0000
-
-    Created these files.
-
-commit df846b6aaa9d3ca0ba0bb17553a867220b1e813c
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:33:24 2016 +0000
-
-    Added option to adjust the microphone gain and also added additional constants to prevent repetative calculations.
-
-commit 17a2834b6d819972609e85d33082f120df968e51
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:31:02 2016 +0000
-
-    Changed hilbert() to use malloc'd memory for the temp array rather than memory on the stack. The program kept crashing from running out of stack memory.
-
-commit 4835cf1327c13396ceda7f85a4d860188c23f66e
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:29:28 2016 +0000
-
-    Removed Modulator class inclusion.
-
-commit 34b5f1e3ad56428ca209113a62e47906b1130346
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:28:51 2016 +0000
-
-    Added support for PL tone.
-
-commit bc1fe25cfb28ec860c2c318862b760fd92797b91
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:28:19 2016 +0000
-
-    Changed fparams coefficient type to float64.
-
-commit 322838d5a365d97f4c51fa4e91b320f2ede9f500
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:27:58 2016 +0000
-
-    Modified vectors to be float64's.
-
-commit a27e9c7064ba8e45ff2b906a0e52842a4d3df760
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:26:46 2016 +0000
-
-    Added sinusoids spaced 250 Hz apart from 250 to 3000 Hz.
-
-commit f55f8cb391fd34b87b730887e458a7b718071898
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:26:06 2016 +0000
-
-    Changed help message and added automatic program exit after displaying help.
-
-commit e9b088bc34f495f3dea5ce56af1a57f32b811c69
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:25:27 2016 +0000
-
-    Changed class name in code.
-
-commit 99889b4ec957a7d75546767737c03d822fae4f29
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:24:09 2016 +0000
-
-    No longer saves old or new samples between passes and now requires both the numerator and the denomenator to have the same order.
-
-commit 54e79069dc3db73c163ab7677ca37c995c789642
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:21:43 2016 +0000
-
-    Added recipes for the PlTone and multiple-Sinusoid tests.
-
-commit 0440cd3324dd1e2b8793ef97561483cfaeac67c3
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 10 22:20:03 2016 +0000
-
-    Renamed Subcarrier to PlTone.
-
-commit 9d7ce298aa6526b8c0f30505666d62473f1a0a31
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Apr 8 15:38:00 2016 +0000
-
-    Modified for testing with new sound card.
-
-commit 59649434a790a8a4fcef91ab24e5b1d2be65a6bf
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Apr 8 15:35:25 2016 +0000
-
-    Added function to convert float samples to signed 32-bit integer samples.
-
-commit ac3fe2f7e733250ecd00f7de3307c2d7896c1be9
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Apr 8 15:27:27 2016 +0000
-
-    Added files to repo.
-
-commit c60bb7701b1b2c8bc7eb23ed27d8ac408fe145ae
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 03:01:11 2016 +0000
-
-    Updated documentation.
-
-commit d546ad5946ee32211d2155e5d51759f826021fa5
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 02:59:44 2016 +0000
-
-    I seem to have "finished" this, and it seems to work OK.
-
-commit e74b476365a5af3fef913943a9ed630802f2177e
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 02:58:44 2016 +0000
-
-    Added documentation.
-
-commit a954d4089872e72712aee3d5aebf47d4203abde7
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 02:57:39 2016 +0000
-
-    Added documentation and fixed help message spacing.
-
-commit f9e31678ac06ed8d17bbbd148fc73a3d1a0c5a49
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 02:56:54 2016 +0000
-
-    Fixed prototype-definition mismatch and ensured waveform would never exceed 1.
-
-commit 41fdd66c51c3fa88a7b32d7f32fa7db3727a7686
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 02:56:05 2016 +0000
-
-    Renamed index variables so that their names make sense.
-
-commit 3fc276b0a76229b89d40a42615f5d7c8bae08663
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Apr 3 02:55:09 2016 +0000
-
-    Added FM modulation and fixed half-amplitude problem with SSB (Hilbert) modulation.
-
-commit 5d503c3252de4749af4cded531f121da48d7f612
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Apr 2 11:50:27 2016 -0500
-
-    Added recipes for new tests.
-
-commit c877af66aac4bc2b34b77b922e99bbce628f6a5e
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Apr 2 11:50:05 2016 -0500
-
-    Changed carrier to 5 kHz.
-
-commit 65e51fde0886f79ea6d0b4245e833c9a77a01afa
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Apr 2 11:49:33 2016 -0500
-
-    Changed carrier to 5 kHz.
-
-commit d22e5a60227336d4b1b58ccddc8bf7c51afb7bca
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Apr 2 11:49:03 2016 -0500
-
-    Fixed bug that caused doubled frequencies and I/Q misalignment.
-
-commit 5f3537dccd46ec4f9f2b56531af9416aa053f45e
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Apr 2 11:47:51 2016 -0500
-
-    Made these to test the LSB filter and Sinusoid class.
-
-commit 3fab873150c3c0ca1d1ca81bb9c4d71025b7bece
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:36:46 2016 -0500
-
-    Updated documentation.
-
-commit b88f94d1cdfd321b5c52850e2c6f6465dc592ce1
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:35:31 2016 -0500
-
-    Deleted modulation.hpp? Actually, I just moved it.
-
-commit b780e593cad92d647c2006ab36ac31e44f279280
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:33:27 2016 -0500
-
-    Created this program to test the Modulator class.
-
-commit dc4076a3e217b1953c48b7fd7f7b5610286b30f3
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:27:43 2016 -0500
-
-    Bug fixes.
-
-commit ca3e3bf0d4af258f085278649dc32407787031ca
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:25:29 2016 -0500
-
-    Got code to the point it will compile. Haven't tested it yet.
-
-commit d63d1ce9c9af6db58fac08e9be39bd69de40375b
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:24:50 2016 -0500
-
-    Added Argument enumeration.
-
-commit 7e2ff6d983b0577ae3f9d6162a0535005837412f
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:24:17 2016 -0500
-
-    Added string-to-ModulationType function and changed the help message somewhat.
-
-commit 7578681d9d18eae55034ecd7c12a3e49a56376a1
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:23:32 2016 -0500
-
-    Fixed a few careless mistakes.
-
-commit 32f2d053f07e8b98ec44892c4cf2248504642224
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Mar 22 21:22:52 2016 -0500
-
-    Added recipes for the modulation test program and the main program.
-
-commit 52b35ef320a7c34b2ece6aa324182e1bf78d50b1
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Thu Mar 10 18:38:05 2016 -0600
-
-    Updated to show Nick.
-
-commit e5337662e5e01db7045cbad5efb22db1a61cf064
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Mar 7 19:09:46 2016 -0600
-
-    Created file to hold helper functions for main().
-
-commit 21b528f12ab2401887d4f93b6c3097fbc525432a
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Mar 7 19:08:33 2016 -0600
-
-    Created Subcarrier class that adds PL tone to baseband.
-
-commit f8a6b6424774b2b213a72ac4767bfecd3222c9b3
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Mar 7 19:07:00 2016 -0600
-
-    Changed access of all private member to protected.
-
-commit 3cb520fce86cda171ecbb25975149746ac0e9d53
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 22:13:05 2016 -0600
-
-    Added much more to generate.
-
-commit 57e99f332206485a2664db4aaad347cf028df3bf
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 22:08:24 2016 -0600
-
-    Updated documentation.
-
-commit 308296c98f5ab2b6db4c100073ede1b238a2ca8d
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 22:07:30 2016 -0600
-
-    Fixed typo in documentation folder name.
-
-commit 717aad7be560ce269bcf00f454881c0d773172ae
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 22:00:05 2016 -0600
-
-    Finished major changes Have not tested them. Essentially rewrote most of the file and consolidated all modulation code into one class.
-
-commit 07c322a7442331d63b506fe26c50b4ba33752afc
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 21:58:26 2016 -0600
-
-    Added values for SSB filters.
-
-commit f9881a10ee12383730520e9b0e028d85fb2be47b
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 21:58:08 2016 -0600
-
-    Added ModulationType enumerated class.
-
-commit 545648065484cf5a29a6f71842d43669eccf5592
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 21:57:50 2016 -0600
-
-    Added documentation.
-
-commit 6b763fd00d19eb622b409c668a837add6b8fb6d7
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 20:40:44 2016 -0600
-
-    Started major overhaul on code structure. Backing up before continuing into even more major changes.
-
-commit e5c6b824ef7c3f5812afee6082b43e2507ed33a1
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Mar 5 20:39:55 2016 -0600
-
-    Created this class.
-
-commit e0af9cde18b6286a4d67892b76da428b22b8ffc2
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Feb 15 10:39:09 2016 +0000
-
-    Updated documentation.
-
-commit 3bc7ca436126b9d501380aa4af6cf95610167f50
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Feb 15 10:37:08 2016 +0000
-
-    Updated for more types and chart generation.
-
-commit 8e66db0bd0c99364f68fd3b3967189b786eaad66
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Feb 15 10:36:40 2016 +0000
-
-    I think updating documentation was the only major change I made to these files.
-
-commit e0e731c1b4aede10603bbd4a7be4962faeed6604
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Feb 15 10:35:35 2016 +0000
-
-    Got baseband filter working!
-
-commit f69bbea3a6ec433a6d941d35cc872667fd64704b
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Mon Feb 15 10:34:16 2016 +0000
-
-    Initial commit.
-
-commit 618113c56ed2d974672d0325bb67d2e9eade142e
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Feb 13 14:52:34 2016 +0000
-
-    Initial commit.
-
-commit 9c5c790df84cc10bc7e25eef96100ad3d957b5e7
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Feb 13 14:51:24 2016 +0000
-
-    Not sure what I did here.
-
-commit d533e53921f10a29c8b49e6de8e5006e8fb30d17
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sat Feb 13 14:50:45 2016 +0000
-
-    Added recipes for iqtest and bbftest.
-
-commit e40919ab2ac2a38d63fc52e1d9e901b897108f3e
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 19:19:36 2016 +0000
-
-    Modified to test quadrature and began modification to test Filter class.
-
-commit f5011f12396305735d5e194720908f4da99cb6ee
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 19:18:29 2016 +0000
-
-    Initial commit.
-
-commit c831a0f6e21f78ca4ba7d7d4fbdc44264b3a73cc
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 19:18:11 2016 +0000
-
-    Modified modulation classes to accept float32 data rather than uint8.
-
-commit 2520a5536df9b7d7f11c7c65205b84b33dd470a4
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 19:16:57 2016 +0000
-
-    Added Filter class enums.
-
-commit cd93decbd72b0ac7df2530520638321041156afc
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 13:29:04 2016 +0000
-
-    Initial commit.
-
-commit b0f21944ff041f46f33f7f80690a7a776ff02ebb
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 13:27:23 2016 +0000
-
-    Began updating this class, but decided to use FFT/IFFT/Hilbert transform in function form.
-
-commit 850b5bac06ee168dcf2d2c793922face92cea2dc
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Feb 5 13:26:16 2016 +0000
-
-    Added fft-test2.
-
-commit 977f5d546b0ed5910a4e715ba85375dd7cadc1a3
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Thu Feb 4 18:23:37 2016 +0000
-
-    Initial commit.
-
-commit ddab8b946d04e692d8ecdf835954653833334ad8
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Jan 31 16:39:15 2016 +0000
-
-    Attempted adding some extra "header" bytes to the beginning of the stdout stream.
-
-commit 927adc3e5da1016d14dae0e7d190771bfe9fffb3
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Fri Jan 29 08:58:36 2016 +0000
-
-    Began implementing modulation equations.
-
-commit 69f42913249cd76c2ab3613f80ef85c960cdbee4
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Thu Jan 28 12:45:23 2016 +0000
-
-    Finished Modulator constructor.
-
-commit 41fc9ea1b65b5944702827872b2a75ae782bd3df
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Thu Jan 28 12:40:40 2016 +0000
-
-    Attempted working with scanf/printf and floats.
-
-commit 7316adb3048f72f47bda445cb492f73a8dbec99b
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Thu Jan 28 10:55:55 2016 +0000
-
-    Attempted cin.get() and cout.write() usage.
-
-commit 04fa177d27dc9fdd828713c27c0691d29d04d0b6
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Sun Jan 17 00:30:09 2016 +0000
-
-    Gosh, this code frustrates me so much!
-
-commit 50d1d63a3ef456ef766ced6d13a0fb96ad23d5fa
-Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Dec 30 00:12:34 2015 +0000
-
-    Ensuring bin folder shows up.
+    Initial code.
 
 commit 966eba5ee7728fdcf240e13151ab1457fb32cb5b
 Merge: 49eed0e 3e7785b
@@ -559,14 +19,578 @@ Date:   Wed Dec 30 00:08:47 2015 +0000
     
     Not sure why this is occurring...
 
-commit 49eed0ec47b80f4a05dfe809408c9aa50e5de5a7
+commit 50d1d63a3ef456ef766ced6d13a0fb96ad23d5fa
 Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Wed Dec 30 00:05:56 2015 +0000
+Date:   Wed Dec 30 00:12:34 2015 +0000
 
-    Initial code.
+    Ensuring bin folder shows up.
 
-commit 3e7785b90eb5eaba3ab5aca9cb9360544882800b
+commit 04fa177d27dc9fdd828713c27c0691d29d04d0b6
 Author: Andrew Wisner <awisner94@gmail.com>
-Date:   Tue Dec 29 18:00:14 2015 -0600
+Date:   Sun Jan 17 00:30:09 2016 +0000
 
-    Initial commit
+    Gosh, this code frustrates me so much!
+
+commit 7316adb3048f72f47bda445cb492f73a8dbec99b
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Thu Jan 28 10:55:55 2016 +0000
+
+    Attempted cin.get() and cout.write() usage.
+
+commit 41fc9ea1b65b5944702827872b2a75ae782bd3df
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Thu Jan 28 12:40:40 2016 +0000
+
+    Attempted working with scanf/printf and floats.
+
+commit 69f42913249cd76c2ab3613f80ef85c960cdbee4
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Thu Jan 28 12:45:23 2016 +0000
+
+    Finished Modulator constructor.
+
+commit 927adc3e5da1016d14dae0e7d190771bfe9fffb3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Jan 29 08:58:36 2016 +0000
+
+    Began implementing modulation equations.
+
+commit ddab8b946d04e692d8ecdf835954653833334ad8
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Jan 31 16:39:15 2016 +0000
+
+    Attempted adding some extra "header" bytes to the beginning of the stdout stream.
+
+commit 977f5d546b0ed5910a4e715ba85375dd7cadc1a3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Thu Feb 4 18:23:37 2016 +0000
+
+    Initial commit.
+
+commit 850b5bac06ee168dcf2d2c793922face92cea2dc
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 13:26:16 2016 +0000
+
+    Added fft-test2.
+
+commit b0f21944ff041f46f33f7f80690a7a776ff02ebb
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 13:27:23 2016 +0000
+
+    Began updating this class, but decided to use FFT/IFFT/Hilbert transform in function form.
+
+commit cd93decbd72b0ac7df2530520638321041156afc
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 13:29:04 2016 +0000
+
+    Initial commit.
+
+commit 2520a5536df9b7d7f11c7c65205b84b33dd470a4
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 19:16:57 2016 +0000
+
+    Added Filter class enums.
+
+commit c831a0f6e21f78ca4ba7d7d4fbdc44264b3a73cc
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 19:18:11 2016 +0000
+
+    Modified modulation classes to accept float32 data rather than uint8.
+
+commit f5011f12396305735d5e194720908f4da99cb6ee
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 19:18:29 2016 +0000
+
+    Initial commit.
+
+commit e40919ab2ac2a38d63fc52e1d9e901b897108f3e
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Feb 5 19:19:36 2016 +0000
+
+    Modified to test quadrature and began modification to test Filter class.
+
+commit d533e53921f10a29c8b49e6de8e5006e8fb30d17
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Feb 13 14:50:45 2016 +0000
+
+    Added recipes for iqtest and bbftest.
+
+commit 9c5c790df84cc10bc7e25eef96100ad3d957b5e7
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Feb 13 14:51:24 2016 +0000
+
+    Not sure what I did here.
+
+commit 618113c56ed2d974672d0325bb67d2e9eade142e
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Feb 13 14:52:34 2016 +0000
+
+    Initial commit.
+
+commit f69bbea3a6ec433a6d941d35cc872667fd64704b
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Feb 15 10:34:16 2016 +0000
+
+    Initial commit.
+
+commit e0e731c1b4aede10603bbd4a7be4962faeed6604
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Feb 15 10:35:35 2016 +0000
+
+    Got baseband filter working!
+
+commit 8e66db0bd0c99364f68fd3b3967189b786eaad66
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Feb 15 10:36:40 2016 +0000
+
+    I think updating documentation was the only major change I made to these files.
+
+commit 3bc7ca436126b9d501380aa4af6cf95610167f50
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Feb 15 10:37:08 2016 +0000
+
+    Updated for more types and chart generation.
+
+commit e0af9cde18b6286a4d67892b76da428b22b8ffc2
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Feb 15 10:39:09 2016 +0000
+
+    Updated documentation.
+
+commit e5c6b824ef7c3f5812afee6082b43e2507ed33a1
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 20:39:55 2016 -0600
+
+    Created this class.
+
+commit 6b763fd00d19eb622b409c668a837add6b8fb6d7
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 20:40:44 2016 -0600
+
+    Started major overhaul on code structure. Backing up before continuing into even more major changes.
+
+commit 545648065484cf5a29a6f71842d43669eccf5592
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 21:57:50 2016 -0600
+
+    Added documentation.
+
+commit f9881a10ee12383730520e9b0e028d85fb2be47b
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 21:58:08 2016 -0600
+
+    Added ModulationType enumerated class.
+
+commit 07c322a7442331d63b506fe26c50b4ba33752afc
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 21:58:26 2016 -0600
+
+    Added values for SSB filters.
+
+commit 717aad7be560ce269bcf00f454881c0d773172ae
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 22:00:05 2016 -0600
+
+    Finished major changes Have not tested them. Essentially rewrote most of the file and consolidated all modulation code into one class.
+
+commit 308296c98f5ab2b6db4c100073ede1b238a2ca8d
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 22:07:30 2016 -0600
+
+    Fixed typo in documentation folder name.
+
+commit 57e99f332206485a2664db4aaad347cf028df3bf
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 22:08:24 2016 -0600
+
+    Updated documentation.
+
+commit 3cb520fce86cda171ecbb25975149746ac0e9d53
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Mar 5 22:13:05 2016 -0600
+
+    Added much more to generate.
+
+commit f8a6b6424774b2b213a72ac4767bfecd3222c9b3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Mar 7 19:07:00 2016 -0600
+
+    Changed access of all private member to protected.
+
+commit 21b528f12ab2401887d4f93b6c3097fbc525432a
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Mar 7 19:08:33 2016 -0600
+
+    Created Subcarrier class that adds PL tone to baseband.
+
+commit e5337662e5e01db7045cbad5efb22db1a61cf064
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Mar 7 19:09:46 2016 -0600
+
+    Created file to hold helper functions for main().
+
+commit 52b35ef320a7c34b2ece6aa324182e1bf78d50b1
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Thu Mar 10 18:38:05 2016 -0600
+
+    Updated to show Nick.
+
+commit 32f2d053f07e8b98ec44892c4cf2248504642224
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:22:52 2016 -0500
+
+    Added recipes for the modulation test program and the main program.
+
+commit 7578681d9d18eae55034ecd7c12a3e49a56376a1
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:23:32 2016 -0500
+
+    Fixed a few careless mistakes.
+
+commit 7e2ff6d983b0577ae3f9d6162a0535005837412f
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:24:17 2016 -0500
+
+    Added string-to-ModulationType function and changed the help message somewhat.
+
+commit d63d1ce9c9af6db58fac08e9be39bd69de40375b
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:24:50 2016 -0500
+
+    Added Argument enumeration.
+
+commit ca3e3bf0d4af258f085278649dc32407787031ca
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:25:29 2016 -0500
+
+    Got code to the point it will compile. Haven't tested it yet.
+
+commit dc4076a3e217b1953c48b7fd7f7b5610286b30f3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:27:43 2016 -0500
+
+    Bug fixes.
+
+commit b780e593cad92d647c2006ab36ac31e44f279280
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:33:27 2016 -0500
+
+    Created this program to test the Modulator class.
+
+commit b88f94d1cdfd321b5c52850e2c6f6465dc592ce1
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:35:31 2016 -0500
+
+    Deleted modulation.hpp? Actually, I just moved it.
+
+commit 3fab873150c3c0ca1d1ca81bb9c4d71025b7bece
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Mar 22 21:36:46 2016 -0500
+
+    Updated documentation.
+
+commit 5f3537dccd46ec4f9f2b56531af9416aa053f45e
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Apr 2 11:47:51 2016 -0500
+
+    Made these to test the LSB filter and Sinusoid class.
+
+commit d22e5a60227336d4b1b58ccddc8bf7c51afb7bca
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Apr 2 11:49:03 2016 -0500
+
+    Fixed bug that caused doubled frequencies and I/Q misalignment.
+
+commit 65e51fde0886f79ea6d0b4245e833c9a77a01afa
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Apr 2 11:49:33 2016 -0500
+
+    Changed carrier to 5 kHz.
+
+commit c877af66aac4bc2b34b77b922e99bbce628f6a5e
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Apr 2 11:50:05 2016 -0500
+
+    Changed carrier to 5 kHz.
+
+commit 5d503c3252de4749af4cded531f121da48d7f612
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sat Apr 2 11:50:27 2016 -0500
+
+    Added recipes for new tests.
+
+commit 3fc276b0a76229b89d40a42615f5d7c8bae08663
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 02:55:09 2016 +0000
+
+    Added FM modulation and fixed half-amplitude problem with SSB (Hilbert) modulation.
+
+commit 41fdd66c51c3fa88a7b32d7f32fa7db3727a7686
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 02:56:05 2016 +0000
+
+    Renamed index variables so that their names make sense.
+
+commit f9e31678ac06ed8d17bbbd148fc73a3d1a0c5a49
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 02:56:54 2016 +0000
+
+    Fixed prototype-definition mismatch and ensured waveform would never exceed 1.
+
+commit a954d4089872e72712aee3d5aebf47d4203abde7
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 02:57:39 2016 +0000
+
+    Added documentation and fixed help message spacing.
+
+commit e74b476365a5af3fef913943a9ed630802f2177e
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 02:58:44 2016 +0000
+
+    Added documentation.
+
+commit d546ad5946ee32211d2155e5d51759f826021fa5
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 02:59:44 2016 +0000
+
+    I seem to have "finished" this, and it seems to work OK.
+
+commit c60bb7701b1b2c8bc7eb23ed27d8ac408fe145ae
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 3 03:01:11 2016 +0000
+
+    Updated documentation.
+
+commit ac3fe2f7e733250ecd00f7de3307c2d7896c1be9
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Apr 8 15:27:27 2016 +0000
+
+    Added files to repo.
+
+commit 59649434a790a8a4fcef91ab24e5b1d2be65a6bf
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Apr 8 15:35:25 2016 +0000
+
+    Added function to convert float samples to signed 32-bit integer samples.
+
+commit 9d7ce298aa6526b8c0f30505666d62473f1a0a31
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Fri Apr 8 15:38:00 2016 +0000
+
+    Modified for testing with new sound card.
+
+commit 0440cd3324dd1e2b8793ef97561483cfaeac67c3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:20:03 2016 +0000
+
+    Renamed Subcarrier to PlTone.
+
+commit 54e79069dc3db73c163ab7677ca37c995c789642
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:21:43 2016 +0000
+
+    Added recipes for the PlTone and multiple-Sinusoid tests.
+
+commit 99889b4ec957a7d75546767737c03d822fae4f29
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:24:09 2016 +0000
+
+    No longer saves old or new samples between passes and now requires both the numerator and the denomenator to have the same order.
+
+commit e9b088bc34f495f3dea5ce56af1a57f32b811c69
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:25:27 2016 +0000
+
+    Changed class name in code.
+
+commit f55f8cb391fd34b87b730887e458a7b718071898
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:26:06 2016 +0000
+
+    Changed help message and added automatic program exit after displaying help.
+
+commit a27e9c7064ba8e45ff2b906a0e52842a4d3df760
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:26:46 2016 +0000
+
+    Added sinusoids spaced 250 Hz apart from 250 to 3000 Hz.
+
+commit 322838d5a365d97f4c51fa4e91b320f2ede9f500
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:27:58 2016 +0000
+
+    Modified vectors to be float64's.
+
+commit bc1fe25cfb28ec860c2c318862b760fd92797b91
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:28:19 2016 +0000
+
+    Changed fparams coefficient type to float64.
+
+commit 34b5f1e3ad56428ca209113a62e47906b1130346
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:28:51 2016 +0000
+
+    Added support for PL tone.
+
+commit 4835cf1327c13396ceda7f85a4d860188c23f66e
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:29:28 2016 +0000
+
+    Removed Modulator class inclusion.
+
+commit 17a2834b6d819972609e85d33082f120df968e51
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:31:02 2016 +0000
+
+    Changed hilbert() to use malloc'd memory for the temp array rather than memory on the stack. The program kept crashing from running out of stack memory.
+
+commit df846b6aaa9d3ca0ba0bb17553a867220b1e813c
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:33:24 2016 +0000
+
+    Added option to adjust the microphone gain and also added additional constants to prevent repetative calculations.
+
+commit b0a6b1d1b91d71773cf17cc604e4127e63b15dcc
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:34:04 2016 +0000
+
+    Created these files.
+
+commit e03211e14ac7fbf1e4623b99fbdc767545db2bf3
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Sun Apr 10 22:38:09 2016 +0000
+
+    Updated documentation.
+
+commit 80af0e1faa46c617c576aa21ef771c8578cc9618
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Apr 11 16:36:02 2016 +0000
+
+    Added commands to docs recipe to generate a text-file version of the commit log in the project's etc directory.
+
+commit bdd000eef3559aeb78d435300f477286f9c37a04
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Apr 11 16:36:41 2016 +0000
+
+    Added lines to ensure the BASH scripts in the bin directory were included in the repo.
+
+commit b7c75e2311c492f1b76bbaa12de8ecf4b6b6d072
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Mon Apr 11 16:37:49 2016 +0000
+
+    Added BASH scripts for first time.
+
+commit 8f01bf9c65b8d9cc1b6657943d5bf1e2e100c336
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:23:03 2016 +0000
+
+    Ensured new LSB/USB filter test scripts are included in repo.
+
+commit 8a5c77b0755eedf136ee32dfc388c18ce171c880
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:23:44 2016 +0000
+
+    "Added recipe for LSB/USB filter tests.
+
+commit 853e25b8c5462a8011cd61cb49e0697ab02568b5
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:24:17 2016 +0000
+
+    Completely restructured code.
+
+commit 5f41e6c0c9ee8c56c657c483f99a8348d7f1e703
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:24:38 2016 +0000
+
+    Updated this so it would compile.
+
+commit 526476db9b9926e37f719b7d9d98bd6764f4c483
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Tue Apr 12 03:24:55 2016 +0000
+
+    Just created.
+
+commit 7217667ab30a1586142f96f03cf84e0e0b7aa977
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 05:18:06 2016 +0000
+
+    Updated documentation.
+
+commit a0162d97f88224b8a1889cebc60c23f39fa52858
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 05:20:43 2016 +0000
+
+    Updated documentation.
+
+commit 00c7f5084fd0b9ba1916e4287b9b2546267c8784
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 05:23:58 2016 +0000
+
+    Updated documentation.
+
+commit 5b8a775721897ba35a870bcb75c5526d1e381c03
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:15:22 2016 +0000
+
+    Updated documentation.
+
+commit 99837c435b9ff2fd366ee03b733beb3f6a4a7f3d
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:20:37 2016 +0000
+
+    Updated documentation.
+
+commit 6636c455a865453df221d0cb1365891cf3dbfc74
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:24:57 2016 +0000
+
+    Updated documentation.
+
+commit d719bbbb2c74badac4d1263d162b55e69f77fbd1
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:30:57 2016 +0000
+
+    Updated documentation.
+
+commit ca624b9d6bad74fce2ae523e97f8a5e82b691e0d
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:34:10 2016 +0000
+
+    Updated documentation.
+
+commit d4983a7bfc23f63e5818f49a2df558dcf2027a10
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:36:27 2016 +0000
+
+    Updated documentation.
+
+commit a0bf0215c40e6b093f71f0c9a727a9b50bb385bc
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:44:45 2016 +0000
+
+    Updated documentation.
+
+commit b2cd2a0be77623f3384eb3401159e0f028daefa8
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:53:32 2016 +0000
+
+    Updated documentation.
+
+commit 6df3787e178a62033c34168b26e4502e46664bb5
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:57:35 2016 +0000
+
+    Removed iqtest.
+
+commit f84aa3f3c72e8c2dc4968009c77db7853918aa1c
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:58:08 2016 +0000
+
+    Updated.
+
+commit eee65d1355c5d150f1dfec3f5797b8fa7f314a12
+Author: Andrew Wisner <awisner94@gmail.com>
+Date:   Wed Apr 13 22:58:58 2016 +0000
+
+    Prepared files for final documentation generation.
