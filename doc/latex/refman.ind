@@ -11,12 +11,12 @@
 
   \item {bin/bbftest}, \hyperpage{29}
   \item {bin/lsbftest}, \hyperpage{29}
-  \item {bin/modtest}, \hyperpage{29, 30}
+  \item {bin/modtest}, \hyperpage{30}
   \item {bin/msintest}, \hyperpage{30}
-  \item {bin/pltest}, \hyperpage{30}
-  \item {bin/radio}, \hyperpage{30}
+  \item {bin/pltest}, \hyperpage{30, 31}
+  \item {bin/radio}, \hyperpage{31}
   \item {bin/sintest}, \hyperpage{31}
-  \item {bin/usbftest}, \hyperpage{31}
+  \item {bin/usbftest}, \hyperpage{31, 32}
 
   \indexspace
 
@@ -61,7 +61,7 @@
 
   \item {M\+O\+D\+E}
     \subitem {radio}, \hyperpage{12}
-  \item {makefile}, \hyperpage{32}
+  \item {makefile}, \hyperpage{33}
 
   \indexspace
 

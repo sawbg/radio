@@ -378,7 +378,7 @@ Scanning input file refman.idx....
 !! Input index error (file = refman.idx, line = 249):
    -- Extra `@' at position 129 of first argument.
 done (62 entries accepted, 187 rejected).
-Sorting entries....done (386 comparisons).
+Sorting entries....done (393 comparisons).
 Generating output file refman.ind....done (116 lines written, 0 warnings).
 Output written in refman.ind.
 Transcript written in refman.ilg.
