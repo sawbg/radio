@@ -47,16 +47,98 @@ Creates a \fBModulator\fP with the specified parameters\&. Intended to be called
 
 .PP
 Definition at line 103 of file Modulator\&.hpp\&.
+.PP
+.nf
+104                                             {
+105         freqCarrier = freqInter;
+106         this->rate = rate;
+107         this->data = data;
+108         this->size = size;
+109         this->type = type;
+110 
+111         if(type == ModulationType::USB_HILBERT
+112                 || type == ModulationType::LSB_HILBERT) {
+113             hilData = (float32*)malloc(size*sizeof(float32));
+114         }
+115     }
+.fi
 .SS "radio::Modulator::~Modulator ()"
 
 .PP
 Definition at line 117 of file Modulator\&.hpp\&.
+.PP
+.nf
+117                           {
+118         if(hilData != nullptr) free(hilData);
+119     }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::Modulator::Mod ()"
 Modulates the audio currently in the data array\&. 
 .PP
 Definition at line 121 of file Modulator\&.hpp\&.
+.PP
+.nf
+121                         {
+122         // these variables should only ever be created once
+123         static float32 fmArg = 2 * M_PI * freqCarrier / (float32)rate;
+124         static float32 fmK = 2 * M_PI / rate;
+125         static float32 fmSum = 0;  // cummulative sum used in FM modulation
+126         static Filter lsbFilter(data, size, F_LOWERSIDEBAND);
+127         static Sinusoid sinusoid(freqCarrier, rate);  // IF carrier sinusoid
+128         static Filter usbFilter(data, size, F_UPPERSIDEBAND);
+129 
+130         // take hilbert transform if necessary
+131         if(type == ModulationType::USB_HILBERT
+132                 || type == ModulationType::LSB_HILBERT) {
+133             hilbert(data, hilData, size);
+134         } else if(type == ModulationType::FM_NARROW) {
+135             fmK *= 2\&.5;
+136         } else if(type == ModulationType::FM_WIDE) {
+137             fmK *= 5;
+138         }
+139 
+140         // perform main modulation
+141         for(uint32 i = 0; i < size; i++) {
+142             switch(type) {
+143                 case ModulationType::DSB_LC:
+144                     data[i] = ((data[i] + 1) * sinusoid\&.next()) / 2;
+145                     break;
+146 
+147                 case ModulationType::DSB_SC:
+148                 case ModulationType::USB_FILTERED:
+149                 case ModulationType::LSB_FILTERED:
+150                     data[i] = data[i] * sinusoid\&.next();
+151                     break;
+152 
+153                 case ModulationType::USB_HILBERT:
+154                     data[i] = data[i] * sinusoid\&.next()
+155                         - hilData[i] * sinusoid\&.nextShifted();
+156                     break;
+157 
+158                 case ModulationType::LSB_HILBERT:
+159                     data[i] = data[i] * sinusoid\&.next()
+160                         + hilData[i] * sinusoid\&.nextShifted();
+161                     break;
+162 
+163                 case ModulationType::FM_NARROW:
+164                 case ModulationType::FM_WIDE:
+165                     fmSum += fmK * data[i];
+166                     data[i] = cos(fmArg * i + fmSum);
+167                     break;
+168             }
+169         }
+170 
+171         // filter out a sideband if using filtered SSB modulation
+172         if(type == ModulationType::LSB_FILTERED) {
+173             lsbFilter\&.Pass();
+174         } else if(type == ModulationType::USB_FILTERED) {
+175             usbFilter\&.Pass();
+176         }
+177     }
+.fi
+
 
 .SH "Author"
 .PP 

@@ -52,6 +52,46 @@ This code is based on code from \href{http://rosettacode.org/wiki/Fast_Fourier_t
 Definition at line \hyperlink{fft__test2_8cpp_source_l00022}{22} of file \hyperlink{fft__test2_8cpp_source}{fft\+\_\+test2.\+cpp}.
 
 
+\begin{DoxyCode}
+00023 \{
+00024     std::complex<float32> test[] = \{ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 \};
+00025     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} ftest[16];   
+00026     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} dest[16];
+00027 
+00028     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 16; i++) \{
+00029         ftest[i] = test[i].real();
+00030     \}
+00031 
+00032     \textcolor{comment}{// forward fft}
+00033     \hyperlink{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{fft}(test, 16);
+00034 
+00035     std::cout << \textcolor{stringliteral}{"fft"} << std::endl;
+00036 
+00037     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 16; ++i)
+00038     \{
+00039     \textcolor{comment}{//  std::cout << test[i] << std::endl;}
+00040     \}
+00041 
+00042     \textcolor{comment}{// inverse fft}
+00043     \hyperlink{fft__test_8cpp_a6234aee8acb83780e803805365617f36}{ifft}(test, 16);
+00044     std::cout << std::endl << \textcolor{stringliteral}{"ifft"} << std::endl;
+00045 
+00046     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 16; ++i)
+00047     \{
+00048         std::cout << test[i] << std::endl;
+00049     \}
+00050 
+00051     \hyperlink{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}{hilbert}(ftest, dest, 16);
+00052     std::cout << std::endl << \textcolor{stringliteral}{"hilbert"} << std::endl;
+00053 
+00054     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 16; i++) \{
+00055         std::cout << dest[i] << std::endl;
+00056     \}
+00057 
+00058     \textcolor{keywordflow}{return} 0;
+00059 \}
+\end{DoxyCode}
+
 
 Here is the call graph for this function\+:
 \nopagebreak

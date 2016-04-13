@@ -73,6 +73,18 @@ Creates a \hyperlink{classradio_1_1PlTone}{Pl\+Tone} object.
 Definition at line \hyperlink{PlTone_8hpp_source_l00063}{63} of file \hyperlink{PlTone_8hpp_source}{Pl\+Tone.\+hpp}.
 
 
+\begin{DoxyCode}
+00065         : \hyperlink{classradio_1_1Sinusoid_a9494c3cb2bca12effdf770e10dfbe8a5}{Sinusoid}(\hyperlink{classradio_1_1Sinusoid_ad429b5dd330e96aaf89a0d48ef59d3f2}{frequency}, \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}) \{
+00066         this->data = data;
+00067         this->amplitude = amplitude;
+00068         this->size = size;
+00069 
+00070         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < \hyperlink{classradio_1_1Sinusoid_a964d64aae9acc4ea5d752534a33d76b8}{samplingRate}; i++) \{
+00071             \hyperlink{classradio_1_1Sinusoid_a56556c3d3e08d1c9481c18e087ff1c85}{sinusoid}[i] *= amplitude;
+00072         \}
+00073     \}
+\end{DoxyCode}
+
 
 \subsection{Member Function Documentation}
 \hypertarget{classradio_1_1PlTone_a9e19b2d5106b35626d4839f04f9b9f95}{\index{radio\+::\+Pl\+Tone@{radio\+::\+Pl\+Tone}!Add@{Add}}
@@ -86,6 +98,15 @@ Adds the C\+T\+C\+S\+S tone to the baseband signal.
 
 Definition at line \hyperlink{PlTone_8hpp_source_l00075}{75} of file \hyperlink{PlTone_8hpp_source}{Pl\+Tone.\+hpp}.
 
+
+\begin{DoxyCode}
+00075                      \{
+00076         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < size; i++) \{
+00077             data[i] += amplitude * \hyperlink{classradio_1_1Sinusoid_aab44298ea1bd5cb175d5826243cf56f2}{next}();
+00078             data[i] /= (1 + amplitude);  \textcolor{comment}{// ensures value <= 1}
+00079         \}
+00080     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

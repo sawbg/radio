@@ -55,6 +55,36 @@ Definition in file \fBpl_tone_test\&.cpp\fP\&.
 Program to test the PlTone class\&. 
 .PP
 Definition at line 24 of file pl_tone_test\&.cpp\&.
+.PP
+.nf
+24                                  {
+25     // Constants
+26     const uint16 BUFFER_SIZE = 16384;
+27 
+28     // Declare primative Variables
+29     float32 dataBuffer[BUFFER_SIZE];
+30     float32 iqBuffer[2 * BUFFER_SIZE];
+31     float32 freq = atof(argv[1]);
+32 
+33     if(freq < 0) {
+34         cerr << "The given tone was invalid\&." << endl;
+35         return ERROR;
+36     }
+37 
+38     PlTone tone(0\&.15, dataBuffer, BUFFER_SIZE, freq, 48000);
+39 
+40     while(true) {
+41         for(uint16 i = 0; i < BUFFER_SIZE; i ++) {
+42             dataBuffer[i] = 1;
+43         }
+44         
+45         tone\&.Add();
+46         makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
+47         to_sint32(iqBuffer, 2 * BUFFER_SIZE);
+48         write(STDOUT_FILENO, &iqBuffer, 2 * BUFFER_SIZE * sizeof(sint32));
+49     }
+50 }
+.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

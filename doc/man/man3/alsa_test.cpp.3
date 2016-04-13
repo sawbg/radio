@@ -52,6 +52,94 @@ Definition in file \fBalsa_test\&.cpp\fP\&.
 This program tests sinusoidal speaker output through the ALSA API\&. Not sure if it works\&. When it did at least compile and run, it produced a sinusoid with an approximately twice-per-second clicking noise\&. 
 .PP
 Definition at line 22 of file alsa_test\&.cpp\&.
+.PP
+.nf
+22            {
+23     int ret;
+24 
+25     snd_pcm_t* pcm_handle;  // device handle
+26     snd_pcm_stream_t stream = SND_PCM_STREAM_PLAYBACK;
+27     snd_pcm_hw_params_t* hwparams;  // hardware information
+28     char* pcm_name = strdup("plughw:1,0");  // on-board audio jack
+29     int rate = 48000;
+30 
+31     const uint16 freq = 440;
+32     long unsigned int bufferSize = 4096*4;  // anything >8192 causes seg fault
+33     const uint32 len = bufferSize*100;
+34     const float32 arg = 2 * 3\&.141592 * freq / rate;
+35     sint16 vals[len];
+36 
+37     long unsigned int count = 0;
+38 
+39     for(uint32 i = 0; i < len; i = i + 2) {
+40         vals[i] = (sint16)(SHRT_MAX * cos(arg * i/2) + 0\&.5);
+41         vals[i+1] = vals[i];
+42     }
+43 
+44     ret = snd_pcm_open(&pcm_handle, pcm_name, stream, 0);
+45     cout << "Opening: " << snd_strerror(ret) << endl;
+46 
+47     ret = snd_pcm_hw_params_any(pcm_handle, hwparams);
+48     cout << "Initializing hwparams structure: " << snd_strerror(ret) << endl;   
+49 
+50     ret = snd_pcm_hw_params_set_access(pcm_handle, hwparams,
+51             SND_PCM_ACCESS_RW_INTERLEAVED);
+52     cout << "Setting access: " << snd_strerror(ret) << endl;
+53 
+54     ret = snd_pcm_hw_params_set_format(pcm_handle, hwparams,
+55             SND_PCM_FORMAT_S16_LE);
+56     cout << "Setting format: " << snd_strerror(ret) << endl;
+57 
+58     ret = snd_pcm_hw_params_set_rate(pcm_handle, hwparams,
+59             rate, (int)0);
+60     cout << "Setting rate: " << snd_strerror(ret) << endl;
+61 
+62     ret = snd_pcm_hw_params_set_channels(pcm_handle, hwparams, 2); 
+63     cout << "Setting channels: " << snd_strerror(ret) << endl;
+64 
+65     ret = snd_pcm_hw_params_set_periods(pcm_handle, hwparams, 2, 0);
+66     cout << "Setting periods: " << snd_strerror(ret) << endl;
+67 
+68     ret = snd_pcm_hw_params_set_buffer_size_near(pcm_handle, hwparams,
+69             &bufferSize);
+70     cout << "Setting buffer size: " << snd_strerror(ret) << endl;
+71 
+72     ret = snd_pcm_hw_params(pcm_handle, hwparams);
+73     cout << "Applying parameters: " << snd_strerror(ret) << endl;
+74 
+75 //  ret = snd_pcm_hw_params_get_period_size(hwparams, &count, 0);
+76     cout << "Actual period size: " << count << endl;
+77     cout << "Returned: " << snd_strerror(ret) << endl;
+78 
+79 
+80 
+81     cout << endl << endl;
+82 
+83 
+84     const void* ptr[100];
+85 
+86     for(int i = 0; i < 100; i++) {
+87         ptr[i] = (const void*)&vals + bufferSize*i;
+88     }
+89 
+90     int err;
+91 
+92     for(int i = 0; i < 100; i++) {
+93         do {
+94             ret = snd_pcm_writei(pcm_handle,
+95                     ptr[i], count);
+96 
+97             if(ret < 0) {
+98                 err = snd_pcm_prepare(pcm_handle);
+99                 cout << "Preparing: " << snd_strerror(err)
+100                     << endl;
+101             }
+102         } while(ret < 0);
+103 
+104         cout << "Writing data: " << ret << endl;
+105     }
+106 }
+.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

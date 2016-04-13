@@ -45,6 +45,24 @@ Definition in file \fBiq_test\&.cpp\fP\&.
 This small program demonstrates the IQ generation abilities of the \fBmakeIQ()\fP function\&. 
 .PP
 Definition at line 20 of file iq_test\&.cpp\&.
+.PP
+.nf
+20            {
+21     const uint16 len = 16384;
+22     float32 data[len];
+23     float32 iqData[2*len];
+24 
+25     for(int i = 0; i < len; i++) {
+26         data[i] = sin(2*3\&.141592*170*i/len);
+27     }
+28 
+29     while(true) {
+30         read(STDIN_FILENO, &data, len * sizeof(float32));
+31         makeIQ(data, iqData, len);
+32         write(STDOUT_FILENO, &iqData,  2 * len * sizeof(float32));
+33     }
+34 }
+.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.

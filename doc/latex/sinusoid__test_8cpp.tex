@@ -55,6 +55,36 @@ Program to test the Sinusoid class.
 Definition at line \hyperlink{sinusoid__test_8cpp_source_l00023}{23} of file \hyperlink{sinusoid__test_8cpp_source}{sinusoid\+\_\+test.\+cpp}.
 
 
+\begin{DoxyCode}
+00023                                  \{
+00024 
+00025     \textcolor{comment}{// Constants}
+00026     \textcolor{keyword}{const} \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} BUFFER\_SIZE = 16384;
+00027 
+00028     \textcolor{comment}{// Declare primative Variables}
+00029     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} dataBuffer[BUFFER\_SIZE];
+00030     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} iqBuffer[2 * BUFFER\_SIZE];
+00031     \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} freq = atof(argv[1]);
+00032 
+00033     \textcolor{keywordflow}{if}(freq < 0) \{
+00034         cerr << \textcolor{stringliteral}{"The given tone was invalid."} << endl;
+00035         \textcolor{keywordflow}{return} \hyperlink{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR};
+00036     \}
+00037 
+00038     \hyperlink{classradio_1_1Sinusoid}{Sinusoid} sinusoid(freq, 48000);
+00039 
+00040     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00041         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} i = 0; i < BUFFER\_SIZE; i++) \{
+00042             dataBuffer[i] = sinusoid.next();
+00043         \}
+00044         
+00045         \hyperlink{namespaceradio_a7166522e76ff88e8d482491b1b6e2275}{makeIQ}(dataBuffer, iqBuffer, BUFFER\_SIZE);
+00046         \hyperlink{namespaceradio_ae4b2334c4366dcdf0311ad79d2067945}{to\_sint32}(iqBuffer, 2 * BUFFER\_SIZE);
+00047         write(STDOUT\_FILENO, &iqBuffer, 2 * BUFFER\_SIZE * \textcolor{keyword}{sizeof}(\hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32}));
+00048     \}
+00049 \}
+\end{DoxyCode}
+
 
 Here is the call graph for this function\+:
 \nopagebreak

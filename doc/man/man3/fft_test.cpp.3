@@ -76,18 +76,127 @@ Definition at line 14 of file fft_test\&.cpp\&.
 This code was taken from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&. 
 .PP
 Definition at line 23 of file fft_test\&.cpp\&.
+.PP
+.nf
+24 {
+25     // DFT
+26     unsigned int N = x\&.size(), k = N, n;
+27     double thetaT = 3\&.14159265358979323846264338328L / N;
+28     std::complex<double> phiT(cos(thetaT), sin(thetaT)), T;
+29     while (k > 1)
+30     {
+31         n = k;
+32         k >>= 1;
+33         phiT = phiT * phiT;
+34         T = 1\&.0L;
+35         for (unsigned int l = 0; l < k; l++)
+36         {
+37             for (unsigned int a = l; a < N; a += n)
+38             {
+39                 unsigned int b = a + k;
+40                 std::complex<double> t = x[a] - x[b];
+41                 x[a] += x[b];
+42                 x[b] = t * T;
+43             }
+44             T *= phiT;
+45         }
+46     }
+47     // Decimate
+48     unsigned int m = (unsigned int)log2(N);
+49     for (unsigned int a = 0; a < N; a++)
+50     {
+51         unsigned int b = a;
+52         // Reverse bits
+53         b = (((b & 0xaaaaaaaa) >> 1) | ((b & 0x55555555) << 1));
+54         b = (((b & 0xcccccccc) >> 2) | ((b & 0x33333333) << 2));
+55         b = (((b & 0xf0f0f0f0) >> 4) | ((b & 0x0f0f0f0f) << 4));
+56         b = (((b & 0xff00ff00) >> 8) | ((b & 0x00ff00ff) << 8));
+57         b = ((b >> 16) | (b << 16)) >> (32 - m);
+58         if (b > a)
+59         {
+60             std::complex<double> t = x[a];
+61             x[a] = x[b];
+62             x[b] = t;
+63         }
+64     }
+66     //std::complex<double> f = 1\&.0 / sqrt(N);
+67     //for (unsigned int i = 0; i < N; i++)
+68     //  x[i] *= f;
+69 }
+.fi
 .SS "std::complex<double> hilbert (std::complex< double >n)"
 
 .PP
 Definition at line 87 of file fft_test\&.cpp\&.
+.PP
+.nf
+87                                                  {
+88     return std::complex<double>(-2 * n\&.imag(), 0);
+89 }
+.fi
 .SS "void ifft (\fBCArray\fP &x)"
 
 .PP
 Definition at line 72 of file fft_test\&.cpp\&.
+.PP
+.nf
+73 {
+74     // conjugate the complex numbers
+75     x = x\&.apply(std::conj);
+76 
+77     // forward fft
+78     fft( x );
+79 
+80     // conjugate the complex numbers again
+81     x = x\&.apply(std::conj);
+82 
+83     // scale the numbers
+84     x /= x\&.size();
+85 }
+.fi
 .SS "int main ()"
 
 .PP
 Definition at line 91 of file fft_test\&.cpp\&.
+.PP
+.nf
+92 {
+93     const std::complex<double> test[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };
+94     CArray data(test, 16);
+95 
+96     // forward fft
+97     fft(data);
+98 
+99     std::cout << "fft" << std::endl;
+100     for (int i = 0; i < 16; ++i)
+101     {
+102     //  std::cout << data[i] << std::endl;
+103     }
+104 
+105     for(int i = 8; i < 16; i++) {
+106         data[i] = 0;
+107     }
+108 
+109     // inverse fft
+110     ifft(data);
+111     std::cout << std::endl << "ifft" << std::endl;
+112 
+113     for (int i = 0; i < 16; ++i)
+114     {
+115     //  std::cout << data[i] << std::endl;
+116     }
+117 
+118     data = data\&.apply(hilbert);
+119 
+120     std::cout << std::endl;
+121 
+122     for(int i = 0; i < 16; i++) {
+123         std::cout << data[i]\&.real() << std::endl;
+124     }
+125 
+126     return 0;
+127 }
+.fi
 .SH "Variable Documentation"
 .PP 
 .SS "const double PI = 3\&.141592653589793238460"

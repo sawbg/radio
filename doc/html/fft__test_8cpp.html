@@ -186,7 +186,52 @@ Variables</h2></td></tr>
 <p>This code was taken from <a href="http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B">http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B</a>. </p>
 
 <p>Definition at line <a class="el" href="fft__test_8cpp_source.html#l00023">23</a> of file <a class="el" href="fft__test_8cpp_source.html">fft_test.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// DFT</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = x.size(), k = N, n;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">double</span> thetaT = 3.14159265358979323846264338328L / N;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::complex&lt;double&gt; phiT(cos(thetaT), sin(thetaT)), T;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">while</span> (k &gt; 1)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        n = k;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        k &gt;&gt;= 1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        phiT = phiT * phiT;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        T = 1.0L;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt; k; l++)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> a = l; a &lt; N; a += n)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> b = a + k;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                std::complex&lt;double&gt; t = x[a] - x[b];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                x[a] += x[b];</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                x[b] = t * T;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            T *= phiT;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Decimate</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m = (<span class="keywordtype">unsigned</span> int)log2(N);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> a = 0; a &lt; N; a++)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> b = a;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Reverse bits</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        b = (((b &amp; 0xaaaaaaaa) &gt;&gt; 1) | ((b &amp; 0x55555555) &lt;&lt; 1));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        b = (((b &amp; 0xcccccccc) &gt;&gt; 2) | ((b &amp; 0x33333333) &lt;&lt; 2));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        b = (((b &amp; 0xf0f0f0f0) &gt;&gt; 4) | ((b &amp; 0x0f0f0f0f) &lt;&lt; 4));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        b = (((b &amp; 0xff00ff00) &gt;&gt; 8) | ((b &amp; 0x00ff00ff) &lt;&lt; 8));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        b = ((b &gt;&gt; 16) | (b &lt;&lt; 16)) &gt;&gt; (32 - m);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (b &gt; a)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::complex&lt;double&gt; t = x[a];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            x[a] = x[b];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            x[b] = t;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//std::complex&lt;double&gt; f = 1.0 / sqrt(N);</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//for (unsigned int i = 0; i &lt; N; i++)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//  x[i] *= f;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -213,7 +258,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="fft__test_8cpp_source.html#l00087">87</a> of file <a class="el" href="fft__test_8cpp_source.html">fft_test.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                 {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> std::complex&lt;double&gt;(-2 * n.imag(), 0);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -240,7 +288,21 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="fft__test_8cpp_source.html#l00072">72</a> of file <a class="el" href="fft__test_8cpp_source.html">fft_test.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// conjugate the complex numbers</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    x = x.apply(std::conj);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// forward fft</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="fft__test_8cpp.html#a22051cd252d576aec530227d32d95bdd">fft</a>( x );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// conjugate the complex numbers again</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    x = x.apply(std::conj);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// scale the numbers</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    x /= x.size();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="fft__test_8cpp_html_a22051cd252d576aec530227d32d95bdd"><div class="ttname"><a href="fft__test_8cpp.html#a22051cd252d576aec530227d32d95bdd">fft</a></div><div class="ttdeci">void fft(CArray &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="fft__test_8cpp_source.html#l00023">fft_test.cpp:23</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -275,7 +337,47 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="fft__test_8cpp_source.html#l00091">91</a> of file <a class="el" href="fft__test_8cpp_source.html">fft_test.cpp</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> std::complex&lt;double&gt; test[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="fft__test_8cpp.html#ac43c8a7b2d97f3ccbd6f7a48beaa472c">CArray</a> data(test, 16);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// forward fft</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="fft__test_8cpp.html#a22051cd252d576aec530227d32d95bdd">fft</a>(data);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;fft&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//  std::cout &lt;&lt; data[i] &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 8; i &lt; 16; i++) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        data[i] = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// inverse fft</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="fft__test_8cpp.html#a6234aee8acb83780e803805365617f36">ifft</a>(data);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::cout &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;ifft&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">//  std::cout &lt;&lt; data[i] &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    data = data.apply(<a class="code" href="fft__test_8cpp.html#adc49b5a69e64611f421bbefee39a4d15">hilbert</a>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 16; i++) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        std::cout &lt;&lt; data[i].real() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="ttc" id="fft__test_8cpp_html_a6234aee8acb83780e803805365617f36"><div class="ttname"><a href="fft__test_8cpp.html#a6234aee8acb83780e803805365617f36">ifft</a></div><div class="ttdeci">void ifft(CArray &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="fft__test_8cpp_source.html#l00072">fft_test.cpp:72</a></div></div>
+<div class="ttc" id="fft__test_8cpp_html_ac43c8a7b2d97f3ccbd6f7a48beaa472c"><div class="ttname"><a href="fft__test_8cpp.html#ac43c8a7b2d97f3ccbd6f7a48beaa472c">CArray</a></div><div class="ttdeci">std::valarray&lt; std::complex&lt; double &gt; &gt; CArray</div><div class="ttdef"><b>Definition:</b> <a href="fft__test_8cpp_source.html#l00014">fft_test.cpp:14</a></div></div>
+<div class="ttc" id="fft__test_8cpp_html_adc49b5a69e64611f421bbefee39a4d15"><div class="ttname"><a href="fft__test_8cpp.html#adc49b5a69e64611f421bbefee39a4d15">hilbert</a></div><div class="ttdeci">std::complex&lt; double &gt; hilbert(std::complex&lt; double &gt; n)</div><div class="ttdef"><b>Definition:</b> <a href="fft__test_8cpp_source.html#l00087">fft_test.cpp:87</a></div></div>
+<div class="ttc" id="fft__test_8cpp_html_a22051cd252d576aec530227d32d95bdd"><div class="ttname"><a href="fft__test_8cpp.html#a22051cd252d576aec530227d32d95bdd">fft</a></div><div class="ttdeci">void fft(CArray &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="fft__test_8cpp_source.html#l00023">fft_test.cpp:23</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -308,7 +410,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="fft__test_8cpp.html">fft_test.cpp</a></li>
-    <li class="footer">Generated on Wed Apr 13 2016 05:19:30 for An Inexpensive, Software-Defined IF Modulator by
+    <li class="footer">Generated on Wed Apr 13 2016 05:22:37 for An Inexpensive, Software-Defined IF Modulator by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

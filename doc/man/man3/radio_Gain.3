@@ -40,12 +40,35 @@ Initializes a \fBGain\fP object and converts gain from decibels to a standard va
 
 .PP
 Definition at line 61 of file Gain\&.hpp\&.
+.PP
+.nf
+61                                                          {
+62         this->data = data;
+63         this->size = size;
+64         gainCoeff = pow(10, gaindB / 20);
+65     }
+.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::Gain::Apply ()"
 Applies the gain to the signal contained in the data array 
 .PP
 Definition at line 67 of file Gain\&.hpp\&.
+.PP
+.nf
+67                      {
+68         for(uint32 i = 0; i < size; i++) {
+69             data[i] *= gainCoeff;
+70 
+71             if((data[i] > 1 || data[i] < -1) && !hasClipped) {
+72                 hasClipped = true;
+73                 std::cerr << "Baseband clipping has occurred!"
+74                     << std::endl;
+75             }
+76         }
+77     }
+.fi
+
 
 .SH "Author"
 .PP 

@@ -9,19 +9,19 @@
 
   \indexspace
 
-  \item {bin/bbftest}, \hyperpage{31}
-  \item {bin/lsbftest}, \hyperpage{31}
-  \item {bin/modtest}, \hyperpage{31, 32}
-  \item {bin/msintest}, \hyperpage{32}
-  \item {bin/pltest}, \hyperpage{32}
-  \item {bin/radio}, \hyperpage{32}
-  \item {bin/sintest}, \hyperpage{33}
-  \item {bin/usbftest}, \hyperpage{33}
+  \item {bin/bbftest}, \hyperpage{35}
+  \item {bin/lsbftest}, \hyperpage{35}
+  \item {bin/modtest}, \hyperpage{35, 36}
+  \item {bin/msintest}, \hyperpage{36}
+  \item {bin/pltest}, \hyperpage{36}
+  \item {bin/radio}, \hyperpage{36}
+  \item {bin/sintest}, \hyperpage{37}
+  \item {bin/usbftest}, \hyperpage{37}
 
   \indexspace
 
   \item {D\+E\+N}
-    \subitem {radio}, \hyperpage{12}
+    \subitem {radio}, \hyperpage{13}
   \item {D\+S\+B\+\_\+\+L\+C}
     \subitem {radio}, \hyperpage{13}
   \item {D\+S\+B\+\_\+\+S\+C}
@@ -36,19 +36,19 @@
   \item {F\+R\+E\+Q}
     \subitem {radio}, \hyperpage{12}
   \item {fft}
-    \subitem {radio}, \hyperpage{13}
+    \subitem {radio}, \hyperpage{14}
   \item {Fractional}
     \subitem {radio}, \hyperpage{12}
 
   \indexspace
 
   \item {hilbert}
-    \subitem {radio}, \hyperpage{14}
+    \subitem {radio}, \hyperpage{15}
 
   \indexspace
 
   \item {ifft}
-    \subitem {radio}, \hyperpage{15}
+    \subitem {radio}, \hyperpage{16}
 
   \indexspace
 
@@ -61,14 +61,14 @@
 
   \item {M\+O\+D\+E}
     \subitem {radio}, \hyperpage{12}
-  \item {makefile}, \hyperpage{34}
+  \item {makefile}, \hyperpage{38}
 
   \indexspace
 
   \item {N\+E\+W}
     \subitem {radio}, \hyperpage{12}
   \item {N\+U\+M}
-    \subitem {radio}, \hyperpage{12}
+    \subitem {radio}, \hyperpage{13}
 
   \indexspace
 
@@ -86,21 +86,21 @@
     \subitem {aconj}, \hyperpage{13}
     \subitem {Age}, \hyperpage{12}
     \subitem {Argument}, \hyperpage{12}
-    \subitem {D\+E\+N}, \hyperpage{12}
+    \subitem {D\+E\+N}, \hyperpage{13}
     \subitem {D\+S\+B\+\_\+\+L\+C}, \hyperpage{13}
     \subitem {D\+S\+B\+\_\+\+S\+C}, \hyperpage{13}
     \subitem {F\+M\+\_\+\+N\+A\+R\+R\+O\+W}, \hyperpage{13}
     \subitem {F\+M\+\_\+\+W\+I\+D\+E}, \hyperpage{13}
     \subitem {F\+R\+E\+Q}, \hyperpage{12}
-    \subitem {fft}, \hyperpage{13}
+    \subitem {fft}, \hyperpage{14}
     \subitem {Fractional}, \hyperpage{12}
-    \subitem {hilbert}, \hyperpage{14}
-    \subitem {ifft}, \hyperpage{15}
+    \subitem {hilbert}, \hyperpage{15}
+    \subitem {ifft}, \hyperpage{16}
     \subitem {L\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}, \hyperpage{13}
     \subitem {L\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}, \hyperpage{13}
     \subitem {M\+O\+D\+E}, \hyperpage{12}
     \subitem {N\+E\+W}, \hyperpage{12}
-    \subitem {N\+U\+M}, \hyperpage{12}
+    \subitem {N\+U\+M}, \hyperpage{13}
     \subitem {O\+L\+D}, \hyperpage{12}
     \subitem {P\+L\+\_\+\+T\+O\+N\+E}, \hyperpage{12}
     \subitem {U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}, \hyperpage{13}
