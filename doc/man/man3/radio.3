@@ -100,7 +100,7 @@ Describes the age of a filter (from last Pass() or in this Pass())\&. Not curren
 .TP
 \fB\fINEW \fP\fP
 .PP
-Definition at line 60 of file definitions\&.hpp\&.
+Definition at line 61 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Argument\fP"
 Describes the arguments in argv\&. Never actually used\&. 
 .PP
@@ -113,7 +113,7 @@ Describes the arguments in argv\&. Never actually used\&.
 .TP
 \fB\fIPL_TONE \fP\fP
 .PP
-Definition at line 70 of file definitions\&.hpp\&.
+Definition at line 71 of file definitions\&.hpp\&.
 .SS "enum \fBradio::Fractional\fP"
 Describes the numerator and denominator of a z-domain transfer function 
 .PP
@@ -124,7 +124,7 @@ Describes the numerator and denominator of a z-domain transfer function
 .TP
 \fB\fIDEN \fP\fP
 .PP
-Definition at line 65 of file definitions\&.hpp\&.
+Definition at line 66 of file definitions\&.hpp\&.
 .SS "enum \fBradio::ModulationType\fP\fC [strong]\fP"
 Describes a form of modulation\&. 
 .PP
@@ -147,7 +147,7 @@ Describes a form of modulation\&.
 .TP
 \fB\fIFM_WIDE \fP\fP
 .PP
-Definition at line 75 of file definitions\&.hpp\&.
+Definition at line 76 of file definitions\&.hpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void radio::aconj (\fBcfloat32\fP *data, \fBuint32\fPsize)"
@@ -166,7 +166,7 @@ Definition at line 84 of file zdomain\&.hpp\&.
 .SS "void radio::fft (\fBcfloat32\fP *data, \fBuint32\fPsize)"
 Replaces the values of an array of cfloat32's with the array's DFT using a decimation-in-frequency algorithm\&.
 .PP
-\fBThis\fP code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&.
+This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -196,7 +196,7 @@ Definition at line 138 of file zdomain\&.hpp\&.
 .SS "void radio::ifft (\fBcfloat32\fP *data, \fBuint32\fPsize)"
 Replaces the values of an array of cfloat32's with the array's inverse DFT\&.
 .PP
-\fBThis\fP code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&.
+This code is based on code from http://rosettacode.org/wiki/Fast_Fourier_transform#C.2B.2B\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -209,7 +209,7 @@ Replaces the values of an array of cfloat32's with the array's inverse DFT\&.
 .PP
 Definition at line 161 of file zdomain\&.hpp\&.
 .SS "void radio::makeIQ (\fBfloat32\fP *data, \fBfloat32\fP *dest, \fBuint32\fPsize)"
-Produces an interleaved array with an element from an original array of data first and then an element from the original data's Hilbert transform second\&. \fBThis\fP function is intended to generate a two-channel output (I/Q output) for mixing applications\&.
+Produces an interleaved array with an element from an original array of data first and then an element from the original data's Hilbert transform second\&. This function is intended to generate a two-channel output (I/Q output) for mixing applications\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -243,7 +243,7 @@ Definition at line 62 of file auxiliary\&.hpp\&.
 .SS "\fBModulationType\fP radio::to_type (std::stringstr)"
 Converts a string representation of the supported modulation types (see \fBShowHelp()\fP documentation) to the enum class ModulationType value\&.
 .PP
-\fBThis\fP function is not as elegant as it could be\&. Ideally, I would have used a std::map<string, ModulationType> rather than a long series of if-else's\&.
+This function is not as elegant as it could be\&. Ideally, I would have used a std::map<string, ModulationType> rather than a long series of if-else's\&.
 .PP
 \fBParameters:\fP
 .RS 4

@@ -13,66 +13,66 @@
 00014 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
 00015 
 00016 \textcolor{keyword}{namespace }\hyperlink{namespaceradio}{radio} \{
-\hypertarget{Filter_8hpp_source_l00028}{}\hyperlink{classradio_1_1Filter}{00028}     \textcolor{keyword}{class }\hyperlink{classradio_1_1Filter}{Filter} \{
-00029         \textcolor{keyword}{public}:
-00044             \hyperlink{classradio_1_1Filter_a48ab268192e0135e5c9f74ad35a90fa1}{Filter}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}, 
+\hypertarget{Filter_8hpp_source_l00031}{}\hyperlink{classradio_1_1Filter}{00031}     \textcolor{keyword}{class }\hyperlink{classradio_1_1Filter}{Filter} \{
+00032         \textcolor{keyword}{public}:
+00047             \hyperlink{classradio_1_1Filter_a48ab268192e0135e5c9f74ad35a90fa1}{Filter}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}, 
       \hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{fparams}& \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq});
-00045 
-00051             \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass}();
-00052 
-00053         \textcolor{keyword}{protected}:
-\hypertarget{Filter_8hpp_source_l00058}{}\hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{00058}             \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength};
-00059 
-\hypertarget{Filter_8hpp_source_l00063}{}\hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{00063}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size};
-00064 
-\hypertarget{Filter_8hpp_source_l00069}{}\hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{00069}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data};
-00070 
-\hypertarget{Filter_8hpp_source_l00077}{}\hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{00077}             \hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{fparams} \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq};
-00078     \};
-00079 
-\hypertarget{Filter_8hpp_source_l00080}{}\hyperlink{classradio_1_1Filter_a48ab268192e0135e5c9f74ad35a90fa1}{00080}     \hyperlink{classradio_1_1Filter_a48ab268192e0135e5c9f74ad35a90fa1}{Filter::Filter}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, 
+00048 
+00054             \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass}();
+00055 
+00056         \textcolor{keyword}{protected}:
+\hypertarget{Filter_8hpp_source_l00061}{}\hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{00061}             \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength};
+00062 
+\hypertarget{Filter_8hpp_source_l00066}{}\hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{00066}             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size};
+00067 
+\hypertarget{Filter_8hpp_source_l00072}{}\hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{00072}             \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data};
+00073 
+\hypertarget{Filter_8hpp_source_l00080}{}\hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{00080}             \hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{fparams} \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq};
+00081     \};
+00082 
+\hypertarget{Filter_8hpp_source_l00083}{}\hyperlink{classradio_1_1Filter_a48ab268192e0135e5c9f74ad35a90fa1}{00083}     \hyperlink{classradio_1_1Filter_a48ab268192e0135e5c9f74ad35a90fa1}{Filter::Filter}(\hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}* data, \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size, 
       \hyperlink{definitions_8hpp_a7615684c2af56be5f302c5b367d71f6b}{fparams}& diffEq) \{
-00081         this->data = \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data};
-00082         this->size = \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size};
-00083         this->diffEq = \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq};
-00084         \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength} = this->diffEq[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}].size();
-00085     \}
-00086 
-\hypertarget{Filter_8hpp_source_l00087}{}\hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{00087}     \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Filter::Pass}() \{
-00088         \hyperlink{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{float64} temp[\hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}];
+00084         this->data = \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data};
+00085         this->size = \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size};
+00086         this->diffEq = \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq};
+00087         \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength} = this->diffEq[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}].size();
+00088     \}
 00089 
-00090         \textcolor{comment}{// create first values in filtered data}
-00091         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; i++) \{
-00092             temp[i] = 0;
-00093 
-00094             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00095                 temp[i] += \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}][j] * (j > i ? 0 : \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i - j]);
-00096             \}
-00097 
-00098             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00099                 temp[i] -= \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}][j] * (j > i ? 0 : temp[i - j]);
-00100             \}
-00101         \}
-00102 
-00103         \textcolor{comment}{// create the REST of the values in filtered data}
-00104         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = eqLength; i < \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}; i++) \{
-00105             temp[i] = 0;
-00106 
-00107             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00108                 temp[i] += \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}][j] * \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i - j];
-00109             \}
-00110 
-00111             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00112                 temp[i] -= \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}][j] * temp[i - j];
-00113             \}
-00114         \}
-00115 
-00116         \textcolor{comment}{// save final values of data and filtered data}
-00117     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}; i++) \{
-00118             \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i] = temp[i];
-00119         \}
-00120     \}
-00121 \}
-00122 
-00123 \textcolor{preprocessor}{#endif}
+\hypertarget{Filter_8hpp_source_l00090}{}\hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{00090}     \textcolor{keywordtype}{void} \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Filter::Pass}() \{
+00091         \hyperlink{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{float64} temp[\hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}];
+00092 
+00093         \textcolor{comment}{// create first values in filtered data}
+00094         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; i++) \{
+00095             temp[i] = 0;
+00096 
+00097             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
+00098                 temp[i] += \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}][j] * (j > i ? 0 : \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i - j]);
+00099             \}
+00100 
+00101             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
+00102                 temp[i] -= \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}][j] * (j > i ? 0 : temp[i - j]);
+00103             \}
+00104         \}
+00105 
+00106         \textcolor{comment}{// create the REST of the values in filtered data}
+00107         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = eqLength; i < \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}; i++) \{
+00108             temp[i] = 0;
+00109 
+00110             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
+00111                 temp[i] += \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}][j] * \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i - j];
+00112             \}
+00113 
+00114             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
+00115                 temp[i] -= \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}][j] * temp[i - j];
+00116             \}
+00117         \}
+00118 
+00119         \textcolor{comment}{// save final values of data and filtered data}
+00120     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}; i++) \{
+00121             \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i] = temp[i];
+00122         \}
+00123     \}
+00124 \}
+00125 
+00126 \textcolor{preprocessor}{#endif}
 \end{DoxyCode}

@@ -9,14 +9,14 @@
 
   \indexspace
 
-  \item {bin/bbftest}, \hyperpage{31}
-  \item {bin/lsbftest}, \hyperpage{31}
-  \item {bin/modtest}, \hyperpage{31, 32}
-  \item {bin/msintest}, \hyperpage{32}
-  \item {bin/pltest}, \hyperpage{32}
-  \item {bin/radio}, \hyperpage{32}
-  \item {bin/sintest}, \hyperpage{33}
-  \item {bin/usbftest}, \hyperpage{33}
+  \item {bin/bbftest}, \hyperpage{29}
+  \item {bin/lsbftest}, \hyperpage{29}
+  \item {bin/modtest}, \hyperpage{29, 30}
+  \item {bin/msintest}, \hyperpage{30}
+  \item {bin/pltest}, \hyperpage{30}
+  \item {bin/radio}, \hyperpage{30}
+  \item {bin/sintest}, \hyperpage{31}
+  \item {bin/usbftest}, \hyperpage{31}
 
   \indexspace
 
@@ -61,7 +61,7 @@
 
   \item {M\+O\+D\+E}
     \subitem {radio}, \hyperpage{12}
-  \item {makefile}, \hyperpage{34}
+  \item {makefile}, \hyperpage{32}
 
   \indexspace
 
@@ -105,10 +105,6 @@
     \subitem {P\+L\+\_\+\+T\+O\+N\+E}, \hyperpage{12}
     \subitem {U\+S\+B\+\_\+\+F\+I\+L\+T\+E\+R\+E\+D}, \hyperpage{12}
     \subitem {U\+S\+B\+\_\+\+H\+I\+L\+B\+E\+R\+T}, \hyperpage{12}
-
-  \indexspace
-
-  \item {This}, \hyperpage{19}
 
   \indexspace
 

@@ -26,11 +26,9 @@ void \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass} ()
 
 
 \subsection{Detailed Description}
-\hyperlink{namespaceThis}{This} class implements a z-\/domain filter on a specified array of float32's (a.\+k.\+a. singles, floats). It requires the transfer function coefficients be already calculated (i.\+e., it does not generate the coefficients based on desired filter characteristics). M\+A\+T\+L\+A\+B and its Signal Processing Toolbox can be used to generate the coefficients.
 
-While this class is designed to implement a single-\/section filter, several instances of the class can be created and run over the data array in sequence to effectively implement a multi-\/section filter. 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00028}{28} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00031}{31} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 
 
@@ -57,7 +55,7 @@ Initializes \hyperlink{classradio_1_1Filter}{Filter} based on a difference equat
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00080}{80} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00083}{83} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 
 
@@ -71,7 +69,7 @@ Definition at line \hyperlink{Filter_8hpp_source_l00080}{80} of file \hyperlink{
 )}}\label{classradio_1_1Filter_ad2793821801780809af385463bf8f197}
 Passes the data array through the digital filter but does not account for previous x\mbox{[}n\mbox{]} and y\mbox{[}n\mbox{]} values from the previous call to \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass()}. 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00087}{87} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00090}{90} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 
 
@@ -93,28 +91,28 @@ Here is the caller graph for this function\+:
 \subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float32}$\ast$ radio\+::\+Filter\+::data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}
 A pointer to the start of the data array to be filtered when \hyperlink{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{Pass()} is called. 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00069}{69} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00072}{72} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 \hypertarget{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{\index{radio\+::\+Filter@{radio\+::\+Filter}!diff\+Eq@{diff\+Eq}}
 \index{diff\+Eq@{diff\+Eq}!radio\+::\+Filter@{radio\+::\+Filter}}
 \subsubsection[{diff\+Eq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fparams} radio\+::\+Filter\+::diff\+Eq\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}
 A vector containing two vectors of float32's (a.\+k.\+a. singles, floats), containing the numerator and denominator coefficients, respectively, of the z-\/domain tranfer function of the filter in decending order (z$^\wedge$0, z$^\wedge$-\/1, z$^\wedge$-\/2, etc.). 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00077}{77} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00080}{80} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 \hypertarget{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{\index{radio\+::\+Filter@{radio\+::\+Filter}!eq\+Length@{eq\+Length}}
 \index{eq\+Length@{eq\+Length}!radio\+::\+Filter@{radio\+::\+Filter}}
 \subsubsection[{eq\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8} radio\+::\+Filter\+::eq\+Length\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}
 The number of terms in the numerator (or denomenator) of the transfer function (i.\+e., function order + 1). 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00058}{58} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00061}{61} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 \hypertarget{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{\index{radio\+::\+Filter@{radio\+::\+Filter}!size@{size}}
 \index{size@{size}!radio\+::\+Filter@{radio\+::\+Filter}}
 \subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} radio\+::\+Filter\+::size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}
 The number of elements in the data array. 
 
-Definition at line \hyperlink{Filter_8hpp_source_l00063}{63} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
+Definition at line \hyperlink{Filter_8hpp_source_l00066}{66} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 
 
