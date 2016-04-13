@@ -60,15 +60,6 @@ Initializes \hyperlink{classradio_1_1Filter}{Filter} based on a difference equat
 Definition at line \hyperlink{Filter_8hpp_source_l00080}{80} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
 
-\begin{DoxyCode}
-00080                                                               \{
-00081         this->\hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data} = \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data};
-00082         this->\hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size} = \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size};
-00083         this->\hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq} = \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq};
-00084         \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength} = this->\hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}].size();
-00085     \}
-\end{DoxyCode}
-
 
 \subsection{Member Function Documentation}
 \hypertarget{classradio_1_1Filter_ad2793821801780809af385463bf8f197}{\index{radio\+::\+Filter@{radio\+::\+Filter}!Pass@{Pass}}
@@ -82,43 +73,6 @@ Passes the data array through the digital filter but does not account for previo
 
 Definition at line \hyperlink{Filter_8hpp_source_l00087}{87} of file \hyperlink{Filter_8hpp_source}{Filter.\+hpp}.
 
-
-\begin{DoxyCode}
-00087                       \{
-00088         \hyperlink{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{float64} temp[\hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}];
-00089 
-00090         \textcolor{comment}{// create first values in filtered data}
-00091         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; i++) \{
-00092             temp[i] = 0;
-00093 
-00094             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00095                 temp[i] += \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}][j] * (j > i ? 0 : \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i - j]);
-00096             \}
-00097 
-00098             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00099                 temp[i] -= \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}][j] * (j > i ? 0 : temp[i - j]);
-00100             \}
-00101         \}
-00102 
-00103         \textcolor{comment}{// create the REST of the values in filtered data}
-00104         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = eqLength; i < \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}; i++) \{
-00105             temp[i] = 0;
-00106 
-00107             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00108                 temp[i] += \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}][j] * \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i - j];
-00109             \}
-00110 
-00111             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < \hyperlink{classradio_1_1Filter_a26a32320c4dffa8925ab5f0f06689e8d}{eqLength}; j++) \{
-00112                 temp[i] -= \hyperlink{classradio_1_1Filter_abe705768a267844edfa2aaabfdac9f56}{diffEq}[\hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN}][j] * temp[i - j];
-00113             \}
-00114         \}
-00115 
-00116         \textcolor{comment}{// save final values of data and filtered data}
-00117     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classradio_1_1Filter_a7285b4c7263d8278e38abb14b5dca5d9}{size}; i++) \{
-00118             \hyperlink{classradio_1_1Filter_a25459a2b762120df0102f00553344be2}{data}[i] = temp[i];
-00119         \}
-00120     \}
-\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:

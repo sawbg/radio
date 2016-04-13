@@ -58,58 +58,12 @@ Initializes \fBFilter\fP based on a difference equation\&.
 
 .PP
 Definition at line 80 of file Filter\&.hpp\&.
-.PP
-.nf
-80                                                               {
-81         this->data = data;
-82         this->size = size;
-83         this->diffEq = diffEq;
-84         eqLength = this->diffEq[DEN]\&.size();
-85     }
-.fi
 .SH "Member Function Documentation"
 .PP 
 .SS "void radio::Filter::Pass ()"
 Passes the data array through the digital filter but does not account for previous x[n] and y[n] values from the previous call to \fBPass()\fP\&. 
 .PP
 Definition at line 87 of file Filter\&.hpp\&.
-.PP
-.nf
-87                       {
-88         float64 temp[size];
-89 
-90         // create first values in filtered data
-91         for(int i = 0; i< eqLength; i++) {
-92             temp[i] = 0;
-93 
-94             for(int j = 0; j < eqLength; j++) {
-95                 temp[i] += diffEq[NUM][j] * (j > i ? 0 : data[i - j]);
-96             }
-97 
-98             for(int j = 1; j < eqLength; j++) {
-99                 temp[i] -= diffEq[DEN][j] * (j > i ? 0 : temp[i - j]);
-100             }
-101         }
-102 
-103         // create the REST of the values in filtered data
-104         for(int i = eqLength; i < size; i++) {
-105             temp[i] = 0;
-106 
-107             for(int j = 0; j < eqLength; j++) {
-108                 temp[i] += diffEq[NUM][j] * data[i - j];
-109             }
-110 
-111             for(int j = 1; j < eqLength; j++) {
-112                 temp[i] -= diffEq[DEN][j] * temp[i - j];
-113             }
-114         }
-115 
-116         // save final values of data and filtered data
-117     for(int i = 0; i < size; i++) {
-118             data[i] = temp[i];
-119         }
-120     }
-.fi
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBfloat32\fP* radio::Filter::data\fC [protected]\fP"

@@ -112,10 +112,6 @@ Describes the age of a filter (from last Pass() or in this Pass()) \begin{Desc}
 
 Definition at line \hyperlink{definitions_8hpp_source_l00052}{52} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
-
-\begin{DoxyCode}
-00052 \{ \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3afbe8ecd067dc1095175b7cdc7cecbb82}{OLD}, \hyperlink{namespaceradio_a90839d95c13fa21f45e9cd380e38f1f3ac1a7d3b0b6d1c9639e94bdd8c8692686}{NEW} \};
-\end{DoxyCode}
 \hypertarget{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5}{\index{radio@{radio}!Argument@{Argument}}
 \index{Argument@{Argument}!radio@{radio}}
 \subsubsection[{Argument}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf radio\+::\+Argument}}}\label{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5}
@@ -134,10 +130,6 @@ Describes the arguments in argv. Never actually used. \begin{Desc}
 
 Definition at line \hyperlink{definitions_8hpp_source_l00062}{62} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
-
-\begin{DoxyCode}
-00062 \{ \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a47cc56722e29261caff496eb98ff3d88}{FREQ} = 1, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a70b58e67bda4ad9bd46e010e1f090c7b}{MODE}, \hyperlink{namespaceradio_adf83fa57d52181b9779a376c3a98b4f5a145a49f0c5e95c6f59e51825a5a4817d}{PL\_TONE} \};
-\end{DoxyCode}
 \hypertarget{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}{\index{radio@{radio}!Fractional@{Fractional}}
 \index{Fractional@{Fractional}!radio@{radio}}
 \subsubsection[{Fractional}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf radio\+::\+Fractional}}}\label{namespaceradio_aa2a4fb91116a2b9a094776a29cce0dac}
@@ -154,10 +146,6 @@ Describes the numerator and denominator of a z-\/domain transfer function \begin
 
 Definition at line \hyperlink{definitions_8hpp_source_l00057}{57} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
-
-\begin{DoxyCode}
-00057 \{ \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca7436a425f0fd0f72aa39de328f2bdd48}{NUM}, \hyperlink{namespaceradio_aa2a4fb91116a2b9a094776a29cce0daca2fd2fe719e453d2bda50a402c0f49abe}{DEN} \};
-\end{DoxyCode}
 \hypertarget{namespaceradio_a46fb7299001138f28b7f69975c58399e}{\index{radio@{radio}!Modulation\+Type@{Modulation\+Type}}
 \index{Modulation\+Type@{Modulation\+Type}!radio@{radio}}
 \subsubsection[{Modulation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf radio\+::\+Modulation\+Type}\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespaceradio_a46fb7299001138f28b7f69975c58399e}
@@ -187,13 +175,6 @@ Describes a form of modulation. \begin{Desc}
 Definition at line \hyperlink{definitions_8hpp_source_l00067}{67} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
 
-\begin{DoxyCode}
-00067                               \{ \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaf180dafbc98f54c6382ae29243cec902}{DSB\_LC}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea92c257208ae8b0c6d88c80abcf15ec31}{DSB\_SC}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea9d8eca0470206cddb0dd0297717eb876}{USB\_FILTERED}, 
-      \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea1b14284e455bf5c311de662665312d13}{USB\_HILBERT},
-00068         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eaa6fd9ffa81c9d5e4a255b0c3b2336bd8}{LSB\_FILTERED}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea18f970daa5b5a8f72cbd45f7b49a6b6a}{LSB\_HILBERT}, \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399ea7b4b1e7876b8d9de5b77b9264fbe556a}{FM\_NARROW}, 
-      \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399eafabee3b32b363b14950cb5f5b61e998c}{FM\_WIDE} \};
-\end{DoxyCode}
-
 
 \subsection{Function Documentation}
 \hypertarget{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26}{\index{radio@{radio}!aconj@{aconj}}
@@ -217,14 +198,6 @@ Replaces the values in an array of complex float32's with their respective conju
 
 Definition at line \hyperlink{zdomain_8hpp_source_l00084}{84} of file \hyperlink{zdomain_8hpp_source}{zdomain.\+hpp}.
 
-
-\begin{DoxyCode}
-00084                                             \{
-00085         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++) \{
-00086             data[i] = std::conj(data[i]);
-00087         \}
-00088     \}
-\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -261,56 +234,6 @@ This code is based on code from \href{http://rosettacode.org/wiki/Fast_Fourier_t
 Definition at line \hyperlink{zdomain_8hpp_source_l00090}{90} of file \hyperlink{zdomain_8hpp_source}{zdomain.\+hpp}.
 
 
-\begin{DoxyCode}
-00090                                           \{
-00091         \textcolor{comment}{// DFT}
-00092         \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} k = size;
-00093         \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} n;
-00094         \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} thetaT = M\_PI / size;
-00095         \hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} phiT(cos(thetaT), sin(thetaT));
-00096         \hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} T;
-00097 
-00098         \textcolor{keywordflow}{while}(k > 1) \{
-00099             n = k;
-00100             k >>= 1;
-00101             phiT = phiT * phiT;
-00102             T = 1.0L;
-00103 
-00104             \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} l = 0; l < k; l++) \{
-00105                 \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} a = l; a < size; a += n) \{
-00106                     \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} b = a + k;
-00107                     \hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} t = data[a] -data[b];
-00108                     data[a] +=data[b];
-00109                     data[b] = t * T;
-00110                 \}
-00111 
-00112                 T *= phiT;
-00113             \}
-00114         \}
-00115 
-00116         \textcolor{comment}{// Decimate}
-00117         \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} m = (\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32})log2(size);
-00118 
-00119         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} a = 0; a < size; a++) \{
-00120             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} b = a;
-00121 
-00122             \textcolor{comment}{// Reverse bits}
-00123             b = (((b & 0xaaaaaaaa) >> 1) | ((b & 0x55555555) << 1));
-00124             b = (((b & 0xcccccccc) >> 2) | ((b & 0x33333333) << 2));
-00125             b = (((b & 0xf0f0f0f0) >> 4) | ((b & 0x0f0f0f0f) << 4));
-00126             b = (((b & 0xff00ff00) >> 8) | ((b & 0x00ff00ff) << 8));
-00127             b = ((b >> 16) | (b << 16)) >> (32 - m);
-00128 
-00129             \textcolor{keywordflow}{if} (b > a)
-00130             \{
-00131                 \hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32} t = data[a];
-00132                 data[a] =data[b];
-00133                 data[b] = t;
-00134             \}
-00135         \}
-00136     \}
-\end{DoxyCode}
-
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -346,31 +269,6 @@ Performs the hilbert transfor of an array of float32's.
 
 Definition at line \hyperlink{zdomain_8hpp_source_l00138}{138} of file \hyperlink{zdomain_8hpp_source}{zdomain.\+hpp}.
 
-
-\begin{DoxyCode}
-00138                                                             \{
-00139         \hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32}* temp = (\hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32}*)std::malloc(\textcolor{keyword}{sizeof}(\hyperlink{definitions_8hpp_a960be6b6614c08090c16574dba10a421}{cfloat32}) * size);
-00140 
-00141         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++) \{
-00142             temp[i] = data[i];
-00143         \}
-00144         
-00145         \hyperlink{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{fft}(temp, size);
-00146 
-00147         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = size/2; i < size; i++) \{
-00148             temp[i] = 0;
-00149         \}
-00150 
-00151         \hyperlink{fft__test_8cpp_a6234aee8acb83780e803805365617f36}{ifft}(temp, size);
-00152 
-00153         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++) \{
-00154             \textcolor{comment}{// parentheses around temp prevent free() error}
-00155             dest[i] = -2 * (temp[i].imag());
-00156         \}
-00157 
-00158         free(temp);
-00159     \}
-\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -418,18 +316,6 @@ This code is based on code from \href{http://rosettacode.org/wiki/Fast_Fourier_t
 
 Definition at line \hyperlink{zdomain_8hpp_source_l00161}{161} of file \hyperlink{zdomain_8hpp_source}{zdomain.\+hpp}.
 
-
-\begin{DoxyCode}
-00161                                            \{
-00162         \hyperlink{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26}{aconj}(data, size);
-00163         \hyperlink{fft__test_8cpp_a22051cd252d576aec530227d32d95bdd}{fft}(data, size);
-00164         \hyperlink{namespaceradio_aa04bb922c40cafb00a5603f1fc6d9c26}{aconj}(data, size);
-00165 
-00166         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++) \{
-00167             data[i] /= size;
-00168         \}
-00169     \}
-\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -479,18 +365,6 @@ Produces an interleaved array of first an element from an original array of data
 Definition at line \hyperlink{zdomain_8hpp_source_l00171}{171} of file \hyperlink{zdomain_8hpp_source}{zdomain.\+hpp}.
 
 
-\begin{DoxyCode}
-00171                                                            \{
-00172         \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32} quadData[size];
-00173         \hyperlink{fft__test_8cpp_adc49b5a69e64611f421bbefee39a4d15}{hilbert}(data, quadData, size);
-00174 
-00175         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 2 * size; i += 2) \{
-00176             dest[i] = quadData[i/2];
-00177             dest[i+1] = data[i/2];
-00178         \}
-00179     \}
-\end{DoxyCode}
-
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -526,39 +400,6 @@ Displays the help information.
 Definition at line \hyperlink{auxiliary_8hpp_source_l00022}{22} of file \hyperlink{auxiliary_8hpp_source}{auxiliary.\+hpp}.
 
 
-\begin{DoxyCode}
-00022                     \{
-00023         std::cerr << std::endl << \textcolor{stringliteral}{"Usage: radio [MODE] [MIC GAIN] "}
-00024             \textcolor{stringliteral}{"[PL TONE]"} << std::endl << std::endl
-00025             << \textcolor{stringliteral}{"MODE: one of the following types "}
-00026             \textcolor{stringliteral}{"of modulation"} << std::endl << std::endl;
-00027 
-00028         std::cerr << \textcolor{stringliteral}{"dsblc\(\backslash\)t\(\backslash\)tDouble sideband, large carrier"} << std::endl
-00029             << \textcolor{stringliteral}{"am\(\backslash\)t\(\backslash\)tAlias for dsblc"} << std::endl
-00030             << \textcolor{stringliteral}{"dsbsc\(\backslash\)t\(\backslash\)tDouble sideband, suppressed carrier"} << std::endl
-00031             << \textcolor{stringliteral}{"lsbhil\(\backslash\)t\(\backslash\)tLower sideband created via Hilbert transform"}
-00032             << std::endl
-00033             << \textcolor{stringliteral}{"lsbfilt\(\backslash\)t\(\backslash\)tLower sideband created via digital low-pass filter"}
-00034             << std::endl
-00035             << \textcolor{stringliteral}{"usbhil\(\backslash\)t\(\backslash\)tUpper sideband created via Hilbert transform"}
-00036             << std::endl
-00037             << \textcolor{stringliteral}{"usbfilt\(\backslash\)t\(\backslash\)tUpper sideband created via digital high-pass filter"}
-00038             << std::endl
-00039 \textcolor{comment}{//          << "nfm\(\backslash\)t\(\backslash\)tFrequency modulation, 2.5 kHz bandwidth"}
-00040             << std::endl;
-00041 \textcolor{comment}{//          << "wfm\(\backslash\)t\(\backslash\)tFrequency modulation, 5 kHz bandwidth" << std::endl}
-00042 \textcolor{comment}{//          << "fm\(\backslash\)t\(\backslash\)talias for wfm" << std::endl << std::endl;}
-00043 
-00044         std::cerr << \textcolor{stringliteral}{"MIC GAIN: Microphone power gain expressed in decibels"}
-00045         << std::endl << std::endl;
-00046 
-00047         std::cerr << \textcolor{stringliteral}{"PL TONE: Optional specification for CTCSS tone from "}
-00048             \textcolor{stringliteral}{"60-260 Hz"} << std::endl << std::endl;
-00049 
-00050         std::exit(\hyperlink{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR});
-00051     \}
-\end{DoxyCode}
-
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -591,14 +432,6 @@ Converts float32 samples to sint32 samples. Rounds conversion to nearest integer
 
 Definition at line \hyperlink{auxiliary_8hpp_source_l00062}{62} of file \hyperlink{auxiliary_8hpp_source}{auxiliary.\+hpp}.
 
-
-\begin{DoxyCode}
-00062                                                \{
-00063         \textcolor{keywordflow}{for}(\hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} i = 0; i < size; i++) \{
-00064             ((\hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32}*)data)[i] = (\hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32})(data[i] * INT\_MAX + 0.5);
-00065         \}
-00066     \}
-\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -634,34 +467,6 @@ enum value of the type of modulation
 
 Definition at line \hyperlink{auxiliary_8hpp_source_l00080}{80} of file \hyperlink{auxiliary_8hpp_source}{auxiliary.\+hpp}.
 
-
-\begin{DoxyCode}
-00080                                           \{
-00081         \hyperlink{namespaceradio_a46fb7299001138f28b7f69975c58399e}{ModulationType} type;
-00082 
-00083         \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"dsblc"} || str == \textcolor{stringliteral}{"am"}) \{
-00084             type = ModulationType::DSB\_LC;
-00085         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"dsbsc"}) \{
-00086             type = ModulationType::DSB\_SC;
-00087         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"lsbhil"}) \{
-00088             type = ModulationType::LSB\_HILBERT;
-00089         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"lsbfilt"}) \{
-00090             type = ModulationType::LSB\_FILTERED;
-00091         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"usbhil"}) \{
-00092             type = ModulationType::USB\_HILBERT;
-00093         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"usbfilt"}) \{
-00094             type = ModulationType::USB\_FILTERED;
-00095         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"wfm"} || str == \textcolor{stringliteral}{"fm"}) \{
-00096             type = ModulationType::FM\_NARROW;
-00097         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(str == \textcolor{stringliteral}{"nfm"}) \{
-00098             type = ModulationType::FM\_WIDE;
-00099         \} \textcolor{keywordflow}{else} \{
-00100             \textcolor{keywordflow}{throw} std::logic\_error(\textcolor{stringliteral}{"The given modulation type is invalid!"});
-00101         \}
-00102 
-00103         \textcolor{keywordflow}{return} type;
-00104     \}
-\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:

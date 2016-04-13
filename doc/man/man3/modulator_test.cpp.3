@@ -58,51 +58,6 @@ Definition in file \fBmodulator_test\&.cpp\fP\&.
 Program to test the Modulator class with a self-generated sinusoidal input\&. 
 .PP
 Definition at line 24 of file modulator_test\&.cpp\&.
-.PP
-.nf
-24                                  {
-25 
-26     // Constants
-27     const uint16 BUFFER_SIZE = 16384;
-28 
-29     // Declare primative Variables
-30     float32 dataBuffer[BUFFER_SIZE];
-31     float32 iqBuffer[2 * BUFFER_SIZE];
-32     ModulationType type;
-33     float32 freq = atof(argv[2]);
-34     float32 tone = 0;
-35 
-36     if(argc >= 4) tone = atof(argv[3]);
-37 
-38     try{
-39         type = to_type(string(argv[1]));
-40     } catch(std::exception ex) {
-41         std::cerr << ex\&.what() << std::endl << std::endl;
-42         return ERROR;
-43     }
-44 
-45     if(freq < 0) {
-46         cerr << "The given tone was invalid\&." << endl;
-47         return ERROR;
-48     }
-49 
-50     // Declare objects
-51     Modulator modulator(dataBuffer, BUFFER_SIZE, type, 20000);
-52     Sinusoid sinusoid(freq);
-53     PlTone(tone > 0 ? 0\&.15 : 0, dataBuffer, BUFFER_SIZE, tone, 48000);
-54 
-55     while(true) {
-56         for(uint16 i = 0; i < BUFFER_SIZE; i++) {
-57             dataBuffer[i] = sinusoid\&.next();
-58         }
-59 
-60         modulator\&.Mod();
-61         makeIQ(dataBuffer, iqBuffer, BUFFER_SIZE);
-62         to_sint32(iqBuffer, 2 * BUFFER_SIZE);
-63         write(STDOUT_FILENO, &iqBuffer,  2 * BUFFER_SIZE * sizeof(sint32));
-64     }
-65 }
-.fi
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for An Inexpensive, Software-Defined IF Modulator from the source code\&.
